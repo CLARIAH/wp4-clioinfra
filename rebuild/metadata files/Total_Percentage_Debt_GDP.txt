@@ -1,0 +1,752 @@
+Working Paper Clio infra: Total Gross Central Government Debt as a Percentage of GDP
+
+1. Title
+	- Total gross central government debt as a percentage of GDP database clio infra
+2. Author(s)
+	- Jon Verriet & Reinoud Bosch; International Institute of Social History, Amsterdam, The 	Netherlands
+3. Production date
+	- April 10, 2012
+4. Version
+	- Version 1.0
+5. Variable group(s)
+	- Finance
+6. Variable(s)
+	- Total gross central government debt as a percentage of gross domestic product (GDP). 
+7. Unit of analysis
+	- Country
+8. Keywords (5)
+	- government debt, GDP, finance, world, growth
+9. Abstract (200 words)
+	- This paper is supplement to the database on total gross central government debt as a 
+Percentage of GDP in light of the clio infra project. It specifies the sources of data. 
+10. Time period
+	- 1692-2010
+11. Geographical coverage
+	- World
+12. Methodologies used for data collection and processing
+	- Collecting data from the datasets by Reinhart & Rogoff dataset 	(http://www.reinhartandrogoff.com/data/browse-by-topic/topics/9/. Consulted: April 5, 	2012) 	and the World Bank (http://data.worldbank.org/indicator/GC.DOD.TOTL.GD.ZS. 	Consulted: April 10, 2012).
+13. Data quality (multiple possibilities)
+	- Indication of the quality of the data based on the following categories:
+		i. Central statistical agencies
+			- Data are the result of work of central statistical agencies.
+		ii. Historical reconstructions
+			- Data are the result of historical reconstructions making use of the 
+methods and the broad range of data that are also used by central statistical agencies.
+14. Period of collection
+	- April 5, 2012  -  April 10, 2012
+15. Data collectors
+	- Jon Verriet & Reinoud Bosch, International Institute of Social History;
+	- Carmen M. Reinhart, Peterson Institute for International Economics, Washington DC
+	- Kenneth S. Rogoff, Harvard University, Cambridge, MA
+16. Sources
+	- Carmen M. Reinhart & Kenneth S. Rogoff, "Debt-to-GDP Ratios", 	http://www.reinhartandrogoff.com/data/browse-by-topic/topics/9/. Consulted: April 5, 	2012.
+	- World Bank, "Central government debt, total (% of GDP)", 	http://data.worldbank.org/indicator/GC.DOD.TOTL.GD.ZS. Consulted: April 10, 2012.
+
+17. Text
+
+This study was carried out within the framework of the CLIO-INFRA project financed by the Netherlands Organisation for Scientific Research (NWO). Government debt as a percentage of GDP tells us something about the financial health of a country or region and can also be an indirect signifier of economic stability and development. This database provides figures for government debt as a percentage of GDP for a wide range of different countries around the world. 
+Notes of interest: - In the case of overlapping data, precedence has been given to the World Bank figures.- Both the `Ethiopia (until 1993)' and `Ethiopia (from 1993)' data stem from the World Bank database, which does not make that distinction. The same goes for `Indonesia (until 1999)' and `Indonesia'. 
+- While it is not entirely clear whether the data for `Germany' in the World Bank database for before 1991 refer to either West or East Germany, the assumption has been made that these figures refer to the Federal Republic of Germany (West Germany). 
+- Kyrgyzstan is called Kyrgyz Republic in the World Bank database, which is also its official name. Slovakia is called the Slovak Republic, also its official name. Occupied Palestinian Territory is called `West Bank and Gaza' in the World Bank database.
+- Notable omissions include: the USSR, most of the Middle East and Central Asia, Vietnam, large parts of Africa, and most small countries. 
+Overlapping data show that while in most cases the data are (almost) identical, there are also some significant differences between the Reinhart & Rogoff dataset and the World Bank dataset. Figure 1 illustrates this problem, showing a large inconsistency between the two when it comes to Australia:
+
+Figure 1. Australia's government debt as a percentage of GDP, 1999-2004.
+                                                                               
+                                                                           1999
+                                                                           2000
+                                                                           2001
+                                                                           2002
+                                                                           2003
+                                                                           2004
+                                                          Reinhart & Rogoff
+                                                                          12,85
+                                                                          10,81
+                                                                           8,97
+                                                                           7,97
+                                                                           6,83
+                                                                           6,10
+                                                                     World Bank
+                                                                          31,02
+                                                                          29,47
+                                                                          27,31
+                                                                          25,11
+                                                                          24,54
+                                                                          22,51
+
+One would assume that Reinhart & Rogoff are not measuring the same thing as the World Bank in this instance, but there are no directions for either dataset that support this assumption. 
+
+Herewith the exact definitions of the variables measured:  
+
+For Reinhart & Rogoff:
+The standard variable used by Reinhart and Rogoff is `Total (domestic plus external) gross central government debt/GDP', unless mentioned otherwise (see below)
+
+
+Central African Republic 2000-2010 Total (domestic plus external) gross general government 
+debt/GDP (%)
+
+Cote d'Ivoire 1970-2008 Total (domestic plus external) gross general government debt/GDP (%)
+
+Germany Total (domestic plus external) gross government debt/GDP (%) 1880-1913, 1951-2010
+
+Hungary Total (domestic plus external) gross central (federal) government debt/GDP (%) 1880-1913, 1991-2010
+
+Iceland Total (domestic plus external) gross general government debt/GDP (%) 1908-2010
+
+Italy Total (domestic plus external) gross general government debt/GDP (%)  1861-2010
+
+Korea 1996-2000: Total (domestic plus external) gross central government debt/GDP, including 
+bank recapitalization debt (IMF estimates)
+
+Mexico 1872-1916: External debt
+
+Myanmar Total (domestic plus external) gross general government debt/GDP (%) 2000-2010
+
+Netherlands Total (domestic plus external) gross general government debt/GDP (%) 1814-1939, 1946-2010
+
+New Zealand Total (domestic plus external) gross general government debt/GDP (%) 1860-2010
+
+Nigeria Total (domestic plus external) gross general government debt/GDP (%) 2000-2010
+
+Paraguay 1970-1989 External public debts. Domestic debt is nil during this period (as are private 
+debts))
+
+Poland Total (domestic plus external) gross general government debt/GDP (%) 1990-2009
+
+Singapore Total (domestic plus external) gross general government debt/GDP (%) 1969-1982, 1984-2009
+
+Romania Total (domestic plus external) gross general government debt/GDP (%) 1992-2005 public 
+sector, 2006-2010 General government
+
+Spain Total (domestic plus external) gross general government debt/GDP (%) 1850-1935, 1940-2010
+
+Tunesia Total gross general government debt/GDP 1991-2010
+
+UK Total (domestic plus external) net general government debt/GDP (%) 1692-1979, 
+1980-2010 Total (domestic plus external) gross general government debt/GDP (%)
+
+Zambia Total (domestic plus external) gross general government debt/GDP (%) 1990-2010
+Zimbabwe 2005-2010 (General government debt/GDP, IMF, World Economic Outlook)
+
+
+For the World Bank:
+
+The exact World Bank definition for `Central government debt, total (%)' is: 
+`Debt is the entire stock of direct government fixed-term contractual obligations to others outstanding on a particular date. It includes domestic and foreign liabilities such as currency and money deposits, securities other than shares, and loans. It is the gross amount of government liabilities reduced by the amount of equity and financial derivatives held by the government. Because debt is a stock rather than a flow, it is measured as of a given date, usually the last day of the fiscal year.'
+
+
+Below the sources for the data in this database are given per country and per period.
+
+Europe
+
+Western Europe
+
+Austria
+1880-1913, 1924-1937, 1948-1994 (R&R), 1995-2009 (WB)
+Belgium
+1835-1913, 1920-1939, 1946-1994 (R&R), 1995-2010 (WB)
+Federal Republic of Germany (until 1990)
+1951-1989 (R&R)
+France
+1880-1913, 1920-1931, 1949-1994 (R&R), 1995-2009 (WB)
+German Democratic Republic (until 1990)
+
+Germany
+1880-1913, 1990-2000 (R&R), 2001-2009 (WB)
+Liechtenstein
+
+Luxembourg
+
+Monaco
+
+Netherlands
+1814-1939, 1946-2010 (R&R)
+Switzerland
+1880-1913, 1924, 1929-1983, 1986-2010 (R&R)
+
+
+Northern Europe
+
+Åland Islands
+
+Channel Islands
+
+Denmark
+1880-1994 (R&R), 1995-2009 (WB)
+Estonia
+1995-2009 (WB)
+Faeroe Islands
+
+Finland
+1914-1994 (R&R), 1995-2008 (WB)
+Guernsey
+
+Iceland
+1908-2010 (R&R)
+Ireland
+1924-2010 (R&R)
+Isle of Man
+
+Jersey
+
+Latvia
+
+Lithuania
+
+Norway
+1880-1939, 1946-2010 (R&R)
+Sark
+
+Svalbard and Jan Mayen Islands
+
+Sweden
+1719-2010 (R&R)
+United Kingdom of Great Britain and Northern Ireland
+1692-1979, 1980-2010 (R&R)
+
+
+Southern Europe
+
+Albania
+1995-1998 (WB)
+Andorra
+
+Bosnia and Herzegovina
+
+Croatia
+
+Gibraltar
+
+Greece
+1848-1913, 1919-1939, 1950-1994 (R&R), 1995-2009 (WB)
+Holy See
+
+Italy
+1861-2010 (R&R)
+Kosovo
+
+Malta
+
+Montenegro
+
+Portugal
+1851-2010 (R&R)
+San Marino
+
+Serbia
+
+Serbia and Montenegro (until 2006)
+
+Slovenia
+
+Socialist Federal Republic of Yugoslavia (until 1992)
+
+Spain
+1850-1935, 1940-2010 (R&R)
+The former Yugoslav Republic of Macedonia
+
+
+
+Eastern Europe
+
+Belarus
+1992-2002, 2005-2009 (WB)
+Bulgaria
+1919-1946, 1981-2010 (R&R)
+Czech Republic
+1993-2009 (WB)
+Czechoslovakia (until 1993)
+
+Hungary
+1880-1913, 1991-2010 (R&R)
+Poland
+1990-2009 (R&R)
+Republic of Moldova
+
+Romania
+1992-2010 (R&R)
+Russian Federation
+1886-1914, 1991-2010 (R&R)
+Slovakia
+
+Ukraine
+
+USSR (until 1991)
+
+
+
+Americas
+
+Northern America
+
+Bermuda
+
+Canada
+1867-2001 (R&R), 2002, 2005-2009 (WB)
+Greenland
+
+Saint Pierre and Miquelon
+
+United States of America
+1790-2010 (R&R)
+
+
+Latin America and the Caribbean
+
+Caribbean
+
+Anguilla
+
+Antigua and Barbuda
+
+Aruba
+
+Bahamas
+1990-2000, 2006-2009 (WB)
+Barbados
+2007-2008 (WB)
+Bonaire, Saint Eustatius and Saba
+
+British Virgin Islands
+
+Cayman Islands
+
+Cuba
+
+Curaçao
+
+Dominica
+
+Dominican Republic
+1914-1952, 1961-1962, 1966-2010 (R&R)
+Grenada
+
+Guadeloupe
+
+Haiti
+
+Jamaica
+
+Martinique
+
+Montserrat
+
+Netherlands Antilles (until 2010)
+
+Puerto Rico
+
+Saint-Barthélemy
+
+Saint Kitts and Nevis
+
+Saint Lucia
+
+Saint Martin (French part)
+
+Saint Vincent and the Grenadines
+
+Sint Maarten (Dutch part)
+
+Trinidad and Tobago
+
+Turks and Caicos Islands
+
+United States Virgin Islands
+
+
+
+Central America
+
+Belize
+1990-1996 (WB)
+Costa Rica
+1892-1893, 1900-1973, 1975-2010 (R&R)
+El Salvador
+1914-1963, 1970-2001 (R&R), 2002-2009 (WB)
+Guatemala
+1922-1925, 1927-1950, 1952-1978, 1980-1989 (R&R), 1990-2009 (WB)
+Honduras
+1914-1957, 1959-1971, 1980-2010 (R&R)
+Mexico
+1872-1874, 1877-1945, 1947-1967, 1970-2010 (R&R)
+Nicaragua
+1914-1945, 1970-2009 (R&R)
+Panama
+1914-1916, 1918-1921, 1923-1976, 1978, 1980-2009 (R&R)
+
+
+South America
+
+Argentina
+1824-1865, 1867-2010 (R&R)
+Bolivia (Plurinational State of)
+1914-1944, 1947-1952, 1970-2010 (R&R)
+Brazil
+1862-2005 (R&R), 2006-2009 (WB)
+Chile
+1827-2010 (R&R)
+Colombia
+1899-2002 (R&R), 2003-2009 (WB)
+Ecuador
+1914-2010 (R&R)
+Falkland Islands (Malvinas)
+
+French Guiana
+
+Guyana
+
+Paraguay
+1927-1947, 1970-2009 (R&R)
+Peru
+1883-1958, 1960, 1963-1967, 1972, 1980-2010 (R&R)
+Suriname
+
+Uruguay
+1871-1946, 1970-2009 (R&R)
+Venezuela (Bolivarian Republic of)
+1914-2009 (R&R)
+
+
+Oceania
+
+Australia and New Zealand
+
+Australia
+1861-1998 (R&R), 1999-2009 (WB)
+New Zealand
+1860-2010 (R&R)
+Norfolk Island
+
+
+
+Melanesia
+
+Fiji
+1991-1994 (WB)
+New Caledonia
+
+Papua New Guinea
+
+Solomon Islands
+
+Vanuatu
+
+
+
+Micronesia
+
+Guam
+
+Kiribati
+
+Marshall Islands
+
+Micronesia (Federated States of)
+
+Nauru
+
+Northern Mariana Islands
+
+Pacific Islands (Trust Territory) (1947-1986)
+
+Palau
+
+
+
+Polynesia
+
+American Samoa
+
+Cook Islands
+
+French Polynesia
+
+Niue
+
+Pitcairn
+
+Samoa
+
+Tokelau
+
+Tonga
+
+Tuvalu
+
+Wallis and Futuna Islands
+
+
+
+Asia
+
+Southern Asia
+
+Afghanistan
+
+Bangladesh
+2001-2004 (WB)
+Bhutan
+1990-2009 (WB)
+India
+1841-1946, 1948-2010 (R&R)
+Iran (Islamic Republic of)
+
+Maldives
+
+Nepal
+
+Pakistan
+
+Sri Lanka
+1861-1914, 1950-2009 (R&R)
+Tibet
+
+
+
+Eastern Asia
+
+China
+1982-2009 (R&R)
+China, Hong Kong Special Administrative Region
+2002-2009 (WB)
+China, Macao Special Administrative Region
+
+Democratic People's Republic of Korea
+
+Japan
+1872-1939, 1953-2009 (R&R)
+Mongolia
+
+Republic of Korea
+1913-1938, 1970, 1976-2010 (R&R)
+Taiwan
+1987-2008 (R&R)
+
+
+South-Eastern Asia
+
+Brunei Darussalam
+
+Cambodia
+
+Indonesia
+1911-1940, 1970-2009 (R&R)
+Indonesia (until 1999)
+
+Lao People's Democratic Republic
+
+Malaysia
+1949-1957, 1970-2010 (R&R)
+Myanmar
+2000-2010 (R&R)
+Philippines
+1948-2009 (R&R)
+Singapore
+1969-1982, 1984-2009 (R&R)
+Thailand
+1913-1941, 1943-1945, 1948-2009 (R&R)
+Timor-Leste
+
+Viet Nam
+
+
+
+Western Asia
+
+Armenia
+
+Azerbaijan
+
+Bahrain
+1990-2004, 2006-2008 (WB)
+Cyprus
+1998-2009 (WB)
+Democratic Yemen (until 1990)
+
+Georgia
+1997-2009 (WB)
+Iraq
+
+Israel
+
+Jordan
+
+Kuwait
+
+Lebanon
+
+Occupied Palestinian Territory
+
+Oman
+
+Qatar
+
+Saudi Arabia
+
+Syrian Arab Republic
+
+Turkey
+1854-1915, 1925-1973, 1977-2010 (R&R)
+United Arab Emirates
+
+Yemen (until 1990)
+
+Yemen
+
+
+
+Central Asia
+
+Kazakhstan
+
+Kyrgyzstan
+
+Tajikistan
+
+Turkmenistan
+
+Uzbekistan
+
+
+
+Africa
+
+Northern Africa
+
+Algeria
+1964-2010 (R&R)
+Egypt
+1862-1943, 1970-2006 (R&R), 2007-2009 (WB)
+Libya
+
+Morocco
+1965-1980, 1990-2010 (R&R)
+South Sudan
+
+Sudan (North)
+
+Sudan (until 2011)
+
+Tunisia
+1990-2010 (R&R)
+Western Sahara
+
+
+
+Western Africa
+
+Benin
+
+Burkina Faso
+
+Cape Verde
+
+Cote d'Ivoire
+1970-2008 (R&R)
+Gambia
+
+Ghana
+1911-1937, 1952-2009 (R&R)
+Guinea
+
+Guinea-Bissau
+
+Liberia
+
+Mali
+
+Mauritania
+
+Niger
+
+Nigeria
+2000-2010 (R&R)
+Saint Helena
+
+Senegal
+
+Sierra Leone
+
+Togo
+
+
+
+Middle Africa
+
+Angola
+
+Cameroon
+1990-1995, 1998-1999 (WB)
+Central African Republic
+2000-2010 (R&R)
+Chad
+
+Congo
+1999 (WB)
+Democratic Republic of the Congo
+1990-1997 (WB)
+Equatorial Guinea
+
+Gabon
+
+Sao Tome and Principe
+
+
+
+Southern Africa
+
+Botswana
+1990-1996 (WB)
+Lesotho
+
+Namibia
+
+South Africa
+1865-2009 (R&R)
+Swaziland
+
+
+
+Eastern Africa
+
+Burundi
+1991-1999 (WB)
+Comoros
+
+Djibouti
+
+Eritrea
+
+Ethiopia (until 1993)
+
+Ethiopia (from 1993)
+
+Kenya
+1911-1937, 1963-1978, 1980-2010 (R&R)
+Madagascar
+
+Malawi
+
+Mauritius
+1970-1984, 1990-2010 (R&R)
+Mayotte
+
+Mozambique
+
+Réunion
+
+Rwanda
+
+Seychelles
+
+Somalia
+
+Uganda
+
+United Republic of Tanzania
+
+Zambia
+1970-1989 (R&R)
+Zimbabwe
+1924-1936, 1965-1983, 1990-2003, 2005-2010 (R&R)
+

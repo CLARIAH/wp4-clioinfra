@@ -1,0 +1,298 @@
+Working Paper Clio Infra: Inflation
+
+1. Title
+	- Inflation Database clio infra
+2. Author(s)
+	- De Zwart, Pim, International Institute of Social History
+3. Production date
+	- 12-12-2011
+4. Version
+	- Version 1.0
+5. Variable group(s)
+	- Prices
+6. Variable(s)
+	- Inflation, annual percentage change
+7. Unit of analysis
+	- Country
+8. Keywords (5)
+	- Prices, inflation, world, inequality, economy
+9. Abstract (200 words)
+	- This paper is supplement to the database on world inflation (annual percentage change) in the light of the CLIO-INFRA project. It specifies which data point comes from which source. 
+10. Time period
+	- 1500-2010
+11. Geographical coverage
+	- World
+12. Methodologies used for data collection and processing
+	- Combining data from all available sources, a most complete database of inflation in the world was created. Most of the data was found online, while the time-series for pre-twentieth century Ceylon and South Africa stem from my own research on prices in the archives of the Dutch East India Company (VOC).
+13. Data quality
+	- Indication of the quality of the data based on the following categories:
+		i. Central statistical agencies
+Most data for the 20th century are the result of work of central statistical agencies.
+		ii. Historical reconstructions
+For the earlier centuries: data are the result of historical reconstructions making use of the methods and the broad range of data that are also used by central statistical agencies.
+14. Date of collection
+	- 12-12-2011
+15. Data collectors
+	- Pim de Zwart, International Institute of Social History
+	- Carmen M. Reinhart, Peterson Institute for International Economics, Washington DC
+	- Kenneth S. Rogoff, Harvard University, Cambridge MA
+16. Sources
+Arroyo Abad, Leticia, Elwyn Davies and Jan Luiten van Zanden, `Prices and wages in Argentina, Bolivia, Chile, Colombia, Mexico and Peru',  IISG Historical Prices and Wages, http://www.iisg.nl/hpw
+De Zwart, Pim, `Population, Labour and Living Standards in early modern Ceylon: an Empirical Contribution to the Divergence Debate' Mimeo (2011).
+De Zwart, Pim, `Real wages at the Cape of Good Hope: a long-term perspective, 1652-1912', CGEH Working Paper (August 2011).
+Montevideo-Oxford Latin American Economic History Database: http://oxlad.qeh.ox.ac.uk/
+Reinhart, Carmen M., and Kenneth S. Rogoff, `From Financial Crash to Debt Crisis', American Economic Review 101 (2011) 1676-1706.
+	Database on the website: http://www.carmenreinhart.com/data/
+Santing, Coos, `Inflation 1800-2000',  IISG Historical Prices and Wages: http://www.iisg.nl/hpw.
+	This also contains data from the IMF International Financial Statistics.
+World Bank: http://data.worldbank.org/indicator/FP.CPI.TOTL.ZG
+
+
+17. Text
+Prices and inflation are immediate reflections of economic conditions, and in turn affect economic development, as well as people's lives directly. This database provides the most recent and complete data on inflation in the world available. Most of the data from after 1950 stems from the IMF and WorldBank. Obviously this is the period for which most countries data becomes available (see figure 1). Below the sources for the data in this database are given per country and per period.
+
+            Figure 1: Number of observations each year, 1500-2010.
+
+
+Europe
+
+Western Europe
+Austria					1500-2010 (Reinhart)
+Belgium					1500-2010 (Reinhart)
+France					1500-2010 (Reinhart)
+Germany				1500-2010 (Reinhart)
+Luxembourg				1949-2007 (IMF); 2008-2010 (WorldBank)
+Netherlands				1500-2010 (Reinhart)
+Switzerland				1851-2010 (Reinhart)
+
+
+Northern Europe
+Denmark				1749-2010 (Reinhart)
+Estonia					1993-2007 (IMF); 2008-2010 (WorldBank)
+Finland					1861-2010 (Reinhart)
+Iceland					1901-2010 (Reinhart)
+Ireland					1922-2010 (Reinhart)
+Latvia					1992-2007 (IMF); 2008-2010 (WorldBank)
+Lithuania				1993-2007 (IMF); 2008-2010 (WorldBank)
+Norway					1517-2010 (Reinhart)
+Sweden					1540-2010 (Reinhart)
+United Kingdom of Great Britain and Northern Ireland: 	1500-2010 (Reinhart)
+
+Southern Europe
+Albania					1992-2007 (IMF); 2008-2010 (WorldBank)
+Bosnia-Herzegovina			2006-2010 (WorldBank)
+Croatia					1993-2007 (IMF); 1986-1992; 2008-2010 (WorldBank)
+Greece					1834-2010 (Reinhart)
+Italy					1549-2010 (Reinhart)
+Kosovo					2003-2010 (WorldBank)
+Malta					1949-2007 (IMF); 2008-2010 (WorldBank)
+Montenegro				2006-2010 (WorldBank)
+Portugal					1565-2010 (Reinhart)
+San Marino				2004-2010 (WorldBank)
+Serbia					2006-2007 (IMF); 2008-2010 (WorldBank)
+Serbia and Montenegro (until 2006):	1995-2005 (IMF)
+Slovenia					1993-2007 (IMF); 2008-2010 (WorldBank)
+Spain					1501-2010 (Reinhart)
+The Former Yugoslav Republic of Macedonia: 1994-2007 (IMF); 2008-2010 (WorldBank)
+
+Eastern Europe
+Belarus					1993-2007 (IMF); 2008-2010 (WorldBank)
+Bulgaria					1986-2007 (IMF); 2008-2010 (WorldBank)
+Czech Republic				1994-2007 (IMF); 2008-2010 (WorldBank)
+Czechoslovakia (until 1993) 		1923-1970 (Santing); 1971-1993 (IMF)
+Hungary					1925-2010 (Reinhart)
+Poland					1995-2007 (IMF); 2008-2010 (WorldBank)
+Romania				1779-2010 (Reinhart)
+Russian Federation			1854-2010 (Reinhart)
+Slovakia					1994-2007 (IMF); 2008-2010 (WorldBank)
+Ukraine					1993-2007 (IMF); 2008-2010 (WorldBank)
+	
+
+Americas
+
+Northern America
+Canada					1868-2010 (Reinhart)
+United States of America			1721-2010 (Reinhart)
+
+Latin America and the Caribbean
+
+Caribbean
+Anguilla					1991-2007 (IMF)
+Antigua and Barbuda			1977-1985 (IMF); 1999-2010 (WorldBank)
+Aruba					1985-2007 (IMF); 2008-2010 (WorldBank)
+Bahamas				1967-2007 (IMF); 2008-2010 (WorldBank)
+Barbados				1967-2007 (IMF); 2008-2010 (WorldBank)
+Cuba					1904-2000 (OxLad)
+Dominica				1965-2007 (IMF); 2008-2010 (WorldBank)
+Dominican Republic			1943-2010 (Reinhart)
+Grenada					1977-2010 (WorldBank)
+Haiti					1949-1960 (OxLad); 1961-2010 (WorldBank)
+Jamaica					1954-1960 (IMF); 1961-2010 (WorldBank)
+Netherlands Antilles (until 2010)		1960-2007 (IMF)
+Saint Kitts and Nevis			1980-2010 (WorldBank)
+Saint Lucia				1966-2010 (WorldBank)
+Saint Vincent and the Grenadines		1975-2010 (WorldBank)
+Trinidad and Tobago			1953-1960 (IMF); 1961-2010 (WorldBank)
+
+Central America
+Belize					1981-2010 (WorldBank)
+Costa Rica				1937-2010 (Reinhart)
+El Salvador				1938-2010 (Reinhart)
+Guatemala				1938-2010 (Reinhart)
+Honduras				1937-2010 (Reinhart)
+Mexico					1526-1813 (Arroyo Abbad et al.); 1814-2010 (Reinhart)
+Nicaragua				1938-2010 (Reinhart)
+Panama					1940-2010 (Reinhart)
+
+South America
+Argentina				1701-1773 (Arroyo Abbad et al.); 1774-2010 (Reinhart)
+Bolivia (Plurinational State of) 		1727-1813 (Arroyo Abbad et al.); 1937-2010 (Reinhart)
+Brazil					1764-2010 (Reinhart)
+Chile	1662-1738 (Arroyo Abbad et al.); 1751-2010 (Reinhart): Note: for 1914 two figures were given: 8.4 and 16.3. I have taken the average of 9.7 percent.
+Colombia				1763-1805 (Arroyo Abbad et al.); 1863-2010 (Reinhart)
+Ecuador					1939-2010 (Reinhart)
+Guyana					1995-2010 (WorldBank)
+Paraguay				1939-2010 (Reinhart)
+Peru					1565-1750 (Arroyo Abbad et al.); 1751-2010 (Reinhart)
+Suriname				1955-1960 (IMF); 1961-2010 (WorldBank)
+Uruguay					1871-2010 (Reinhart)
+Venezuela (Bolivarian Republic of): 	1831-2010 (Reinhart)
+
+Oceania
+
+Australia and New Zealand
+Australia				1819-2010 (Reinhart)
+New Zealand				1858-2010 (Reinhart)
+	
+Melanesia
+Fiji					1970-2010 (WorldBank)
+Papua New Guinea			1972-2010 (WorldBank)
+Solomon Islands				1972-2010 (WorldBank)
+Vanuatu					1977-2010 (WorldBank)
+
+Polynesia
+Samoa					1962-2010 (WorldBank)
+Tonga					1976-2010 (WorldBank)
+
+Asia
+
+Southern Asia
+Afghanistan				2005-2010 (WorldBank)
+Bangladesh				1987-2010 (WorldBank)
+Bhutan					1981-2010 (WorldBank)
+India					1801-2010 (Reinhart)
+Iran (Islamic Republic of)			1949-1960 (IMF); 1961-2010 (WorldBank)
+Maldives				1978-1982 (IMF); 2006-2010 (World Bank)
+Nepal					1965-2010 (WorldBank)
+Pakistan	1949-1956 (Santing); 1957-1960 (IMF); 1961-2010 (WorldBank)
+Sri Lanka				1689-1790 (De Zwart); 1939-2010 (Reinhart)
+
+Eastern Asia
+China					1639-2010 (Reinhart)
+China, Hong Kong 			1982-2010 (WorldBank)
+China, Macao 				1989-2010 (WorldBank)
+Japan					1819-2010 (Reinhart)
+Mongolia				1993-2010 (WorldBank)
+Republic of Korea			1952-2010 (Reinhart)
+Taiwan	1953-2010 (Reinhart); Note: for 1914 two figures were given: -2 and -6.1. I have taken the average of -4 percent.
+
+South-Eastern Asia
+Brunei Darussalam			1981-2009 (WorldBank)
+Cambodia				1995-2010 (WorldBank)
+Indonesia				1999-2010 (Reinhart)
+Indonesia (until 1999)			1819-1998 (Reinhart)
+Lao People's Democratic Republic		1989-2010 (WorldBank)
+Malaysia				1950-2010 (Reinhart)
+Myanmar				1827-2010 (Reinhart)
+Philippines				1939-2010 (Reinhart); 1944-45 (Santing)
+Singapore				1961-2010 (Reinhart)
+Thailand					1921-2010 (Reinhart); 1944-1948 (Santing)
+Timor-Leste				2003-2010 (WorldBank)
+Viet Nam				1996-2010 (WorldBank)
+
+Western Asia
+Armenia					1994-2010 (WorldBank)
+Azerbaijan				1992-2010 (WorldBank)
+Bahrain					1966-2010 (WorldBank)
+Cyprus					1951-2007 (IMF); 2008-2010 (WorldBank)
+Georgia					1995-2010 (WorldBank)
+Iraq					1961-2010 (WorldBank)
+Israel					1946-2007 (Santing); 2008-2010 (WorldBank)
+Jordan					1970-2010 (WorldBank)
+Kuwait					1972-2010 (WorldBank)
+Lebanon					1967-1994 (IMF); 2009-2010 (WorldBank)
+Oman					2001-2010 (WorldBank)
+Qatar					1980-2010 (WorldBank)
+Saudi Arabia				1964-2010 (WorldBank)
+Syrian Arab Republic			1949-1960 (IMF); 1961-2010 (WorldBank)
+Turkey	1586-2010 (Reinhart); Note for 1915 two figures were given: 20.2 and 77.3. I have taken the average of 48.8 percent.
+Yemen					1991-2010 (WorldBank)
+
+Central Asia
+Kazakhstan				1994-2010 (WorldBank)
+Kyrgyzstan				1996-2010 (WorldBank)
+Tajikistan				2001-2010 (WorldBank)
+
+Africa
+
+Northern Africa
+Algeria					1870-2010 (Reinhart)
+Egypt					1860-2010 (Reinhart)
+Libya					1965-2009 (WorldBank)
+Morocco				1940-2010 (Reinhart)
+Sudan (until 2011)			1952-1960 (IMF); 1961-2010 (WorldBank)
+Tunisia					1939-2010 (Reinhart)
+
+Western Africa
+Benin					1993-2010 (WorldBank)
+Burkina Faso				1959-2007 (IMF); 2008-2010 (WorldBank)
+Cape Verde				1984-2010 (WorldBank)
+Cote d'Ivoire				1952-2010 (Reinhart)
+Gambia					1962-2010 (WorldBank)
+Ghana					1949-2010 (WorldBank)
+Guinea					2005-2010 (WorldBank)
+Guinea-Bissau				1988-2010 (WorldBank)
+Liberia					1966-1989 (IMF); 2002-2009 (WorldBank)
+Mali					1989-2010 (WorldBank)
+Mauritania				1986-2010 (WorldBank)
+Niger					1964-2010 (WorldBank)
+Nigeria					1954-2010 (Reinhart)
+Senegal					1968-2010 (WorldBank)
+Sierra Leone				1957-2007 (IMF); 2008-2010 (WorldBank)
+Togo					1967-2010 (WorldBank)
+
+Middle Africa
+Angola					1915-2010 (Reinhart)
+Cameroon				1969-2010 (WorldBank)
+Central African Republic			1957-2010 (Reinhart)
+Chad					1984-2009 (WorldBank)
+Congo	1997-98 (IMF); 1986-96 (WorldBank); 1999-2009 (WorldBank)
+Democratic Republic of the Congo	1964-2008 (WorldBank)
+Equatorial Guinea			1986-2008 (WorldBank)
+Gabon					1963-2010 (WorldBank)
+Sao Tome and Principe			1997-2010 (WorldBank)
+
+Southern Africa	
+Botswana				1975-2010 (WorldBank)
+Lesotho					1974-96; 2000-10 (WorldBank); 1997-99 (IMF)
+Namibia					2003-2010 (WorldBank)
+South Africa				1653-1912 (De Zwart); 1913-2010 (Reinhart)
+Swaziland				1966-2010 (WorldBank)
+
+Eastern Africa		
+Burundi					1966-2010 (WorldBank)
+Comoros				2001-2010 (WorldBank)
+Djibouti					1980-2010 (WorldBank)
+Ethiopia (until 1993)			1966-1993 (WorldBank)
+Ethiopia (from 1993)			1993-2010 (WorldBank)
+Kenya					1948-2010 (Reinhart)
+Madagascar				1965-2010 (WorldBank)
+Malawi					1981-2010 (WorldBank)
+Mauritius				1946-2010 (Reinhart)
+Mozambique				1986-2007 (IMF); 2008-2010 (WorldBank)
+Rwanda					1967-93; 1996-2010 (WorldBank); 1994-95 (IMF)
+Seychelles				1971-2010 (WorldBank)
+Uganda					1981-2010 (WorldBank)
+United Republic of Tanzania		1966-2010 (WorldBank)
+Zambia					1943-2010 (Reinhart)
+Zimbabwe				1921-2010 (Reinhart)

@@ -1,0 +1,81 @@
+Working Paper CLIO-INFRA: Labourers' real wages
+1. Title
+	- Building labourers' real wages, 1820-2010.
+2. Author(s)
+	-Pim de Zwart, Bas van Leeuwen, and Jieli van Leeuwen-Li, 
+3. Production date
+	- 15-3-2013
+4. Version
+	- 1st version.
+5. Variable group(s)
+	- Wages and prices.
+6. Variable(s)
+	-Building labourers' real wage by country  -  Daily building labourers' wage divided by a daily subsistence basket
+r.
+7. Unit of analysis
+	- number of subsistence baskets.
+8. Keywords (5)
+	Building labourer, wage, price, world.
+9. Abstract (200 words)
+- The building labourers' real wage is given annually for the period 1850-2010. 
+10. Time period
+	- 1820-2000.
+11. Geographical coverage
+	- Entire World.
+12. Methodologies used for data collection and processing
+- Bibliographical research, research of published and Online Databases, and cross-analysis of various datasets
+13. Data quality
+		i. Central statistical agencies
+		ii. Historical reconstructions
+		iii. Estimates
+		iv. Conjectures
+Virtually all benchmark data after the 1920s are derived indirectly from Central Statistical Agencies and therefore probably better classify as historical reconstructions. The remaining data are estimates. 
+
+14. Period of collection
+	Jan/2013 and Jan/2014.
+15. Data collectors
+	- Pim de Zwart, Bas van Leeuwen and Jieli van Leeuwen-Li.
+
+16. Sources
+The wage and price series shown in this chapter are taken from three sources: (A) a variety of studies on historical real wages that appeared in academic journals and books; (B) the British Colonial Blue Books (circa 1840-1912); and (C) the October Enquiries of the International Labour Organisation (1924-2008). These data were then converted into subsistence ratios, which indicate how many times the daily wage of a male unskilled construction labourer can buy the daily subsistence basket. This methodology has the advantage of providing an absolute yardstick to compare welfare across countries and time periods and, hence, is conceptually close (but not identical) to purchasing power parities. Finally, in order to fill gaps in the data, interpolations were made (D) on the basis of real wages indices from the (older) literature.
+* To start, for much of the 19th century data we draw on economic histories. Much European data came from Allen's pioneering study (2001) on European wages and prices from the late Middle Ages to the First World War. Data for Istanbul came from the study by Ozmucur and Pamuk (2002), which was based on over 6 000 account books from the soup kitchens of pious foundations and the Topkapı Palace. In addition, we took data for Japan from Bassino and Ma (2005), for several Southeast Asian countries from Van der Eng and Bassino (2013), for India from Allen (2007), for China from Allen et al. (2011), for Argentina, Bolivia, Chile, Colombia, Mexico and Peru from Arroyo Abad et al. (2012), for the United States from Allen et al. (2012), and for Indonesia from De Zwart and Van Zanden (2012). These studies each draw on a variety of sources that are too extensive to discuss here. 
+* The Colonial Blue Books (1840-1912) contain data that were collected by the colonial administrators in the various colonies of the British Empire and sent each year to the Colonial Office in London, in response to questionnaires sent out by the latter. Frankema and Van Waijenburg (2012) worked with these data for nine British African colonies, with the earliest observation dating from 1870. We extended their series, where possible, to 1850, and added estimates for South Africa (De Zwart, 2011). In addition, we added data from several non-African colonies, especially in Oceania, Latin America and the Caribbean. Data from the Blue Books are not ideal, since price data do not always reflect retail prices (but prices for produce) and wages are not always representative for the majority of the population, but these are currently the only figures available for many of Europe's former colonial possessions. 
+* Since 1924, the International Labour Organisation (ILO) has conducted an annual survey, called the October Inquiry, to obtain data on wages and prices worldwide. Every year the ILO has sent two questionnaires (one relating to wages and hours of work, the other to retail prices) to national statistical agencies, which were to complete the questionnaires with the information already available to them (and thus not to conduct specific surveys in order to supply the data). Hence, while the price data are roughly consistent, the wage information returned for the various countries could differ significantly; while some reported average wages per hour from an establishment survey, others reported legislated minimum or maximum wage rates for certain occupations, and others returned minimum wage rates based on collective agreements, etc. (see Freeman and Oostendorp, 2001). These wage data thus require some form of standardisation before they can be used. Since 1983, this work has been performed by Freeman and Oostendorp (2001), Harsch and Kleinert (2011), and Oostendorp (2012). In addition, the number of countries included expanded from 15 in 1924 to over 50 in the 1950s, after which the number of countries has fluctuated (after 1983 it contains data on over 130 countries!). 
+* Real wage series for various countries in the 19th and 20th centuries are also available from other (older) literature (e.g. Mitchell, 2007; Williamson 1998; Scholliers and Zamagni, 1995) as well as from some more recent literature on wages and prices (e.g. Van Leeuwen, 2004; 2007). In addition, in a few cases we included special reports, such as on the period 1950-1970 in China for which little data is available (e.g. Survey on cities and counties in Guangxi, 1985; Yulin City Gazetteer, 1993). The lack of standardisation in the methodology makes direct comparisons on the basis of these data impossible. However, in order to deal with gaps in the data, those real wage series are used for interpolation in a few cases. 
+
+17. Text
+After the price and wage data were collected, they needed to be standardised. This required first dealing with wage and price ranges. If ranges were reported, we took the logarithmic average of the wages, while for the prices we took the simple geometric mean. Second, standardisation required a modification of the territorial unit, since many of the data were given at the regional level, often with multiple cities/regions for one country. This modification was performed by taking averages across regions in one country. It is important to stress that virtually all our data stem from urban areas. This can make some difference. For example, in France in 1930 the hourly wage rate of a cabinet maker in Paris was 6.75 francs, versus 5.32 francs in the provincial cities. However, this qualification is less applicable to the case of the building labourers used in this chapter. The wage rate in Paris in 1930 for these labourers was, at 4.17 francs an hour, identical to the rate in provincial cities. Similar observations can be made for the developing economies. Third, arriving at a consistent dataset required a conversion into common units. As already mentioned, for prices this problem is less severe, since most prices are standard retail price data. However, wages can be reported in average rates, minimum or maximum rates, or earnings. Considering only the ILO data, it appears that 70% of the data concern average wage rates or comparable data, minimum rates and maximum rates account for 15% and 0.7% respectively, while earnings comprise the remaining 14% of observations. We followed the procedure of Freeman and Oostendorp (2001) and converted all data into average rates, because this reduces the error margin. This conversion was done using a regression analysis in which we regressed the wage on dummy variables, indicating country, industry, pay concept and time. This was necessary only for the period prior to 1984, since data from the later period were obtained from Oostendorp (2011), and were already converted into average rates. Finally, we converted all wages into daily rates; wages from the ILO were reported as hourly rates, and we have assumed an eight-hour working day for all countries throughout the entire time period. While it is clear that this assumption does not hold, consistent data on working hours per country per year have not yet been gathered. Future research may help to adjust our calculated real wage rates by providing information on working hours.
+Second, how representative are wage labourers for the general working populace? Allen (2001) found the wage of an unskilled labourer in the building industry to be fairly representative for total wage development in the early modern period. This may have changed in the modern period and may differ per country. It has been argued that since the start of the 20th century in certain, especially developed countries, what has driven economic development is skills. In this case one might expect that it would be skilled wages rather than unskilled wages that mainly reflected general wage development. Table 4.3 reports the population-weighted wages of building labourers and craftsmen in the world. We can see that the skill premium over the past 60 years underwent a major decline, suggesting that the supply of skills in this field outpaced the demand. On the one hand, this was caused by the educational revolution during this period and, on the other, by the increasing development of technology in our societies, which has led to a reduction of the role of skilled building labour in favour of skilled people in services and mechanical engineering. More research into this issue is necessary. Yet for now we suggest that, when comparing wages globally, the most meaningful baseline is unskilled male wages in the building industry.
+Third, in many pre-industrial developing economies, wage income is often only a small part of total household income. Only a part of the labour force was engaged in full-time wage employment. However, it is clear that the share of the population in paid employment has increased over the past 200 years. But even in the 21st century the share of wage employment clearly can differ by region. Whilst in Europe around 80 per cent of the working population is in wage labour, in Sub-Saharan Africa this holds for only about 20/30 per cent (World Bank Development Report, Chap. 1, 2013). It is important to keep these limitations in mind when reviewing these data.
+
+References
+Allen, R. C. (2001), "The Great Divergence in European Wages and Prices from the Middle Ages to the First World War", Explorations in Economic History 38, pp. 411-447.
+Allen, R. C. (2005), Real Wages in Europe and Asia: A First Look at the Long-term Patterns. In: R. C. Allen, T. Bengtsson, and M. Dribe (eds.), Living Standards in the Past New Perspectives on Well-Being in Asia and Europe. Oxford: Oxford University Press, pp. 157-185.
+Allen, R. C. et al (2011), "Wages, Prices, and Living Standards in China, 1738-1925: In Comparison with Europe, Japan, and India", Economic History Review, Vol. 64, pp. 8-38.
+Arroyo Abad, L. (2013), "Inestabilidad, Bienestar Económico y Costo de Vida en Venezuela durante el siglo XIX", América Latina en la Historia Económica, Vol. 20/, pp. 114-137.
+Arroyo Abad, L., E. Davies and J. L. van Zanden, (2012) "Between conquest and independence: Real wages and demographic change in Spanish America, 1530 - 1820", Explorations in Economic History 49, pp. 149-166.
+Bassino, J-P, and D. Ma, (2005) "Japanese unskilled wages in international perspective, 1741-1913", Research in Economic History. Broadberry, S., Campbell, B., Klein, A., Overton, M. and Leeuwen, B. van, (2012) "British Economic Growth, 1270-1870: an output-based approach", Studies in Economics 1203, Department of Economics, University of Kent.
+Cha, M. S. "Wages in the Japanese colonial empire (Taiwan, Korea and Northeastern China)." Mimeo
+de Zwart, P. (2011) "South African Living Standards in Global Perspective, 1835-1910", Economic History of Developing Regions 26, pp. 49-74. 
+de Zwart, P. and J. L. van Zanden (2012), "Labour, wages and living standards in Java, 1640-1940", Presentation at the CLIO-INFRA Workshop on Real Wages, International Institute of Social History, Amsterdam. November.
+Frankema, E. and M. van Waijenburg, (2012), "Structural impediments to African growth? New evidence from real wages in British Africa, 1880-1965", Journal of Economic History, Vol. 72/4, pp. 895-926.
+Freeman, R.B. and R.H. Oostendorp (2001), "The Occupational Wages around the World Data File", ILO Labour Review, 2001, Fall Issue.
+Harsch, D. and J. Kleinert, (2011),  "An Almost Ideal Wage Database Harmonizing the ILO October Inquiry," IAW Discussion Papers 71, Institut für Angewandte Wirtschaftsforschung (IAW).
+ILO (International Labour Organization, Laborsta, http://laborsta.ilo.org/ (accessed 2013).
+Leeuwen, B. (2007), Human capital and economic growth in India, Indonesia and Japan: a quantitative analysis, PhD thesis Utrecht University.
+Leeuwen, B. (2004) "Wage differentials and economic growth in India, Indonesia, and Japan, 1800-2000", Mimeo.
+Mitchell, M. F. (2007) International historical statistics. Palgrave Macmillan, 6th Edition.
+Oostendorp, R.H. (2005): "The Standardized ILO October Inquiry 1983-2003", www.nber.org/oww/Technical_document_1983-2003_standardizationv3.pdf. 
+Oostendorp, R.H. (2012), "The Occupational Wages around the World (OWW) Database: Update for 1983-2008, NBER.
+Ozmucur, S. and S. Pamuk, (2002), "Real Wages and Standards of Living in the Ottoman Empire, 1489-1914", Journal of Economic History, Vol. 62, pp. 293-321.
+Scholliers, P. and V. Zamagni (1995). Labour"s Reward. Real wages and economic change in 19th and 20th century Europe. Aldershot and Vermont, Edward Elgar.
+Survey on cities and counties in Guangxi province, Guangxi people press,1985(《广西市县概况》， 广西人民出版社1985), p. 551.
+Yulin City Gazetteer, Guangxi People press 1993. (《玉林市志》，广西人民出版社1993年第1版)，p. 178.
+van der Eng, P, and J-P. Bassino, "The First East Asian Miracle: Wages, Living Standards and the Foundations of Modern Economic Growth in Southeast Asia, 1880-1938", Paper presented at the 7th EuroSEAS conference (Lisbon, June 2013).
+van Zanden, J. L. (1999) "Wages and the standard of living in Europe, 1500-1800", European Review of Economic History 2, pp. 175-197.
+
+
+
+
+
+

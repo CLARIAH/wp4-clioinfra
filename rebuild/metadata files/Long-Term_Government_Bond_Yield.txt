@@ -1,0 +1,788 @@
+Working Paper Clio Infra: Long-Term Government Bond Yield
+
+1. Title
+	- Long-Term Government Bond Yield Database clio infra
+2. Author(s)
+	- Jon Verriet & Reinoud Bosch, International Institute of Social History, Amsterdam, The 
+	Netherlands
+3. Production date
+	- May 3, 2012
+4. Version
+	- Version 1.0
+5. Variable group(s)
+	- Finance
+6. Variable(s)
+	- Long-term government bond yield. See text below for an explanation regarding the exact 	specifics of the different variables used to calculate `long-term government bond yield'. 
+7. Unit of analysis
+	- Country
+8. Keywords (5)
+	- Bond yield, long-term, interest rate, finance, government
+9. Abstract (200 words)
+	- This paper is a supplement to the clio infra database on long-term government bond yield 
+	(annual average percentage). It specifies the sources used to construct the 
+	database. 
+10. Time period
+	- 1727-2011
+11. Geographical coverage
+	- World
+12. Methodologies used for data collection and processing
+- Collecting cross-country OECD data on long-term government bond yields.  http://stats.oecd.org/Index.aspx. Consulted: May 3, 2012.
+	- Collecting historical data from: Homer, Sidney & Sylla, Richard (2005). A History of Interest 
+Rates. Fourth Edition. Hoboken, NJ: Wiley. - Collecting historical data from additional sources.
+13. Data quality (multiple possibilities)
+	- Indication of the quality of the data based on the following categories:
+		i. Central statistical agencies
+			- Data are the result of work of central statistical agencies.
+		ii. Historical reconstructions
+			- Data are the result of historical reconstructions making use of the 				methods and the broad range of data that are also used by central 				statistical agencies.
+		iii. Estimates
+			- Data are based on partial indicators and/or have limited regional spread.
+14. Period of collection
+	- March 20, 2012  -  May 3, 2012
+15. Data collectors
+	- Jon Verriet & Reinoud Bosch, International Institute of Social History, Amsterdam, The 
+	Netherlands
+16. Sources
+	- Homer, Sidney & Sylla, Richard. A History of Interest Rates. Hoboken, NJ: Wiley, 2005 (4th	ed.). 
+- OECD, "Long-term interest rates, Per cent per annum", Consulted: March 20, 2012,http://stats.oecd.org/Index.aspx
+	- Fratianni, Michele & Spinelli, Franco (1984). Italy in the Gold Standard Period, 1861-
+1914. In: Michael D. Bordo & Anna J. Schwartz (Eds.), A Retrospective on the Classical Gold Standard, 1821-1931, pp. 405-54. Chicago: University of Chicago Press.
+17. Text
+	
+This study was carried out within the framework of the clio infra project financed by the Netherlands Organisation for Scientific Research (NWO). Long-term government bond yield tells us something about the financial health of a country or region and can also be an indirect signifier of economic stability and development. The actual variable measured within this database differs from country to country and from period to period; no single measure is currently available. 
+
+Notes of interest:
+- In the case of overlapping data, precedence has been given to the OECD figures.- No data for Belgium during World War I, while such data is available for the other Western European countries
+- No data for Germany 1944-1947
+- While the OECD dataset defines `Germany' as the state that was created in the year 1990, the data for this `Germany' goes back to 1957. It has been assumed that this part of the data refers to the Federal Republic of Germany (1949-1989).
+- Richard Sylla provides data for both India and Pakistan. However, India's numbers go back to the year 1937, which probably means that the numbers used for 1937-1946 are for a different political and geographical entity than those from 1947 onwards. 
+- Pakistan makes a jump 1975-1976 (5,77% -> 9,04%)
+- Big jumps in the Mexico data 1991-2011
+- Russia 1999: 87,38% (no pre-1999 data, sadly)
+- Remarkably low rates for Switzerland during the 1980's. 
+- The Sylla data not always refer to YTM (!). 
+- Notable omissions:  
+The whole of Africa except for South Africa
+The Mid-East except for Israel
+China, plus most of South-East Asia
+Recent data (+/- 1960-2011) for South America
+Mexico pre-1991
+Most small (non-European) countries
+Eastern Europe pre-2000
+
+The exact variables are as follows: 
+
+For the OECD (http://stats.oecd.org/Index.aspx): `Long term (in most cases 10 year) government bonds are the instrument whose yield is used as the representative `interest rate' for this area. Generally the yield is calculated at the pre-tax level and before deductions for brokerage costs and commissions and is derived from the relationship between the present market value of the bond and that at maturity, taking into account also interest payments paid through to maturity'.
+
+For Fratianni & Spinelli (1984): `Yield on Long-term Government Bonds (percent per year)'
+For Homer & Sylla (2005):
+Argentina:1900-1913, 1929-1953: Current yields of 5% Long-Term Government Bonds (%) (pp. 633-7).
+
+Australia: 1930-1969: Long-Term Government Bond (p. 588-90).
+
+Austria: 
+1965-1989: Government Bond Yield, % (p. 537-8).
+
+Belgium: 
+1831-1913: Yield on 2(1/2)% Rentes (pp. 243-4, 494-7).
+1919-1927: Yield on 3% Rentes (pp. 494-5). 
+1928-1929: Yield on 2(1/2)% Rentes (p. 495).
+1930-1939: Yield on 3% Rentes (p. 495). 
+1940-1954: Yield on 4% Unified Debt (no maturity), partially tax exempt (pp. 494-7). 
+
+Brazil:1900-1913, 1929-1959: Government Bond Yields (4% issue 1900-1913; 5% issue 1929-1959) (pp. 	629-630).
+
+Canada:
+1900-1919: Province of Ontario Bonds (pp. 547-9).
+1920-1954: Long-Term Canadian Dollar Bonds, Annual Average, % (pp. 549-51).
+
+Chile: 1872-1890, 1892-1917, 1930-1953: Long-term Bond Yields (%) (pp. 629-31).
+
+Colombia: 1930-1955: Government Bond Yields (%) (pp. 639-40). 
+
+Denmark:1930-1986: Government Bond Yield, % (pp. 537-8).
+
+France:
+1798-1824: Yield on 5% Rentes. (pp. 217-8).
+1825-1899: Yield on 3% Rentes. (pp.217-8). 1900-1959: Yield on 3% Perpetual Rentes (pp. 465-9).
+
+Germany: 
+1815-1843: Prussian State Yield of 4s Government Bond in percentages. (pp. 255-6).
+1844-1868: Prussian State Yield of 3(1/2)s Government Bond in percentages (pp. 255-6). 
+1870-1883: Prussian State Yield of 4s Government Bond in percentages. (pp. 255-6).
+1884-1897: Imperial German Yield of 4s Government Bond in percentages (pp. 255-6). 
+1900-1956: High Grade Bond Yields in percentages (pp. 507-8). 
+
+India: 1934-1985: Government Bond Yields, Long Term (%) (pp. 594-5). 
+
+Ireland:1952-1970: Government Bond Yield, % (pp. 537-8). 
+
+Italy: 1924-1949: Yield on 3(1/2)s Government Bonds (pp. 519-20).1950-1969: Yield on 5s Government Bonds (pp. 519-20).1970-1979: Long-term Government Bonds (pp. 520-21).
+1980-1991: treasuries with residual maturities of 9-10 years (p. 668).
+
+Japan:
+1930-1989: Only low (%) and high (%) are given (pp. 580-2).
+
+Netherlands: 
+1814-1958: Yield on 2(1/2)% Perpetual Debt of the Central Government in percentages, December 31
+(pp. 233-5, pp. 482-4). 
+
+New Zealand: 1933-1969: Government Bonds, Long Term (%) (pp. 589-90). 
+
+Norway: 
+1930-1939: Government Bond Yield (pp. 536-8).1940-1946: Government Bond Yield, average of various 3.6% bonds, at least 15 years maturity (pp. 
+536-8).
+1946-1954: Government Bond Yield, average of various 2.5% bonds, at least 15 years maturity (pp. 
+536-8).
+1955-1984: Government Bond Yield, Maturity of at least fifteen years (p. 536-8).
+
+Pakistan:1948-1989: Government Bond Yields, Long Term (%) (pp. 594-5). 
+
+Peru:1936-1965: Government Bond Yields (%) (pp. 639-40). 
+
+Portugal:
+1931-1989: Government Bond Yield, (up to 1973: 4% bonds due in 1980; after 1980: average of all 
+bonds outstanding) (pp. 541-2).
+
+South Africa: 1937-1956: Government Bonds, Long Term (%) (pp. 589-90). 
+
+Sweden: 1922-1986: Market Yield on Long-Term Government Bonds, Annual Average %, various coupon rates 	(when indicated between 2(1/2)s and 6s) (pp. 531-3). 
+
+Switzerland:
+1907-1954: Weighted averages of the yields to maturity (YTM) of twelve different government bond 	issues with maturities of at least 5 years (pp. 525-6). 
+Turkey: 1948-1952: Government Bond Yield, yields to maturity (YTM), issue of 7s due in 1965 (pp. 541-2).
+1953-1969: Government Bond Yield, yields to maturity (YTM), issue of 5s due in 1972 (pp. 541-2). 
+
+UK: 
+1727-1752: Old 3% Annuities, annual average (pp. 157-8). 1753-1879: Yield on 3% consols, annual average (pp. 157-8, pp. 192-4)
+1880-1899: Yield on 3% and 3-2(3/4)-2(1/2)% Consols, annual average (pp. 192-4).
+1900-1959: Yield on 2(1/2)% Consols, annual average (pp. 446-9).
+
+United States of America:
+1798-1822: U.S. 6s of 1790, current yield, annual average (%) (pp. 291, 293). 1823-1829: U.S. 6s of 1814-1827, current yield, annual average (%) (p. 293).
+1830-1834: U.S. 5s of 1821-1835, annual average, redemption yield (YTM) (%) (p. 300). 
+1842-1849: U.S. 6s of 1842-1863, annual average, redemption yield (YTM) (%) (p. 300).
+1850-1860: U.S. 6s of 1848-1868, annual average, redemption yield (YTM) (%) (p. 300, 305).
+1861-1879: U.S. 6s long-term high-grade bond of 1861-1881, current yield, annual average (%) (p. 	305-306). 1880-1899: U.S. Refunding 4s of 1907, annual average, current yield (%) (p. 312).
+1900-1919: U.S. 4s of 1925, annual average (tax-exempt, circulation privilege), redemption yield 	(YTM) (p. 342). 1920-1925: Yield Average of over eight years' term, long-term government securities (p. 351-352).
+1926-1940: Yield Average of over twelve years' term, long-term government securities (p. 351-352).
+1941-1945: Average Yield of various taxable Long-Term Government Securities, % (p. 351-352). 1946-1953: Yield Average of Long-Term Government Securities, %. (p. 375-376). 
+
+Uruguay: 1936-1969: Government Bond Yields (%) (p. 635-637). 
+
+
+Below the sources for the data in this database are given per country and per period.
+
+Europe
+
+Western Europe
+
+Austria
+1965-1989 (Sylla), 1990-2011 (OECD)
+Belgium
+1831-1913, 1919-1954 (Sylla), 1955-2011 (OECD)
+Federal Republic of Germany (until 1990)
+1949-1953, 1956 (Sylla), 1957-1989 (OECD)
+France
+1798-1959 (Sylla), 1960-2011 (OECD)
+German Democratic Republic (until 1990)
+
+Germany
+1815-1868, 1870-1897, 1900-1921, 1924-1943, 1948 (Sylla), 1990-2011 (OECD)
+Liechtenstein
+
+Luxembourg
+1994-2006, 2011 (OECD)
+Monaco
+
+Netherlands
+1814-1958 (Sylla), 1959-2011 (OECD)
+Switzerland
+1907-1914, 1916-1954 (Sylla), 1955-2011 (OECD)
+
+
+Northern Europe
+
+Åland Islands
+
+Channel Islands
+
+Denmark
+1930-1986 (Sylla), 1987-2011 (OECD)
+Estonia
+
+Faeroe Islands
+
+Finland
+1988-2011 (OECD)
+Guernsey
+
+Iceland
+1994-2011 (OECD)
+Ireland
+1952-1970 (Sylla), 1971-2011 (OECD)
+Isle of Man
+
+Jersey
+
+Latvia
+
+Lithuania
+
+Norway
+1930-1984 (Sylla), 1985-2011 (OECD)
+Sark
+
+Svalbard and Jan Mayen Islands
+
+Sweden
+1922-1940, 1945-1986 (Sylla), 1987-2011 (OECD)
+United Kingdom of Great Britain and Northern Ireland
+1727, 1729-1959 (Sylla), 1960-2011 (OECD)
+
+
+Southern Europe
+
+Albania
+
+Andorra
+
+Bosnia and Herzegovina
+
+Croatia
+
+Gibraltar
+
+Greece
+1998-2011 (OECD)
+Holy See
+
+Italy
+1861-1914 (Fratianni & Spinelli), 1924-1991 (Sylla), 1992-2011 (OECD)
+Kosovo
+
+Malta
+
+Montenegro
+
+Portugal
+1931-1973, 1976-1985, 1987-1989 (Sylla), 1994-2011 (OECD)
+San Marino
+
+Serbia
+
+Serbia and Montenegro (until 2006)
+
+Slovenia
+2003-2011 (OECD)
+Socialist Federal Republic of Yugoslavia (until 1992)
+
+Spain
+1980-2011 (OECD)
+The former Yugoslav Republic of Macedonia
+
+
+
+Eastern Europe
+
+Belarus
+
+Bulgaria
+
+Czech Republic
+2001-2011 (OECD)
+Czechoslovakia (until 1993)
+
+Hungary
+2000-2011 (OECD)
+Poland
+2001-2011 (OECD)
+Republic of Moldova
+
+Romania
+
+Russian Federation
+1999-2011 (OECD)
+Slovakia
+2001-2011 (OECD)
+Ukraine
+
+USSR (until 1991)
+
+
+
+Americas
+
+Northern America
+
+Bermuda
+
+Canada
+1900-1954 (Sylla), 1955-2011 (OECD)
+Greenland
+
+Saint Pierre and Miquelon
+
+United States of America
+1798-1834, 1842-1859, 1861-1907, 1911-1953 (Sylla), 1954-2011 (OECD)
+
+
+Latin America and the Caribbean
+
+Caribbean
+
+Anguilla
+
+Antigua and Barbuda
+
+Aruba
+
+Bahamas
+
+Barbados
+
+Bonaire, Saint Eustatius and Saba
+
+British Virgin Islands
+
+Cayman Islands
+
+Cuba
+
+Curaçao
+
+Dominica
+
+Dominican Republic
+
+Grenada
+
+Guadeloupe
+
+Haiti
+
+Jamaica
+
+Martinique
+
+Montserrat
+
+Netherlands Antilles (until 2010)
+
+Puerto Rico
+
+Saint-Barthélemy
+
+Saint Kitts and Nevis
+
+Saint Lucia
+
+Saint Martin (French part)
+
+Saint Vincent and the Grenadines
+
+Sint Maarten (Dutch part)
+
+Trinidad and Tobago
+
+Turks and Caicos Islands
+
+United States Virgin Islands
+
+
+
+Central America
+
+Belize
+
+Costa Rica
+
+El Salvador
+
+Guatemala
+
+Honduras
+
+Mexico
+1991-1994, 1996-1997, 1999-2011 (OECD)
+Nicaragua
+
+Panama
+
+
+
+South America
+
+Argentina
+1900-1913, 1929-1953 (Sylla)
+Bolivia (Plurinational State of)
+
+Brazil
+1900-1913, 1929-1959 (Sylla)
+Chile
+1872-1890, 1892-1917, 1930-1953 (Sylla), 2005, 2007-2011 (OECD)
+Colombia
+1930-1955 (Sylla)
+Ecuador
+
+Falkland Islands (Malvinas)
+
+French Guiana
+
+Guyana
+
+Paraguay
+
+Peru
+1936-1942, 1944-1965 (Sylla)
+Suriname
+
+Uruguay
+1936-1969 (Sylla)
+Venezuela (Bolivarian Republic of)
+
+
+
+Oceania
+
+Australia and New Zealand
+
+Australia
+1930-1969 (Sylla), 1970-2011 (OECD)
+New Zealand
+1933-1969 (Sylla), 1970-2011 (OECD)
+Norfolk Island
+
+
+
+Melanesia
+
+Fiji
+
+New Caledonia
+
+Papua New Guinea
+
+Solomon Islands
+
+Vanuatu
+
+
+
+Micronesia
+
+Guam
+
+Kiribati
+
+Marshall Islands
+
+Micronesia (Federated States of)
+
+Nauru
+
+Northern Mariana Islands
+
+Pacific Islands (Trust Territory) (1947-1986)
+
+Palau
+
+
+
+Polynesia
+
+American Samoa
+
+Cook Islands
+
+French Polynesia
+
+Niue
+
+Pitcairn
+
+Samoa
+
+Tokelau
+
+Tonga
+
+Tuvalu
+
+Wallis and Futuna Islands
+
+
+
+Asia
+
+Southern Asia
+
+Afghanistan
+
+Bangladesh
+
+Bhutan
+
+India
+1934-1985 (Sylla)
+Iran (Islamic Republic of)
+
+Maldives
+
+Nepal
+
+Pakistan
+1948-1985, 1987-1989 (Sylla)
+Sri Lanka
+
+Tibet
+
+
+
+Eastern Asia
+
+China
+
+China, Hong Kong Special Administrative Region
+
+China, Macao Special Administrative Region
+
+Democratic People's Republic of Korea
+
+Japan
+1989-2011 (OECD)
+Mongolia
+
+Republic of Korea
+2001-2011 (OECD)
+Taiwan
+
+
+
+South-Eastern Asia
+
+Brunei Darussalam
+
+Cambodia
+
+Indonesia
+
+Indonesia (until 1999)
+
+Lao People's Democratic Republic
+
+Malaysia
+
+Myanmar
+
+Philippines
+
+Singapore
+
+Thailand
+
+Timor-Leste
+
+Viet Nam
+
+
+
+Western Asia
+
+Armenia
+
+Azerbaijan
+
+Bahrain
+
+Cyprus
+
+Democratic Yemen (until 1990)
+
+Georgia
+
+Iraq
+
+Israel
+1997-2000, 2002, 2004-2011 (OECD)
+Jordan
+
+Kuwait
+
+Lebanon
+
+Occupied Palestinian Territory
+
+Oman
+
+Qatar
+
+Saudi Arabia
+
+Syrian Arab Republic
+
+Turkey
+1948-1969 (Sylla)
+United Arab Emirates
+
+Yemen (until 1990)
+
+Yemen
+
+
+
+Central Asia
+
+Kazakhstan
+
+Kyrgyzstan
+
+Tajikistan
+
+Turkmenistan
+
+Uzbekistan
+
+
+
+Africa
+
+Northern Africa
+
+Algeria
+
+Egypt
+
+Libya
+
+Morocco
+
+South Sudan
+
+Sudan (North)
+
+Sudan (until 2011)
+
+Tunisia
+
+Western Sahara
+
+
+
+Western Africa
+
+Benin
+
+Burkina Faso
+
+Cape Verde
+
+Cote d'Ivoire
+
+Gambia
+
+Ghana
+
+Guinea
+
+Guinea-Bissau
+
+Liberia
+
+Mali
+
+Mauritania
+
+Niger
+
+Nigeria
+
+Saint Helena
+
+Senegal
+
+Sierra Leone
+
+Togo
+
+
+
+Middle Africa
+
+Angola
+
+Cameroon
+
+Central African Republic
+
+Chad
+
+Congo
+
+Democratic Republic of the Congo
+
+Equatorial Guinea
+
+Gabon
+
+Sao Tome and Principe
+
+
+
+Southern Africa
+
+Botswana
+
+Lesotho
+
+Namibia
+
+South Africa
+1937-1956 (Sylla), 1957-2011 (OECD)
+Swaziland
+
+
+
+Eastern Africa
+
+Burundi
+
+Comoros
+
+Djibouti
+
+Eritrea
+
+Ethiopia (until 1993)
+
+Ethiopia (from 1993)
+
+Kenya
+
+Madagascar
+
+Malawi
+
+Mauritius
+
+Mayotte
+
+Mozambique
+
+Réunion
+
+Rwanda
+
+Seychelles
+
+Somalia
+
+Uganda
+
+United Republic of Tanzania
+
+Zambia
+
+Zimbabwe
+
+

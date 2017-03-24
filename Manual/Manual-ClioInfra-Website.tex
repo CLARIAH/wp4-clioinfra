@@ -1,0 +1,401 @@
+\documentclass[a4paper]{article}
+% \usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref,footmisc,eurosym}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{natbib,amsmath}
+\usepackage{booktabs,graphicx,pgfplots,float}
+\usepackage{pdflscape}
+\usepackage{nameref,tabularx}
+\usepackage[normalem]{ulem}
+% \usepackage{lscape}
+%\bibliographystyle{dinat}
+%\bibliographystyle{chicago}
+
+\linespread{1.2}
+\frenchspacing
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0.15in}
+\setlength{\headsep}{0.15in}
+\setlength{\textheight}{9in}
+\setlength{\textwidth}{5.5in}
+\setlength{\oddsidemargin}{0.35in}
+\setlength{\evensidemargin}{0in}
+\setlength{\parindent}{0.15in}
+\setlength{\parskip}{0.1in}
+%\setlength{\voffset}{0.2in}
+
+%%% for flow chart; start
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{caption}
+\newcommand*{\h}{\hspace{5pt}}% for indentation
+\newcommand*{\hh}{\h\h}% double indentation
+%%% for flow chart; end
+
+
+\title{Clio Infra Website:\\ Creation, Use and Maintenance.}
+\author{Michail Moatsos\footnote{michalis.moatsos@iisg.nl, IISG}}
+
+\begin{document}
+
+\maketitle 
+\begin{abstract}
+Everything one needs to know for how the new Clio Infra website is created and 
+how to recreate it from scratch if necessary. All the requirements are spelled 
+out, and all materials and software used are open source. The overall approach 
+uses R-coded scripts to fill-in manually made html templates, and produce the 
+static pages for the web server. R code is fed with the material (both data and 
+metadata) available on the 
+\href{https://datasets.socialhistory.org/dataverse/clioinfra}{Clio Infra 
+dataverse repository}. The html layout is manually made using 
+\href{http://getbootstrap.com/}{Bootstrap}. The demo front end is reachable 
+\href{clio2.sandbox.socialhistoryservices.org}{here}. Pending tickets for 
+website and service improvement are available on 
+\href{https://github.com/CLARIAH/wp4-requirements}{Github}
+\end{abstract}
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\section{Introduction}\label{sec:intro}
+
+%\subsection{How to read this manual}
+
+%colorcoding...
+
+\subsection{Built using Bootstrap}
+
+The website is developed using Bootstrap version 3.3.7. However, some of the 
+css files have been modified for additional functionalities (such as the back 
+to the top button). Thus, one needs to use the Bootstrap files as they are 
+found on the demo server for smooth operation. For the exact templates 
+developed and used see section \ref{sec:req}.
+
+\subsection{Workflow}
+
+Figure \ref{fig:diagram} shows the workflow of website creation via the various 
+R scripts and the available data. The Dataverse block is strikedthrough to 
+underlie the fact that in the current version those files need to be fetched 
+manually.
+
+\begin{center}
+\captionof{figure}{Workflow for an R generated website}\label{fig:diagram}
+% setting the typeface to sans serif and the font size to small
+% the scope local to the environment
+\sffamily
+\footnotesize
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!30, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!30, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!40, node distance=3cm,
+  minimum height=2em]
+  
+  \begin{tikzpicture}[node distance = 2cm, auto]
+  % Place nodes
+
+  \node [block] (DV) {\sout{Dataverse}};
+  \node [block, below of=DV] (Data) {Data downloading};
+  \node [block, below of=Data] (IList) {Indicator List};
+  \node [block, below of=IList] (Rankings) {Rankings \& Performance per 
+Indicator \& Country};
+  \node [block, left of=Data] (LEntities) {Extraction of landed entities};
+  \node [block, below of=LEntities] (OECD_UN) {OECD/UN groupings};
+  \node [block, below of=OECD_UN] (CList) {Country List};
+  \node [block, left of=CList] (ReGlob) {Regional and Global aggregates};
+  \node [block, below of=ReGlob] (Home) {Homepage, Global, Regional pages};
+  \node [block, below of=CList] (CPage) {Country pages};
+  \node [block, right of=Data] (meta) {Metadata downloading (docx)};
+  \node [block, right of=Rankings] (IPage) {Indicator Page};
+  \node [block, right of=meta] (R) {R};
+  \node [block, right of=IPage] (OtherDynamic) {News, Publications, 
+Contributors};
+  \node [block, below of=OtherDynamic] (OtherStatic) {Partners, About, Contact};
+  \node [cloud, below of=Home] (Clio) {Github};
+   \node [cloud, right of=Clio] (webserver) {webserver};
+  
+  % Draw edges
+  
+  \path [line] (DV) -- (Data);
+  \path [line] (DV) -- (meta);
+  \path [line] (Data) -- (IList);
+  \path [line] (Data) -- (LEntities);
+  \path [line] (LEntities) -- (OECD_UN);
+  \path [line] (OECD_UN) -- (ReGlob);
+  \path [line] (ReGlob) -- (Home);
+  \path [line] (Home) -- (Clio);
+  \path [line] (CPage) -- (Clio);
+  \path [line] (OECD_UN) -- (CList);
+  \path [line] (Rankings) -- (CList);
+  \path [line] (meta) -- (IPage);
+  \path [line] (IPage) -- (Clio);
+  \path [line] (CList) -- (CPage);
+  \path [line] (R) -- (OtherDynamic);
+  \path [line] (OtherDynamic) -- (Clio);
+  \path [line] (OtherStatic) -- (Clio);
+  \path [line] (IList) -- (Rankings);
+  \path [line] (Clio) -- (webserver);
+  
+  \end{tikzpicture}
+\end{center}
+
+
+\subsection{Overview of items generated by the scripts}
+
+\begin{enumerate}
+ \item Indicators per country in separate xlsx with long format, created by 
+running CountryHTML\_JSON.R, having filename structure:\\
+CountryName\_IndicatorName\_TerritorialRef\_BorderStart\_2012\_CCode\_XXX.xlsx\\
+for example: 
+Zambia\_LabourersRealWage\_TerritorialRef\_1964\_2012\_CCode\_894.xlsx\\
+Exported at folder: /IndicatorsPerCountry.
+
+ \item All indicators for a given country in one xlsx with wide and long 
+format, created by running CountryHTML\_JSON.R, having filename structure:\\
+CountryName\_AllIndicatorsAvailable\_TerritorialRef\_BorderStart\_2012\_CCode
+\_XXX.xlsx\\ for example:
+BosniaandHerzegovina\_AllIndicatorsAvailable\_TerritorialRef\_1992\_2012\_CCode
+\_70.xlsx \\
+Exported at folder: /CountryData.
+
+ \item (a) A ``broad'' xlsx per indicator using all ``2012 border'' countries 
+of the Clio Infra dataset, and (b) a ``compact'' xlsx per indicator with rows 
+only for countries with available data. Both are created by using 
+IndicatorHTML.R, with both wide and long formats.\\
+Exported at folder: /data.
+
+ \item One html page for each indicator\\
+Exported at folder: /IndicatorPagesWithMenus.
+
+ \item One html page for each country\\
+Exported at folder: /CountryPagesWithMenus.
+
+ \item index.html, indexOECD.html, Partners.html, News\_Publications.html 
+located at the same folder as the R scripts.
+  
+ \item The html files that actually need to be uploaded on the server are 
+located in the folder ``ToUpload''.
+ 
+\end{enumerate}
+
+\clearpage
+
+\section{Requirements in tools and data}\label{sec:req}
+
+The website is created by using a set of templates and some scripts written in 
+R. The templates are written in html and make use of the css functionalities of 
+\href{http://getbootstrap.com/}{Bootstrap}. 
+
+Those HTML templates are:
+\begin{itemize}
+ \item IndexTemplate.html
+ \item IndicatorsTemplate.html
+ \item CountryTemplateJSON.html and CountryTemplateNoMoreVisualsJSON.html
+ \item NewsPublicationsTemplate.html
+ \item PartnersTemplate.html
+\end{itemize}
+
+The R scripts are (in strict order of execution):
+\begin{itemize}
+ \item ReadData.R
+ \item IndicatorHTML.R
+ \item CountryHTML\_JSON.R
+ \item HistoricalBordersData.R
+ \item AddMenusToIndicatorAndHome.R
+ \item AddCountryMenu.R (only run this after running 
+AddMenusToIndicatorAndHome.R)
+ \item Contributors.R this needs to run only once to create 
+ContributorsList.xlsx
+ \item PartnersPage.R
+ \item FooterSubstitution.R
+ \item some supportive scripts that only need to be called from the other 
+scripts are (\textit{you don't need to call them directly}): 
+IndicatorHTMLSubstitutions.R, LongToClio.R, citations.R, MakeTheGGplot.R, 
+f\_IndicatorMenu.R, and f\_IndicatorMenu2.R.
+\end{itemize}
+
+Some main texts and external images used in the process are:
+\begin{itemize}
+ \item AboutClioInfra.txt
+ \item logo of various participating entities (found in images folder under www)
+\end{itemize}
+
+To run those scripts you need to install the following R libraries: 
+\textit{readxl, xlsx, ggplot2, jsonlite, tidyr, RefManageR.}
+
+Files related to Bootstrap that need to be copied to the server www folder are 
+all placed in the www folder of the Github repository.
+
+Data files that are required (not included in the dataverse repository, but 
+included in the Github repository) are:
+\begin{itemize}
+ \item ``CIA-Factbook-Countries with notes for their independence status.xls'', 
+constructed with information found in: 
+\url{
+https://www.cia.gov/library/publications/the-world-factbook/fields/2088.html#af}
+ \item ``statcan - countries list and codes from statistics canada.xls'', 
+constructed with information found in: 
+\url{http://www.statcan.gc.ca/eng/subjects/standard/sccai/2011/scountry-desc}
+ \item ``UN Countries or areas, codes and abbreviations.xls'', constructed with 
+information found in:
+\url{http://unstats.un.org/unsd/methods/m49/m49alpha.htm}
+\item ``oecdregions.csv'' file containing the OECD split of the world intro 
+regions. Provided by Auke Rijpma.
+\end{itemize}
+
+\section{Processing}
+
+The data files are not fetched automatically from the dataverse repository in 
+the current version of the R scripts. This will be the case in future versions.
+Thus the data (and metadata) files need to be manually placed on the proper 
+folder so that R scripts can locate them. 
+
+\subsection{Metadata files}
+
+Until the metadata files on dataverse are updated with new ones, the pre-edited 
+metadata files found on this Github repository must be fed to the R scripts 
+instead. 
+
+Because the R script requires the metadata in txt format follow the 
+instructions found in ConvertDOCStoTXT.xls to convert the docx files to txt.
+For convenience the txt files are also provided in the Github repository.
+
+\subsection{The website layouts}
+
+On the same folder level as the R scripts all the html layouts (listed in 
+section \ref{sec:intro}) need to be placed.
+
+\subsection{Exporting data}
+ This takes place in \begin{verbatim}CountryHTML_JSON.R\end{verbatim} and can 
+be found at the comment: 
+ \begin{verbatim}
+  ### Now exporting indicator and country files
+ \end{verbatim}
+
+Change the value of \textcolor{red}{ExportData} flag to export the files or 
+not. If no change takes place in the data, then to save time considerably set 
+this variable to \textcolor{blue}{FALSE}.
+
+\section{Other pages}
+\subsection{News \& Publications page}
+This page is completely manual. When new items are added then they have to be 
+written in html code within the News\_Publications.html page. This could be 
+slightly improved in later versions, but the idea is not to recreate a cms 
+functionality with R.
+
+\subsection{Partners page}
+
+Some preprocessing to extract the list of contributors is necessary. This is 
+done by Contributors.R script. This needs to run only once to create 
+ContributorsList.xlsx. After that only calling the PartnersPage.R is enough to 
+create the html page. Then of course you need to run the FooterSubstitution.R 
+script to properly set the footer.
+
+\section{Adding new countries and indicators}
+
+This is to explain how to update the files and scripts when one needs to add an 
+indicator and countries.
+
+First step is to place the new data and metadata files in the proper folders. 
+Second step is in both cases (either when a new indicator or a new country is 
+added) that the \textit{ReadData.R} script needs to be run to read the new data 
+in, and then follow and execute the remaining scipts in order of appearance in 
+the R script list of section \ref{sec:req}.
+
+Note that when adding a historical entity a different process needs to be 
+followed in script: AddMenusToIndicatorAndHome.R
+
+To avoid reproducing the historical data files set CreateHistoricalDataFiles to 
+false in script: AddMenusToIndicatorAndHome.R
+
+\clearpage
+\section{Uploading to the server}
+
+\subsection{Folder correspondence table}
+
+\begin{table}[h]
+\centering
+\caption{Where on server to upload which items from which local folder.}
+\label{tab:uncertainty}
+\begin{tabular}{l | l}
+  \toprule
+  Local Folder & Server Folder (under /var/www) \\
+  \midrule
+  ToUpload (no subdirectories) & / \\
+  ToUpload/CountryPagesWithMenus & /Countries \\
+  ToUpload/IndicatorPagesWithMenus & /Indicators \\
+  Country data & /docs \\
+  JSON & /json \\
+  IndicatorsPerCountry & /IndicatorsPerCountry \\
+  data & /data \\
+  html/graphs & /graphs \\
+  Citations & citations \\
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Commands to upload to server}
+\begin{verbatim}
+ssh michalism@clio2.sandbox.socialhistoryservices.org
+
+scp -r "/var/www/html/theme.css" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp theme.css /var/www/
+
+scp -r "/home/michalis/PhD/Clio Infra/Website/CountryPagesWithMenus" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp CountryPagesWithMenus/* /var/www/Countries/
+scp -r "/home/michalis/PhD/Clio Infra/Website/JSON" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp JSON/* /var/www/json/
+scp -r "/home/michalis/PhD/Clio Infra/Website/IndicatorsPerCountry" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R IndicatorsPerCountry/ /var/www/
+
+scp "/home/michalis/PhD/Clio Infra/Website/index.html" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp index.html /var/www/
+scp -r "/home/michalis/PhD/Clio Infra/Website/html/graphs" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R graphs/ /var/www/
+scp -r "/home/michalis/PhD/Clio Infra/Website/IndicatorPagesWithMenus" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R IndicatorPagesWithMenus/* /var/www/Indicators/
+scp -r "/home/michalis/PhD/Clio Infra/Website/Citations" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R Citations/* /var/www/citations/
+scp -r "/home/michalis/PhD/Clio Infra/Website/data" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R data/ /var/www/
+scp -r "/home/michalis/PhD/Clio Infra/Website/CountryData" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R CountryData/* /var/www/docs/
+
+scp "/var/www/html/index.html" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+scp -r "/var/www/html/images" 
+michalism@clio2.sandbox.socialhistoryservices.org:/home/michalism
+sudo cp -R images/* /var/www/images/
+\end{verbatim}
+
+%\section{Bibliography}
+
+%\bibliographystyle{apalike}
+%\bibliography{library.bib}
+
+\section{Appendix}
+\subsection{Functions and Scripts}
+\subsubsection{LongToClio.R}
+This function converts long format to clio infra format
+\subsubsection{Contributors.R}
+Exports the list of authors with their homepage and affiliation to 
+ContributorsList.xlsx. The correct path needs to be provided.
+\end{document}

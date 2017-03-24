@@ -1,0 +1,7 @@
+require(RefManageR)
+bib <- ReadBib('/home/michalis/PhD/Clio Infra/Website/Citations/DOI-10622_2EM9DE.bib')
+bib <- ReadBib('/home/michalis/PhD/Clio Infra/Website/Citations/DOI-10622_2KHSYM.bib')
+bib <- ReadBib('/home/michalis/PhD/Clio Infra/Website/Citations/DOI-10622_4ZDPWP.bib')
+TheAuthorAndDate <- capture.output(print(bib, .opts = list(bib.style = "authoryear", first.inits = FALSE, no.print.fields = c("title","publisher","url"))))
+xxx <- unlist(bib)
+paste(TheAuthorAndDate," ",xxx$title,". ", xxx$url,", accessed via the Clio Infra website.", sep = "")

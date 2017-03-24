@@ -1,0 +1,81 @@
+Working Paper CLIO-INFRA:  University foundations
+1. Title
+	- Number of universities founded
+2. Author(s)
+	- Peter Foldvari
+3. Production date
+	- 20-08-2014
+4. Version
+	- 1st version.
+5. Variable group(s)
+	- institutions, education
+6. Variable(s)
+	- number of universities founded
+7. Unit of analysis
+	- piece
+8. Keywords (5)
+	- university, education, institutions
+9. Abstract (200 words)
+- The number of universities founded in a year within the current borders of a particular country.
+10. Time period
+	- 1500-2013.
+11. Geographical coverage
+	- 95 countries
+12. Methodologies used for data collection and processing
+- 
+13. Data quality
+		i. Central statistical agencies
+		ii. Historical reconstructions
+		iii. Estimates
+		iv. Conjectures
+
+Estimates. Please bear in mind that the quantity and quality of available information on universities vary by period and geographical area. Even the definition of university is not universal: in some countries even colleges offering undergradute programmes can be named universities (Latin America, Japan, Near East). Even though efforts has been made to count institutions which fulfills the European concept of a university (i.e. offering postgraduate and especially  PhD programmes), the lack of information may have resulted in overestimation of university foundations in third-world countries. For this reason, the most reliable estimates are those for Europe. For outside Europe, the data is more reliable for the pre-1945 period than thereafter. When the data is used for statistical analysis, using country fixed effects is advised to explicitly take such international differences into account. 
+The dataset records only the foundation of new universities not the cessation of activates.  Hence adding up the number of university foundations will overestimate the number of universities currently in operation.
+It should also be noted that national legislations also changed and this may result in spikes of university foundations: this happens when lower category higher or post-secondary educational institutions are reclassified as universities. Universities occasionally report the foundation date for their non-university predecessors only,  probably in order to look more prestigious (some Eastern European universities are especially notorious in this respect). Whenever possible, it is the year when university status was granted that is reported. It is also possible that more universities have the same predecessor and hence report the same year of foundation leading to an overestimation. This source of bias could not be eliminated. 
+Be aware that the dataset reflect current borders. In other words, universities may appear in countries that did not even exist at the year of foundation or do not exist today (we do not report data for the USSR or East/West Germany etc.). This approach was chosen to avoid the incomparability of estimates over time. 
+The current version has 1470 university foundations.
+Countries in the database are: 
+Albania, Angola, Antigua and Barbadua,	 Argentina, Armenia, Australia,	Austria,	 Azerbaijan, Bahrain. Barbados, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria,	Cameroon, Canada, Central African Republic, Chad, Chile, Columbia, China,	 Congo, Costa Rica, Croatia, Cuba, Cyprus, Czech Republic, Dem. Rep. of Congo, Denmark,	 Dominican Republic, Ecuador, Estonia, Finland, France, Georgia, Germany, Greece, Greenland, Guatemala, Honduras, Hong Kong, Hungary, Iceland, Indonesia,	 Iran, Iraq, Ireland, Israel, Italy, Jamaica, Japan, Jordan, Kuwait, Latvia, Lithuania, Macao, Malta, Mexico, Moldova, Mongolia, Montenegro, Netherlands,	 New Zealand, Nicaragua, Norway, Oman, Panama, Paraguay, Peru,	 Poland, Portugal, Puerto Rico, Qatar, Romania,	 Russia, Serbia, Slovakia, Slovenia, South Africa, South Korea, Spain, Sweden, Switzerland,	 Syria, Taiwan, Trinidad and Tobago, Turkey, U.S. Virgin Islands, UAE, Ukraine, Uruguay, USA, Vietnam, Yemen, India, UK.
+
+14. Period of collection
+	July and August 2014
+15. Data collectors
+	Peter Foldvari 
+16. Sources
+
+For Europe the main sources are: 
+de Ridder-Symoens , Hilde (ed.): A History of the University in Europe. Vol. II: Universities in Early Modern Europe (1500 - 1800), Cambridge University Press, 1996
+Rüegg, Walter (ed.): A History of the University in Europe. Vol. III: Universities in the Nineteenth and Early Twentieth Centuries (1800 - 1945), Cambridge University Press, 2004
+Rüegg, Walter (ed.): A History of the University in Europe. Vol. IV: Universities Since 1945, Cambridge University Press, 2011
+
+For the rest of the world the main sources are the English language Wikipedia and the homepages of universities when the information at Wikipedia was not sufficient. Wikipedia was also used to update the data on European universities, since the above listed books underestimate the number of universities, especially in East- and Southern Europe. AS a principle, only public or accredited private universities are listed. Special universities like religious studies, fine art and music and military academies are omitted whenever it was possible.
+
+17. Text
+
+Albania: only public universities offering PhD degree
+
+Poland: Only publicly funded universities. Universities of arts, music and religious studies are not counted.
+
+Hungary:  Many universities were founded outside the current borders of Hungary. In these cases the dates reported are the dates when an institution moved to the current area of Hungary.
+
+Romania: Accredited public and private universities.
+
+Serbia: Only public universities
+
+Japan: The term university is often used for colleges a private institutions. Hence, only national universities are listed. A high number of higher education institutions were awarded the university status only in 1949, even though they had been founded earlier. Since these were originally usually junior colleges or technical schools, 1949 is reported as their foundation year.
+
+Iran: The Islamic Azad University is counted as a single university even though it is actually a private university system established in 1982 with over 100 local branches.
+
+USA: Only state universities are listed. Participants of state university systems are counted as individual universities, even if their name differs only by the geographical location of their campuses. For the colonial period we also include private universities that later became private research universities.
+
+Costa Rica: only public universities, of the five public universities 2 are not listed because there was no information on the year of their foundation
+
+Nicaragua: Religious institutions are not listed. 
+
+South Korea: Only national universities, except  universities of education specialized on the education of elementary school teachers.
+
+Cuba, Vietnam: Information is not available for many universities, the figures are hence lower bound estimates. 
+
+China (P.R.C.): Only the main 36 universities are reported. Currently there are  600+ recognized universities in China, but the information on their foundation year is scattered and often not available in English. At this stage it is better to omit the P.R. China before any comparative analysis is conducted.
+
+Taiwan: Many universities have roots in mainland China. Their relocation year to Taiwan is reported as year of foundation.

@@ -1,0 +1,98 @@
+Required content of Working Paper CLIO-INFRA
+Please include the following elements into any working paper entered into the CLIO-INFRA system:
+1. Title
+	- World Countries New Book titles per Capita, 1500-2010.
+2. Author(s)
+	- Jonathan Fink-Jensen
+3. Production date
+	- 10-7-2015.
+4. Version
+	- 1st version.
+5. Variable group(s)
+	- Human capital
+6. Variable(s)
+	- New book titles per capita
+7. Unit of analysis
+	- Number of new book titles per million inhabitants
+8. Keywords (5)
+	- Human capital, book production, book titles, world countries
+9. Abstract (200 words)
+- This dataset comprises information on the number of new book titles published per year per million inhabitants in a given country for the period 1500-2010. Data has been gathered and organized in 1-year intervals, using as geographical reference the current list of existing world countries. Colours have been used to indicate which source is used for the given number, a more elaborate list of sources can be found in this document. 
+10. Time period
+	- 1500-2010
+11. Geographical coverage
+	- Entire World.
+12. Methodologies used for data collection and processing
+- Data on the number of new book titles has been gathered from a number of other datasets and publications that contain data on book production for different regions and periods (see below). This data has been combined with population numbers as given by Maddison (2003) and CLIO Infra in order to calculate the number of new book titles per million inhabitants. 
+
+Europe, Canada, USA 1500-1800
+Buringh & Van Zanden
+
+Europe 1800-2010
+Dataset `Book production 1800-2010', mainly based on national bibliographies:
+* Belgium, 1875-2004: Belgische Bibliografie. Numbers from 1966 onwards are more reliable, since an official depot was opened in that year and all publications had to be filed. However, there may still be small differences with the real number of new publications, since the numbers given indicate the amount of publications processed in the Belgian bibliography, not the actual publications;
+* Sweden, 1801-2009: LIBRIS catalogue, containing a substantial part of all publications, but real numbers will probably be higher;
+* Netherlands, 1801-2009: Picarta;
+* United Kingdom, 1801-1978 Copac, 1979-2009: British Library Legal Deposit. Copac data has the disadvantage that quite a number of titles are `unspecified', which makes it harder to indicate its reliability. Therefore, from the earliest date possible (1979) the data is taken from the British Library Legal Deposit, since these numbers for a later period correspond to the data gathered by Plopenanu et al. based on UNESCO statistics (see below);
+* Denmark, 1800-2009: Danish catalogue;
+* Norway 1801-2009: Bibsys catalogue;
+* Switzerland, 1915-2009: statistics published by the Federal Office of Statistics.
+
+The total population per country is given by Maddison (2003) from 1820 onwards, CLIO Infra gives population numbers for 1800 and 1810. For the years in between, total population is taken from the closest year known (1801-1805 is the same as 1800, 1806-1815 the same as 1810, etc.).
+
+Germany, Finland, Switzerland, France, Poland, USSR, USA: 1800-1945
+Dataset `Book production before 1900', based on The History of the book in the West 1800-1914, Vol. IV (2010) and The Oxford Companion of the book, Vol. I (2010).
+
+USSR 1924-2010
+Didenko, Földvári & Van Leeuwen (2013)
+For the years 1924-1939 and 1941-1949 population numbers for Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Ukraine, and Uzbekistan are unknown. The same goes for Moldova, Estonia, Latvia, and Lithuania for the years 1941-1949. However, the total population in these countries is given for 1940 (CLIO Infra) and 1950 onwards (Maddison). For the years 1924-1939 and 1941-1945 the data for 1940 is used, and for 1946-1949 the data for 1950.
+
+Peru, Mexico: 1539-1799
+Arroyo Abad & Van Zanden (2014). The annual average of new book titles per million inhabitants up to 1700 has been calculated by dividing the average annual production of new book titles by the average annual population (based on Maddison). For the 18th century, the annual average per million inhabitants is given by the authors themselves.
+
+India, Indonesia, 1750-1799
+Baten & Van Zanden (2014). The numbers given are annual averages, as given by the authors.
+
+Japan, 1505-1911
+Derived from Van Zanden (2009), based on Kornicki (2001) and Hayami and Kito (2004. All numbers are annual averages. 
+Kornicki (2001) covers the longest periods, but since he gives annual averages for a very long period (1720s-1815) there is no growth visible. According to his figures, the annual average production of new book titles per million inhabitants is 10,5 for the whole period, but this was probably lower in the earlier years and higher in later periods. Van Zanden states, for instance, that the annual production for the period 1750-1800 was 7 new titles per million inhabitants. In order to show some growth, numbers given by Hayami & Kito are shown for the 1720s and 1750s, and from 1754-1815 Kornicki's figures are given.
+
+Ottoman Empire, 16th century
+Van Zanden (2009): the sultan of the Ottoman Empire banned the possession of printed materials, and the fact that new technology could easily be suppressed suggests that the market for books was limited.
+
+World 1930s-1996
+Plopenanu et al. (2014), based on UNESCO data. Population data taken from Maddison.
+
+13. Data quality
+		
+14. Period of collection
+	- June 2015.
+15. Data collector
+	- Jonathan Fink-Jensen
+16. Sources
+Arroyo Abad, L. and Zanden, J.L. van, `Growth under extractive institutions? Latin America per capita GDP in colonial times' in: CGEH Working Paper Series 61, 2014.
+
+Baten, J. and Zanden, J.L. van, `Book production and the onset of modern economic growth' in: Journal of Economic Growth Vol. 13 (3), 2008, pp. 217-235.
+
+Buringh, E. and Zanden, J.L. van, `Charting the "Rise of the West": Manuscripts and Printed Books in Europe, A long-term perspective from the sixth through eighteenth centuries', in: The Journal of Economic History, Vol. 69 (2) 2009, pp. 409-445.
+
+Buringh, E. and Zanden, J.L. van, datafile `Book production in Europe, 1454-1800', available at: http://www.cgeh.nl/global-historical-bibliometrics (last visited on: 26-6-2015).
+
+CLIO-Infra, `Total Population', see: https://www.clio-infra.eu/datasets/select/indicator/111 (last visited on: 10-7-2015).
+
+Colclough, Stephen and Alexis Weedon, The History of the book in the West 1800-1914, Vol. IV (Ashgate, 2010).
+
+Didenko, Dmitry, Péter Földvári and Bas van Leeuwen, 'The spread of human capital in the former Soviet Union area in a comparative perspective: Exploring a new dataset,' Journal of Eurasian studies, Vol. 4 (2) 2013, pp. 123-135.
+
+Maddison, A., The World Economy: Historical Statistics (Paris: OECD, 2003).
+
+Pleijt, Sandra de, datafile: `Book production 1800-2010'.
+
+Plopenanu, Aurelian-Petrus, Péter Földvári, Bas van Leeuwen and Jan Luiten van Zanden, `Where Do Ideas Come from? The Relation between Book Production and Patents from the Industrial Revolution to the Present, European Journal of Science and Theology, 10 (3), 2014, pp. 131-147.
+
+Suarez, Michael F. and H.R. Woudhuysen (eds.) The Oxford Companion of the book, vol. I (Oxford, 2010).
+
+Zanden, J.L. van, The Long Road to the Industrial Revolution. The European economy in a global perspective, 1000-1800 (Leiden 2009).
+
+
+

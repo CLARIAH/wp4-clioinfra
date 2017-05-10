@@ -68,6 +68,10 @@ f_IndicatorMenu2 <- function(WebCat, ClioMetaData, GlobalDurations, IndicatorFil
     }
   }
   
+  CountryIndicatorsFiles <- gsub("Heights","Height",CountryIndicatorsFiles)
+  CountryIndicatorsFiles <- gsub("FemalelifeExpectancyatBirth","FemalelifeexpectancyatBirth",CountryIndicatorsFiles)
+  CountryIndicatorsFiles <- gsub("Labourer'sRealWage","LabourersRealWage",CountryIndicatorsFiles)
+  
   Observations <- paste0(" [",Observations,"] ",sep="")
   Observations <- gsub(" \\[No Data\\] ","",Observations) 
   

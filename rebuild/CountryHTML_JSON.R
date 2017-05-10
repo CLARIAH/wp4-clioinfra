@@ -17,18 +17,25 @@ require(tidyr)
 rm(list=ls())
 
 # to get the data from the ReadData.R script
-# it was load("~/PhD/Clio Infra/Website/ReadData2.R.RData")
-load("~/PhD/Clio Infra/Website/ReadData3.R.RData")
-rm(list=ls(pattern="^XxZzYy"))
+load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+
+# select only rows that have not all elements of the specified columns NA
+ClioOnlyWithData <- ClioData[rowSums(is.na(ClioData[,8:524]))<516,]
+
+ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
 
 # rebuild the countries even if they exist already?
 from_scratch <- T
 # export the individual indicator data for each country separately to xlsx files?
-ExportData <- F
+ExportData <- T
 # export all indicator data for each country to xlsx files?
 ExportCountryData <- T
 # export the JSON files for the plots?
-ExportJSON <- F
+ExportJSON <- T
 # set main path for all scripts
 GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
 
@@ -50,7 +57,11 @@ GlobalMetadata$OECD_Region[which(GlobalMetadata$OECD_Region == "Latin America an
 GlobalMetadata$subregion[which(GlobalMetadata$subregion == "Australia and New Zealand")] <- "Australia and N.Zealand"
 GlobalMetadata$subregion[which(GlobalMetadata$subregion == "Latin America and the Caribbean")] <- "L.America &amp; Carib."
 
-#parameters:
+# PARAMETERS:
+# PARAMETERS:
+# PARAMETERS:
+# PARAMETERS:
+
 MinDataAvailable <- 10 # minimum number of datapoints for selecting the visualized indicators
 MinDataDuration <- 80 # minimum number of years for selecting the visualized indicators
 YearOffset <- 10 # number of years to allow missing on each side of year periods, for selecting 
@@ -93,16 +104,8 @@ IndicatorsList <- unique(ClioData$Indicator)
 
 CountryList <- unique(GlobalMetadata$ClioInfraCountryName)
 CountryList <- CountryList[!is.na(CountryList)]
-# set the list of indicators to make the correlation graphs with:
-CorIndicatorList <- c()
-for (kkk in c(16,2,24,26,57,68)){
-  newItem <- trimws(ClioMetaData$WebName[which(ClioMetaData$filename==unique(ClioData$Filename[which(ClioData$Indicator==IndicatorsList[kkk])]))])
-  CorIndicatorList <- c(CorIndicatorList,newItem)
-  rm(newItem)
-}
 
 GlobalMetadata$`Alpha-3 code`[which(GlobalMetadata$ISO3OECD=="CSK")] <- "CSK"
-
 
 for (j in 1:nrow(GlobalMetadata)){
   if (!is.na(GlobalMetadata$ISO3OECD[j])){
@@ -112,24 +115,17 @@ for (j in 1:nrow(GlobalMetadata)){
   }
 }
 
-# variables that need to be set
-# and then substituted in the text
-# see /home/michalis/PhD/Clio Infra/Website/VarNames.xls for the commands 
-#test <- gsub("income", "consumption", test)
-
 #which(CountryList=="Greece") 
-#75
-#which(CountryList=="Netherlands") 
-#134
-#k <- 134
+#76
+#which(CountryList=="Sudan") 
+#182
+#k <- 182
+
 k <- seq(1,length(CountryList),1)
 
 for (i in k){
   # check if the page has been created and skip if yes
   XxZzYyCountryShortXxZzYy <- CountryList[i]
-  XxZzYyTotalDatasetsXxZzYy <- nrow(ClioMetaData)
-  XxZzYyTotalNumOfCountriesXxZzYy <- nrow(subset(GlobalMetadata,GlobalMetadata$DataPoints>0))
-  XxZzYyAboutClioInfraXxZzYy <- readChar(paste(GenericPath,"AboutClioInfra.txt",sep="/"), file.info(paste(GenericPath,"AboutClioInfra.txt",sep="/"))$size)
   
   countryHTMLfile <- paste0("/home/michalis/PhD/Clio Infra/Website/Country Pages Exports R/",trimalls(gsub("[[:punct:]]", "", XxZzYyCountryShortXxZzYy)),".html")
   country_page_already_build <- file.exists(countryHTMLfile)
@@ -223,11 +219,18 @@ for (i in k){
       temp <- temp[rowSums(is.na(temp[,9:524]))<515,]
       # and remove data refering to non-2012 borders
       temp <- temp[temp$`end year`=="2012",]
-      # when there are more than two rows for a variable with the same 2012 end year, e.g. Canada, Labourers Real Wage,
+      # from the problem caused by Sudan: if multiple borders end in 2012 remove the one with the oldest start year
+      if (length(unique(temp$`start year`))>1){
+        StartYearToExclude <- min(as.numeric(unique(temp$`start year`)))
+        temp <- temp[!temp$`start year`==StartYearToExclude,]
+      }
+      
+      # when there are more than two rows for a variable with the same 2012 end year, e.g. Morocco
       # then I need to test for those variables with two lines, select the one with the same webmapper code as the others
       if (nrow(temp)>0){
         # however I will control entry on this part of the script to identified countries only:
-        if (CountryList[i] %in% c("Canada","Morocco")){
+        if (F){
+        #if (CountryList[i] %in% c("Morocco")){
           RowsToRemove <- c()
           #find the dominant webmapper code:
           WMC <- unique(temp$`Webmapper code`)
@@ -1503,7 +1506,7 @@ for (i in k){
         #### a list of webnames of indicators and the Indicator's name as it appears in the data is necessary to continue ####
         
         # the list of web names and their corresponding Indicator Name 
-        IndicDictionary <- read_excel('/home/michalis/PhD/Clio Infra/Website/WebNames Corresponding to Indicators.xls')
+        IndicDictionary <- read_excel('/home/michalis/PhD/Clio Infra/Website/IndicPriorityList.xlsx', sheet = 3)
         
         #### I need a full list of indicators with start year, end year and number of observations ####
         Durations <- temp[c("Indicator")]
@@ -1755,19 +1758,19 @@ for (i in k){
             
             
             CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==ForExport[L_ij])]
-            Metadata <- t(c("XML Citation",paste0(URL_basis,"/citations/",CitationFileName,".xml")))
+            Metadata <- t(c("XML Citation",paste0(URL_basis,"/Citations/",CitationFileName,".xml")))
             Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
             names(Metadata) <- c("Description","Value")
             
             FullMetadata <- rbind(FullMetadata,Metadata)
             
-            Metadata <- t(c("RIS Citation",paste0(URL_basis,"/citations/",CitationFileName,".ris")))
+            Metadata <- t(c("RIS Citation",paste0(URL_basis,"/Citations/",CitationFileName,".ris")))
             Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
             names(Metadata) <- c("Description","Value")
             
             FullMetadata <- rbind(FullMetadata,Metadata)
             
-            Metadata <- t(c("BIB Citation",paste0(URL_basis,"/citations/",CitationFileName,".bib")))
+            Metadata <- t(c("BIB Citation",paste0(URL_basis,"/Citations/",CitationFileName,".bib")))
             Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
             names(Metadata) <- c("Description","Value")
             
@@ -1782,6 +1785,14 @@ for (i in k){
         
         } # only run if ExportData is true
         
+        CountryIndicatorFilename <- 
+          paste0(trimalls(gsub("[[:punct:]]", "", temp$`country name`[1])),"_AllIndicatorsAvailable",
+                 "_TerritorialRef_",temp$`start year`[1],"_",temp$`end year`[1],
+                 "_CCode_",temp$ccode[1],".xlsx")
+        
+        CountryIndicatorFilenamePath <- 
+          paste0(GenericPath,"CountryData/",CountryIndicatorFilename)
+        
         tempDurations <- Durations
         tempDurations$CountryName <- temp$`country name`[1]
         tempDurations$CCode <- temp$ccode[1]
@@ -1794,14 +1805,6 @@ for (i in k){
           GlobalDurations <- tempDurations
         }
         rm(tempDurations)
-        
-        CountryIndicatorFilename <- 
-          paste0(trimalls(gsub("[[:punct:]]", "", temp$`country name`[1])),"_AllIndicatorsAvailable",
-                 "_TerritorialRef_",temp$`start year`[1],"_",temp$`end year`[1],
-                 "_CCode_",temp$ccode[1],".xlsx")
-        
-        CountryIndicatorFilenamePath <- 
-          paste0(GenericPath,"CountryData/",CountryIndicatorFilename)
         
         test <- gsub("XxZzYyCountryIndicatorFilenameXxZzYy", CountryIndicatorFilename, test)
         
@@ -1866,7 +1869,7 @@ for (i in k){
           
           write.xlsx(FullMetadata, file=CountryIndicatorFilenamePath, sheetName="Text Citations", append=TRUE, row.names=F)
           
-          Metadata <- c(paste0(URL_basis,"/citations/",CitationFileName,".xml"))
+          Metadata <- c(paste0(URL_basis,"/Citations/",CitationFileName,".xml"))
           Metadata <- as.data.frame(Metadata)
           names(Metadata) <- c("Value")
           Metadata$Description <- CitationIndicators
@@ -1875,7 +1878,7 @@ for (i in k){
           
           write.xlsx2(Metadata, file=CountryIndicatorFilenamePath, sheetName="XML Citations", append=TRUE, row.names=F)
           
-          Metadata <- c(paste0(URL_basis,"/citations/",CitationFileName,".ris"))
+          Metadata <- c(paste0(URL_basis,"/Citations/",CitationFileName,".ris"))
           Metadata <- as.data.frame(Metadata)
           names(Metadata) <- c("Value")
           Metadata$Description <- CitationIndicators
@@ -1884,7 +1887,7 @@ for (i in k){
           
           write.xlsx2(Metadata, file=CountryIndicatorFilenamePath, sheetName="RIS Citations", append=TRUE, row.names=F)
           
-          Metadata <- c(paste0(URL_basis,"/citations/",CitationFileName,".bib"))
+          Metadata <- c(paste0(URL_basis,"/Citations/",CitationFileName,".bib"))
           Metadata <- as.data.frame(Metadata)
           names(Metadata) <- c("Value")
           Metadata$Description <- CitationIndicators
@@ -1909,3 +1912,7 @@ for (i in k){
     
   } # if for the create the page or not in case it already exists
 } # outer for loop
+
+ttt<-as.data.frame(as.matrix(GlobalDurations),stringsAsFactors = F)
+ttt[,c(2,3,4,6)] <-  lapply(ttt[,c(2,3,4,6)], function (x) as.numeric(x))
+write.xlsx2(ttt, "/home/michalis/PhD/Clio Infra/Website/GlobalDurations.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)

@@ -23,6 +23,10 @@ CurFileName <- paste0(gsub(" ","_",ClioDataTitle),"-historical.xlsx")
 write.xlsx(ClioLayout,CurFileName,sheetName = "Data",row.names = F, append = F, showNA = F)
 
 # all rows below do not work because of Error : OutOfMemoryError ( Java ): Java heap space PROBLEMS THAT I CANNOT SOLVE
+# all rows below do not work because of Error : OutOfMemoryError ( Java ): Java heap space PROBLEMS THAT I CANNOT SOLVE
+# all rows below do not work because of Error : OutOfMemoryError ( Java ): Java heap space PROBLEMS THAT I CANNOT SOLVE
+# all rows below do not work because of Error : OutOfMemoryError ( Java ): Java heap space PROBLEMS THAT I CANNOT SOLVE
+
 if (F){
   dat <- ClioLayout
   text_matrix <- function(dat, table_title) {

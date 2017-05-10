@@ -1,14 +1,8 @@
 # this script substitutes the region variables with actual country data in all files found in the folders
-# I should covert this to a function
-# currenty it should run right after the CountryHTML scripts
-
-load('/home/michalis/PhD/Clio Infra/Website/ReadData3.R.RData')
 
 # run this only after running AddMenusToIndicatorAndHome.R !!!!!
 # run this only after running AddMenusToIndicatorAndHome.R !!!!!
 # run this only after running AddMenusToIndicatorAndHome.R !!!!!
-
-# GlobalDurations is the variable that should be present from CountryHTML_JSON.R script for this to work (among other things)
 
 YearsBeforeEndYear <- 10 # set the number of years before the end year to sum the number of available indicators
 
@@ -20,36 +14,6 @@ files <- files[!files %in% c("xyz.html","Greece2.html")]
 TemplateLine <- '<p class="list-group-item"><a href="./TheCountryFile.html" >TheCountryName</a><span class="badge"><a href="../docs/CountryDataFileName" data-toggle="tooltip" title="Download all available indicators for the country in compact layout. Click on country name for more options."><font color="FFFFFF">Start_Year (IndNum_S_Year)-End_Year (IndNum_E_Year)</font></a></span></p>'
 TemplateLineEmpty <- '<p class="list-group-item">TheCountryName<span class="badge"><font color="FFFFFF">[No Data]</font></span></p>'
 
-# only treat the 2012 borders!
-SubRegions <- c(unique(GlobalMetadata$subregion),unique(GlobalMetadata$subsubregion),"Caribbean2")
-SubRegions <- SubRegions[!SubRegions=="L.America &amp; Carib."]
-SubRegions <- as.data.frame(SubRegions[!is.na(SubRegions)], stringsAsFactors = F)
-names(SubRegions) <- "SubReg"
-SubRegions$VarName <- as.character(NA)
-SubRegions$VarName[which(SubRegions$SubReg=="Southern Asia")] <- "XxZzYySouthernAsiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Southern Europe")] <- "XxZzYySouthernEuropeXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Northern Africa")] <- "XxZzYyNorthernAfricaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Polynesia")] <- "XxZzYyPolynesiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Middle Africa")] <- "XxZzYyMiddleAfricaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Central America")] <- "XxZzYyCentralAmericaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Western Asia")] <- "XxZzYyWesternAsiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Australia and N.Zealand")] <- "XxZzYyAustNewZeaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Western Europe")] <- "XxZzYyWesternEuropeXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Northern America")] <- "XxZzYyNorthernAmericaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Southern Africa")] <- "XxZzYySouthernAfricaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Melanesia")] <- "XxZzYyMelanesiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="South-Eastern Asia")] <- "XxZzYySouthEasternAsiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Eastern Europe")] <- "XxZzYyEasternEuropeXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Eastern Africa")] <- "XxZzYyEasternAfricaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Western Africa")] <- "XxZzYyWesternAfricaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Eastern Asia")] <- "XxZzYyEasternAsiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Northern Europe")] <- "XxZzYyNorthernEuropeXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Micronesia")] <- "XxZzYyMicronesiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Central Asia")] <- "XxZzYyCentralAsiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="South America")] <- "XxZzYySouthAmericaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Caribbean")] <- "XxZzYyCaribbean1XxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Caribbean2")] <- "XxZzYyCaribbean2XxZzYy"
-
 SubRegions2 <- unique(SubRegions$SubReg)
 SubRegions$XYZ <- as.character(NA)
 
@@ -57,6 +21,7 @@ for (i_regions in SubRegions2){
   # get the set of countries of that region with the proper names for the menu:
   temp <- GlobalMetadata$country_name[which(GlobalMetadata$subregion == i_regions)]
   temp <- temp[!is.na(temp)]
+  temp <- temp[!temp==""]
   temp <- sort(temp)
   
   for (L_i in temp){

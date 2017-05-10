@@ -17,11 +17,21 @@ require(tidyr)
 rm(list=ls())
 
 # to get the data from the ReadData.R script
-load("~/PhD/Clio Infra/Website/ReadData3.R.RData")
-rm(list=ls(pattern="^XxZzYy"))
+load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+
+ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+
+URL_basis <- "https://www.clio-infra.eu"
+
 GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
-ExportData <- F
-MakeThePlots <- F
+# export the individual indicator data to xlsx files?
+ExportData <- T
+# export images?
+MakeThePlots <- T
 
 setwd(GenericPath)
 source('MakeTheGGplot.R')
@@ -31,6 +41,10 @@ source('MakeTheGGplot.R')
 
 Citations <- read_excel("/home/michalis/PhD/Clio Infra/Website/CitationsStatic.xls")
 Citations <- subset(Citations, !Citations$Indicator == "Geocoder")
+
+OECD_regions <- unique(GlobalMetadata$OECD_Region[!is.na(GlobalMetadata$OECD_Region)])
+OECD_regions <- OECD_regions[!(OECD_regions=="")]
+OECD_regions <- sort(OECD_regions)
 
 fileName <- '/home/michalis/PhD/Clio Infra/Website/IndicatorsTemplate.html'
 
@@ -44,6 +58,7 @@ LogPlotList <- read_excel(paste0(GenericPath,"IndicatorsGraphType.xlsx"))
 # see /home/michalis/PhD/Clio Infra/Website/VarNames.xls for the commands 
 #test <- gsub("income", "consumption", test)
 #length(IndicatorsList)
+
 for (i in 1:length(IndicatorsList)){
   test <- readChar(fileName, file.info(fileName)$size)
   
@@ -146,26 +161,26 @@ for (i in 1:length(IndicatorsList)){
   
   
   CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==IndicatorsList[i])]
-  Metadata <- t(c("XML Citation",paste0(URL_basis,"/citations/",CitationFileName,".xml")))
+  Metadata <- t(c("XML Citation",paste0(URL_basis,"/Citations/",CitationFileName,".xml")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
-  Metadata <- t(c("RIS Citation",paste0(URL_basis,"/citations/",CitationFileName,".ris")))
+  Metadata <- t(c("RIS Citation",paste0(URL_basis,"/Citations/",CitationFileName,".ris")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
-  Metadata <- t(c("RIS Citation",paste0(URL_basis,"/citations/",CitationFileName,".bib")))
+  Metadata <- t(c("RIS Citation",paste0(URL_basis,"/Citations/",CitationFileName,".bib")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
   if (ExportData){
-    write.xlsx(FullMetadata, file=IndicatorFilenamePath, sheetName="Metadata", append=TRUE, row.names=F)
+    write.xlsx2(FullMetadata, file=IndicatorFilenamePath, sheetName="Metadata", append=TRUE, row.names=F)
   }
   
   # export compact data (Download only for countries that have available data. Modern borders only.") :
@@ -176,9 +191,18 @@ for (i in 1:length(IndicatorsList)){
   ttt[,c(1,seq(3,ncol(ttt),1))] <-  lapply(ttt[,c(1,seq(3,ncol(ttt),1))], function (x) as.numeric(x))
   
   if (ExportData){
-    write.xlsx2(ttt, file=IndicatorFilenamePath, sheetName="Data", row.names=F, showNA=F)
+    write.xlsx2(ttt, file=IndicatorFilenamePath, sheetName="Data Clio Infra Format", row.names=F, showNA=F)
   }
   rm(ttt)
+  
+  ttt<-as.data.frame(as.matrix(LocalTempLongFormat),stringsAsFactors = F)
+  ttt[,c(1,seq(3,ncol(ttt),1))] <-  lapply(ttt[,c(1,seq(3,ncol(ttt),1))], function (x) as.numeric(x))
+  
+  if (ExportData){
+    write.xlsx2(ttt, file=IndicatorFilenamePath, sheetName="Data Long Format", 
+                append=TRUE, row.names=F, showNA=F)
+  }
+  rm(ttt,LocalTempLongFormat)
   
   FileNameForXLS <- strsplit(IndicatorFilenamePath,"/")[[1]][length(strsplit(IndicatorFilenamePath,"/")[[1]])]
   Metadata <- t(c("Downloaded from",paste0(URL_basis,"/data/",FileNameForXLS)))
@@ -207,20 +231,20 @@ for (i in 1:length(IndicatorsList)){
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
-  Metadata <- t(c("RIS Citation",paste0(URL_basis,"/citations/",CitationFileName,".ris")))
+  Metadata <- t(c("RIS Citation",paste0(URL_basis,"/Citations/",CitationFileName,".ris")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
-  Metadata <- t(c("BIB Citation",paste0(URL_basis,"/citations/",CitationFileName,".bib")))
+  Metadata <- t(c("BIB Citation",paste0(URL_basis,"/Citations/",CitationFileName,".bib")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
   if (ExportData){
-    write.xlsx(FullMetadata, file=IndicatorFilenamePath, sheetName="Metadata", append=TRUE, row.names=F)
+    write.xlsx2(FullMetadata, file=IndicatorFilenamePath, sheetName="Metadata", append=TRUE, row.names=F)
   }
   
   # make the plots:
@@ -230,9 +254,6 @@ for (i in 1:length(IndicatorsList)){
   
   XxZzYyGraph0XxZzYy <- paste("Global_",XxZzYyIndicNoSpaceXxZzYy,".svg", sep = "")
   rm(pdata)
-  
-  OECD_regions <- unique(GlobalMetadata$OECD_Region[!is.na(GlobalMetadata$OECD_Region)])
-  OECD_regions <- sort(OECD_regions)
   
   RegionIndex <- 1
   pdata <- subset(ClioData,ClioData$Indicator == XxZzYyTitleXxZzYy &
@@ -405,5 +426,7 @@ for (i in 1:length(IndicatorsList)){
   
   write(test, file = paste0(GenericPath,"Pages Exports R/",trimalls(gsub("[[:punct:]]", "", XxZzYyIndicatorXxZzYy)),".html"))
   
-  rm(test)
+  rm(test,tempVector,xxxTemp,RegionIndex,stringA,stringB,IndicatorFilenamePath,IndicNameForCitation,
+     FileNameForXLS,TheAuthorAndDate,ObsTemp,Metadata,fFullExport,FullExport,FullMetadata,bib,CitationFileName)
+  rm(list=ls(pattern="^XxZzYy"))
 }

@@ -54,7 +54,9 @@ dataverse repository}. The html layout is manually made using
 \href{http://getbootstrap.com/}{Bootstrap}. The demo front end is reachable 
 \href{clio2.sandbox.socialhistoryservices.org}{here}. Pending tickets for 
 website and service improvement are available on 
-\href{https://github.com/CLARIAH/wp4-requirements}{Github}
+\href{
+https://github.com/CLARIAH/wp4-requirements/issues?q=is%3Aissue+is%3Aopen+label%
+3Aclio-infra%3Awebsite}{Github}
 \end{abstract}
 
 \clearpage
@@ -183,8 +185,16 @@ located at the same folder as the R scripts.
   
  \item The html files that actually need to be uploaded on the server are 
 located in the folder ``ToUpload''.
+
+\item An xlsx file containing all indicators for historical entities at 
+``DataAtHistoricalBorders.xlsx''.\\
+Exported at folder: /data.
  
 \end{enumerate}
+
+\textbf{WARNING: if at any point the xlsx files fail to export in the r scripts 
+replace write.xls with write.xls2. Do note that most of them have been already 
+replaced.}
 
 \clearpage
 
@@ -214,6 +224,7 @@ The R scripts are (in strict order of execution):
 AddMenusToIndicatorAndHome.R)
  \item Contributors.R this needs to run only once to create 
 ContributorsList.xlsx
+ \item NewsAndPublications.R
  \item PartnersPage.R
  \item FooterSubstitution.R
  \item some supportive scripts that only need to be called from the other 
@@ -304,11 +315,72 @@ script to properly set the footer.
 This is to explain how to update the files and scripts when one needs to add an 
 indicator and countries.
 
-First step is to place the new data and metadata files in the proper folders. 
-Second step is in both cases (either when a new indicator or a new country is 
-added) that the \textit{ReadData.R} script needs to be run to read the new data 
-in, and then follow and execute the remaining scipts in order of appearance in 
-the R script list of section \ref{sec:req}.
+First step is to place the new data and metadata files in the proper folders 
+and, in case of a new indicator, convert the metadata doc file that the creator 
+of the dataset has filled to a txt file. To convert the doc file to txt file 
+see ConvertDOCStoTXT.xls for the commands to use in Ubuntu. Also make sure that 
+the data are given in the proper layout (see file ClioLayout.xlsx), otherwise 
+convert them in the proper layout. If this is not possible then additional R 
+programming in necessary to digest the new format.
+
+If the metadata are not given in the format required (see current txt files for 
+the format required) then the process will not conclude. Thus, some manual 
+editing of the metadata file to achieve conformity might be necessary. 
+Currently the template I'm using is slightly different than the one used 
+before. Thus I had to downgrade the current template to achieve conformity with 
+the old one. This means that at some point I need to update the procedure that 
+will allow for the new template to be used.
+
+Second step is that the \textit{ReadData.R} script needs to be run to read the 
+new data in, and then follow and execute the remaining scipts in order of 
+appearance in the R script list of section \ref{sec:req}. Before running this 
+script some modifications are necessary. Go to section starting with the 
+comment: ``ADD WebName and WebCategory'' and add those two variables for the 
+new dataset you want to include. Example:
+\begin{verbatim}
+ ClioMetaData$WebName[which(ClioMetaData$title=="Composite Measure of 
+Wellbeing")] <- "Composite Measure of Wellbeing"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Composite Measure of 
+Wellbeing")] <- "Demography"
+\end{verbatim}
+
+For ease of use keep the same WebName as it is given in the original xlsx top 
+cell. If not problems with naming consistency arise among the various tables in 
+the scripts.
+
+Third step requires running the IndicatorHTML.R script. Before running this 
+script you need to upload the new indicator on dataverse to be able to get the 
+citation info. After depositing the new indicator on dataverse you need to 
+download the two types of available citations to the local citation 
+folder\footnote{.../Clio Infra/Website/Citations}. Then to add the bib type of 
+citation you need to either do that manually, or install ``sudo apt install 
+bibutils'' on an Ubuntu system. To get the command for doing this simply paste 
+the complete short description from dataverse to the third column in ``~/Clio 
+Infra/Website/Citations.xls'', and then export a static version of this in 
+``~/Clio Infra/Website/CitationsStatic.xls''.\footnote{Note that when working 
+with the citation files from the Composite Wellbeing Index the bibutils command 
+did not work, so I produced the bib file manually so that I can proceed.} 
+Further, you need to add the document filename of the new indicator in the 
+``~/Clio Infra/Website/IndicatorsListWithDocFiles.xlsx'', and appropriately in 
+``~/Clio Infra/Website/IndicatorsGraphType.xlsx''; and in ``~/PhD/Clio 
+Infra/Website/IndicPriorityList.xlsx'' set the priority in selecting the 
+variable for country visualizations. 
+
+Important for completing successfully the procedure: the consistent naming of 
+the indicator in various locations is critical. The filename of the xlsx with 
+the original data must end with ``-historical.xslx''. The prefix (e.g. 
+CompositeWellbeingIndex) should be used as it is in the docx and the txt files. 
+It is preferable that the prefix will also be used in the ``ADD WebName and 
+WebCategory'' above. Very important: the WebName must be used in the 
+Citations.xlsx list above.
+
+Running ReadData.R will execute in about 2 minutes on a good laptop, and 
+IndicatorHTML.R will do so in approximately 10 minutes (with all flags marked 
+as True). CountryHTML\_JSON.R takes about 35 minutes with all flags up.
+
+In the section that begins with ``\# PARAMETERS:'' in scropt CountryHTML\_JSON.R
+you can set the parameters with which the data for the visualizations in the 
+country HTML pages will be selected.
 
 Note that when adding a historical entity a different process needs to be 
 followed in script: AddMenusToIndicatorAndHome.R
@@ -316,7 +388,6 @@ followed in script: AddMenusToIndicatorAndHome.R
 To avoid reproducing the historical data files set CreateHistoricalDataFiles to 
 false in script: AddMenusToIndicatorAndHome.R
 
-\clearpage
 \section{Uploading to the server}
 
 \subsection{Folder correspondence table}
@@ -337,12 +408,15 @@ false in script: AddMenusToIndicatorAndHome.R
   IndicatorsPerCountry & /IndicatorsPerCountry \\
   data & /data \\
   html/graphs & /graphs \\
-  Citations & citations \\
+  Citations & /Citations \\
   \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Commands to upload to server}
+\textbf{Do note that the docx and xlsx files with the original data as deposited 
+by the contributors must also be placed in the /docs folder of the server}
+
+\subsection{Commands to upload to initial test server}
 \begin{verbatim}
 ssh michalism@clio2.sandbox.socialhistoryservices.org
 
@@ -395,6 +469,11 @@ sudo cp -R images/* /var/www/images/
 \subsection{Functions and Scripts}
 \subsubsection{LongToClio.R}
 This function converts long format to clio infra format
+\subsection{MadToClio.R}
+This function converts the format used in the Maddison project, to that
+used in the clio-infra website and dataverse. This function was written when 
+adding the Composite Measure of Wellbeing, and it is written around it, thus it 
+is not a generic script yet.
 \subsubsection{Contributors.R}
 Exports the list of authors with their homepage and affiliation to 
 ContributorsList.xlsx. The correct path needs to be provided.

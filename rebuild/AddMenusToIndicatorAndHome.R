@@ -1,3 +1,29 @@
+require(xlsx)
+require(readxl)
+rm(list=ls())
+
+# set main path for all scripts
+GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
+
+# to get the data from the ReadData.R script
+load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+
+# select only rows that have not all elements of the specified columns NA
+ClioOnlyWithData <- ClioData[rowSums(is.na(ClioData[,8:524]))<516,]
+
+ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalDurations <- read.xlsx("~/PhD/Clio Infra/Website/GlobalDurations.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+IndicPriorityList <- read_excel('/home/michalis/PhD/Clio Infra/Website/IndicPriorityList.xlsx')
+
+URL_basis <- "https://www.clio-infra.eu"
+
+Citations <- read_excel("/home/michalis/PhD/Clio Infra/Website/CitationsStatic.xls")
+Citations <- subset(Citations, !Citations$Indicator == "Geocoder")
+
 ##########################################################################################################
 ##########################################################################################################
 ##########################################################################################################
@@ -10,9 +36,7 @@
 ##########################################################################################################
 ##########################################################################################################
 
-load("~/PhD/Clio Infra/Website/ReadData3.R.RData")
-
-CreateHistoricalDataFiles <- F
+CreateHistoricalDataFiles <- T
 
 # this script substitutes the Indicator menu placeholders in Country and Home pages
 # the functionality allows for the user to click and download the complete indicator file
@@ -25,7 +49,7 @@ YearsBeforeEndYear <- 10 # set the number of years before the end year to sum th
 # IndicatorsList
 # and for the duration of the data indicators:
 # GlobalDurations
-
+trimalls <- function (x) gsub("\\s", "", x)
 # file name structure:
 
 IndicatorFilename <- paste0("XXXNameOfIndicatorXXX","_Compact.xlsx")
@@ -67,7 +91,8 @@ TemplateLineEmpty <- '<p class="list-group-item">TheCountryName<span class="badg
 
 # only treat the 2012 borders!
 SubRegions <- c(unique(GlobalMetadata$subregion),unique(GlobalMetadata$subsubregion),"Caribbean2")
-SubRegions <- SubRegions[!SubRegions=="L.America &amp; Carib."]
+SubRegions <- SubRegions[!SubRegions==""]
+SubRegions <- SubRegions[!SubRegions=="Latin America and the Caribbean"]
 SubRegions <- as.data.frame(SubRegions[!is.na(SubRegions)], stringsAsFactors = F)
 names(SubRegions) <- "SubReg"
 SubRegions$VarName <- as.character(NA)
@@ -78,7 +103,7 @@ SubRegions$VarName[which(SubRegions$SubReg=="Polynesia")] <- "XxZzYyPolynesiaXxZ
 SubRegions$VarName[which(SubRegions$SubReg=="Middle Africa")] <- "XxZzYyMiddleAfricaXxZzYy"
 SubRegions$VarName[which(SubRegions$SubReg=="Central America")] <- "XxZzYyCentralAmericaXxZzYy"
 SubRegions$VarName[which(SubRegions$SubReg=="Western Asia")] <- "XxZzYyWesternAsiaXxZzYy"
-SubRegions$VarName[which(SubRegions$SubReg=="Australia and N.Zealand")] <- "XxZzYyAustNewZeaXxZzYy"
+SubRegions$VarName[which(SubRegions$SubReg=="Australia and New Zealand")] <- "XxZzYyAustNewZeaXxZzYy"
 SubRegions$VarName[which(SubRegions$SubReg=="Western Europe")] <- "XxZzYyWesternEuropeXxZzYy"
 SubRegions$VarName[which(SubRegions$SubReg=="Northern America")] <- "XxZzYyNorthernAmericaXxZzYy"
 SubRegions$VarName[which(SubRegions$SubReg=="Southern Africa")] <- "XxZzYySouthernAfricaXxZzYy"
@@ -102,6 +127,7 @@ for (i_regions in SubRegions2){
   # get the set of countries of that region with the proper names for the menu:
   temp <- GlobalMetadata$country_name[which(GlobalMetadata$subregion == i_regions)]
   temp <- temp[!is.na(temp)]
+  temp <- temp[!temp==""]
   temp <- sort(temp)
   
   for (L_i in temp){
@@ -213,18 +239,29 @@ TemplateLineEmpty <- '<p class="list-group-item">TheCountryName<span class="badg
 
 # only treat the 2012 borders!
 OECDMenu <- unique(GlobalMetadata$OECD_Region)
+OECDMenu <- OECDMenu[!OECDMenu==""]
 #OECDMenu <- OECDMenu[!OECDMenu=="L.America &amp; Carib."]
 OECDMenu <- as.data.frame(OECDMenu[!is.na(OECDMenu)], stringsAsFactors = F)
 names(OECDMenu) <- "SubReg"
 OECDMenu$VarName <- as.character(NA)
-OECDMenu$VarName[which(OECDMenu$SubReg=="S. &amp; S.E.Asia")] <- "XxZzYySSEAsia1XxZzYy"
-OECDMenu$VarName[which(OECDMenu$SubReg=="E.Europe &amp; f.SU")] <- "XxZzYyFSU1XxZzYy"
-OECDMenu$VarName[which(OECDMenu$SubReg=="M.East &amp; N.Africa")] <- "XxZzYyMENA1XxZzYy"
+OECDMenu$VarName[which(OECDMenu$SubReg=="South and South-East Asia")] <- "XxZzYySSEAsia1XxZzYy"
+OECDMenu$VarName[which(OECDMenu$SubReg=="East. Europe and form. SU")] <- "XxZzYyFSU1XxZzYy"
+OECDMenu$VarName[which(OECDMenu$SubReg=="MENA")] <- "XxZzYyMENA1XxZzYy"
 OECDMenu$VarName[which(OECDMenu$SubReg=="W. Europe")] <- "XxZzYyWEurope1XxZzYy"
-OECDMenu$VarName[which(OECDMenu$SubReg=="Sub-Sah. Africa")] <- "XxZzYySSA1XxZzYy"
-OECDMenu$VarName[which(OECDMenu$SubReg=="L.America &amp; Carib.")] <- "XxZzYyLAC1XxZzYy"
+OECDMenu$VarName[which(OECDMenu$SubReg=="Sub-Saharan Africa")] <- "XxZzYySSA1XxZzYy"
+OECDMenu$VarName[which(OECDMenu$SubReg=="Latin America and Carib.")] <- "XxZzYyLAC1XxZzYy"
 OECDMenu$VarName[which(OECDMenu$SubReg=="W. Offshoots")] <- "XxZzYyWOffshoots1XxZzYy"
-OECDMenu$VarName[which(OECDMenu$SubReg=="E.Asia")] <- "XxZzYyEAsia1XxZzYy"
+OECDMenu$VarName[which(OECDMenu$SubReg=="East Asia")] <- "XxZzYyEAsia1XxZzYy"
+if (F){
+  OECDMenu$VarName[which(OECDMenu$SubReg=="S. &amp; S.E.Asia")] <- "XxZzYySSEAsia1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="E.Europe &amp; f.SU")] <- "XxZzYyFSU1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="M.East &amp; N.Africa")] <- "XxZzYyMENA1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="W. Europe")] <- "XxZzYyWEurope1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="Sub-Sah. Africa")] <- "XxZzYySSA1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="L.America &amp; Carib.")] <- "XxZzYyLAC1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="W. Offshoots")] <- "XxZzYyWOffshoots1XxZzYy"
+  OECDMenu$VarName[which(OECDMenu$SubReg=="E.Asia")] <- "XxZzYyEAsia1XxZzYy"
+}
 OECDMenu2 <- unique(OECDMenu$SubReg)
 OECDMenu$XYZ <- as.character(NA)
 
@@ -232,6 +269,7 @@ for (i_regions in OECDMenu2){
   # get the set of countries of that region with the proper names for the menu:
   temp <- GlobalMetadata$country_name[which(GlobalMetadata$OECD_Region == i_regions)]
   temp <- temp[!is.na(temp)]
+  temp <- temp[!temp==""]
   temp <- sort(temp)
   
   for (L_i in temp){
@@ -282,7 +320,8 @@ for (i_regions in OECDMenu2){
 # so dont forget to split them into three groups:
 
 # do the OECD split:
-OECDSplit <- aggregate(cbind(count = OECD_Country_Name) ~ OECD_Region, data = GlobalMetadata, FUN = function(x){NROW(x)})
+GlobalMetadataOECD <- subset(GlobalMetadata,!(GlobalMetadata$OECD_Region==""))
+OECDSplit <- aggregate(cbind(count = OECD_Country_Name) ~ OECD_Region, data = GlobalMetadataOECD, FUN = function(x){NROW(x)})
 
 # I need to add the rows here for the XYZ2 and 3:
 XYZ2 <- gsub("1","2",unique(OECDMenu$VarName))
@@ -351,17 +390,43 @@ for (L_i in temp){
     MapCodes <- strsplit(Historical$WebmapperNums[which(Historical$ClioInfraCountryName==L_i)],";")[[1]]
     HistoricalData <- subset(ClioData,ClioData$`Webmapper numeric code` %in% MapCodes)
     HistoricalData <- HistoricalData[rowSums(is.na(HistoricalData[,9:524]))<515,]
-  
-  
-    write.xlsx2(HistoricalData,file=paste0(GenericPath,"CountryData/",CountryDataFileName), 
+    
+    ttt <- as.data.frame(as.matrix(HistoricalData),stringsAsFactors = F)
+    ttt[,c(2,3,5,6,seq(9,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,5,6,seq(9,ncol(ttt),1))], function (x) as.numeric(x))
+    
+    write.xlsx2(ttt,file=paste0(GenericPath,"CountryData/",CountryDataFileName), 
                sheetName="Data Clio Infra Format", row.names=F, showNA=F)
+    
+    # add Long Format Section
+    
+    fLocalTemp <- HistoricalData
+    fLocalTemp$`Webmapper code` <- NULL
+    fLocalTemp$`Webmapper numeric code` <- NULL
+    fLocalTemp$Filename <- NULL
+    fLocalTemp$ccode <- NULL
+    fLocalTemp$`country name` <- factor(fLocalTemp$`country name`)
+    
+    names(fLocalTemp)[2] <- "Borders Start Year"
+    names(fLocalTemp)[3] <- "Borders End Year"
+    
+    fLocalTemp$`Borders Start Year` <- factor(fLocalTemp$`Borders Start Year`)
+    fLocalTemp$`Borders End Year` <- factor(fLocalTemp$`Borders End Year`)
+    fLocalTemp$Indicator <- factor(fLocalTemp$Indicator)
+    
+    LocalTempLongFormat <- gather(fLocalTemp,year,value,which(names(fLocalTemp)=="1500"):which(names(fLocalTemp)=="2015"))
+    LocalTempLongFormat <- LocalTempLongFormat[!is.na(LocalTempLongFormat$value),]
+    ttt <- as.data.frame(as.matrix(LocalTempLongFormat),stringsAsFactors = F)
+    ttt[,c(2,3,seq(5,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,seq(5,ncol(ttt),1))], function (x) as.numeric(x))
+    
+    write.xlsx2(ttt, file=paste0(GenericPath,"CountryData/",CountryDataFileName),
+                sheetName="Data Long Format", append=TRUE, row.names=F, showNA=F)
     
     # which are the available indicators to cite:
     AvailIndicators <- unique(HistoricalData$Indicator)
     
     # create metadata sheet starting with the download url of the file:
     
-    Metadata <- t(c("Downloaded from","N/A",paste0(URL_basis,"/data/DataAtHistoricalBorders.xlsx")))
+    Metadata <- t(c("Downloaded from","N/A",paste0(URL_basis,"/data/",CountryDataFileName)))
     Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
     names(Metadata) <- c("Description","Indicator Name","Value")
     
@@ -390,19 +455,19 @@ for (L_i in temp){
       CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==i)]
       CitationFileName <- as.character(CitationFileName)
       
-      Metadata <- t(c("XML Citation",i,paste0(URL_basis,"/citations/",CitationFileName,".xml")))
+      Metadata <- t(c("XML Citation",i,paste0(URL_basis,"/Citations/",CitationFileName,".xml")))
       Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
       names(Metadata) <- c("Description","Indicator Name","Value")
       
       FullMetadata <- rbind(FullMetadata,Metadata)
       
-      Metadata <- t(c("RIS Citation",i,paste0(URL_basis,"/citations/",CitationFileName,".ris")))
+      Metadata <- t(c("RIS Citation",i,paste0(URL_basis,"/Citations/",CitationFileName,".ris")))
       Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
       names(Metadata) <- c("Description","Indicator Name","Value")
       
       FullMetadata <- rbind(FullMetadata,Metadata)
       
-      Metadata <- t(c("BIB Citation",i,paste0(URL_basis,"/citations/",CitationFileName,".bib")))
+      Metadata <- t(c("BIB Citation",i,paste0(URL_basis,"/Citations/",CitationFileName,".bib")))
       Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
       names(Metadata) <- c("Description","Indicator Name","Value")
       
@@ -564,13 +629,13 @@ testfile <- gsub("XxZzYyMelanesiaXxZzYy", SubRegions$XYZ[which(SubRegions$VarNam
 # OECD Countries:
 for (i_oecd in 1:nrow(OECDMenu)){
   testfile <- gsub(OECDMenu$VarName[i_oecd], OECDMenu$XYZ[i_oecd], testfile)
+  i_oecd <- i_oecd + 1
 }
 
 # Historical:
 testfile <- gsub("XxZzYyLOC1XxZzYy", XxZzYyLOC1XxZzYy, testfile)
 testfile <- gsub("XxZzYyLOC2XxZzYy", XxZzYyLOC2XxZzYy, testfile)
 testfile <- gsub("XxZzYyLOC3XxZzYy", XxZzYyLOC3XxZzYy, testfile)
-
 
 # Indicators:
 testfile <- gsub("XxZzYyAgricultureXxZzYy", XxZzYyAgricultureXxZzYy, testfile)
@@ -585,15 +650,5 @@ testfile <- gsub("XxZzYyNationalAccountsXxZzYy", XxZzYyNationalAccountsXxZzYy, t
 testfile <- gsub("XxZzYyPricesAndWagesXxZzYy", XxZzYyPricesAndWagesXxZzYy, testfile)
 testfile <- gsub("XxZzYyProductionXxZzYy", XxZzYyProductionXxZzYy, testfile)
 
-# these are now part of the substitution in FooterSubstitution.R
-# Copyright:
-#testfile <- gsub("XxZzYyCopyrightYearsXxZzYy", XxZzYyCopyrightYearsXxZzYy, testfile)
-# top menu figures:
-#testfile <- gsub("XxZzYyTotalDatasetsXxZzYy", "76", testfile)
-#testfile <- gsub("XxZzYyTotalNumOfCountriesXxZzYy", "210", testfile)
-# About Clio Infra:
-#testfile <- gsub("XxZzYyAboutClioInfraXxZzYy", XxZzYyAboutClioInfraXxZzYy, testfile)
-
 i_file <- "index.html"
 write(testfile, paste0(GenericPath,i_file))
-

@@ -31,14 +31,26 @@ MakeTheGGplot <- function(pdata,XxZzYyTitleXxZzYy,XxZzYyIndicNoSpaceXxZzYy,GeoLe
   GeoLevelTitle <- GeoLevel
   GeoLevel <- trimalls(gsub("[[:punct:]]", "", GeoLevel))
   
+  #GeoLevelTitle <- switch(GeoLevelTitle,
+  #                        'Global' =  "Global",
+  #                        'E.Asia' = "East Asia",
+  #                        'E.Europe And f.SU' = "Eastern Europe and former Soviet Union",
+  #                        'L.America And Carib.' = "Latin America and Caribbean",
+  #                        'M.East And N.Africa' = "Middle East and North Africa",
+  #                        'S. And S.E.Asia' = "South and South-East Asia",
+  #                        'Sub-Sah. Africa' = "Sub-Saharan Africa",
+  #                        'W. Europe' = "Western Europe",
+  #                        'W. Offshoots' = "Western Offshoots")
+  
+  
   GeoLevelTitle <- switch(GeoLevelTitle,
                           'Global' =  "Global",
-                          'E.Asia' = "East Asia",
-                          'E.Europe And f.SU' = "Eastern Europe and former Soviet Union",
-                          'L.America And Carib.' = "Latin America and Caribbean",
-                          'M.East And N.Africa' = "Middle East and North Africa",
-                          'S. And S.E.Asia' = "South and South-East Asia",
-                          'Sub-Sah. Africa' = "Sub-Saharan Africa",
+                          'East Asia' = "East Asia",
+                          'East. Europe and form. SU' = "Eastern Europe and former Soviet Union",
+                          'Latin America and Carib.' = "Latin America and Caribbean",
+                          'MENA' = "Middle East and North Africa",
+                          'South and South-East Asia' = "South and South-East Asia",
+                          'Sub-Saharan Africa' = "Sub-Saharan Africa",
                           'W. Europe' = "Western Europe",
                           'W. Offshoots' = "Western Offshoots")
   
@@ -81,12 +93,12 @@ MakeTheGGplot <- function(pdata,XxZzYyTitleXxZzYy,XxZzYyIndicNoSpaceXxZzYy,GeoLe
     
     pdata <- pdata[,as.character(TickYears)]
     
-    pdata2 <- expand.grid(names(pdata)[1],pdata[!is.na(pdata[,1]),1], KEEP.OUT.ATTRS = F, stringsAsFactors = F)
+    pdata2 <- expand.grid(names(pdata)[1],as.numeric(unlist(pdata[!is.na(pdata[,1]),1])), KEEP.OUT.ATTRS = F, stringsAsFactors = F)
+    
     
     for (L_i in 2:ncol(pdata)){
-      pdata2 <- rbind(pdata2,
-                      expand.grid(names(pdata)[L_i],pdata[!is.na(pdata[,L_i]),L_i],
-                                  KEEP.OUT.ATTRS = F, stringsAsFactors = F))
+      pdata2 <- rbind(pdata2,expand.grid(names(pdata)[L_i],as.numeric(unlist(pdata[!is.na(pdata[,L_i]),L_i])),
+                                         KEEP.OUT.ATTRS = F, stringsAsFactors = F))
     }
     
     names(pdata2) <- c("Year","Value")

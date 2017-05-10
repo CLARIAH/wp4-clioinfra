@@ -6,11 +6,13 @@ require(stringr)
 require(foreign)
 require(countrycode)
 
+rm(list=ls())
+
 ### "Labourers_wage-historical.xlsx" only had 203 instead of 523 variables, bcs it started from 1820 instead of 1500...
 ### also two files have more rows, but those are just NA rows read accidently by R, and I remove them
 ### this happens for: "Book_titles_capita-historical.xlsx-1417" and "Exchange_Rates_UK-historicalV2.xlsx-1414"
 
-DataPath <- '/home/michalis/PhD/Clio Infra/historical.all.standardized/'
+DataPath <- '/home/michalis/PhD/Clio Infra/historical.all.standardized.2/'
 ExportPath <- '/home/michalis/PhD/Clio Infra/Website/Data Exports R/'
 
 FilenamePattern <- '.xlsx'
@@ -132,10 +134,6 @@ UNmembers$`OFFICIAL NAMES OF THE UNITED NATIONS MEMBERSHIP`[which(!(UNmembers$`O
 CountriesList <- unique(ClioData$`country name`)
 
 # now match all the countries in the data with naming information from sources above
-
-# first keep only rows that have not all elements of the specified columns NA
-#ClioOnlyWithData <- ClioData[rowSums(is.na(ClioData[,8:524]))<516,]
-# but this way I am missing the border changes available in the maps, so I should keep all countries
 
 # then get country codes and country names only
 Countries <- ClioData[,c(1,2,3,4)]
@@ -699,16 +697,19 @@ GlobalMetadata$OECD_Region[which(GlobalMetadata$ClioInfraCountryName==TargetCoun
 
 
 # Export all countries data:
-
+CountriesWithNoData <- 0
+CountriesWithData <- 0
 for (k in 1:length(CountriesList)){
   CountryData <- subset(ClioData,ClioData$`country name`==CountriesList[k])
   # keep only rows that have not all elements of the specified columns NA
   CountryData <- CountryData[rowSums(is.na(CountryData[,8:524]))<516,]
   if (nrow(CountryData)>1){
+    CountriesWithData <- CountriesWithData + 1
     #WriteXLS(CountryData, paste0(ExportPath,CountriesList[k],".xlsx"))
   } else {
     # I want to know the names of countries without data
-    print(CountriesList[k])
+    #print(CountriesList[k])
+    CountriesWithNoData <- CountriesWithNoData + 1
   }
 }
 
@@ -780,7 +781,7 @@ ClioMetaData[1,17] <- paste0(substr(txtFiles[1], 1, nchar(txtFiles[1])-4),"-hist
 # e.g. "8. Keywords (6)" or "8. Keywords" those where manually changed back to "8. Keywords (5)"
 ##########################
 
-for (k in 2:76){
+for (k in 2:length(txtFiles)){
   tempMetaClio <- readChar(paste0(DataPath,txtFiles[k]), file.info(paste0(DataPath,txtFiles[k]))$size)
   tempMetaClio <- gsub("14. Period of collection","14. Date of collection",tempMetaClio)
   tempMetaClio <- gsub("15. Data collector\n","15. Data collectors\n",tempMetaClio)
@@ -825,6 +826,7 @@ for (j in 1:ncol(ClioMetaData)){
   }
 }
 
+# ADD WebName and WebCategory
 # now add columns with the name of the indicator as it appears on the website, and the category that it is assigned:
 ClioMetaData$WebName <- NA
 ClioMetaData$WebCategory <- NA
@@ -979,8 +981,10 @@ ClioMetaData$WebCategory[which(ClioMetaData$title=="Building labourers' real wag
 
 ClioMetaData$WebName[which(ClioMetaData$title=="Height ginis by birth decade and country")] <- "Height Gini"
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Height ginis by birth decade and country")] <- "Demography"
-ClioMetaData$WebName[which(ClioMetaData$title=="Heights by birth decade and country, both before and after 1800")] <- "Heights"
+ClioMetaData$WebName[which(ClioMetaData$title=="Heights by birth decade and country, both before and after 1800")] <- "Height"
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Heights by birth decade and country, both before and after 1800")] <- "Demography"
+ClioMetaData$WebName[which(ClioMetaData$title=="Composite Measure of Wellbeing")] <- "Composite Measure of Wellbeing"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Composite Measure of Wellbeing")] <- "Demography"
 
 #ClioMetaData$WebName[which(ClioMetaData$title=="")] <- ""
 #ClioMetaData$WebCategory[which(ClioMetaData$title=="")] <- ""
@@ -999,21 +1003,7 @@ ClioMetaData$WebCategory[which(ClioMetaData$title=="Heights by birth decade and 
 ## XxZzYyCountryXxZzYy, XxZzYyArithmeticMeanXxZzYy, XxZzYyTitleXxZzYy, XxZzYyObservationsXxZzYy,
 ## XxZzYyObsAfricaXxZzYy, etc
 
-
-# add proper citations
-# e.g. Foldvari, P.: A latent democracy measure 1850-2000, Utrecht University, Centre for Global Economic History, Working paper no. 59., June 2014
-
-## now read-in the data to collect the descriptives and make the graphs
-
-# map title with indicator names:
-
-
-WriteXLS(ClioMetaData, "/home/michalis/PhD/Clio Infra/Website/metaD.xlsx")
-
-#IndicatorName <- read_excel(paste0(DataPath,files[1]), sheet=1)
-#ClioData$Indicator <- names(IndicatorName)[1]
-
-# check whic indicators are missing:
+# check which indicators are missing:
 Dataverse <- read.csv("/home/michalis/PhD/Clio Infra/Website/IndicatorsList.txt",header=F, stringsAsFactors = F)
 ClioNow <- read.csv("/home/michalis/PhD/Clio Infra/Website/IndicatorsOnClioInfraEUNow.txt",header=F, stringsAsFactors = F)
 
@@ -1027,3 +1017,18 @@ ClioDataList <- unique(ClioData$Indicator)
 ClioDataList[which(!(c(ClioDataList) %in% c(CLN)))]
 # [1] "Exchange Rates to UK Pound"      "Female life expectancy at Birth" "Height Gini"                    
 # [4] "Height"
+
+# map title with indicator names:
+
+write.xlsx2(ClioMetaData, "/home/michalis/PhD/Clio Infra/Website/metaD.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(OECDregions, "/home/michalis/PhD/Clio Infra/Website/OECDregions.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(GlobalMetadata, "/home/michalis/PhD/Clio Infra/Website/GlobalMetadata.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(UNmembers, "/home/michalis/PhD/Clio Infra/Website/UNmembers.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(UNregions, "/home/michalis/PhD/Clio Infra/Website/UNregions.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+
+rm(list= ls()[!(ls() %in% c('ClioData'))])
+save.image("~/PhD/Clio Infra/Website/ClioData.RData")
+#write.xlsx2(ClioData, "/home/michalis/PhD/Clio Infra/Website/ClioData.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+
+# 20170508-18:25
+# save.image("~/PhD/Clio Infra/Website/AddingWellBeing.RData")

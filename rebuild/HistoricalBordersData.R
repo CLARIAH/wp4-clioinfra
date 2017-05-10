@@ -1,8 +1,30 @@
 # export data corresponding to historical entities for the homepage:
 require(xlsx)
+require(readxl)
 require(RefManageR)
+require(tidyr)
+rm(list=ls())
 
-load("~/PhD/Clio Infra/Website/ReadData3.R.RData")
+# set main path for all scripts
+GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
+
+# to get the data from the ReadData.R script
+load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+
+# select only rows that have not all elements of the specified columns NA
+ClioOnlyWithData <- ClioData[rowSums(is.na(ClioData[,8:524]))<516,]
+
+ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+
+URL_basis <- "https://www.clio-infra.eu"
+
+Citations <- read_excel("/home/michalis/PhD/Clio Infra/Website/CitationsStatic.xls")
+Citations <- subset(Citations, !Citations$Indicator == "Geocoder")
+
 ExportData <- T
 # get all non 2012 entries with available data:
 DataWithHistBorders <- subset(ClioData,!(ClioData$`end year`=="2012"))
@@ -17,10 +39,29 @@ names(DataWithHistBorders)[which(names(DataWithHistBorders)=="start year")] <- "
 names(DataWithHistBorders)[which(names(DataWithHistBorders)=="end year")] <- "Borders End Year"
 
 DataWithHistBorders <- DataWithHistBorders[ order(DataWithHistBorders$`country name`),]
+ttt <- as.data.frame(as.matrix(DataWithHistBorders),stringsAsFactors = F)
+ttt[,c(2,3,seq(5,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,seq(5,ncol(ttt),1))], function (x) as.numeric(x))
 
 FilenamePath <- paste0(GenericPath,"data/DataAtHistoricalBorders.xlsx")
 if (ExportData){
-  write.xlsx(DataWithHistBorders, file=FilenamePath, sheetName="Data Clio Infra Format", row.names=F, showNA=F)
+  write.xlsx2(ttt, file=FilenamePath, sheetName="Data Clio Infra Format", row.names=F, showNA=F, append = F)
+}
+
+# add Long Format Section
+
+fLocalTemp <- DataWithHistBorders
+fLocalTemp$`country name` <- factor(fLocalTemp$`country name`)
+fLocalTemp$`Borders Start Year` <- factor(fLocalTemp$`Borders Start Year`)
+fLocalTemp$`Borders End Year` <- factor(fLocalTemp$`Borders End Year`)
+fLocalTemp$Indicator <- factor(fLocalTemp$Indicator)
+
+LocalTempLongFormat <- gather(fLocalTemp,year,value,which(names(fLocalTemp)=="1500"):which(names(fLocalTemp)=="2015"))
+LocalTempLongFormat <- LocalTempLongFormat[!is.na(LocalTempLongFormat$value),]
+ttt <- as.data.frame(as.matrix(LocalTempLongFormat),stringsAsFactors = F)
+ttt[,c(2,3,seq(5,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,seq(5,ncol(ttt),1))], function (x) as.numeric(x))
+
+if (ExportData){
+  write.xlsx2(ttt, file=FilenamePath, sheetName="Data Long Format", append=TRUE, row.names=F, showNA=F)
 }
 
 # which are the available indicators to cite:
@@ -60,23 +101,26 @@ for (i in AvailIndicators){
   CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==i)]
   CitationFileName <- as.character(CitationFileName)
   
-  Metadata <- t(c("XML Citation",i,paste0(URL_basis,"/citations/",CitationFileName,".xml")))
+  Metadata <- t(c("XML Citation",i,paste0(URL_basis,"/Citations/",CitationFileName,".xml")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Indicator Name","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
-  Metadata <- t(c("RIS Citation",i,paste0(URL_basis,"/citations/",CitationFileName,".ris")))
+  Metadata <- t(c("RIS Citation",i,paste0(URL_basis,"/Citations/",CitationFileName,".ris")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Indicator Name","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
   
-  Metadata <- t(c("BIB Citation",i,paste0(URL_basis,"/citations/",CitationFileName,".bib")))
+  Metadata <- t(c("BIB Citation",i,paste0(URL_basis,"/Citations/",CitationFileName,".bib")))
   Metadata <- as.data.frame(Metadata, stringsAsFactors=F)
   names(Metadata) <- c("Description","Indicator Name","Value")
   
   FullMetadata <- rbind(FullMetadata,Metadata)
 }
 
-write.xlsx(FullMetadata, file=FilenamePath, sheetName="Metadata", append=TRUE, row.names=F)
+if (ExportData){
+ write.xlsx2(FullMetadata, file=FilenamePath, sheetName="Metadata", append=TRUE, row.names=F, showNA=F)
+}
+

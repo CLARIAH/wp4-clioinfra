@@ -1,5 +1,4 @@
 # substitute for the news and publication items on the footer for all pages created:
-load("~/PhD/Clio Infra/Website/ReadData3.R.RData")
 
 # this script should be updating also all main variables subject to frequent change:
 
@@ -24,11 +23,31 @@ IndicatorPages <- list.files(IndicatorPath)
 IndicatorPages <- paste(IndicatorPath,IndicatorPages,sep="/")
 # core pages at the generic path:
 GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
-CorePages <- c("News_Publications.html","index.html","Partners.html") # add indexOECD.html once created
+CorePages <- c("News_Publications.html","index.html","Partners.html")
 CorePages <- paste0(GenericPath,CorePages)
 
 AllPages <- c(CountriesPages,IndicatorPages,CorePages)
 SaveFilenames <- gsub('Website',"Website/ToUpload",AllPages)
+
+# populating news items
+
+XxZzYyNewsItem1XxZzYy <- "<a href=\"./News_Publications.html#item010\">How Was Life? Global Well-Being Since 1820</a>"
+XxZzYyNewsItem1DateXxZzYy <- "Published on Thu, 12/04/2014 - 16:22"
+
+XxZzYyNewsItem2XxZzYy <- "<a href=\"./News_Publications.html#item002\">Quality of Life Workshop at the OECD</a>"
+XxZzYyNewsItem2DateXxZzYy <- "Published on Sun, 03/24/2013 - 14:25"
+
+XxZzYyNewsItem3XxZzYy <- "<a href=\"./News_Publications.html#item001\">Workshop on Real Wages</a>"
+XxZzYyNewsItem3DateXxZzYy <- "Published on Thu, 03/21/2013 - 15:07"
+
+XxZzYyPublicationItem1XxZzYy <- "<a href=\"./News_Publications.html#item009\">How Was Life? Global Well-Being <br/>Since 1820</a>"
+XxZzYyPublicationItem1DateXxZzYy <- "Published on Thu, 12/04/2014 - 16:20"
+
+XxZzYyPublicationItem2XxZzYy <- "<a href=\"./News_Publications.html#item008\">Overview of datasets used in Global <br/>Well-Being Since 1820</a>"
+XxZzYyPublicationItem2DateXxZzYy <- "Published on Thu, 12/04/2014 - 16:15"
+
+XxZzYyPublicationItem3XxZzYy <- "<a href=\"./News_Publications.html#item009\">Working Papers Center for Global Economic History Online</a>"
+XxZzYyPublicationItem3DateXxZzYy <- ""
 
 # process with read, substitution and save:
 total <- length(AllPages)
@@ -40,24 +59,6 @@ for (i in 1:total){
   setTkProgressBar(pb, i, label=paste( round(i/total*100, 0),"% done"))
   
   test <- readChar(AllPages[i], file.info(AllPages[i])$size)
-  
-  XxZzYyNewsItem1XxZzYy <- "<a href=\"./News_Publications.html#item010\">How Was Life? Global Well-Being Since 1820</a>"
-  XxZzYyNewsItem1DateXxZzYy <- "Published on Thu, 12/04/2014 - 16:22"
-  
-  XxZzYyNewsItem2XxZzYy <- "<a href=\"./News_Publications.html#item002\">Quality of Life Workshop at the OECD</a>"
-  XxZzYyNewsItem2DateXxZzYy <- "Published on Sun, 03/24/2013 - 14:25"
-  
-  XxZzYyNewsItem3XxZzYy <- "<a href=\"./News_Publications.html#item001\">Workshop on Real Wages</a>"
-  XxZzYyNewsItem3DateXxZzYy <- "Published on Thu, 03/21/2013 - 15:07"
-  
-  XxZzYyPublicationItem1XxZzYy <- "<a href=\"./News_Publications.html#item009\">How Was Life? Global Well-Being <br/>Since 1820</a>"
-  XxZzYyPublicationItem1DateXxZzYy <- "Published on Thu, 12/04/2014 - 16:20"
-  
-  XxZzYyPublicationItem2XxZzYy <- "<a href=\"./News_Publications.html#item008\">Overview of datasets used in Global <br/>Well-Being Since 1820</a>"
-  XxZzYyPublicationItem2DateXxZzYy <- "Published on Thu, 12/04/2014 - 16:15"
-  
-  XxZzYyPublicationItem3XxZzYy <- "<a href=\"./News_Publications.html#item009\">Working Papers Center for Global Economic History Online</a>"
-  XxZzYyPublicationItem3DateXxZzYy <- ""
   
   test <- gsub("XxZzYyNewsItem1XxZzYy", XxZzYyNewsItem1XxZzYy, test)
   test <- gsub("XxZzYyNewsItem2XxZzYy", XxZzYyNewsItem2XxZzYy, test)

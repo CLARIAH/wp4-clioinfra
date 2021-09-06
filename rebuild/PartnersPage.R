@@ -1,17 +1,18 @@
 # this is to be used to substitute the XYZ items on PartnersTemplate.html
 require(xlsx)
-ContributorsList <- read.xlsx("/home/michalis/PhD/Clio Infra/Website/ContributorsList.xlsx", sheetIndex = 1)
+ContributorsList <- read.xlsx("ContributorsList.xlsx", sheetIndex = 1)
 ContributorsList <- ContributorsList[order(ContributorsList[,4]),]
-GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
 
-fileName <- '/home/michalis/PhD/Clio Infra/Website/PartnersTemplate.html'
+GenericPath <- paste0(dirname(rstudioapi::getSourceEditorContext()$path))
+
+fileName <- 'PartnersTemplate.html'
 test <- readChar(fileName, file.info(fileName)$size)
 
 if (FALSE){
   # not to be executed since now the substitution takes place at the FooterSubstitution.R script
   XxZzYyTotalDatasetsXxZzYy <- nrow(ClioMetaData)
   XxZzYyTotalNumOfCountriesXxZzYy <- nrow(subset(GlobalMetadata,GlobalMetadata$DataPoints>0))
-  XxZzYyAboutClioInfraXxZzYy <- readChar(paste(GenericPath,"AboutClioInfra.txt",sep="/"), file.info(paste(GenericPath,"AboutClioInfra.txt",sep="/"))$size)
+  XxZzYyAboutClioInfraXxZzYy <- readChar(paste(GenericPath,"/AboutClioInfra.txt",sep="/"), file.info(paste(GenericPath,"/AboutClioInfra.txt",sep="/"))$size)
   XxZzYyCopyrightYearsXxZzYy <- "2010-2017"
   
   test <- gsub("XxZzYyTotalDatasetsXxZzYy", XxZzYyTotalDatasetsXxZzYy, test)
@@ -79,4 +80,4 @@ test <- gsub("XxZzYyContributors2XxZzYy", XxZzYyContributors2XxZzYy, test)
 test <- gsub("XxZzYyContributors3XxZzYy", XxZzYyContributors3XxZzYy, test)
 
 # export the HTML page:
-write(test, paste0(GenericPath,"Partners.html"))
+write(test, paste0(GenericPath,"/Partners.html"))

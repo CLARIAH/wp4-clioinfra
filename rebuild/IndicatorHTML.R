@@ -6,28 +6,36 @@
 # Universities.docx and txt to universities.docx and txt
 # Urban_Population.txt and docx to Urban_population.txt and docx
 
-options( java.parameters = "-Xmx2g")
+options( java.parameters = "-Xmx10g")
 
-require(RefManageR)
-require(readxl)
-require(xlsx)
-require(ggplot2)
-require('jsonlite')
-require(tidyr)
+library(RefManageR)
+library(readxl)
+library(rJava)
+library(xlsx)
+library(ggplot2)
+library(jsonlite)
+library(tidyr)
+
 rm(list=ls())
 
-# to get the data from the ReadData.R script
-load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+# https://stackoverflow.com/questions/21937640/handling-java-lang-outofmemoryerror-when-writing-to-excel-from-r
+jgc <- function()
+{
+  #.jcall("java/lang/System", method = "gc")
+} 
 
-ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+# to get the data from the ReadData.R script
+load(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/ClioData.RData')) # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+
+ClioMetaData <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/metaD.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/OECDregions.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/GlobalMetadata.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNmembers.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNregions.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
 
 URL_basis <- "https://www.clio-infra.eu"
 
-GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
+GenericPath <- dirname(rstudioapi::getSourceEditorContext()$path)
 # export the individual indicator data to xlsx files?
 ExportData <- T
 # export images?
@@ -39,20 +47,21 @@ source('MakeTheGGplot.R')
 # /home/michalis/PhD/Clio Infra/Website/html/data
 #XxZzYyAboutClioInfraXxZzYy <- readChar(paste(GenericPath,"AboutClioInfra.txt",sep="/"), file.info(paste(GenericPath,"AboutClioInfra.txt",sep="/"))$size)
 
-Citations <- read_excel("/home/michalis/PhD/Clio Infra/Website/CitationsStatic.xls")
+Citations <- read_excel("CitationsStatic.xls")
 Citations <- subset(Citations, !Citations$Indicator == "Geocoder")
 
 OECD_regions <- unique(GlobalMetadata$OECD_Region[!is.na(GlobalMetadata$OECD_Region)])
 OECD_regions <- OECD_regions[!(OECD_regions=="")]
 OECD_regions <- sort(OECD_regions)
 
-fileName <- '/home/michalis/PhD/Clio Infra/Website/IndicatorsTemplate.html'
+fileName <- 'IndicatorsTemplate.html'
 
 trimalls <- function (x) gsub("\\s", "", x)
 
 IndicatorsList <- unique(ClioData$Indicator)
-DocFiles <- read_excel(paste0(GenericPath,"IndicatorsListWithDocFiles.xlsx"))
-LogPlotList <- read_excel(paste0(GenericPath,"IndicatorsGraphType.xlsx"))
+DocFiles <- read_excel("IndicatorsListWithDocFiles.xlsx")
+LogPlotList <- read_excel("IndicatorsGraphType.xlsx")
+
 # variables that need to be set
 # and then substituted in the text
 # see /home/michalis/PhD/Clio Infra/Website/VarNames.xls for the commands 
@@ -60,6 +69,9 @@ LogPlotList <- read_excel(paste0(GenericPath,"IndicatorsGraphType.xlsx"))
 #length(IndicatorsList)
 
 for (i in 1:length(IndicatorsList)){
+  gc()
+  jgc()
+  
   test <- readChar(fileName, file.info(fileName)$size)
   
   ### newly added, not in excel
@@ -110,7 +122,7 @@ for (i in 1:length(IndicatorsList)){
   FullExport$Indicator <- NULL
   FullExport <- FullExport[ order(FullExport$`country name`),]
   
-  IndicatorFilenamePath <- paste0(GenericPath,"data/",XxZzYyIndicNoSpaceXxZzYy,"_Broad.xlsx")
+  IndicatorFilenamePath <- paste0(GenericPath,"/data/",XxZzYyIndicNoSpaceXxZzYy,"_Broad.xlsx")
   ttt<-as.data.frame(as.matrix(FullExport),stringsAsFactors = F)
   ttt[,c(1,seq(3,ncol(ttt),1))] <-  lapply(ttt[,c(1,seq(3,ncol(ttt),1))], function (x) as.numeric(x))
   
@@ -122,7 +134,7 @@ for (i in 1:length(IndicatorsList)){
   fFullExport$ccode <- factor(fFullExport$ccode)
   fFullExport$`country name`<- factor(fFullExport$`country name`)
   
-  LocalTempLongFormat <- gather(fFullExport,year,value,which(names(fFullExport)=="1500"):which(names(fFullExport)=="2015"))
+  LocalTempLongFormat <- gather(fFullExport,year,value,which(names(fFullExport)=="1500"):which(names(fFullExport)=="2050"))
   LocalTempLongFormat <- LocalTempLongFormat[!is.na(LocalTempLongFormat$value),]
   LocalTempLongFormat <- data.frame(lapply(LocalTempLongFormat, as.character), stringsAsFactors=FALSE)
   LocalTempLongFormat$ccode <- as.numeric(LocalTempLongFormat$ccode)
@@ -148,7 +160,7 @@ for (i in 1:length(IndicatorsList)){
   CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==IndicatorsList[i])]
   CitationFileName <- as.character(CitationFileName)
   
-  bib <- ReadBib(paste0(GenericPath,"Citations/",CitationFileName,".bib"))[1]
+  bib <- ReadBib(paste0(GenericPath,"/Citations/",CitationFileName,".bib"))[1]
   
   TheAuthorAndDate <- capture.output(print(bib, .opts = list(bib.style = "authoryear", first.inits = FALSE, no.print.fields = c("title","publisher","url"))))
   xxxTemp <- unlist(bib)
@@ -184,9 +196,9 @@ for (i in 1:length(IndicatorsList)){
   }
   
   # export compact data (Download only for countries that have available data. Modern borders only.") :
-  FullExport <- FullExport[rowSums(is.na(FullExport[,3:518]))<515,]
+  FullExport <- FullExport[rowSums(is.na(FullExport[,3:553]))<550,]
   
-  IndicatorFilenamePath <- paste0(GenericPath,"data/",XxZzYyIndicNoSpaceXxZzYy,"_Compact.xlsx")
+  IndicatorFilenamePath <- paste0(GenericPath,"/data/",XxZzYyIndicNoSpaceXxZzYy,"_Compact.xlsx")
   ttt<-as.data.frame(as.matrix(FullExport),stringsAsFactors = F)
   ttt[,c(1,seq(3,ncol(ttt),1))] <-  lapply(ttt[,c(1,seq(3,ncol(ttt),1))], function (x) as.numeric(x))
   
@@ -212,7 +224,7 @@ for (i in 1:length(IndicatorsList)){
   
   FullMetadata <- Metadata
   
-  bib <- ReadBib(paste0(GenericPath,"Citations/",CitationFileName,".bib"))[1]
+  bib <- ReadBib(paste0(GenericPath,"/Citations/",CitationFileName,".bib"))[1]
   
   TheAuthorAndDate <- capture.output(print(bib, .opts = list(bib.style = "authoryear", first.inits = FALSE, no.print.fields = c("title","publisher","url"))))
   xxxTemp <- unlist(bib)
@@ -424,7 +436,7 @@ for (i in 1:length(IndicatorsList)){
   setwd(GenericPath)
   source('IndicatorHTMLSubstitutions.R')
   
-  write(test, file = paste0(GenericPath,"Pages Exports R/",trimalls(gsub("[[:punct:]]", "", XxZzYyIndicatorXxZzYy)),".html"))
+  write(test, file = paste0(GenericPath,"/Pages Exports R/",trimalls(gsub("[[:punct:]]", "", XxZzYyIndicatorXxZzYy)),".html"))
   
   rm(test,tempVector,xxxTemp,RegionIndex,stringA,stringB,IndicatorFilenamePath,IndicNameForCitation,
      FileNameForXLS,TheAuthorAndDate,ObsTemp,Metadata,fFullExport,FullExport,FullMetadata,bib,CitationFileName)

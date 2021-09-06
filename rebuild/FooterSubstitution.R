@@ -1,33 +1,36 @@
 # substitute for the news and publication items on the footer for all pages created:
-
+fun1 <- function(lst, n){
+  sapply(lst, `[`, n)
+}
 # this script should be updating also all main variables subject to frequent change:
+GenericPath <- paste0(dirname(rstudioapi::getSourceEditorContext()$path))
 
 XxZzYyTotalDatasetsXxZzYy <- nrow(ClioMetaData)
 XxZzYyTotalNumOfCountriesXxZzYy <- nrow(subset(GlobalMetadata,GlobalMetadata$DataPoints>0))
-XxZzYyAboutClioInfraXxZzYy <- readChar(paste(GenericPath,"AboutClioInfra.txt",sep="/"), file.info(paste(GenericPath,"AboutClioInfra.txt",sep="/"))$size)
-XxZzYyCopyrightYearsXxZzYy <- "2010-2017"
+XxZzYyAboutClioInfraXxZzYy <- readChar(paste(GenericPath,"/AboutClioInfra.txt",sep="/"), file.info(paste(GenericPath,"AboutClioInfra.txt",sep="/"))$size)
+XxZzYyCopyrightYearsXxZzYy <- "2010-2019"
 # newly added:
 XxZzYyFAXXxZzYy <- "fax + 31 20 6654181"
 XxZzYyTelephoneXxZzYy <- "tel + 31 20 6685866"
-XxZzYyEmailXxZzYy <- "e-mail: clioinfra@iisg.nl"
+XxZzYyEmailXxZzYy <- "e-mail: servicedesk@socialhistoryservices.org"
 
-require(tcltk)
+library(tcltk)
 # The pages should be exported in a different folder for easy updating
+GenericPath <- paste0(dirname(rstudioapi::getSourceEditorContext()$path))
 
 # list of html pages that need substitution (all of them need, thus this is a full list of html pages for the website):
-CountryPath <- '/home/michalis/PhD/Clio Infra/Website/CountryPagesWithMenus'
+CountryPath <- paste0(GenericPath,'/CountryPagesWithMenus')
 CountriesPages <- list.files(CountryPath)
 CountriesPages <- paste(CountryPath,CountriesPages,sep="/")
-IndicatorPath <- '/home/michalis/PhD/Clio Infra/Website/IndicatorPagesWithMenus'
+IndicatorPath <- paste0(GenericPath,'/IndicatorPagesWithMenus')
 IndicatorPages <- list.files(IndicatorPath)
 IndicatorPages <- paste(IndicatorPath,IndicatorPages,sep="/")
 # core pages at the generic path:
-GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
 CorePages <- c("News_Publications.html","index.html","Partners.html")
-CorePages <- paste0(GenericPath,CorePages)
-
+CorePages <- paste(GenericPath,CorePages, sep = "/")
+PresentFolder <- fun1(strsplit(GenericPath,"/"),6)
 AllPages <- c(CountriesPages,IndicatorPages,CorePages)
-SaveFilenames <- gsub('Website',"Website/ToUpload",AllPages)
+SaveFilenames <- gsub(PresentFolder,paste0(PresentFolder,"/ToUpload"),AllPages)
 
 # populating news items
 

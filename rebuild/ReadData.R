@@ -1,83 +1,143 @@
+#### bug on reproducing the website: the merge command on row 164:
+# GlobalMetadata <- merge(UNregions, Countries, by.x = "numeric", by.y = "ccode", all.x = T, all.y = T)
+# introduces one more line on the top compared to the version of 2017. Just in case: Check if the xls that are merged have changed.
+
+# Clio Infra: Heights are missing from IndicatorsPerCountry; missing: data/rankings.csv; 
+# data/nations.json;data/DataAtHistoricalBorders.xlsx; graphs/SDN_LabourersRealWage.svg;
+# graphs/TUR_HistoricalGenderEqualityIndex.svg; Inflation should be worse as increasing in abs terms; 
+#Check what to do with the citation of Historical Gender Inequality Index
+
+options( java.parameters = "-Xmx10g")
+
 library(plyr)
-require(readxl)
-require(WriteXLS)
-require(xlsx)
-require(stringr)
-require(foreign)
-require(countrycode)
+library(readxl)
+library(WriteXLS)
+library(xlsx)
+library(stringr)
+library(foreign)
+library(countrycode)
 
 rm(list=ls())
+
+nthsplit <- function(lst, n){
+  sapply(lst, `[`, n)
+}
 
 ### "Labourers_wage-historical.xlsx" only had 203 instead of 523 variables, bcs it started from 1820 instead of 1500...
 ### also two files have more rows, but those are just NA rows read accidently by R, and I remove them
 ### this happens for: "Book_titles_capita-historical.xlsx-1417" and "Exchange_Rates_UK-historicalV2.xlsx-1414"
 
-DataPath <- '/home/michalis/PhD/Clio Infra/historical.all.standardized.2/'
-ExportPath <- '/home/michalis/PhD/Clio Infra/Website/Data Exports R/'
+DataPath <- paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/historical.all.standardized.2/')
+ExportPath <- paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Data Exports R/')
 
 FilenamePattern <- '.xlsx'
 files <- list.files(path=DataPath,pattern = FilenamePattern)
 files <- files[!(files=='Labourers_Wage-historical.xlsx')]
 
-ClioData <- read_excel(paste0(DataPath,files[1]), sheet=1, skip=2)
+ClioData <- suppressMessages(read.xlsx2(paste0(DataPath,files[1]), 
+                                        sheetIndex=1, startRow = 3, stringsAsFactors = F, check.names = F, 
+                                        colClasses = c("character",rep("numeric",2),"character",rep("numeric",520))))
+ClioData[sapply(ClioData, is.nan)] <- NA
 ClioData$Filename <- files[1]
-IndicatorName <- read_excel(paste0(DataPath,files[1]), sheet=1)
+IndicatorName <- suppressMessages(read.xlsx2(paste0(DataPath,files[1]), sheetIndex=1, stringsAsFactors = F, check.names = F))
+# the warnings above are just for renaming the columns, because of the reading starting at the top row with missing column names in xls
+
 ClioData$Indicator <- names(IndicatorName)[1]
 
-print(paste0(files[1],"-",nrow(ClioData)))
+ClioData <- ClioData[rowSums(is.na(ClioData[,7:(ncol(ClioData)-2)]))<(ncol(ClioData)-8),]
+
+print(paste0(files[1],";",nrow(ClioData)))
+rm(IndicatorName)
 
 for (j in 2:length(files)){
-  nextContent <- read_excel(paste0(DataPath,files[j]), sheet=1, skip=2)
+  #if (paste0(files[j])=='Global_Extreme_Poverty_Cost_of_Basic_Needs.xlsx'){
+  #  stop('Global_Extreme_Poverty_Cost_of_Basic_Needs.xlsx')
+  #}
+  nextContent <- suppressMessages(read.xlsx2(paste0(DataPath,files[j]), 
+                                             sheetIndex=1, startRow = 3, stringsAsFactors = F, check.names = F, 
+                                             colClasses = c("character",rep("numeric",2),"character",rep("numeric",520))))
+  if (ncol(nextContent)>524){
+    
+    nextContent <- suppressMessages(read.xlsx2(paste0(DataPath,files[j]), 
+                                               sheetIndex=1, startRow = 3, stringsAsFactors = F, check.names = F, 
+                                               colClasses = c("character",rep("numeric",2),"character",rep("numeric",557))))
+  }
+  
+  nextContent[sapply(nextContent, is.nan)] <- NA
   
   # keep only rows that have not all elements of the specified columns NA
-  nextContent <- nextContent[rowSums(is.na(nextContent[,1:522]))<522,]
+  # nextContent <- nextContent[rowSums(is.na(nextContent[,7:(ncol(nextContent)-2)]))<(ncol(nextContent)-8),]
   
+  # does not work but I think it should not work purposefully
   nextContent$Filename <- files[j]
   
-  IndicatorName <- read_excel(paste0(DataPath,files[j]), sheet=1)
+  IndicatorName <- suppressMessages(read.xlsx2(paste0(DataPath,files[j]), sheetIndex=1, stringsAsFactors = F, check.names = F))
   nextContent$Indicator <- names(IndicatorName)[1]
   
   if (!(nrow(nextContent)==1412)){
-    print(paste0(files[j],"-",nrow(nextContent)))
+    print(paste0("NO 1412 lines in df:",files[j],", it has: ",nrow(nextContent)," instead"))
   }
   
   if (nrow(subset(nextContent,is.na(nextContent$`country name`)))>0){
-    print(paste0(files[j],"-",nrow(nextContent)))
+    print(paste0("NA country name: ",files[j],"-",nrow(nextContent)))
   }
   
-  ClioData <- rbind(ClioData,nextContent)
+  print(paste0(files[j],";",nrow(nextContent)))
+  #stop('Add a control for the additional columns')
   
-  rm(nextContent)
+  if (ncol(nextContent)>ncol(ClioData)){
+    w1 = ncol(ClioData)+1
+    w2 = ncol(nextContent)
+    ClioData[c(w1:w2)] <- as.numeric(NA)
+    names(ClioData)[c(w1:w2)] <- c((max(suppressWarnings(as.numeric(names(ClioData))),na.rm = T)+1):max(suppressWarnings(as.numeric(names(nextContent))),na.rm = T))
+    ClioData <- ClioData[,names(nextContent)]
+    ClioData <- rbind(ClioData,nextContent)
+  } else if (ncol(nextContent)<ncol(ClioData)){
+    w1 = ncol(nextContent)+1
+    w2 = ncol(ClioData)
+    nextContent[c(w1:w2)] <- as.numeric(NA)
+    names(nextContent)[c(w1:w2)] <- c((max(suppressWarnings(as.numeric(names(nextContent))),na.rm = T)+1):max(suppressWarnings(as.numeric(names(ClioData))),na.rm = T))
+    nextContent <- nextContent[,names(ClioData)]
+    ClioData <- rbind(ClioData,nextContent)
+  } else {
+    ClioData <- rbind(ClioData,nextContent)
+  }
+  rm(nextContent,IndicatorName)
 }
 
 # add the "Labourers_wage-historical.xlsx" dataset
 # Adding the columns to host the data
 MissingFile <- "Labourers_Wage-historical.xlsx"
-nextContent <- read_excel(paste0(DataPath,MissingFile), sheet=1, skip=2)
+nextContent <- read.xlsx2(paste0(DataPath,MissingFile), sheetIndex=1, startRow = 3, stringsAsFactors = F, check.names = F,
+                          colClasses = c("character",rep("numeric",2),"character",rep("numeric",520)))
+nextContent[sapply(nextContent, is.nan)] <- NA
 print(paste0(MissingFile,"-",nrow(nextContent)))
+
 # add missing columns
 w1 = ncol(nextContent)+1
 w2 = w1+length(c(1500:1819))-1
 nextContent[c(w1:w2)] <- NA
-names(nextContent)[c(w1:w2)] <- 1500:1819
+names(nextContent)[c(w1:w2)] <- c(1500:1819)
 nextContent$Filename <- MissingFile
-IndicatorName <- read_excel(paste0(DataPath,MissingFile), sheet=1)
+IndicatorName <- read.xlsx2(paste0(DataPath,MissingFile), sheetIndex=1, stringsAsFactors = F, check.names = F)
 nextContent$Indicator <- names(IndicatorName)[1]
+w1 = ncol(nextContent)+1
+w2 = ncol(ClioData)
+nextContent[c(w1:w2)] <- as.numeric(NA)
+names(nextContent)[c(w1:w2)] <- c((max(suppressWarnings(as.numeric(names(nextContent))),na.rm = T)+1):max(suppressWarnings(as.numeric(names(ClioData))),na.rm = T))
+nextContent <- nextContent[,names(ClioData)]
+nextContent <- nextContent[rowSums(is.na(nextContent[,7:(ncol(nextContent)-2)]))<(ncol(nextContent)-8),]
 
 ClioData <- rbind(ClioData,nextContent)
-rm(nextContent)
+rm(nextContent,IndicatorName)
 
-# bring the Filename column up front
-ClioData <- ClioData[c(1:6,523,524,7:522)]
+# bring the Filename &Indicator columns up front
+ClioData <- ClioData[c(1:6,558,559,7:557)]
+# total observations:
+sum(rowSums(!is.na(ClioData[,9:(ncol(ClioData))])))
 
-#####################################################################################
-#####################################################################################
 ########################### Get the Country Identifiers right #######################
-#####################################################################################
-#####################################################################################
 # now I need to add all the info about the country's region, names, ccode, iso3, etc.
-#####################################################################################
-#####################################################################################
 
 UNmembers <- read_excel("/home/michalis/PhD/Clio Infra/Website/OFFICIAL NAMES OF THE UNITED NATIONS MEMBERSHIP.xls",sheet = 1)
 ISO3166 <- read_excel("/home/michalis/PhD/Clio Infra/Website/ISO3166.xls",sheet = 1)
@@ -101,6 +161,14 @@ for (i in 1:nrow(UNregions)){
     }
   }
 }
+#### XXX check this ?####
+# [1] "Congo-51"
+# [1] "Dominica-61"
+# [1] "Guinea-94"
+# [1] "Ireland-107"
+# [1] "Republic of Korea-117"
+# [1] "Niger-160"
+# [1] "Sudan-212"
 
 UNregions$UN_membership_name[which(UNregions$country_name=="Venezuela (Bolivarian Republic of)")] <-
   "Bolivarian Republic of Venezuela"
@@ -173,49 +241,59 @@ GlobalMetadata$WebmapperEndYears <- NA
 # then the unique command I am loosing irrecoverably combinations of border year changes that have common number of duplicates
 # at both start and end; besides for those that single out I would still have to correct it manually
 
-TempClioData <- subset(ClioData,ClioData$Indicator=="Labourers Real Wage")
-
 for (i in 1:nrow(GlobalMetadata)){
-  if (nchar(paste0(TempClioData$`Webmapper numeric code`[
-    which(TempClioData$`country name`==TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)])], collapse = ";"))>0){
-    
-    GlobalMetadata$WebmapperNums[i] <- paste0(TempClioData$`Webmapper numeric code`[
-      which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))], collapse = ";")
-    
-    GlobalMetadata$WebmapperCodes[i] <- paste0(TempClioData$`Webmapper code`[
-      which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))], collapse = ";")
-    
-    GlobalMetadata$WebmapperStartYears[i] <- paste0(TempClioData$`start year`[
-      which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))], collapse = ";")
-    
-    GlobalMetadata$WebmapperEndYears[i] <- paste0(TempClioData$`end year`[
-      which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))], collapse = ";")
-    
-  } else {
-    if (!is.na(GlobalMetadata$`Webmapper numeric code`[i])){
-      GlobalMetadata$WebmapperNums[i] <- paste0(TempClioData$`Webmapper numeric code`[which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])], collapse = ";")
-      GlobalMetadata$WebmapperCodes[i] <- paste0(TempClioData$`Webmapper code`[which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])], collapse = ";")
-      GlobalMetadata$WebmapperStartYears[i] <- paste0(TempClioData$`start year`[which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])], collapse = ";")
-      GlobalMetadata$WebmapperEndYears[i] <- paste0(TempClioData$`end year`[which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])], collapse = ";")
+  TempClioData <- subset(ClioData,ClioData$`country name` == GlobalMetadata$ClioInfraCountryName[i])
+  if (nrow(TempClioData)>0){
+    TempClioData$StartEndYears <- paste0(TempClioData$`start year`,'-',TempClioData$`end year`)
+    if (!is.na(GlobalMetadata$numeric[i])){
+      if (nchar(paste0(unique(TempClioData$`Webmapper numeric code`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]), collapse = ";"))>0){
+        
+        GlobalMetadata$WebmapperNums[i] <- paste0(unique(TempClioData$`Webmapper numeric code`[
+          which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))]), collapse = ";")
+        
+        GlobalMetadata$WebmapperCodes[i] <- paste0(unique(TempClioData$`Webmapper code`[
+          which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))]), collapse = ";")
+        
+        GlobalMetadata$WebmapperStartYears[i] <- paste0(nthsplit(strsplit(unique(TempClioData$StartEndYears[
+          which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))]),'-'),1), collapse = ";")
+        
+        GlobalMetadata$WebmapperEndYears[i] <- paste0(nthsplit(strsplit(unique(TempClioData$StartEndYears[
+          which(TempClioData$`country name`==unique(TempClioData$`country name`[which(GlobalMetadata$numeric[i]==TempClioData$ccode)]))]),'-'),2), collapse = ";")
+      }
+    } else {
+      if (!is.na(GlobalMetadata$`Webmapper numeric code`[i])){
+        
+        GlobalMetadata$WebmapperNums[i] <- paste0(unique(TempClioData$`Webmapper numeric code`[which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])]), collapse = ";")
+        GlobalMetadata$WebmapperCodes[i] <- paste0(unique(TempClioData$`Webmapper code`[which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])]), collapse = ";")
+        
+        GlobalMetadata$WebmapperEndYears[i] <- paste0(nthsplit(strsplit(unique(TempClioData$StartEndYears[
+          which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])]),'-'),2), collapse = ";")
+        
+        GlobalMetadata$WebmapperStartYears[i] <- paste0(nthsplit(strsplit(unique(TempClioData$StartEndYears[
+          which(TempClioData$`country name`==GlobalMetadata$ClioInfraCountryName[i])]),'-'),1), collapse = ";")
+        
+      }
     }
   }
 }
 
-# also test which other have different number of year ends and beginings, and correct them all:
+# also test which other have different number of year ends and beginnings, and correct them all:
 for (i in 1:nrow(GlobalMetadata)){
   if (!is.na(GlobalMetadata$WebmapperStartYears[i]) & !is.na(GlobalMetadata$WebmapperEndYears[i])){
     if (nchar(GlobalMetadata$WebmapperStartYears[i])>nchar(GlobalMetadata$WebmapperEndYears[i])){
-      print(GlobalMetadata$ClioInfraCountryName[i])
+      print(paste0(i,':::',GlobalMetadata$ClioInfraCountryName[i]))
     }
   }
 }
 
 GlobalMetadata$DataPoints <- NA
-
+ClioData[ClioData==""]<-NA
 # finally add a column if that country has any data or not:
 AllCountryNames <- c()
 for (i in 1:nrow(GlobalMetadata)){
-  GlobalMetadata$DataPoints[i] <- sum(rowSums(!is.na(ClioData[which(ClioData$`Webmapper numeric code` %in% as.numeric(strsplit(GlobalMetadata$WebmapperNums[i],";")[[1]])),9:524])))
+  GlobalMetadata$DataPoints[i] <- 
+    sum(rowSums(!is.na(ClioData[which(as.numeric(ClioData$`Webmapper numeric code`) %in% 
+                                        as.numeric(strsplit(GlobalMetadata$WebmapperNums[i],";")[[1]])),9:ncol(ClioData)])))
   if (GlobalMetadata$DataPoints[i]>0){
     # since it is only Clio that gives data then I only use the name of clio here:
     #    AllCountryNames <- c(AllCountryNames,paste(GlobalMetadata$country_name[i],GlobalMetadata$`English short name`[i],
@@ -232,15 +310,52 @@ GMWithDataCountries <- sort(GMWithDataCountries)
 length(GMWithDataCountries)
 length(which(GlobalMetadata$DataPoints>0))
 
-# I get 211 countries with data, and so does the export from the code below:
+# the total observations from the main dataset:
+sum(rowSums(!is.na(ClioData[,9:(ncol(ClioData))])))
+# 872264
+# and that of the GlobalMetadata must be the same:
+sum(GlobalMetadata$DataPoints)
+# 872264
 
+# I get 211 countries with data, and so does the export from the code below:
+# [this seems like an old comment, because now I do get 211 countries] I now get 143 countries with data from the above...
+
+# try again:
+GlobalMetadata$DataPoints <- NA
+ClioData[ClioData==""]<-NA
+
+# finally add a column if that country has any data or not:
+AllCountryNames <- c()
+for (i in 1:length(CountriesList)){
+  CountryData <- subset(ClioData,ClioData$`country name`==CountriesList[i])
+  GlobalMetadata$DataPoints[which(GlobalMetadata$ClioInfraCountryName==CountriesList[i])] <- sum(rowSums(!is.na(CountryData[,9:(ncol(CountryData))])))
+  if (GlobalMetadata$DataPoints[which(GlobalMetadata$ClioInfraCountryName==CountriesList[i])]>0){
+    AllCountryNames <- c(AllCountryNames,CountriesList[i])
+  }
+}
+
+AllCountryNames <- AllCountryNames[!is.na(AllCountryNames)]
+AllCountryNames <- unique(AllCountryNames)
+GMWithDataCountries <- AllCountryNames
+GMWithDataCountries <- sort(GMWithDataCountries)
+length(GMWithDataCountries)
+length(which(GlobalMetadata$DataPoints>0))
+
+# the total observations from the main dataset:
+sum(rowSums(!is.na(ClioData[,9:(ncol(ClioData))])))
+# 872264
+# and that of the GlobalMetadata must be the same:
+sum(GlobalMetadata$DataPoints, na.rm = T)
+# 872264
+
+# the loop below says 211:
 NoDataCountries <- c()
 CDWithDataCountries <- c()
 
 for (k in 1:length(CountriesList)){
   CountryData <- subset(ClioData,ClioData$`country name`==CountriesList[k])
   # keep only rows that have not all elements of the specified columns NA
-  CountryData <- CountryData[rowSums(is.na(CountryData[,9:524]))<515,]
+  CountryData <- CountryData[rowSums(is.na(CountryData[,9:ncol(ClioData)]))<(ncol(ClioData)-8),]
   if (nrow(CountryData)>0){
     CDWithDataCountries <- c(CDWithDataCountries,CountriesList[k])
     WriteXLS(CountryData, paste0(ExportPath,CountriesList[k],".xlsx"))
@@ -249,27 +364,34 @@ for (k in 1:length(CountriesList)){
     #print(CountriesList[k])
     NoDataCountries <- c(NoDataCountries,CountriesList[k])
   }
+  rm(CountryData)
 }
 
 length(NoDataCountries)
+# 278
 length(CDWithDataCountries)
+# 211
+
+CDWithDataCountries[which(!CDWithDataCountries %in% GlobalMetadata$ClioInfraCountryName)]
 
 # OK now lets identify those countries that are missing from the first loop:
 
 # first check which of the 211 countries found with data in the second loop are not found as such by the first that gives 194
 MissedCountries <- CDWithDataCountries[which(!(CDWithDataCountries %in% GMWithDataCountries))]
-# used to be missing those below, but now it is ok!
+# those below used to be missing, but now they are ok!
 #[1] "Ceylon"                       "Czechoslovakia"               "England"                      "Falklands"                   
 #[5] "Gambia"                       "German Confederation"         "Hong Kong"                    "Ottoman"                     
 #[9] "Persia"                       "Poland-Lithuania"             "Prussia"                      "West Germany"                
 #[13] "Yugoslavia"                   "USSR"                         "Germany Federal Republic"     "Egypt (United Arab Republic)"
 #[17] "Yemen Arab Republic"
 
+# save.image("~/PhD/Clio Infra/TempDebugging.RData")
+
 # second check which of the countries found with data in the first loop are not found as such by the second
 GMWithDataCountries[which(!(GMWithDataCountries %in% CDWithDataCountries))]
 # character(0)
 
-WriteXLS(GlobalMetadata,"/home/michalis/PhD/Clio Infra/Website/Global_Metadata.xls")
+WriteXLS(GlobalMetadata,paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/Global_Metadata.xls'))
 
 # duplicates of the same territorial instances and merge their properties (e.g. ccode from Oecd for a country not having ccode before, like USSR)
 # I now need to work for cases like USSR and Soviet Union.
@@ -285,14 +407,20 @@ WriteXLS(GlobalMetadata,"/home/michalis/PhD/Clio Infra/Website/Global_Metadata.x
 
 # a great title for a dataframe :)
 CountriesWithIssues <- subset(GlobalMetadata,is.na(GlobalMetadata$WebmapperNums))
-WriteXLS(CountriesWithIssues,"/home/michalis/PhD/Clio Infra/Website/CountriesWithIssues.xls")
+WriteXLS(CountriesWithIssues,paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/CountriesWithIssues.xls'))
 
 # add a column for tracking numeric codes changes 
 GlobalMetadata$PredecessorNumeric <- NA
 
 ### is american samoa == east samoa?
+### I think so based on the relevant wikipedia pages
+
+# and I need to check with the names of countries in the GlobalMetadata 
+# if there are the duplicated as listed below (with different nowname numbers)
+# OR check why the 2nd row names are usually not present now...
 
 # for Bermuda merge rows 19 and 297
+# now there is no row 297...
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="19")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="297")]
 GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="19")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="297")]
 GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="19")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="297")]
@@ -305,7 +433,7 @@ GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="297")
 ### XXX clio infra Virgin Islands correspond to the US or UK version or none?
 ### XXX are Cooks and Cook islands the same?
 
-# merge 58 and 320 for Czechoslovakia
+# merge 58 and 277 for Czechoslovakia
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$`Webmapper code`[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
 GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$`Webmapper numeric code`[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
 GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$WebmapperNums[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
@@ -314,11 +442,12 @@ GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="58")] <- Glo
 GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$WebmapperEndYears[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
 GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$DataPoints[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
 GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$ClioInfraCountryName[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="320")
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="277")
 
 ### XXX how to treat Ethiopia until 1993? this is a fundamental question with the treatment of historical entities
 
 # merge 72 and 331 for Falkland
+
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="72")] <- GlobalMetadata$`Webmapper code`[which(GlobalMetadata$ClioInfraCountryName=="Falklands")]
 GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="72")] <- GlobalMetadata$`Webmapper numeric code`[which(GlobalMetadata$ClioInfraCountryName=="Falklands")]
 GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="72")] <- GlobalMetadata$WebmapperNums[which(GlobalMetadata$ClioInfraCountryName=="Falklands")]
@@ -336,6 +465,7 @@ GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="331")
 # 85 and 439 for Palestine, 
 # XXX but the dates end in 1945 and I need to provide additional ones
 # also use PSE or WBG? or both?
+
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="439")]
 GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="439")]
 GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="439")]
@@ -488,7 +618,6 @@ GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="259")] <- GlobalMetad
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="543")
 
 # and to both 216 and 543 give the geo regions of present day Yemen 260
-
 GlobalMetadata$region[which(rownames(GlobalMetadata)=="216")] <- GlobalMetadata$region[which(rownames(GlobalMetadata)=="260")]
 GlobalMetadata$region_numeric[which(rownames(GlobalMetadata)=="216")] <- GlobalMetadata$region_numeric[which(rownames(GlobalMetadata)=="260")]
 GlobalMetadata$subregion[which(rownames(GlobalMetadata)=="216")] <- GlobalMetadata$subregion[which(rownames(GlobalMetadata)=="260")]
@@ -498,6 +627,11 @@ GlobalMetadata$region[which(rownames(GlobalMetadata)=="259")] <- GlobalMetadata$
 GlobalMetadata$region_numeric[which(rownames(GlobalMetadata)=="259")] <- GlobalMetadata$region_numeric[which(rownames(GlobalMetadata)=="260")]
 GlobalMetadata$subregion[which(rownames(GlobalMetadata)=="259")] <- GlobalMetadata$subregion[which(rownames(GlobalMetadata)=="260")]
 GlobalMetadata$subregion_numeric[which(rownames(GlobalMetadata)=="259")] <- GlobalMetadata$subregion_numeric[which(rownames(GlobalMetadata)=="260")]
+
+# Sudan split:
+GlobalMetadata$PredecessorNumeric[which(rownames(GlobalMetadata)=="218")] <- GlobalMetadata$numeric[which(rownames(GlobalMetadata)=="221")]
+GlobalMetadata$PredecessorNumeric[which(rownames(GlobalMetadata)=="219")] <- GlobalMetadata$PredecessorNumeric[which(rownames(GlobalMetadata)=="218")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="221")
 
 # Western Sahara: 220/527 XXX borders update
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="220")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="527")]
@@ -510,21 +644,17 @@ GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="220")] <- Glob
 GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="220")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="527")]
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="527")
 
-# Sudan split:
-GlobalMetadata$PredecessorNumeric[which(rownames(GlobalMetadata)=="218")] <- GlobalMetadata$numeric[which(rownames(GlobalMetadata)=="221")]
-GlobalMetadata$PredecessorNumeric[which(rownames(GlobalMetadata)=="219")] <- GlobalMetadata$PredecessorNumeric[which(rownames(GlobalMetadata)=="218")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="221")
+# USSR: 243/271
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="271")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="271")
 
-# USSR: 243/538
-GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="538")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="538")
 GlobalMetadata$`Alpha-2 code`[which(rownames(GlobalMetadata)=="243")] <- "SU"
 GlobalMetadata$`Alpha-3 code`[which(rownames(GlobalMetadata)=="243")] <- "SUN"
 GlobalMetadata$`English short name`[which(rownames(GlobalMetadata)=="243")] <- "Soviet Union"
@@ -550,7 +680,7 @@ GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="262")] <- Glob
 GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="547")]
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="547")
 
-# XXX Now to the remaining entities without geo regions assign them manually
+#### Now to the remaining entities without geo regions assign them manually ####
 # since those countries are about half of the dataframe I will first treat the ones that have data:
 TempCountries <- subset(GlobalMetadata,is.na(GlobalMetadata$region) & GlobalMetadata$DataPoints>0)
 
@@ -695,8 +825,8 @@ GlobalMetadata$subsubregion[which(GlobalMetadata$ClioInfraCountryName==TargetCou
 GlobalMetadata$subsubregion_numeric[which(GlobalMetadata$ClioInfraCountryName==TargetCountry)] <- GlobalMetadata$subsubregion_numeric[which(GlobalMetadata$OECD_Country_Name==OriginCountry)]
 GlobalMetadata$OECD_Region[which(GlobalMetadata$ClioInfraCountryName==TargetCountry)] <- GlobalMetadata$OECD_Region[which(GlobalMetadata$OECD_Country_Name==OriginCountry)]
 
+# Repetition of the loop for export all countries data, also found above (here it does not export anything):
 
-# Export all countries data:
 CountriesWithNoData <- 0
 CountriesWithData <- 0
 for (k in 1:length(CountriesList)){
@@ -708,12 +838,16 @@ for (k in 1:length(CountriesList)){
     #WriteXLS(CountryData, paste0(ExportPath,CountriesList[k],".xlsx"))
   } else {
     # I want to know the names of countries without data
-    #print(CountriesList[k])
+    print(CountriesList[k])
     CountriesWithNoData <- CountriesWithNoData + 1
   }
 }
 
-# Read the docx information in a dataframe
+#### Read the docx information in a dataframe ####
+
+# save.image("~/PhD/Clio Infra/UPDATE 20210315/Test20210315.RData")
+# load("~/PhD/Clio Infra/UPDATE 20210315/Test20210315.RData")
+
 # see the /home/michalis/PhD/Clio Infra/ConvertDOCStoTXT.xls file for converting commands (run on ubuntu only)
 # I try automating this first:
 
@@ -773,13 +907,11 @@ ClioMetaData[1,17] <- paste0(substr(txtFiles[1], 1, nchar(txtFiles[1])-4),"-hist
 
 # now we are ready to iterate among txt files
 
-##########################
 # XXX MANUAL WORK required in pre-editing the txt files for: 
 # Height, Height Gini, income inequality: removed extended 17 section
 # Number_Days_Lost_Labour_Conflicts, Number_Labour_Conflicts, Number_Workers_Labour_Conflicts substituted 2. Author with 2. Author(s)
 # in a number of occasions (~15) the "8. Keywords (5)" was differently written 
 # e.g. "8. Keywords (6)" or "8. Keywords" those where manually changed back to "8. Keywords (5)"
-##########################
 
 for (k in 2:length(txtFiles)){
   tempMetaClio <- readChar(paste0(DataPath,txtFiles[k]), file.info(paste0(DataPath,txtFiles[k]))$size)
@@ -805,7 +937,12 @@ for (k in 2:length(txtFiles)){
   for (i in 1:16){
     tempframe[1,i] <- metaD[i]
   }
-  tempframe[1,17] <- paste0(substr(txtFiles[k], 1, nchar(txtFiles[k])-4),"-historical.xlsx")
+  if (txtFiles[k] %in% c("Global_Extreme_Poverty_Cost_of_Basic_Needs.txt",
+                      "Global_Extreme_Poverty_Dollar_a_Day.txt")){
+    tempframe[1,17] <- paste0(substr(txtFiles[k], 1, nchar(txtFiles[k])-4),".xlsx")
+  } else {
+    tempframe[1,17] <- paste0(substr(txtFiles[k], 1, nchar(txtFiles[k])-4),"-historical.xlsx")
+  }
   ClioMetaData <- rbind(ClioMetaData,tempframe)
   tempframe[,] <- as.character(NA)
 }
@@ -819,14 +956,14 @@ trim2 <- function (x) gsub("\\.$", "", x)
 for (j in 1:ncol(ClioMetaData)){
   for (k in 1:nrow(ClioMetaData)){
     ClioMetaData[k,j] <- trim(ClioMetaData[k,j])
-    if (!(names(ClioMetaData)[j] %in% c("sources", "text")) & !(ClioMetaData[k,j]=="n.a.")){
+    if (!(names(ClioMetaData)[j] %in% c("sources", "text")) & !(ClioMetaData[k,j]=="n.a." & !is.na(ClioMetaData[k,j]))){
       ClioMetaData[k,j] <- trim2(ClioMetaData[k,j])
     }
     ClioMetaData[k,j] <- trimws(ClioMetaData[k,j])
   }
 }
 
-# ADD WebName and WebCategory
+#### ADD WebName and WebCategory ####
 # now add columns with the name of the indicator as it appears on the website, and the category that it is assigned:
 ClioMetaData$WebName <- NA
 ClioMetaData$WebCategory <- NA
@@ -986,9 +1123,42 @@ ClioMetaData$WebCategory[which(ClioMetaData$title=="Heights by birth decade and 
 ClioMetaData$WebName[which(ClioMetaData$title=="Composite Measure of Wellbeing")] <- "Composite Measure of Wellbeing"
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Composite Measure of Wellbeing")] <- "Demography"
 
+### UPDATE for HWL2
+ClioMetaData$WebName[which(ClioMetaData$title=="Global Extreme Poverty Cost of Basic Needs")] <- "Global Extreme Poverty Cost of Basic Needs"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Global Extreme Poverty Cost of Basic Needs")] <- "Demography"
+ClioMetaData$WebName[which(ClioMetaData$title=="Global Extreme Poverty Dollar a Day")] <- "Global Extreme Poverty Dollar a Day"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Global Extreme Poverty Dollar a Day")] <- "Demography"
+
+ClioMetaData$WebName[which(ClioMetaData$title=="Wealth Yearly Ginis")] <- "Wealth Yearly Ginis"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Wealth Yearly Ginis")] <- "Prices and Wages"
+ClioMetaData$WebName[which(ClioMetaData$title=="Wealth Total")] <- "Wealth Total"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Wealth Total")] <- "Prices and Wages"
+ClioMetaData$WebName[which(ClioMetaData$title=="Wealth Top10 percent share")] <- "Wealth Top10 percent share"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Wealth Top10 percent share")] <- "Prices and Wages"
+ClioMetaData$WebName[which(ClioMetaData$title=="Wealth Decadal Ginis")] <- "Wealth Decadal Ginis"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Wealth Decadal Ginis")] <- "Prices and Wages"
+
+# 17 new datasets:
+# Social_Transfers.xlsx
+# Gender_lab.xlsx
+# Gender_edu.xlsx
+# Gender_HGI.xlsx
+# Working_hours.xlsx
+# Education_Relative_Gini.xlsx
+# Education_SD.xlsx
+# Education_Gini_LLMM.xlsx
+# Education_Average_LLMM.xlsx
+# Education_Population_Above_15.xlsx
+# Life_Expectancy_Relative_Gini_Female.xlsx
+# Life_Expectancy_Relative_Gini_Male.xlsx
+# Life_Expectancy_Gini_Female.xlsx
+# Life_Expectancy_Gini_Male.xlsx
+# Life_Expectancy_Level_Female.xlsx
+# Life_Expectancy_Level_Male.xlsx
+# GDP_Per_Capita_Mix.xlsx
+
 #ClioMetaData$WebName[which(ClioMetaData$title=="")] <- ""
 #ClioMetaData$WebCategory[which(ClioMetaData$title=="")] <- ""
-
 
 # [1] "Exchange Rates to UK Pound"      "Female life expectancy at Birth" "Height Gini"                    
 # [4] "Height"
@@ -1015,20 +1185,17 @@ DDV[which(!(c(DDV) %in% c(CLN)))]
 
 ClioDataList <- unique(ClioData$Indicator)
 ClioDataList[which(!(c(ClioDataList) %in% c(CLN)))]
-# [1] "Exchange Rates to UK Pound"      "Female life expectancy at Birth" "Height Gini"                    
-# [4] "Height"
+# all are in!
 
 # map title with indicator names:
-
-write.xlsx2(ClioMetaData, "/home/michalis/PhD/Clio Infra/Website/metaD.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
-write.xlsx2(OECDregions, "/home/michalis/PhD/Clio Infra/Website/OECDregions.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
-write.xlsx2(GlobalMetadata, "/home/michalis/PhD/Clio Infra/Website/GlobalMetadata.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
-write.xlsx2(UNmembers, "/home/michalis/PhD/Clio Infra/Website/UNmembers.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
-write.xlsx2(UNregions, "/home/michalis/PhD/Clio Infra/Website/UNregions.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(ClioMetaData, paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/metaD.xlsx'),sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(OECDregions, paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/OECDregions.xlsx'),sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(GlobalMetadata, paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/GlobalMetadata.xlsx'),sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(UNmembers, paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNmembers.xlsx'),sheetName = "Data",row.names = F, append = F, showNA = F)
+write.xlsx2(UNregions, paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNregions.xlsx'),sheetName = "Data",row.names = F, append = F, showNA = F)
 
 rm(list= ls()[!(ls() %in% c('ClioData'))])
-save.image("~/PhD/Clio Infra/Website/ClioData.RData")
-#write.xlsx2(ClioData, "/home/michalis/PhD/Clio Infra/Website/ClioData.xlsx",sheetName = "Data",row.names = F, append = F, showNA = F)
+save.image(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/ClioData.RData'))
 
-# 20170508-18:25
+# 20210720-13:58
 # save.image("~/PhD/Clio Infra/Website/AddingWellBeing.RData")

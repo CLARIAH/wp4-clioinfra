@@ -1,3 +1,8 @@
+library(xlsx)
+
+setwd(paste0(dirname(rstudioapi::getSourceEditorContext()$path)))
+
+IndicatorsList <- unique(ClioData$Indicator)
 
 ContributorsList <- c()
 for (i in 1:length(IndicatorsList)){
@@ -165,5 +170,13 @@ ContributorsList$NameProper[which(ContributorsList$Name=="Marlène Gerber")] <- 
 ContributorsList$URL[which(ContributorsList$Name=="Pim de Zwart")] <- "https://www.wur.nl/en/Persons/Pim-P-Pim-de-Zwart.htm"
 ContributorsList$CurrentAffiliation[which(ContributorsList$Name=="Pim de Zwart")] <- "Wageningen University, Department of Social Sciences"
 ContributorsList$NameProper[which(ContributorsList$Name=="Pim de Zwart")] <- "Zwart, Pim de"
-require(xlsx)
-write.xlsx(ContributorsList,"/home/michalis/PhD/Clio Infra/Website/ContributorsList.xlsx", row.names = F)
+
+ContributorsList$URL[which(ContributorsList$Name=="Guido Alfani")] <- "https://faculty.unibocconi.eu/guidoalfani/"
+ContributorsList$CurrentAffiliation[which(ContributorsList$Name=="Guido Alfani")] <- "Bocconi University, Dondena Centre and Stone Center on Socio-Economic Inequality"
+ContributorsList$NameProper[which(ContributorsList$Name=="Guido Alfani")] <- "Alfani, Guido"
+ContributorsList$URL[which(ContributorsList$Name=="Sonia Schifano")] <- "https://wwwen.uni.lu/research/fhse/dbcs/people/sonia_schifano"
+ContributorsList$CurrentAffiliation[which(ContributorsList$Name=="Sonia Schifano")] <- "University of Luxembourg"
+ContributorsList$NameProper[which(ContributorsList$Name=="Sonia Schifano")] <- "Schifano, Sonia"
+
+ContributorsList <- subset(ContributorsList,!is.na(ContributorsList$NameProper))
+write.xlsx(ContributorsList,"ContributorsList.xlsx", row.names = F)

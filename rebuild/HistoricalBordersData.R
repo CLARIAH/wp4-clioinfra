@@ -6,23 +6,23 @@ require(tidyr)
 rm(list=ls())
 
 # set main path for all scripts
-GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
+GenericPath <- dirname(rstudioapi::getSourceEditorContext()$path)
 
 # to get the data from the ReadData.R script
-load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+load(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/ClioData.RData')) # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
 
 # select only rows that have not all elements of the specified columns NA
 ClioOnlyWithData <- ClioData[rowSums(is.na(ClioData[,8:524]))<516,]
 
-ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+ClioMetaData <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/metaD.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/OECDregions.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/GlobalMetadata.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNmembers.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNregions.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
 
 URL_basis <- "https://www.clio-infra.eu"
 
-Citations <- read_excel("/home/michalis/PhD/Clio Infra/Website/CitationsStatic.xls")
+Citations <- read_excel(paste0(GenericPath,'/',"CitationsStatic.xls"))
 Citations <- subset(Citations, !Citations$Indicator == "Geocoder")
 
 ExportData <- T
@@ -42,7 +42,7 @@ DataWithHistBorders <- DataWithHistBorders[ order(DataWithHistBorders$`country n
 ttt <- as.data.frame(as.matrix(DataWithHistBorders),stringsAsFactors = F)
 ttt[,c(2,3,seq(5,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,seq(5,ncol(ttt),1))], function (x) as.numeric(x))
 
-FilenamePath <- paste0(GenericPath,"data/DataAtHistoricalBorders.xlsx")
+FilenamePath <- paste0(GenericPath,"/data/DataAtHistoricalBorders.xlsx")
 if (ExportData){
   write.xlsx2(ttt, file=FilenamePath, sheetName="Data Clio Infra Format", row.names=F, showNA=F, append = F)
 }
@@ -84,7 +84,7 @@ for (i in AvailIndicators){
   CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==i)]
   CitationFileName <- as.character(CitationFileName)
   
-  bib <- ReadBib(paste0(GenericPath,"Citations/",CitationFileName,".bib"))
+  bib <- ReadBib(paste0(GenericPath,"/Citations/",CitationFileName,".bib"))
   
   TheAuthorAndDate <- capture.output(print(bib, .opts = list(bib.style = "authoryear", first.inits = FALSE, no.print.fields = c("title","publisher","url"))))
   xxxTemp <- unlist(bib)

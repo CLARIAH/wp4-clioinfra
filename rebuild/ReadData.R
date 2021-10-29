@@ -136,7 +136,8 @@ ClioData <- ClioData[c(1:6,558,559,7:557)]
 # total observations:
 sum(rowSums(!is.na(ClioData[,9:(ncol(ClioData))])))
 
-########################### Get the Country Identifiers right #######################
+#### Get the Country Identifiers right ####
+
 # now I need to add all the info about the country's region, names, ccode, iso3, etc.
 
 UNmembers <- read_excel("/home/michalis/PhD/Clio Infra/Website/OFFICIAL NAMES OF THE UNITED NATIONS MEMBERSHIP.xls",sheet = 1)
@@ -221,6 +222,8 @@ Countries <- rbind(CountriesA,CountriesB)
 # part A are the countries with ccode in both lists, and they are matched like that; 
 # keeping the name of the ClioInfra dataset as well
 names(Countries)[4] <- "ClioInfraCountryName"
+
+#### GlobalMetadata ####
 
 GlobalMetadata <- merge(UNregions, Countries, by.x = "numeric", by.y = "ccode", all.x = T, all.y = T)
 
@@ -308,14 +311,16 @@ AllCountryNames <- unique(AllCountryNames)
 GMWithDataCountries <- AllCountryNames
 GMWithDataCountries <- sort(GMWithDataCountries)
 length(GMWithDataCountries)
+# 231
 length(which(GlobalMetadata$DataPoints>0))
+# 300
 
 # the total observations from the main dataset:
 sum(rowSums(!is.na(ClioData[,9:(ncol(ClioData))])))
-# 872264
+# 883998
 # and that of the GlobalMetadata must be the same:
-sum(GlobalMetadata$DataPoints)
-# 872264
+sum(GlobalMetadata$DataPoints, na.rm = T)
+# 897856
 
 # I get 211 countries with data, and so does the export from the code below:
 # [this seems like an old comment, because now I do get 211 countries] I now get 143 countries with data from the above...
@@ -339,14 +344,16 @@ AllCountryNames <- unique(AllCountryNames)
 GMWithDataCountries <- AllCountryNames
 GMWithDataCountries <- sort(GMWithDataCountries)
 length(GMWithDataCountries)
+# 226
 length(which(GlobalMetadata$DataPoints>0))
+# 226
 
 # the total observations from the main dataset:
 sum(rowSums(!is.na(ClioData[,9:(ncol(ClioData))])))
-# 872264
+# 883998
 # and that of the GlobalMetadata must be the same:
 sum(GlobalMetadata$DataPoints, na.rm = T)
-# 872264
+# 883998
 
 # the loop below says 211:
 NoDataCountries <- c()
@@ -368,9 +375,9 @@ for (k in 1:length(CountriesList)){
 }
 
 length(NoDataCountries)
-# 278
+# 264
 length(CDWithDataCountries)
-# 211
+# 226
 
 CDWithDataCountries[which(!CDWithDataCountries %in% GlobalMetadata$ClioInfraCountryName)]
 
@@ -391,8 +398,6 @@ MissedCountries <- CDWithDataCountries[which(!(CDWithDataCountries %in% GMWithDa
 GMWithDataCountries[which(!(GMWithDataCountries %in% CDWithDataCountries))]
 # character(0)
 
-WriteXLS(GlobalMetadata,paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/Global_Metadata.xls'))
-
 # duplicates of the same territorial instances and merge their properties (e.g. ccode from Oecd for a country not having ccode before, like USSR)
 # I now need to work for cases like USSR and Soviet Union.
 
@@ -412,6 +417,8 @@ WriteXLS(CountriesWithIssues,paste0(dirname(rstudioapi::getSourceEditorContext()
 # add a column for tracking numeric codes changes 
 GlobalMetadata$PredecessorNumeric <- NA
 
+#### GlobalMetadata Manual Edits ####
+
 ### is american samoa == east samoa?
 ### I think so based on the relevant wikipedia pages
 
@@ -429,9 +436,6 @@ GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="19")] <- GlobalMe
 GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="19")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="297")]
 GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="19")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="297")]
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="297")
-
-### XXX clio infra Virgin Islands correspond to the US or UK version or none?
-### XXX are Cooks and Cook islands the same?
 
 # merge 58 and 277 for Czechoslovakia
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="58")] <- GlobalMetadata$`Webmapper code`[which(GlobalMetadata$ClioInfraCountryName=="Czechoslovakia")]
@@ -462,29 +466,36 @@ GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="331")
 
 # what is the "Polynesia" entity on clioinfradata?
 
-# 85 and 439 for Palestine, 
+# save.image("~/Documents/ClioTemp.RData")
+# load("~/Documents/ClioTemp.RData")
+
+# 85 and 536 for Palestine, (and 439 but that is simply for deletion)
 # XXX but the dates end in 1945 and I need to provide additional ones
 # also use PSE or WBG? or both?
 
-GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="439")]
-GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="439")]
-GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="439")]
-GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="439")]
-GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="439")]
-GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="439")]
-GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="439")]
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="439")
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata$UN_membership_name[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="85")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="536")] 
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="85")] + GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="558")] 
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="85")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="536")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="536")
 
 # now germany...
 # 87 with 544 east germany:
-GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="544")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="544")
+#GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="87")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="544")]
+#GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="544")
 
 # 88 with 499 east germany:
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="88")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="499")]
@@ -584,16 +595,16 @@ GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="425")
 
 # I left Marianas as they where XXX
 
-# Puerto Rico, XXX needs expansion to present mapping, 187/549
-GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="549")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="549")
+# Puerto Rico, XXX needs expansion to present mapping, 187/557
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="187")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="557")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="557")
 
 # Yemen: first merge: 216/503 for South Yemen
 GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="216")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="503")]
@@ -644,16 +655,16 @@ GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="220")] <- Glob
 GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="220")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="527")]
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="527")
 
-# USSR: 243/271
-GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="271")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="271")
+# USSR: 243/538
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="243")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="538")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="538")
 
 GlobalMetadata$`Alpha-2 code`[which(rownames(GlobalMetadata)=="243")] <- "SU"
 GlobalMetadata$`Alpha-3 code`[which(rownames(GlobalMetadata)=="243")] <- "SUN"
@@ -669,18 +680,95 @@ GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="243")] <- pa
 GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="243")] <- paste(GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="490")],GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="243")],sep=";",collapse = ";")
 GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="490")
 
-# Yugoslavia: 262/547
-GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="262")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="547")]
-GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="547")
+# Yugoslavia: 261/533
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="261")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="533")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="533")
+GlobalMetadata$`Alpha-3 code`[which(rownames(GlobalMetadata)=="261")] <- 'YUG'
 
-#### Now to the remaining entities without geo regions assign them manually ####
+# save.image("~/Documents/ClioTemp2.RData")
+# load("~/Documents/ClioTemp2.RData")
+
+# Macau - Macao 133 392 539
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="392")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="392")]
+#GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="392")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="133")] <- "Macau, China"
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="392")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="392")]
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="392")]
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="392")]
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="133")] <- GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="539")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="539")
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="392")
+
+# Cook Islands 53 318 537
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="537")
+GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="53")] <- 
+  GlobalMetadata$`Webmapper code`[which(rownames(GlobalMetadata)=="318")]
+GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="53")] <- 
+  GlobalMetadata$`Webmapper numeric code`[which(rownames(GlobalMetadata)=="318")]
+GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="53")] <- 
+  GlobalMetadata$WebmapperNums[which(rownames(GlobalMetadata)=="318")]
+GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="53")] <- 
+  GlobalMetadata$WebmapperCodes[which(rownames(GlobalMetadata)=="318")]
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="53")] <- 
+  paste0(GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="318")])
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="53")] <- 
+  paste0(GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="318")])
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="53")] <- 
+  GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="318")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="53")] <- 
+  GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="318")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="318")
+
+# Netherlands Antilles 156 540
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="156")] <- 
+  GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="540")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="540")
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="156")] <- "Netherlands Antilles"
+GlobalMetadata$country_name[which(rownames(GlobalMetadata)=="156")] <- "Netherlands Antilles"
+GlobalMetadata$WebmapperStartYears[which(rownames(GlobalMetadata)=="156")] <- "1946"
+GlobalMetadata$WebmapperEndYears[which(rownames(GlobalMetadata)=="156")] <- "2012"
+GlobalMetadata$`Alpha-3 code`[which(rownames(GlobalMetadata)=="156")] <- "ANT"
+GlobalMetadata$region[which(rownames(GlobalMetadata)=="156")] <- GlobalMetadata$region[which(rownames(GlobalMetadata)=="39")]
+GlobalMetadata$region_numeric[which(rownames(GlobalMetadata)=="156")] <- GlobalMetadata$region_numeric[which(rownames(GlobalMetadata)=="39")]
+GlobalMetadata$subregion[which(rownames(GlobalMetadata)=="156")] <- GlobalMetadata$subregion[which(rownames(GlobalMetadata)=="39")]
+GlobalMetadata$subregion_numeric[which(rownames(GlobalMetadata)=="156")] <- GlobalMetadata$subregion_numeric[which(rownames(GlobalMetadata)=="39")]
+GlobalMetadata$subsubregion_numeric[which(rownames(GlobalMetadata)=="156")] <- GlobalMetadata$subsubregion_numeric[which(rownames(GlobalMetadata)=="39")]
+
+# Cayman Islands 39 554
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="39")] <- 
+  GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="554")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="554")
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="39")] <- "Cayman Islands"
+
+# Isle Of Man 249 555
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="249")] <- 
+  GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="555")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="555")
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="249")] <- "Isle Of Man"
+
+# Jersey 248 552
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="248")] <- 
+  GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="552")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="552")
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="248")] <- "Jersey"
+
+# United States Virgin Islands 252 523 544
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="523")
+GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="252")] <- 
+  GlobalMetadata$DataPoints[which(rownames(GlobalMetadata)=="544")]
+GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="252")] <- GlobalMetadata$ClioInfraCountryName[which(rownames(GlobalMetadata)=="544")]
+GlobalMetadata <- subset(GlobalMetadata,!rownames(GlobalMetadata)=="544")
+
+#### Manual Geo Regions####
 # since those countries are about half of the dataframe I will first treat the ones that have data:
 TempCountries <- subset(GlobalMetadata,is.na(GlobalMetadata$region) & GlobalMetadata$DataPoints>0)
 
@@ -825,6 +913,8 @@ GlobalMetadata$subsubregion[which(GlobalMetadata$ClioInfraCountryName==TargetCou
 GlobalMetadata$subsubregion_numeric[which(GlobalMetadata$ClioInfraCountryName==TargetCountry)] <- GlobalMetadata$subsubregion_numeric[which(GlobalMetadata$OECD_Country_Name==OriginCountry)]
 GlobalMetadata$OECD_Region[which(GlobalMetadata$ClioInfraCountryName==TargetCountry)] <- GlobalMetadata$OECD_Region[which(GlobalMetadata$OECD_Country_Name==OriginCountry)]
 
+WriteXLS(GlobalMetadata,paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/Global_Metadata.xls'))
+
 # Repetition of the loop for export all countries data, also found above (here it does not export anything):
 
 CountriesWithNoData <- 0
@@ -843,7 +933,7 @@ for (k in 1:length(CountriesList)){
   }
 }
 
-#### Read the docx information in a dataframe ####
+#### Docx Read ####
 
 # save.image("~/PhD/Clio Infra/UPDATE 20210315/Test20210315.RData")
 # load("~/PhD/Clio Infra/UPDATE 20210315/Test20210315.RData")
@@ -1107,8 +1197,8 @@ ClioMetaData$WebName[which(ClioMetaData$title=="Number of Labour Conflicts per c
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Number of Labour Conflicts per country , 1927-2010")] <- "Labour Relations"
 ClioMetaData$WebName[which(ClioMetaData$title=="Number of Workers involved in Labour Conflicts per country , 1927-2010")] <- "Number of Workers Involved in Labour Disputes"
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Number of Workers involved in Labour Conflicts per country , 1927-2010")] <- "Labour Relations"
-ClioMetaData$WebName[which(ClioMetaData$title=="The First Update of the Maddison Project; Re-Estimating growth before 1820")] <- "GDP per Capita"
-ClioMetaData$WebCategory[which(ClioMetaData$title=="The First Update of the Maddison Project; Re-Estimating growth before 1820")] <- "National Accounts"
+ClioMetaData$WebName[which(ClioMetaData$title=="The long view on economic growth: New estimates of GDP")] <- "GDP per Capita"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="The long view on economic growth: New estimates of GDP")] <- "National Accounts"
 ClioMetaData$WebName[which(ClioMetaData$title=="Gross household income gini, 1820-2000")] <- "Income Inequality"
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Gross household income gini, 1820-2000")] <- "Prices and Wages"
 ClioMetaData$WebName[which(ClioMetaData$title=="Inflation Database clio infra")] <- "Inflation"
@@ -1137,8 +1227,12 @@ ClioMetaData$WebName[which(ClioMetaData$title=="Wealth Top10 percent share")] <-
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Wealth Top10 percent share")] <- "Prices and Wages"
 ClioMetaData$WebName[which(ClioMetaData$title=="Wealth Decadal Ginis")] <- "Wealth Decadal Ginis"
 ClioMetaData$WebCategory[which(ClioMetaData$title=="Wealth Decadal Ginis")] <- "Prices and Wages"
+ClioMetaData$WebName[which(ClioMetaData$title=="Social Spending")] <- "Social Spending"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Social Spending")] <- "National Accounts"
+ClioMetaData$WebName[which(ClioMetaData$title=="Working week in manufacturing")] <- "Working week in manufacturing"
+ClioMetaData$WebCategory[which(ClioMetaData$title=="Working week in manufacturing")] <- "Labour Relations"
 
-# 17 new datasets:
+# 17 new datasets (not all are new, some are updates):
 # Social_Transfers.xlsx
 # Gender_lab.xlsx
 # Gender_edu.xlsx

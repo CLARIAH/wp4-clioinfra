@@ -179,4 +179,4 @@ ContributorsList$CurrentAffiliation[which(ContributorsList$Name=="Sonia Schifano
 ContributorsList$NameProper[which(ContributorsList$Name=="Sonia Schifano")] <- "Schifano, Sonia"
 
 ContributorsList <- subset(ContributorsList,!is.na(ContributorsList$NameProper))
-write.xlsx(ContributorsList,"ContributorsList.xlsx", row.names = F)
+# only export if you really have to, be careful you may loose manual entries on the file: write.xlsx(ContributorsList,"ContributorsList.xlsx", row.names = F)

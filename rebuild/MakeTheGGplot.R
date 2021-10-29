@@ -105,7 +105,7 @@ MakeTheGGplot <- function(pdata,XxZzYyTitleXxZzYy,XxZzYyIndicNoSpaceXxZzYy,GeoLe
     
     if (LogPlot){
       library(scales)
-      setwd("/home/michalis/PhD/Clio Infra/Website/html/graphs")
+      setwd("/home/michalis/PhD/Clio Infra/UPDATE 20210315/html/graphs")
       plot(pdata2, type="l",log="y")
       breaks <- axTicks(side=2)
       svg(filename=paste(GeoLevel,"_",XxZzYyIndicNoSpaceXxZzYy,".svg", sep = ""),
@@ -118,8 +118,8 @@ MakeTheGGplot <- function(pdata,XxZzYyTitleXxZzYy,XxZzYyIndicNoSpaceXxZzYy,GeoLe
               coord_trans(y="log") +
               geom_boxplot(outlier.size = 0, outlier.stroke = 0, width = 0.5) +
               geom_point(color="#b1cfe9", alpha = 0.8, position = position_jitter(width = 0.3))+
-              stat_summary(fun.data = give.n, geom = "text", color="#337ab7", fun.y = median)+
-              stat_summary(fun.data = mean.n, geom = "text", fun.y = mean, angle = 90, position = position_nudge(x = -.35)) +
+              stat_summary(fun.data = give.n, geom = "text", color="#337ab7", fun = median)+
+              stat_summary(fun.data = mean.n, geom = "text", fun = mean, angle = 90, position = position_nudge(x = -.35)) +
               xlab("") + ylab("") + theme_gray() +
               theme(plot.title = element_text(color="#337ab7", size=14, face="bold"),
                     axis.text = element_text(color = "darkgray", size=13),
@@ -128,7 +128,7 @@ MakeTheGGplot <- function(pdata,XxZzYyTitleXxZzYy,XxZzYyIndicNoSpaceXxZzYy,GeoLe
       
       dev.off()
     } else {
-      setwd("/home/michalis/PhD/Clio Infra/Website/html/graphs")
+      setwd("/home/michalis/PhD/Clio Infra/UPDATE 20210315/html/graphs")
       svg(filename=paste(GeoLevel,"_",XxZzYyIndicNoSpaceXxZzYy,".svg", sep = ""),
           width=12, 
           height=4, 
@@ -137,8 +137,8 @@ MakeTheGGplot <- function(pdata,XxZzYyTitleXxZzYy,XxZzYyIndicNoSpaceXxZzYy,GeoLe
       print(ggplot(pdata2, aes(x=Year, y=Value)) + ggtitle(paste(GeoLevelTitle," : evolution of ",XxZzYyTitleXxZzYy,sep="")) +
               geom_boxplot(outlier.size = 0,outlier.stroke = 0, width = 0.5) + 
               geom_point(color="#b1cfe9", alpha = 0.8, position = position_jitter(width = 0.3))+
-              stat_summary(fun.data = give.n, geom = "text", color="#337ab7", fun.y = median) +
-              stat_summary(fun.data = mean.n, geom = "text", fun.y = mean, angle = 90, position = position_nudge(x = -.35)) +
+              stat_summary(fun.data = give.n, geom = "text", color="#337ab7", fun = median) +
+              stat_summary(fun.data = mean.n, geom = "text", fun = mean, angle = 90, position = position_nudge(x = -.35)) +
               xlab("") + ylab("") + theme_gray() +
               theme(plot.title = element_text(color="#337ab7", size=14, face="bold"),
                     axis.text = element_text(color = "darkgray", size=13),

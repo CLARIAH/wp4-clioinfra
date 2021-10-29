@@ -159,7 +159,8 @@ for (i in 1:length(IndicatorsList)){
   
   CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==IndicatorsList[i])]
   CitationFileName <- as.character(CitationFileName)
-  
+  #### Error in bibtex::do_read_bib(file, encoding = .Encoding, srcfile) ####
+  # this error points here
   bib <- ReadBib(paste0(GenericPath,"/Citations/",CitationFileName,".bib"))[1]
   
   TheAuthorAndDate <- capture.output(print(bib, .opts = list(bib.style = "authoryear", first.inits = FALSE, no.print.fields = c("title","publisher","url"))))

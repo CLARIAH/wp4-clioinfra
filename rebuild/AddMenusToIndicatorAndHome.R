@@ -1,27 +1,29 @@
 require(xlsx)
 require(readxl)
+require(tidyr)
 rm(list=ls())
 
 # set main path for all scripts
-GenericPath <- "/home/michalis/PhD/Clio Infra/Website/"
+GenericPath <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(GenericPath)
 
 # to get the data from the ReadData.R script
-load("~/PhD/Clio Infra/Website/ClioData.RData") # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
+load(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/ClioData.RData')) # this only contains ClioData dataframe that is too big to export on xslx and gives the Java heap space error
 
 # select only rows that have not all elements of the specified columns NA
 ClioOnlyWithData <- ClioData[rowSums(is.na(ClioData[,8:524]))<516,]
+ClioMetaData <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/metaD.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+OECDregions <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/OECDregions.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+GlobalMetadata <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/GlobalMetadata.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNmembers <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNmembers.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
+UNregions <- read.xlsx(paste0(dirname(rstudioapi::getSourceEditorContext()$path),'/Aggregates/UNregions.xlsx'), sheetIndex = 1, check.names = F, stringsAsFactors = F)
 
-ClioMetaData <- read.xlsx("~/PhD/Clio Infra/Website/metaD.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-OECDregions <- read.xlsx("~/PhD/Clio Infra/Website/OECDregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-GlobalMetadata <- read.xlsx("~/PhD/Clio Infra/Website/GlobalMetadata.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-UNmembers <- read.xlsx("~/PhD/Clio Infra/Website/UNmembers.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-UNregions <- read.xlsx("~/PhD/Clio Infra/Website/UNregions.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-GlobalDurations <- read.xlsx("~/PhD/Clio Infra/Website/GlobalDurations.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
-IndicPriorityList <- read_excel('/home/michalis/PhD/Clio Infra/Website/IndicPriorityList.xlsx')
+GlobalDurations <- read.xlsx("GlobalDurations.xlsx", sheetIndex = 1, check.names = F, stringsAsFactors = F)
+IndicPriorityList <- read_excel('IndicPriorityList.xlsx')
 
 URL_basis <- "https://www.clio-infra.eu"
 
-Citations <- read_excel("/home/michalis/PhD/Clio Infra/Website/CitationsStatic.xls")
+Citations <- read_excel("CitationsStatic.xls")
 Citations <- subset(Citations, !Citations$Indicator == "Geocoder")
 
 ##########################################################################################################
@@ -53,7 +55,7 @@ trimalls <- function (x) gsub("\\s", "", x)
 # file name structure:
 
 IndicatorFilename <- paste0("XXXNameOfIndicatorXXX","_Compact.xlsx")
-source(paste0(GenericPath,"f_IndicatorMenu2.R"))
+source('f_IndicatorMenu2.R')
 XxZzYyAgricultureXxZzYy <- f_IndicatorMenu2("Agriculture",ClioMetaData,GlobalDurations,IndicatorFilename)
 XxZzYyDemographyXxZzYy <- f_IndicatorMenu2("Demography",ClioMetaData,GlobalDurations,IndicatorFilename)
 XxZzYyEnvironmentXxZzYy <- f_IndicatorMenu2("Environment",ClioMetaData,GlobalDurations,IndicatorFilename)
@@ -394,7 +396,7 @@ for (L_i in temp){
     ttt <- as.data.frame(as.matrix(HistoricalData),stringsAsFactors = F)
     ttt[,c(2,3,5,6,seq(9,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,5,6,seq(9,ncol(ttt),1))], function (x) as.numeric(x))
     
-    write.xlsx2(ttt,file=paste0(GenericPath,"CountryData/",CountryDataFileName), 
+    write.xlsx2(ttt,file=paste0(GenericPath,"/CountryData/",CountryDataFileName), 
                sheetName="Data Clio Infra Format", row.names=F, showNA=F)
     
     # add Long Format Section
@@ -418,7 +420,7 @@ for (L_i in temp){
     ttt <- as.data.frame(as.matrix(LocalTempLongFormat),stringsAsFactors = F)
     ttt[,c(2,3,seq(5,ncol(ttt),1))] <-  lapply(ttt[,c(2,3,seq(5,ncol(ttt),1))], function (x) as.numeric(x))
     
-    write.xlsx2(ttt, file=paste0(GenericPath,"CountryData/",CountryDataFileName),
+    write.xlsx2(ttt, file=paste0(GenericPath,"/CountryData/",CountryDataFileName),
                 sheetName="Data Long Format", append=TRUE, row.names=F, showNA=F)
     
     # which are the available indicators to cite:
@@ -438,7 +440,7 @@ for (L_i in temp){
       CitationFileName <- Citations$CitationFilenamePrefix[which(Citations$Indicator==i)]
       CitationFileName <- as.character(CitationFileName)
       
-      bib <- ReadBib(paste0(GenericPath,"Citations/",CitationFileName,".bib"))
+      bib <- ReadBib(paste0(GenericPath,"/Citations/",CitationFileName,".bib"))
       
       TheAuthorAndDate <- capture.output(print(bib, .opts = list(bib.style = "authoryear", first.inits = FALSE, no.print.fields = c("title","publisher","url"))))
       xxxTemp <- unlist(bib)
@@ -474,7 +476,7 @@ for (L_i in temp){
       FullMetadata <- rbind(FullMetadata,Metadata)
     }
     
-    write.xlsx2(FullMetadata, file=paste0(GenericPath,"CountryData/",CountryDataFileName),
+    write.xlsx2(FullMetadata, file=paste0(GenericPath,"/CountryData/",CountryDataFileName),
                sheetName="Metadata", append=TRUE, row.names=F)
   }
   
@@ -507,9 +509,9 @@ XxZzYyLOC3XxZzYy <- paste(XYZ[(ceiling(2*nrow(Historical)/3)+1):nrow(Historical)
 # also substitute the copyright element
 #XxZzYyCopyrightYearsXxZzYy <- "2010-2017"
 
-files <- list.files(paste0(GenericPath,"Pages Exports R"))
+files <- list.files(paste0(GenericPath,"/Pages Exports R"))
 for (i_file in files){
-  i_file_long <- paste0(GenericPath,"Pages Exports R","/",i_file)
+  i_file_long <- paste0(GenericPath,"/Pages Exports R","/",i_file)
   testfile <- readChar(i_file_long, file.info(i_file_long)$size)
   # Countries:
   testfile <- gsub("XxZzYyEasternAfricaXxZzYy", SubRegions$XYZ[which(SubRegions$VarName=="XxZzYyEasternAfricaXxZzYy")], testfile)
@@ -561,7 +563,7 @@ for (i_file in files){
   # Copyright:
   # testfile <- gsub("XxZzYyCopyrightYearsXxZzYy", XxZzYyCopyrightYearsXxZzYy, testfile)
   
-  write(testfile, paste0(GenericPath,"IndicatorPagesWithMenus","/",i_file))
+  write(testfile, paste0(GenericPath,"/IndicatorPagesWithMenus/",i_file))
 }
 
 # last one for Index page:
@@ -570,7 +572,7 @@ for (i_file in files){
 # last one for Index page:
 # last one for Index page:
 
-i_file <- paste0(GenericPath,"IndexTemplate.html")
+i_file <- paste0(GenericPath,"/IndexTemplate.html")
 testfile <- readChar(i_file, file.info(i_file)$size)
 
 # About:
@@ -651,4 +653,4 @@ testfile <- gsub("XxZzYyPricesAndWagesXxZzYy", XxZzYyPricesAndWagesXxZzYy, testf
 testfile <- gsub("XxZzYyProductionXxZzYy", XxZzYyProductionXxZzYy, testfile)
 
 i_file <- "index.html"
-write(testfile, paste0(GenericPath,i_file))
+write(testfile, paste0(GenericPath,'/',i_file))

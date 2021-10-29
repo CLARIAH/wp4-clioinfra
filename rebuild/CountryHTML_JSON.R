@@ -59,6 +59,9 @@ GlobalMetadata$OECD_Region[which(GlobalMetadata$OECD_Region == "Latin America an
 GlobalMetadata$subregion[which(GlobalMetadata$subregion == "Australia and New Zealand")] <- "Australia and N.Zealand"
 GlobalMetadata$subregion[which(GlobalMetadata$subregion == "Latin America and the Caribbean")] <- "L.America &amp; Carib."
 
+GlobalMetadata$WebmapperEndYears[which(GlobalMetadata$ClioInfraCountryName=="United States Virgin Islands")] <- "2012"
+GlobalMetadata$WebmapperStartYears[which(GlobalMetadata$ClioInfraCountryName=="United States Virgin Islands")] <- "1950"
+
 # PARAMETERS:
 # PARAMETERS:
 # PARAMETERS:
@@ -220,7 +223,7 @@ for (i in k[c(1:length(k))]){
         temp <- temp[temp$`end year`=="2012",]
         # from the problem caused by Sudan: if multiple borders end in 2012 remove the one with the oldest start year
         if (length(unique(temp$`start year`))>1){
-          StartYearToExclude <- min(as.numeric(unique(temp$`start year`)))
+          StartYearToExclude <- min(as.numeric(unique(temp$`start year`)), na.rm = T)
           temp <- temp[!temp$`start year`==StartYearToExclude,]
         }
         
@@ -372,6 +375,7 @@ for (i in k[c(1:length(k))]){
             }
           }
           if (length(FilteredSelectedIndicators) > 0){
+            if (!is.na(FilteredSelectedIndicators)){
             XxZzYyIndic0XxZzYy <- FilteredSelectedIndicators[1]
             XxZzYyIndic0NoSpaceNoParXxZzYy <- paste(XxZzYyISO3XxZzYy,trimalls(gsub("[[:punct:]]", "", FilteredSelectedIndicators[1])),sep="_")
             
@@ -416,7 +420,7 @@ for (i in k[c(1:length(k))]){
             test <- gsub("XxZzYyIndic0StartXxZzYy", XxZzYyIndic0StartXxZzYy, test)
             test <- gsub("XxZzYyIndic0EndXxZzYy", XxZzYyIndic0EndXxZzYy, test)
             
-            
+            }
           }
           if (length(FilteredSelectedIndicators) > 1){
           XxZzYyIndic1XxZzYy <- FilteredSelectedIndicators[2]
@@ -1912,6 +1916,7 @@ for (i in k[c(1:length(k))]){
   } # if for the create the page or not in case it already exists
 } # outer for loop
 
+# Palestine, Macau
 beep(6)
 
 ttt<-as.data.frame(as.matrix(GlobalDurations),stringsAsFactors = F)

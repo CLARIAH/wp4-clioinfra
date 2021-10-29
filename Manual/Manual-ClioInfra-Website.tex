@@ -234,11 +234,11 @@ Some main texts and external images used in the process are:
 
 To run the aforementioned R scripts you need to install the following R 
 libraries: \textit{readxl, xlsx, ggplot2, jsonlite, tidyr, RefManageR, plyr, WriteXLS, stringr, 
-foreign, countrycode}. The scripts execute successfully with R version 3.6.3 (2020-02-29).
+foreign, countrycode}. The scripts execute successfully with R version 3.6.3 (2020-02-29); last successful run on September 6th, 2021.
 
 Files related to Bootstrap that need to be copied to the server www folder are 
 all placed in the www folder of the Github repository. This part is excecuted 
-automatically by the updating script that fetches the elements from Github and 
+automatically by the updating script that fetches the files from Github and 
 places them in the production server at IISH.
 
 A few additional data files are required, which are not included in the 
@@ -261,8 +261,7 @@ regions. Provided by \href{https://www.uu.nl/staff/ARijpma}{Auke Rijpma}.
 \section{Processing}
 
 As already mentioned, the data (and metadata) files need to be manually placed 
-in the appropriate folders so that R scripts can locate them. \textbf{MMM 
-mention those folders explicitly here} However, in future versions of the 
+in the appropriate folders so that R scripts can locate them (see below; for example, the data and the metadata files from the data contributors must be placed in ``historical.all.standardized.2'' folder that is located in the same folder as the scripts that create the website; the main folder). However, in future versions of the 
 scripts the data files will be fetched automatically from the dataverse.
 
 \subsection{Metadata files}
@@ -275,10 +274,9 @@ Because the R script requires the metadata in txt format \textbf{follow the inst
 
 NOTE: the names of the contributors in the metadata file need to be seperated with ``and'' or a comma.
 
-\subsection{The website layouts}
+\subsection{The website templates}
 
-All the HTML layouts (listed in section \ref{sec:intro}) need to be placed in 
-the same folder where the R scripts are located.
+For creating the website, all the HTML templates (listed in section \ref{sec:intro}) need to be placed in the same folder where the R scripts are located.
 
 \subsection{Exporting data}
  The data exporting takes place in 
@@ -294,8 +292,8 @@ this variable to \textcolor{blue}{FALSE}.
 
 \section{Other pages}
 \subsection{News \& Publications page}
-This page is manually. When new items are added then they have to be 
-written in HTML code within the News\_Publications.html page.
+This page is created fully manually. When new items are added then they have to be 
+written in HTML code within the News\_Publications.html page. \textbf{NB: I need to specify how articles are selected in the footer.}
 
 \subsection{Partners page}
 
@@ -311,9 +309,11 @@ sequence of script execution above.
 This section explains how to update the files and scripts when one needs to add 
 one or more indicators or one or more countries.
 
-\textbf{First step} is to place the new data and metadata files in the proper folders (doc, txt and xlsx should be in the folder historical.all.standardized.2). Remember: the first cell of the xls should have the full name of the indicator.
+For new indicators, or the update of old ones, the initial step is to upload the xlsx with the data and the docx with the data on the Clio Infra Dataverse: \url{https://datasets.iisg.amsterdam/dataverse/clioinfra/} (you also need the citation details from Dataverse as described below).
 
-In case of a brand new indicator (i.e. not an update of a previously available indicator) also convert the metadata doc file that the creator of the dataset has filled to a txt file. To do so see the instructions listed in the ConvertDOCStoTXT.xls (or use simple copy paste to a txt file). Those commands are intended for use in Ubuntu. If you are not using such a system, then you will have to do this manually using for example OpenOffice under Windows. Also make sure that the data are given in the proper xls(x) layout (see file ``ClioLayout.xlsx''). If you have received them in a non-Clio layout, then you have to convert them manually. There is a script to convert the ``How was life? 2.0'' data to the Clio Layout that can be expanded accordingly (``ConvertToClioInfraLayout.R''). After the conversion you need to add two lines on top and in the first cell of the first line place the name of the indicator.
+\textbf{First step} is to place the new data and metadata files in the proper folders (doc, txt and xlsx should be in the folder historical.all.standardized.2). Remember: the first cell of the xls should have the full name of the indicator and the second row is empty.
+
+\textbf{In case of a brand new indicator} (i.e. not an update of a previously available indicator) also convert the metadata doc file that the creator of the dataset has filled to a txt file. To do so see the instructions listed in the ConvertDOCStoTXT.xls (or use simple copy paste to a txt file). Those commands are intended for use in Ubuntu. If you are not using such a system, then you will have to do this manually using for example OpenOffice under Windows. Also make sure that the data are given in the proper xls(x) layout (see file ``ClioLayout.xlsx''). If you have received them in a non-Clio layout, then you have to convert them manually. There is a script to convert the ``How was life? 2.0'' data to the Clio Layout that can be expanded accordingly (``ConvertToClioInfraLayout.R''). Second Reminder: After the conversion you need to add two lines on top and in the first cell of the first line place the name of the indicator.
 
 If the metadata are not given in the format required (see current txt files for 
 the format required) then the process will not conclude and an error will 
@@ -337,13 +337,13 @@ to). Example:
 	Wellbeing")] <- "Demography"
 \end{verbatim}
 
-For ease of use keep the same WebName as it is given in the original xlsx top cell, or change that named to a one that is common in among those variables. If you do not do so, naming consistency problems arise among the various tables in the scripts.
+For ease of use keep the same WebName as it is given in the original xlsx top cell, or change that named to a one that is common among those variables. If you do not do so, naming consistency problems arise among the various tables in the scripts.
 
 \textbf{Second step} is that the \textit{ReadData.R} script needs to be run to read the new data in.
 
-Before going to the third step you need to upload the new indicator on dataverse to be able to get the citation info. After depositing the new indicator on dataverse you need to download the three types of available citations to the local citation folder\footnote{.../Clio Infra/Website/Citations}. Be careful to follow the same filename structure as the other files in the Citations folder. Also update the entries in the ``~/Clio Infra/Website/CitationsStatic.xls'' file. %Then to add the bib type of citation you need to either do that manually, or install ``sudo apt install bibutils'' on an Ubuntu system. To get the command for doing this simply paste the complete short description from dataverse to the third column in ``~/Clio Infra/Website/Citations.xls'', and then export a static version of this in ``~/Clio Infra/Website/CitationsStatic.xls''.\footnote{Note that when working with the citation files from the Composite Wellbeing Index the bibutils command did not work, so I produced the bib file manually so that I can proceed.} 
+Before going to the third step you need to upload the new indicator on dataverse to be able to get the citation info. After depositing the new indicator on dataverse you need to download the three types of available citations to the local citation folder\footnote{.../Clio Infra/Website/Citations}. Be careful to follow the same filename structure as the other files in the Citations folder. Also update the entries in the ``CitationsStatic.xls'' file. %Then to add the bib type of citation you need to either do that manually, or install ``sudo apt install bibutils'' on an Ubuntu system. To get the command for doing this simply paste the complete short description from dataverse to the third column in ``~/Clio Infra/Website/Citations.xls'', and then export a static version of this in ``~/Clio Infra/Website/CitationsStatic.xls''.\footnote{Note that when working with the citation files from the Composite Wellbeing Index the bibutils command did not work, so I produced the bib file manually so that I can proceed.} 
 
-Moreover, you need to add the document filename of the new indicator in the ``~/Clio Infra/Website/IndicatorsListWithDocFiles.xlsx'', and appropriately in ``~/Clio Infra/Website/IndicatorsGraphType.xlsx''; and in ``~/PhD/Clio Infra/Website/IndicPriorityList.xlsx'' set the priority in selecting the variable for country visualizations and the indicator name ``translation'', short name, short menu name and WebName.
+Moreover, you need to add the document filename of the new indicator in the ``IndicatorsListWithDocFiles.xlsx'', and appropriately in ``IndicatorsGraphType.xlsx''; and in ``IndicPriorityList.xlsx'' set the priority in selecting the variable for country visualizations and the indicator name ``translation'', short name, short menu name and WebName.
 
 \textbf{Third step} requires running the IndicatorHTML.R script. 
 
@@ -357,7 +357,7 @@ Citations.xlsx list above.
 
 Then follow and execute the remaining scipts in order of appearance in the R script list of section \ref{sec:req}
 
-Running ReadData.R will execute in about 2 minutes on a good laptop, and 
+Running ReadData.R will execute in about 5 minutes on a good laptop, and 
 IndicatorHTML.R will do so in approximately 10 minutes (with all flags marked 
 as True). CountryHTML\_JSON.R takes about 45 minutes with all flags up.
 
@@ -365,8 +365,12 @@ In the section that begins with ``\# PARAMETERS:'' in script CountryHTML\_JSON.R
 you can set the parameters with which the data for the visualizations in the 
 country HTML pages will be selected.
 
-Note that when adding a historical entity a different process needs to be 
+\textbf{Note} that when adding a historical entity a different process needs to be 
 followed in script: AddMenusToIndicatorAndHome.R
+
+\textbf{Note} if a new dataset has a contributor not in the list, then it should be added in ContributorsList.xlsx.
+
+\textbf{Critical:} When data from new countries occur, then make sure that their entry in the xls has the same structure in terms of start and end years, otherwise only the set with the most recent ones will be kept, and if an entry from different data has both start and end years, but another only has end year, the latter will be removed. So always use (the same) start and end years. This is not implemented in the script that converts the data to the clio format, so BE CAREFUL! For Cooks, French Guiana, ``Macau, China'', United States Virgin Islands, Netherlands Antilles, Cayman Islands, Isle of Man, Jersey only end year (2012) is necessary. For State of Palestine use 1950 and 2012 respectively.
 
 To avoid reproducing the historical data files set CreateHistoricalDataFiles to 
 false in script: AddMenusToIndicatorAndHome.R

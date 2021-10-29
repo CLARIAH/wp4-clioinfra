@@ -4,8 +4,8 @@ require(xlsx)
 ClioDataTitle <- "Historical Gender Equality Index"
 ClioDataSubTitle <- "A higher score means less gender equality in favour of women."
 
-setwd("/home/michalis/PhD/Clio Infra/New Data/Historical Gender Equality Auke Sarah/")
-OriginalData <- read.csv("hgei_fe_clio.csv")
+setwd("/home/michalis/PhD/Clio Infra/New Data/Historical Gender Equality 2/")
+OriginalData <- read.csv("hgei_ame_19502003.csv")
 ClioLayout <- read.xlsx("~/PhD/Clio Infra/ClioLayout.xlsx", sheetIndex = 1, check.names = F)
 OriginalData$ccode <- as.character(OriginalData$ccode)
 # remember that the two first lines should be including:

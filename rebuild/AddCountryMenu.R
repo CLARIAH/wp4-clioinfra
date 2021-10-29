@@ -6,8 +6,7 @@
 
 YearsBeforeEndYear <- 10 # set the number of years before the end year to sum the number of available indicators
 
-setwd('/home/michalis/PhD/Clio Infra/Website/Country Pages Exports R')
-
+setwd(paste0(dirname(rstudioapi::getSourceEditorContext()$path),"/Country Pages Exports R"))
 files <- list.files()
 files <- files[!files %in% c("xyz.html","Greece2.html")]
 #http://localhost/docs/Greece_AllIndicatorsAvailable_TerritorialRef_1946_2012_CCode_300.xlsx
@@ -165,6 +164,6 @@ for (i_file in files){
   testfile <- gsub("XxZzYyLOC3XxZzYy", XxZzYyLOC3XxZzYy, testfile)
   
   #testfile <- gsub("XxZzYyCopyrightYearsXxZzYy", XxZzYyCopyrightYearsXxZzYy, testfile)
-  write(testfile, paste("/home/michalis/PhD/Clio Infra/Website/CountryPagesWithMenus",i_file,sep="/"))
+  write(testfile, paste("../CountryPagesWithMenus",i_file,sep="/"))
 }
 

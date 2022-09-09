@@ -1,0 +1,86 @@
+Required content of Working Paper CLIO-INFRA
+
+Please include the following elements into any working paper entered
+into the CLIO-INFRA system:
+
+1. Title
+
+	Historical Gender Equality Index
+
+2. Author(s)
+
+	Sarah Carmichael, Selin Dilli and Auke Rijpma, Utrecht University
+
+3. Production date
+
+	20 June 2019
+
+4. Version
+
+	2
+
+5. Variable group(s)
+
+	Gender equality
+
+6. Variable(s)
+
+    composite Historical Gender Equality Index combining data on life expectancy, sex ratio, education, labor force participation, marriage ages, parliament seats
+
+7. Unit of analysis
+
+	Country
+
+8. Keywords (5)
+	
+	Gender equality, composite index, Historical Gender Equality Index
+
+9. Abstract (200 words)
+	
+	The composite index aims to evaluate countries' performances regarding the progress they made in closing the gender gap in the fields of health, socio-economic resources, politics and household since 1950.
+
+10. Time period
+	
+	1950 - 2003
+
+11. Geographical coverage
+	
+	129 countries
+
+12. Methodologies used for data collection and processing
+	
+	Annual data. Gaps in underlying data were imputed using a multiple imputation procedure. See Feminist Economics (2019) for more details. Multiple datasets obtained in this matter were averaged to be able to present one series in this format.
+
+13. Data quality
+	
+	The composite index is based on various data sources. A discussion of data sources of each indicator is included in Clio-infra website and in Carmichael et al. (2014). The data coverage for each gender equality indicator becomes substantially better after 1950 and is mostly based on scholarly research or, usually, statistical agencies. However, most observations of the HGEI have missing data in one of the components, so be mindful that the calculation of the index required imputations.
+
+14. Period of collection
+	
+	2013
+
+15. Data collectors
+
+	Sarah Carmichael, Selin Dilli, and Auke Rijpma
+
+16. Sources
+	
+	Dilli, Selin, Sarah G. Carmichael, and Auke Rijpma. 2019. `Introducing the Historical Gender Equality Index'. Feminist Economics 25 (1): 31 - 57. https://doi.org/10.1080/13545701.2018.1442582.
+	See also other working papers on gender equality indicators in Clio-infra website.
+
+17. Text
+
+	The HGI is constructed by following Hausmann et al. (2012) who created the Global Gender Gap index (GGG). The composite index includes the gender differences in four dimensions, health, socio-economic resources, household and politics. Health is measured by life expectancy and sex ratios whereas socio-economic resources are captured by average years of education and labour force participation. The gender disparities in the household are captured by the marriage ages and the data on distribution of parliamentary seats between men and women is used as an indication of gender disparities in the politics. Each of these variables is presented in female/male ratio. Before creating the composite index, values above 1 were truncated to be 1 except for sex ratio where the equality benchmark is set to be 0.944. For health and socio-economic resources, we have two indicators capturing these dimensions. We have given a weight to each of these indicators, so that the variable with higher standard deviation would not get a higher weight in the sub-index. Thus we normalize the variables in each sub-index by first determining what a 1% point change would translate into in the standard deviations (calculated by dividing .01 by the standard deviation of each variable), then determining the weight to each variable. As a final step, the total of the four sub-indexes was taken, divided by four and multiplied by 100 for the ease of interpretation. A higher score in our index thus highlights less gender equality in favour of women. A more detailed discussion of the composite index is provided in Dilli et al. (2014).
+
+	Note: this is an expanded version compared to the one released in 2014. In line with the procedure required for the How was life report (Carmichael et al. 2014), only decennial averages for the 25 clio-infra countries were reported. This dataset contains all our observations.
+
+	References:
+
+	Hausmann, Ricardo, Laura D. Tyson, and Saadia Zahidi. 2012. "The Global Gender Gap Report". World Economic Forum. http://www3.weforum.org/docs/WEF_GenderGap_Report_2012.pdf
+	Carmichael, S., S. Dilli and A. Rijpma (2014), "Gender Inequality in a Long Term Perspective", in J.L. Van Zanden, M. Mira d'Ercole, A. Rijpma, C. Smith and M. Timmer, eds., in Global Well-being and Development: A Long-term Perspective Since 1820, OECD, Paris.
+	Dilli, Selin, Sarah G. Carmichael, and Auke Rijpma. 2019. `Introducing the Historical Gender Equality Index'. Feminist Economics 25 (1): 31 - 57. https://doi.org/10.1080/13545701.2018.1442582.
+
+18. Citation (that should be used for this dataset)
+	
+	Dilli, Selin, Sarah G. Carmichael, and Auke Rijpma. 2019. `Introducing the Historical Gender Equality Index'. Feminist Economics 25 (1): 31 - 57. https://doi.org/10.1080/13545701.2018.1442582.
+

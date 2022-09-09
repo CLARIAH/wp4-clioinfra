@@ -1,0 +1,44 @@
+Required content of Working Paper CLIO-INFRA
+Please include the following elements into any working paper entered into the CLIO-INFRA system:
+1. Title
+	- World Countries Urban Population Size, 1500-2000.
+2. Author(s)
+	- Jonathan Fink-Jensen
+3. Production date
+	- 29-4-2015.
+4. Version
+	- 1st version.
+5. Variable group(s)
+	- Demography.
+6. Variable(s)
+	- Urban Population.
+7. Unit of analysis
+	- thousands of inhabitants.
+8. Keywords (5)
+	- Demography, population sizes, world countries, urban population
+9. Abstract (200 words)
+- The World Countries Urban Population Size dataset comprises information on urban population per each country for the period 1500-2000. Data has been gathered and organized in 50-years intervals, using as geographical reference the current list of existing world countries. 
+10. Time period
+	- 1500-2000.
+11. Geographical coverage
+	- Entire World.
+12. Methodologies used for data collection and processing
+- The urban population for each country has been estimated by summing up the number of inhabitants for each city within a given country as given by Eltjo Buringh (see: sources). For China, the urban population is unknown for this period. Urbanization ratio's as calculated by Xu, Van Leeuwen and Van Zanden (2015) have been given for 1630, 1644, 1776, 1851, 1893, and 1918. The urban population for these years has been calculated by multiplying the urbanization ratio with the total population in China as estimated by other authors (see dataset: `World Countries Total Population, 1500-2000'). It is, however, important to note that Buringh's database consists of urban settlements with a minimal size of 5.000 inhabitants in 1850 or a minimal size of 100.000 in 2000, whereas the figures as given by Xu, Van Leeuwen and Van Zanden for China include cities with more than 2,000 inhabitants. 
+13. Data quality
+		i. Central statistical agencies
+		ii. Historical reconstructions
+		iii. Estimates
+		iv. Conjectures
+14. Period of collection
+	- April 2015.
+15. Data collector
+	- Jonathan Fink-Jensen
+16. Sources
+Buringh, Eltjo, Urbanization Hub. The Clio-Infra database on urban settlement sizes: 1500-2000
+(http://www.cgeh.nl/urbanisation-hub: 27-4-2015).
+
+Xu, Yi, Bas van Leeuwen and Jan Luiten van Zanden, `Urbanization in China, 1100-1900', CGEH
+Working Paper Series, 63 (2015).
+
+17. Text
+This data collection was carried out within the framework of the CLIO-INFRA project financed by the Netherlands Organisation for Scientific Research (NWO).

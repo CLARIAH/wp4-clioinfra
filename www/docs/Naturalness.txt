@@ -1,0 +1,139 @@
+Required content of Working Paper CLIO-INFRA
+
+Please include the following elements into any working paper entered
+into the CLIO-INFRA system:
+
+1. Title
+
+	Biodiversity changes by decade and country
+
+2. Author(s)
+
+	Kees Klein Goldewijk, Utrecht University
+
+3. Production date
+
+	2013-6-24.
+
+4. Version
+
+	1
+
+5. Variable group(s)
+
+	Environmental sustainability
+
+6. Variable(s)
+
+	MSA (Mean Species Abundance)
+
+7. Unit of analysis
+
+	Country
+
+8. Keywords (5)
+
+	MSA, biodiversity, land use change, cropland , pasture expansion
+
+9. Abstract (200 words)
+
+MSA
+
+10. Time period
+
+	1500 -2000
+
+11. Geographical coverage
+
+	Worldwide
+
+12. Methodologies used for data collection and processing
+
+This dataset is based on the GLOBIO3 approach, represented by the Mean
+Species Abundance (MSA) indicator. Due to historical data availability
+only a selective set of pressures (cropland and grazing) is included
+here. This dataset  therefore gives an overestimation of remaining
+biodiversity or naturalness, as compared to other studies in which the
+GLOBIO approach was used for the more recent time periods, e.g.
+Environmental Data Compendium (  HYPERLINK
+"http://www.compendiumvoordeleefomgeving.nl/" 
+http://www.compendiumvoordeleefomgeving.nl/ ) and the Global
+Biodiversity Outlook4 (  HYPERLINK "https://www.cbd.int/gbo4/" 
+https://www.cbd.int/gbo4/ . GLOBIO3 is built on a set of equations
+linking environmental drivers and biodiversity impact (cause–effect
+relationships). Cause–effect relationships are derived from available
+literature using meta-analyses. GLOBIO3 describes biodiversity as the
+remaining mean species abundance (MSA) of original species, relative to
+their abundance in pristine or primary vegetation, which are assumed to
+be not disturbed by human activities for a prolonged period. MSA is
+similar to the Biodiversity Integrity Index (Majer and Beeston 1996) and
+the Biodiversity Intactness Index (Scholes and Biggs 2005) and can be
+considered as a proxy for the CBD indicator on trends in species
+abundance (UNEP 2004). The main difference between MSA and BII is that
+every hectare is given equal weight in MSA, whereas BII gives more
+weight to species rich areas. MSA is also similar to the Living Planet
+Index (Loh and others 2005), which compares changes in populations to a
+1970 baseline, rather than to primary vegetation. It should be
+emphasized that MSA does not completely cover the complex biodiversity
+concept, and complementary indicators should be included, when used in
+extensive biodiversity assessments (Faith and others 2008). 
+
+The output of GLOBIO is expressed here as MSA, an indicator of
+naturalness or biodiversity intactness. It is defined as the mean
+abundance of original species relative to their abundance in undisturbed
+ecosystems. An area with an MSA of 100% means a biodiversity that is
+similar to the natural situation. An MSA of 0% means a completely
+destructed ecosystem, with no original species remaining. Global
+environmental drivers of biodiversity change are input for GLOBIO3. In
+this particular case, a simplified method is used since not all required
+drivers are available for the historical period. Therefore, only
+historical land use changes are the main driver here. Long term
+historical expansion of cropland, pasture (land used for grazing
+livestock, intensive and extensive) and built-up area (urban sprawl,
+growth of cities and towns) are taken from the HYDE 3.1 database (Klein
+Goldewijk et al. 2011). GLOBIO3 calculates the overall MSAi value by
+substracting the individual MSAX maps from the potential maximum
+available grid cell land area (and dividing with it so a fraction is
+obtained): 
+
+MSAi,t = (Gareai – 0.7* Croplandi,t – 0.3 *Pasturei,t – 0.95 *
+Built-upi,t)/Gareai 
+
+where i is a grid cell, t is (historical) time step, MSAi is the overall
+value for grid cell i, Gareai is the total available land area of grid
+cell i. Cropland, Pasture and Built-up are the corresponding historical
+land use areas at time step t. The multipliers are derived from expert
+judgment, indicating a very high negative impact on biodiversity (0.95),
+a severe impact (0.7) and a modest impact (0.3).
+
+13. Data quality
+
+	-
+
+14. Date of collection
+
+	-
+
+15. Data collectors
+
+	HYDE database , GLOBIO project
+
+16. Sources
+
+	  HYPERLINK "http://www.globio.info/"  http://www.globio.info/ 
+
+	
+
+Alkemade R, van Oorschot M, Miles L, Nelleman C, Bakkenes M, ten Brink
+(2009) GLOBIO3: A framework to investigate options for reducing global
+terrestrial biodiverity loss, Ecosystems 12: 374-390.
+
+http://  HYPERLINK "http://www.pbl.nl/hyde"  www.pbl.nl/hyde 
+
+Klein Goldewijk, K. , A. Beusen, M. de Vos and G. van Drecht, 2011. The
+HYDE 3.1 spatially explicit database of human induced land use change
+over the past 12,000 years, Global Ecology and Biogeography 20(1):
+73-86.   HYPERLINK
+"http://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2010.00587.x/abs
+tract"  DOI: 10.1111/j.1466-8238.2010.00587.x. 
+

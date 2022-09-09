@@ -1,0 +1,105 @@
+Working Paper CLIO-INFRA: Total Cropland
+
+1. Title
+
+	Total cropland area by decade and country
+
+2. Author(s)
+
+	Kees Klein Goldewijk, Utrecht University
+
+3. Production date
+
+	2012-9-1.
+
+4. Version
+
+	1
+
+5. Variable group(s)
+
+	Environmental sustainability
+
+6. Variable(s)
+
+	Total cropland area
+
+7. Unit of analysis
+
+	Country
+
+8. Keywords (5)
+
+	Agriculture, cropland
+
+9. Abstract (200 words)
+
+Cropland occupied roughly less than 1% of the global ice-free land area
+for a long time period until 1000 A.D., quite similar like the area used
+for pasture. In the centuries that followed the share of global cropland
+increased to 2% in 1700 A.D. (ca. 3 million km2), and 11% in 2000
+A.D.(15 million km2), while the share of pasture area grew from 2% in
+1700 A.D. to 24% in 2000 A.D. (34 million km2) These profound land use
+changes have had, and will continue to have quite considerable
+consequences for global biogeochemical cycles and subsequently global
+climate change. 
+
+Some researchers suggest that mankind has shifted from living in the
+Holocene (~emergence of agriculture) into the Anthropocene (~humans
+capable of changing the Earth’ atmosphere) since the start of the
+Industrial Revolution. But in the light of the sheer size and magnitude
+of some historical land use changes (e.g. as result of the depopulation
+of Europe due to the Black Plague in the 14th century and the aftermath
+of the colonization of the Americas in the 16th century), we believe
+that this point might have occurred earlier in time. While there are
+still many uncertainties and gaps in our knowledge about the importance
+of land use (change) in the global biogeochemical cycle, we hope that
+this database can help global (climate) change modelers to close parts
+of this gap.
+
+10. Time period
+
+	1500 -2000
+
+11. Geographical coverage
+
+	Worldwide
+
+12. Methodologies used for data collection and processing
+
+Historical population, cropland and pasture statistics are combined with
+satellite information and specific allocation algorithms (which change
+over time) to create spatial explicit maps, which are fully consistent
+on a 5 minute longitude/latitude grid resolution, and cover the period
+10,000 B.C. to 2,000 A.D..
+
+13. Data quality
+
+	1960 – 2000 period: good
+
+	Ca 1800-1960 period: fair for Europe and N. America, poor for the rest
+of the world
+
+	Pre-1800 period: rather poor, a few countries excepted
+
+14. Date of collection
+
+	-
+
+15. Data collectors
+
+	HYDE database 
+
+16. Sources
+
+	  HYPERLINK "http://www.pbl.nl/hyde"  www.pbl.nl/hyde 
+
+	
+
+Klein Goldewijk, K. , A. Beusen, M. de Vos and G. van Drecht, 2011. The
+HYDE 3.1 spatially explicit database of human induced land use change
+over the past 12,000 years, Global Ecology and Biogeography 20(1):
+73-86.   HYPERLINK
+"http://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2010.00587.x/abs
+tract"  DOI: 10.1111/j.1466-8238.2010.00587.x. 
+

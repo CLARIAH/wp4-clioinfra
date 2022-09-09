@@ -1,0 +1,41 @@
+Required content of Working Paper CLIO-INFRA
+Please include the following elements into any working paper entered into the CLIO-INFRA system:
+1. Title
+	- World Countries Urbanization ratio, 1500-2000.
+2. Author(s)
+	- Jonathan Fink-Jensen
+3. Production date
+	- 29-4-2015.
+4. Version
+	- 1st version.
+5. Variable group(s)
+	- Demography.
+6. Variable(s)
+	- Total population, urban population
+7. Unit of analysis
+	- Urbanization rate
+8. Keywords (5)
+	- Demography, population sizes, world countries, urban population, urbanization ratio
+9. Abstract (200 words)
+- The World Countries Urbanization ratio dataset comprises information on urbanization ratio's per each country for the period 1500-2000. Data has been gathered and organized in 50-years intervals for the period 1500-1800, using as geographical reference the current list of existing world countries. 
+10. Time period
+	- 1500-2000.
+11. Geographical coverage
+	- Entire World.
+12. Methodologies used for data collection and processing
+- The urbanization ratio is given as the calculated share of the urban population of the total population within each country. The figures being used can be found in the datasets `World Countries Total Population Size, 1500-2000' and `World Countries Urban Population Size, 1500-2000'. For China, the urban population is unknown for this period. However, urbanization ratio's as calculated by Xu, Van Leeuwen and Van Zanden (2015) have been given for 1630, 1644, 1776, 1851, 1893, and 1918. 
+13. Data quality
+		i. Central statistical agencies
+		ii. Historical reconstructions
+		iii. Estimates
+		iv. Conjectures
+14. Period of collection
+	- April 2015.
+15. Data collector
+	- Jonathan Fink-Jensen
+16. Sources
+Xu, Yi, Bas van Leeuwen and Jan Luiten van Zanden, `Urbanization in China, 1100-1900', CGEH
+Working Paper Series, 63 (2015).
+
+17. Text
+This data collection was carried out within the framework of the CLIO-INFRA project financed by the Netherlands Organisation for Scientific Research (NWO).

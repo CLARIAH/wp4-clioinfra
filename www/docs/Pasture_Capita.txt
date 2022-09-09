@@ -1,0 +1,89 @@
+Working Paper CLIO-INFRA: Pasture per Capita
+
+1. Title
+
+	Pasture per capita area by decade and country
+
+2. Author(s)
+
+	Kees Klein Goldewijk, Utrecht University
+
+3. Production date
+
+	2013-4-9.
+
+4. Version
+
+	1
+
+5. Variable group(s)
+
+	Environmental sustainability
+
+6. Variable(s)
+
+	Pasture per capita 
+
+7. Unit of analysis
+
+	Country
+
+8. Keywords (5)
+
+	Agriculture, pasture
+
+9. Abstract (200 words)
+
+Pasture occupied roughly less than 1% of the global ice-free land area
+for a long time period until 1000 A.D.. In the centuries that followed
+the share of global pasture area grew from 2% in 1700 A.D. to 24% in
+2000 A.D. (34 million km2). These profound land use changes have had,
+and will continue to have quite considerable consequences for global
+biogeochemical cycles and subsequently global climate change. 
+
+10. Time period
+
+	AD 1500 – AD 2000
+
+11. Geographical coverage
+
+	Worldwide
+
+12. Methodologies used for data collection and processing
+
+Historical population & pasture statistics are combined with satellite
+information and specific allocation algorithms (which change over time)
+to create spatial explicit maps, which are fully consistent on a 5
+minute longitude/latitude grid resolution, and cover the period 10 000
+BC to AD 2000.
+
+13. Data quality
+
+	1960 – 2000 period: good (FAO)
+
+	Ca 1800-1960 period: fair for Europe and N. America, poor for the rest
+of the world
+
+	Pre-1800 period: rather poor, a few countries excepted
+
+14. Date of collection
+
+	-
+
+15. Data collectors
+
+	HYDE database , version 3.1
+
+16. Sources
+
+	  HYPERLINK "http://www.pbl.nl/hyde"  www.pbl.nl/hyde 
+
+	
+
+Klein Goldewijk, K. , A. Beusen, M. de Vos and G. van Drecht, 2011. The
+HYDE 3.1 spatially explicit database of human induced land use change
+over the past 12,000 years, Global Ecology and Biogeography 20(1):
+73-86.   HYPERLINK
+"http://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2010.00587.x/abs
+tract"  DOI: 10.1111/j.1466-8238.2010.00587.x. 
+

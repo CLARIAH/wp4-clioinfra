@@ -1,0 +1,60 @@
+                           Working Paper CLIO-INFRA
+
+1. Title
+Composite Measure of Wellbeing
+
+2. Author(s)
+Auke Rijpma
+
+3. Production date
+December 2014
+
+4. Version
+1.0
+
+5. Variable group(s)
+Wellbeing
+
+6. Variable(s)
+Composite measure of wellbeing
+
+7. Unit of analysis
+Country
+
+8. Keywords (5)
+Composite measure, wellbeing
+
+9. Abstract (200 words)
+This is a composite measure of wellbeing constructed from 9 variables from the Clio-Infra projected prsented in the How was life report. Newer version forthcoming.
+
+10. Time period
+1820-2010 (decennial, usually referring to xxx0 years, sometimes the decennial average: see How was life).
+
+11. Geographical coverage
+Global
+
+12. Methodologies used for data collection and processing
+The composite measure is a linear combination of the 9 variables created through a latent variable model. In the Bayesian implementation of the latent variable model, missing data is handled by the model. This provides estimates even for countries for which there is very little information. The uncertainty of these estimates is reflected in the confidence intervals, but be careful not to over-interpret the mean or median values for these countries.
+
+13. Data quality
+Depends on the underlying data; beyond that the quality should be reflected in the confidence intervals. Note that the assumptions of the latent variable model should also hold. See the background paper (Rijpma 2016) as well as the material this measure was based on (esp. Jackman 2009 and Høyland et al. 2012).
+
+Høyland, Bjørn, Karl Moene, and Fredrik Willumsen. 2012. "The Tyranny of International Index Rankings." Journal of Development Economics 97 (1): 1 - 14. doi:10.1016/j.jdeveco.2011.01.007.
+Jackman, Simon. 2009. Bayesian Analysis for the Social Sciences. Wiley Series in Probability and Statistics. Chichester: Wiley.
+Rijpma, Auke. 2016. "What Can't Money Buy? Wellbeing and GDP since 1820." Working Paper 78. Utrecht University, Centre for Global Economic History. https://ideas.repec.org/p/ucg/wpaper/0078.html.
+
+
+14. Period of collection
+2013 - 4
+
+15. Data collectors
+Auke Rijpma, Clio-Infra team.
+
+16. Sources
+See original Clio-Infra variables.
+
+17. Text
+-
+
+18. Citation (that should be used for this dataset)
+Rijpma, Auke. 2014. "A Composite View of Well-Being since 1820." In How Was Life? Global Well-Being since 1820, edited by Jan Luiten Van Zanden, Joerg Baten, Marco Mira D'Ercole, Auke Rijpma, Conal Smith, and Marcel Timmer. Paris: OECD Publishing. dx.doi.org/10.1787/9789264214262-17-en.

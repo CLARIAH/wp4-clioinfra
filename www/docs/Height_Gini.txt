@@ -1,0 +1,3329 @@
+1. Title
+
+	Height ginis by birth decade and country
+
+2. Author(s)
+
+	Baten, Joerg, University of Tuebingen.; Blum, Mathias, Technical
+University Munich (formerly University of Tuebingen)
+
+3. Production date
+
+	2013-12-16.
+
+4. Version
+
+	1
+
+5. Variable group(s)
+
+	Biological Standard of Living
+
+6. Variable(s)
+
+	Gini coefficient of male height equivalent in cm.
+
+7. Unit of analysis
+
+	Country
+
+8. Keywords (5)
+
+	Height, Anthropometrics, Living Standard.
+
+9. Abstract (200 words)
+
+	This variable contains anthropometric information which can be used as
+a proxy for the inequality of human health and welfare in 119 countries
+spanning the period 1810-1989, although for most countries only a few
+birth decades are documented. The data set was created to provide a
+first attempt to measure inequality, it should be mentioned as a caveat
+that many individual countries cannot be measured without a substantial
+amount of measurement error. The tendencies of anthropometric inequality
+by world region (in which country-specific measurement error tends to
+average out) is probably informative.
+
+10. Time period
+
+	1810 -1980. All data refer to the birth decadal average (1810 means
+1810-19 etc)
+
+11. Geographical coverage
+
+	Worldwide
+
+12. Methodologies used for data collection and processing
+
+	Reconstruction of height ginis by birth decade using a variety of
+different sources. See also the text below. The height gini is a
+transformation of the coefficient of height inequality, based on Moradi
+and Baten’s formula: g htgini=-33.5 + 20.5*cv 
+
+13. Data quality
+
+	As good as possible, but counter-checking and improvement welcome.
+Interpretations on individual country level should be done with careful
+checking
+
+14. Date of collection
+
+	See references
+
+15. Data collectors
+
+	Joerg Baten, Mathias Blum, and many colleagues from around the world.
+
+16. Sources
+
+As almost none of the original height variation estimates entered the
+data set unchanged, the general reference which should be cited is 
+
+Jörg Baten and Matthias Blum, “Anthropometric within-country
+Inequality and the Estimation of Skill Premia with Anthropometric
+Indicators”, Review of Economics -- Jahrbuch fuer
+Wirtschaftswissenschaften 62-2 (2011), pp.107-138.
+
+But as the underlying height data comes from a variety of sources, here
+is the complete list:
+
+(we first reported authors and year; then author with first name;
+finally title)
+
+Apart from those individual titles, are results are based on the
+literature referenced in overview studies such as Floud (1994); Hiernaux
+(1968); and recently Schnaitmann (2007). The Hiernaux (1968)
+bibliography is excerpted at the end of this list.
+
+A Hearn 2003; A'Hearn, Brian; Anthropometric Evidence on Living
+Standards in Northern Italy, 1730-1860.' Journal of Economic History 63,
+pp. 351-381.
+
+Abdushelishvili 1968; Abdushelishvili, M. G. & Ginzburg, V.v. &
+Miklashevskaia, N.n. & Trofimova, T.a.; Contributions to the physical
+anthropology of central asia and the caucasus', Russian Translation
+Series of the Peabody Museum of Archeology and Ethnology, Harvard
+University, vol. 3, no.2
+
+Alter Neven Oris 2004; Alter, George & Neven, Muriel & Oris, Michel;
+Stature in Transition: A Micro-level Study from Nineteenth-Century
+Belgium. Social Science History 28-2, pp. 231-247
+
+Ashcroft Ling Lovell Miall 1966; Ashcroft & Ling & Lovell & Miall;
+Heights and Weights of Adults in Rural and Urban Areas of Jamaica',
+British  Journal of Preventive Social Medicine, vol. 20, no.1, pp.
+22–26.
+
+Aul 1964; Aul, J.; Tartu Riikliku Olikooli Toimetised', Antropologija
+Estoncev, Tartu.
+
+Aul 1997; Aul, J.; Über die Sexualdimorphismus der anthropologischen
+Merkmale von Schulkindern, Jugendlichen und Erwachsenen', Papers on
+Anthropology VII, University of Tartu, Centre of Physical Anthropology
+
+Austin Baten van Leeuwen 2007; Austin, Gareth & Baten, Joerg & van
+Leeuwen, Bas; The Biological Standard of Living in Early 19th-Century
+West Africa: New Anthropometric Evidence. Working Paper
+LSE/Utrecht/Tuebingen
+
+Austr. Bureau of Statistics 1998; Australian Bureau of Statistics; How
+Australians Measure Up. ABS Cat No. 4359.0. Australian Bureau of
+Statistics, Canberra.
+
+Backmann 1924; Backmann, Gaston; Die Körperlänge der Letten' Upsala
+Läkareförenings Förhandlingar, Uppsala.
+
+Bassino 2009; Bassino, Jean-Pascal; Data Set on Japanese Student
+Heights, Obtained via John Komlos
+
+Basu 1976; Basu, M.; Morphology, Serology, Dermatoglyphics, and
+Microevolution of some village populations in Haiti, West Indies' ,
+Human Biology, vol. 48, no. 2, p.245.
+
+Baten 1999; Baten, Joerg; Ernährung und wirtschaftliche Entwicklung in
+Bayern, 1730 - 1880, Stuttgart, Steiner.
+
+Baten 2006; Baten, Joerg; Data Set on Bavarian conscripts and convicts
+and Arnsberg conscripts, see
+http://www.uni-tuebingen.de/uni/wwl/dhheight.html; on the background of
+Arnsberg conscripts, see Baten Fertig 2010
+
+Baten Ma Morgan Wang 2010; Baten, Joerg & Ma, Debin & Morgan, Stephen &
+Wang, Qing; Evolution of living standards and human capital in China in
+the 18–20th centuries: Evidences from real wages, age-heaping, and
+anthropometrics. In Explorations in Economic History 47, pp. 82-97
+
+Baten Stegl Van Der Eng 2009; Baten, Joerg & Stegl, Mojgan & Van der
+Eng, Pierre; Long Term Changes in the Biological Standard of Living in
+Indonesia: New Anthropometric Evidence, 1770s-2000s', University of
+Tuebingen Working Paper.
+
+Benoist 1971; Benoist, J.; Le gradients écologique du rapport
+poids/surface chez des groupes d´Israeliens d´origines différentes',
+Revue de la Société de Biométrie humaine, pp.36-45.
+
+Bhasin 1974; Bhasin, M.K.; A genetic study on the Newards of Nepal
+valley. American Journal of Physical Anthropology 40-1, pp.67-74
+
+Boldsen 1990; Boldsen, Jesper; Height Variation in Denmark A.D.
+1100-1988. In: Iregreen, Elisabeth & Liljekvist, Rune (eds.):
+Populations of the Nordic Countries. Proceedings of the Second Seminar
+of Nordic Physical Anthropology, Lund 1990
+
+Brennan MacDonald Shlomowitz 1994a; Brennan, L. &  MacDonald, J. &
+Shlomowitz R.; The Heights and Economic Wellbeing of North Indian under
+British Rule', Social Science History, vol. 18, pp. 271-307
+
+Brennan MacDonald Shlomowitz 1997; Brennan, L. &  MacDonald, J. &
+Shlomowitz R.; Towards an anthropometric history of Indian under British
+rule', Research in Economic History, vol. 17, pp. 185–246.
+
+Brennan MacDonald Shlomowitz 2006; Brennan, L. &  MacDonald, J. &
+Shlomowitz R.; Data Set on Indian Stature, friendly provided via email,
+on the Background see Brennan MacDonald Shlomowitz 1997
+
+Brennecke 1935; Brennecke, Theophil; Untersuchungen über Körperlänge,
+Brustumfang und rechten Oberarmumfang an Stellungspflichtigen des
+Kantons Basel-Stadt, Philosophischer Verlag, Basel
+
+BRFSS Annual Survey Data 1995; Behavioral Risk Factor Surveillance
+System Annual Survey Data; Behavioral Risk Factor Surveillance System
+Annual Survey Data
+
+Buxton 1920; Buxton, L.H.Dudley; The Anthropology of Cyprus', The
+Journal of the Royal Anthropological Institute of Great Britain and
+Ireland, vol. 50.
+
+Carson 2005; Carson, Scott A.; The Biological Standard of Living in
+19th-Century Mexico and in the American West. In: Economics and Human
+Biology 5-1, pp. 405-419
+
+Carson 2007; Carson, Scott A.; Mexican body mass index values in the
+late-19th-century American West', Economics and Human Biology, vol. 5,
+no.1, pp. 37-47 .
+
+Chabeuf 1969; Chabeuf, M.; Contribution à l'anthropologie des
+Vietnamiens méridionaux', Bulletins et Mémoires de la Société
+d'Anthropologie de Paris, vol. 1, no. 2, pp. 155 - 176.
+
+Chamla 1972; Chamla, M. C.; Variations biométriques avec láge chez des
+ouvriers algériens', Biométrie Humaines , vol 7, pp.41-55.
+
+Clements Pickett 1957; Clements, E. M. B. & Pickett K. G.; Stature and
+Weight of Men from England and Wales in 1941', British  Journal of
+Preventive Social Medicine, vol. 11,, pp. 51-60.
+
+Cogneau Rouanet 2009; Cogneau, Denis & Rouanet, Lea; Living Conditions
+in Cote d´Ivoir, Ghana and Western Africa 1925-1985: What Survey Data
+on Height Stature Tell Us? WP DT/2009/12, at ideas.repec.org
+
+Coon 1931; Coon, Carleton S.; Tribes of the Rif, Peabody Museum of
+Harvard University
+
+Coon 1974; Coon, Carleton S.; The Mountains of Giants. A Racial and
+Cultural Study of the North Albanian Mountain Ghegs, published by the
+Peabody Museum of American Archaeology and Ethnology, New York, vol. 23.
+
+Cranfield Inwood 2007; Cranfield, John & Inwood, Kris; The great
+transformation: A long-run perspective on physical well-being in
+Canada', Economics and Human Biology, no. 5, pp. 204–228.
+
+Crayen 2006; Crayen, Dorothee; Heights in South Africa', University of
+Tuebingen Working Paper
+
+Czekanowski 1910; Czekanowski, J.; Verwandschaftsbeziehungen der
+zentralafrikanischen Pygmäen. Die anthropologische Stellung der Batwa',
+Korespondentblatt der Deutschen Gesellschaft für Anthropologie,
+Ethnologie und Urgeschichte, vol. 16.
+
+Davenport Steggerda 1929; Davenport, C.B. & Steggerda, Morris; Race
+Crossing in Jamaica, Carnegie Institution of Washington.
+
+De Lestrange 1950; de Lestrange, M.; Contribution à l'étude de
+l'anthropologie des Noirs d'A. 0. F. — II. Anthropométrie de 1023
+Coniagui, Bassari, Badyaranké et Fulakunda de Guinée française',
+Bulletins et Mémoires de la Société d'Anthropologie de Paris, vol. 1,
+no. 1, pp. 99 - 1
+
+Debets 1970; Debets, Georgij F.; Physical anthropology of Afghanistan,
+Cambridge, Peabody Museum.
+
+Demographic and Health Surveys; Demographic and Health Surveys;
+Demographic and Health Surveys Internet Pages www.measuredhs.com
+
+Dick 1995; Dick, Trevor; Heights, Nutrition, and Per Capita Income:
+Canada', Komlos, J (ed.) The biological standard of living on three
+continents: further explorations in anthropometric history, Boulder,
+Colorado, Westview.
+
+Drontschilow 1914; Drontschilow, Krum; Beiträge zur Anthropologie der
+Bulgaren', in Ranke, J & Thilenius, G (eds)  Archiv fuer Anthropologie,
+vol. 13., p. 43.
+
+Drucker Van Meerten 1995; Drucker, Jan Willem & Van Meerten, M.A.;
+Beyond Villerme and Quetelet: The Quantitative Relation between Sex- and
+Age-Specific Hieght and Real Per Capita Income, in: Komlos, John (ed.)
+(1995a) The Biological Standard of Living on Three Continents: Further
+Essays in Anthropometric Hist
+
+Drukker Tassenaar 1997; Drukker, Jan Willem & Tassenaar, Vincent; The
+Case of the Shrinking Dutchmen: another Example of the
+'Early-Industrial-Growth Puzzle',' in R. Steckel and R. Floud (eds.)
+Health and Welfare during Industrialization. Chicago: University of
+Chicago Press, pp. 331-378.
+
+Eltis 1982; Eltis, David; Nutritional Trends in Africa and the Americas:
+Heights of African, 1819-1839', Journal of Interdisciplinary History,
+vol. 12, pp. 453-475.
+
+Eltis 2009; Eltis, David; Internet Data Set, friendly provided on his
+internet page. On the Background, see Eltis 1982
+
+Erismann 1888; Erismann, F.; Untersuchungen über die körperliche
+Entwicklung der Arbeiterbevölkerung in Zentralrussland. Archiv für
+soziale Gesetzgebung 1, pp. 98-484
+
+Eurobarometer 1996; Eurobarometer; Internet Data Collection: Statistics
+on Human Stature in Europe
+
+Eveleth Tanner 1990; Eveleth, P.B. & Tanner, J.M.; Worldwide variation
+in human growth. Cambridge: Cambridge University Press.
+
+Faulhaber 1970; Faulhaber, J.; Anthropometry of living indians'. In R
+Wauchope (ed.): Handbook of Middle American Indians. Austin: The
+University of Texas Press, Vol. 9, pp. 82-104.
+
+Fetter Hajnis 1962; Fetter, Vojtech & Hajnis, Karel; Základní
+Somatomerické Charakteristiky Dospelých Cvicencu II. Celostátní
+Spartakiády', Acta Universitatis Carolinae Medica 1962, p. 13ff
+
+Field 1948; Field, Henry; Contributions to the anthropology of the
+Soviet Union, Washington, DC, Smithsonian Institution.
+
+Field 1952; Field, Henry; Contributions to the Anthropology of the
+Faiyum, Sinai, Sudan, Kenya, Univ. of California Press
+
+Field 1953; Field, Henry; Contributions to the Anthropology of the
+Caucasus. Peabody Museum of American Archaeology and Ethnology, Harvard
+University, 1953.
+
+Floud 1994; Floud, Roderick; The Heights of Europeans since 1750: A New
+Source for European Economic History,' in Komlos, John (ed.) Stature,
+Living Standards, and Economic Development. Essays in Anthropometric
+History. Chicago: The University of Chicago Press,  pp. 9-24.
+
+Floud Wachter Gregory 1990; Floud, Roderick & Wachter, Kenneth & Annabel
+Gregory; Height, Health and History. Nutritional Status in the United
+Kingdom, 1750-1870. Cambridge: Cambridge University Press.
+
+Floud Wachter Gregory 1991; Floud, Roderick & Wachter, Kenneth & Annabel
+Gregory; Data Set Friendly Provided via the Essex Social Science Data
+Archive, on the Background see Floud Wachter Gregory 1990
+
+Fogel Engerman Trussell 1982; Fogel, R.W., Engerman,S.L., Trussell, J.;
+Exploring the Uses of Data on Height: The Analysis of Long-Term Trends
+in Nutrition, Labor Welfare, and Labor Productivity', Social Science
+History, vol. 6, no. 4, pp. 401-421. 1982
+
+Frisancho 1976; Frisancho, Roberto A.; Growth and Morphology at high
+Altitude', in: Baker, PT & Little, MA (eds.) Man in the Andes - A
+Multidisciplinary Story of High-Altitude Quechua, Dowden, Hutchinson &
+Ross, Stroudsburg.
+
+Fthenakis 1968; Fthenakis, W.; Problem der körperlichen und seelischen
+Akzeleration in Griechenland, Diss. LMU Muenchen
+
+Gaillard Poutrin 1914; Gaillard, R.; Poutrin, L.; Étude anthropologique
+des populations des régions du Tchad et du Kanem', Extrait des
+Documents Scientifiques de la Mission Tilho, tome III, Paris.
+
+Gillin 1967; Gillin, John; The Barama River Caribs of British Guyana',
+Papers of the Peabpdy Museum of American Archeology and Ethnology,
+Harvard University, vol. 14, no. 2.
+
+Godoy Leonard Reyes-García Goodman McDade Huanca Tanner Vadez
+2006;Godoy, Ricardo A. & Leonard,  William R. & Reyes-García, Victoria
+& Goodman, Elizabeth & McDade, Thomas & Huanca, Tomás & Tanner, Susan &
+Vadez, Vincent; Physical stature of adult Tsimane’ Amerindians,
+Bolivian Amazon in the 20th century', Economics and Human Biology, vol.
+4, no. 2, pp. 184-205.
+
+Godoy Goodman Levins Caram Seyfried 2007; Godoy, Ricardo A.; Goodman,
+Elizabeth; Levins, Richard; Caram,  Mariana; Seyfried,  Craig; Adult
+male height in an American colony: Puerto Rico and the USA mainland
+compared, 1886–1955', Economics and Human Biology, vol. 5, pp.
+82–99.
+
+Guntupalli Baten 2006; Guntupalli, Aravinda Meera & Baten, Jörg; The
+Development and Inequality of Heights in North, West and East India
+1915-44', Explorations in Economic History, vol. 43, no. 4, pp. 578-608.
+
+Gyenis Joubert 2004; Gyenis, Gyula & Joubert, Kálmán; Socioeconomic
+determinants of anthropometric trends among Hungarian youth', Economics
+and Human Biology, vol. 2, pp. 321–333.
+
+Haghdoost Mirzazadeh Alikhani 2008; Haghdoost, AA & Mirzazadeh, A. &
+Alikhani, S.; Secular Trend of Height Variations in Iranian Population
+Born between 1940 and 1984; Iranian J Publ Health, Vol. 37, No.1, 2008,
+pp.1-7
+
+Hammel Gullickson 2005; Hammel, Eugene A. and Gullickson, A.; Maternal
+Mortality as an Indicator of the Standard of Living in Eighteenth- and
+Nineteenth-Century Slavonia. In Allen, R. & Bengtsson, T. & Dribe, M.,
+eds. Living Standards in the Past. New Perspectives in Asia and Europe
+(Oxford: Oxford Univer
+
+Harrison 1969; Harrison, G. A.; The Effects of Altitudinal variation in
+Ethiopian Populations', Philosophical Transactions of the Royal Society
+of London, series B, vol. 256, Biological Sciences.
+
+Hasle Boldsen Jesper 1991; Hasle, Henrik & Boldsen, Jesper L.; Childhood
+conditions and adult height', Journal of Biosocial Science, vol. 23, pp.
+107-112.
+
+Hasluck Morant 1929; Hasluck, Margaret M. & Morant, G. M.; Measurements
+of Macedonian Men', Biometrika, vol. 21, No. 1/4, pp. 322-336.
+
+Hatton 2009; Hatton, Timothy; A New Dataset on Long Run Trends in the
+Heights of European Males. Working Paper ANU
+
+Hauschild Wagenseil 1931; Hauschild, M.W. & Wagenseil,F.;
+Anthropologische Untersuchungen an anatolischen Türken', Zeitschrift
+für Morphologie und Anthropologie, vol. 29.
+
+Hertzberg 1963; Hertzberg, H. T. E.; Anthropometric survey of Turkey,
+Greece and Italy, Pergamon Press.
+
+Hiernaux 1964; Hiernaux, J.; Luba du Katanga et Luba du Kasai (Congo);
+comparaison de deux populations de même origine'. Bulletins et
+Mémoires de la Société d'Anthropologie de Paris, vol. 6, no. 4, pp.
+611 - 622.
+
+Hiernaux 1968; Hiernaux, J.; La diversité humaine en Afrique
+subsaharienne : recherches biologiques, Ed. de l'Inst. de Sociologie,
+Univ. Libre, Bruxelles.
+
+Hiernaux 1972; Hiernaux, J.; A Comparison of Growth and Physique in
+Rural, Urban and Industrial Groups of Similar Ethnic Origin: A Few Case
+Studies from the Congo and Chad', Vorster, D J M (ed), Human Biology of
+environmental Change.
+
+Hodinova 2007; Hodinova, Katherina; Determinanten der fruehen
+Humankapitalbildung in ost- und mitteleuropaeischen Regionen. Diploma
+Thesis, University of Tuebingen.
+
+Holas 1952; Holas, Bohumil; Mission dans l'Est libe?rien (P.-L.
+Dekeyser, B. Holas, 1948) Re?sultats de?mographiques et
+anthropome?triques  IFAN, Dakar,
+
+Hossain Lestrel Ohtsuki 2005; Hossain, Golam & Lestrel, Pete E. &
+Ohtsuki, Fumio; Secular changes in head dimensions of Japanese adult
+male students over eight decades', Journal of Comparative Human Biology,
+vol. 55, pp. 239-250.
+
+Huizinga 1968b; Huizinga J.; New physical anthropological evidence
+bearing on the relationship between Dogon;Kurumba and the extinct west
+African Tellem populations', Proceedings of the koninklijke nederlandse
+Akademie van Wetenschappen Series C Biological and medical Seri
+
+Huizinga Birnie-Teller 1966; Huizinga J. & N.F. Birnie-Teller; Some
+anthropometric data on male and female DogonI,II', Proceedings of the
+koninklijke nederlandse Akademie van Wetenschappen Series C Biological
+an d medical Series, vol. 69, pp. 675-695.
+
+Hultkrantz 1927; Hultkrantz, J.V.; Über die Zunahme der Körpergröße
+in Schweden in den Jahren 1840 - 1926', Nova acta Regiae Societatis
+Scientiarum Upsaliensis ; vol. extra ord. ed. 4., Uppsala.
+
+Inwood Oxley Roberts 2010; Inwood, Kris & Oxley, Les & & Roberts, Evan;
+Physical stature and its interpretation in nineteenth century New
+Zealand. Australian Economic History Review (forthcoming)
+
+Interdepartmental Committee on Nutrition 1963a; Interdepartmental
+Committee on Nutrition for National Defense; Venezuela. Nutrition Survey
+May-June 1963. Washington.
+
+Jaeger Zellner Kromeyer-Hauschild Luedde Eisele Hebebrand 2001; Jäger,
+U. & Zellner, K & Kromeyer-Hauschild, K. & Lüdde, R. & Eisele, R. &
+Hebebrand, J.; Körperhöhe, Körpergewicht und Body Mass Index bei
+deutschen Wehrpflichtigen. Historischer Rückblick und aktueller Stand',
+Anthropologischer Anzeiger, vol. 59, no. 3, pp. 251-273.
+
+Janghorbani Amini Willett Gouya Delavari Alikhani Mahdavi 2007;
+Janghorbani, M. & Amini, M. & Willett, W.C. & Gouya, M.M. & Delavari,
+A. & Alikhani, S. & Mahdavi, A.; First Nationwide Survey of Prevalence
+of Overweight, Underweight, and Abdominal Obesity in Iranian Adults',
+Obesity, vol. 15, pp. 2797–2808; doi: 10.1038/oby.2007.332.
+
+Jantz Kimmerle Baraybar 2008; Jantz, Richard L. & Kimmerle, Erin H. &
+Baraybar, Jose Pablo; Sexing and Stature Estimation Criteria for Balkan
+Populations', Journal of Forensic Science, vol. 53, no. 3.
+
+Jarcho 1935; Jarcho, A.; Die Altersveränderungen der Rassenmerkmale bei
+den Erwachsenen', Anthropologischer Anzeiger XII.
+
+Johnson 1970; Johnson, T.O.; Height and Weight Patterns of an Urban
+African Population Sample in Nigeria. Tropical and Geographical Medicine
+22, pp. 65-76
+
+Jordan 1979; Jordán, José R.; Desarrollo Humano en Cuba, Instituto de
+la Infancia, La Habana.
+
+Joyce 1926; Joyce, T.A.; Note on the Physical Anthropology of the Pamirs
+and Amu-Daria Basin', The Journal of the Royal Anthropological Institute
+of Great Britain and Ireland, vol. 56 , pp. 105-133.
+
+Juergens 1967; Jürgens, H.W.; Examination of the physical development
+of Tanzanian youth, Anthropological Institute, IFO-Institut für
+Wirtschaftsforschung, Afrika-Studienstelle, Kiel.
+
+Kajava 1927; Kajava, Y; Rasseneigenschaften der Lappen Finlands;
+Suomalaisen Tiedeakatemian Toimituksia', Annales Academie Scientiarum
+Fennicae, vol. 25, Helsinki.
+
+Kemsley 1951; Kemsley, W. F. F.; Weight and Height of a Population in
+1943', Annals of eugenics, vol. 15, pp. 161-183.
+
+Kiil 1939; Kiil, Vilhelm; Stature and Growth of Norwegian Men during the
+Past Two Hundred Years. Oslo 1939
+
+Kimura 1984; Kimura, Kunihiko; Studies on Growth and Development in
+Japan', Yearbook of Physical Anthropology, vol. 27, pp. 179-214.
+
+Kimura 1993; Kumra, Mitsuhiko; Standards of Living in Colonial Korea:
+Did the Masses Become Worse Off or Better Off Under Japanese Rule?
+Journal of Econ. History 53-3, pp. 629-652
+
+Komlos 1985; Komlos, John; Stature and Nutrition in the Habsburg
+Monarchy: The Standard of Living and Economic Development in the
+Eighteenth Century', The American Historical Review, vol. 90, no. 5, pp.
+1149-1161.
+
+Komlos 1989; Komlos, John; Nutrition and Economic Development in the
+Eighteenth-Century Habsburg Monarchy: An Anthropometric History.
+Princeton: Princeton University Press.
+
+Komlos 2008; Komlos, John; Data Set on Habsburg Empire Heights
+
+Komlos 2009; Komlos, John; Recent Trends, Working Paper Munich [allows
+to calculate average of White and Black]
+
+Komlos Coclanis 1997; Komlos, J., Coclanis, P.; On the Puzzling Cycle in
+the Biological Standard of Living: The Case of Antebellum Georgia',
+Explorations in Economic History,  vol. 34, no. 4, pp. 433-459.
+
+Kopczynski 2009; Kopczy?ski, Micha?; Data Collection on Polish Stature:
+Provided by Friendly Email Communication (on the Background, see
+Kopczy´nski 2007)
+
+Korean Research Institute of Standard and Science 2004; Korean Research
+Institute of Standard and Science; Internet Page of the National
+Anthropometric Survey of Korea 2003 (in Korean) available under
+http://sizekorea.kats.go.kr, last accessed Jan 16th, 2009
+
+Laing 1964; Laing, J.G.D.; A height/weight table for African Mine
+Labourers', Journal of the South African Institute of Mining and
+Metallurgy.
+
+Laska-Mierzejewska 1970; Laska-Mierzejewska, T; Morphological and
+Developmental Difference Between Negro and White Cuban Youths' , Human
+Biology, vol. 42, no.4, p.581.
+
+Lee 1978; Lee, Sang-Do; A study of the differences and characteristics
+between the nations, in the measured values of the human body and the
+working area. International Journal of Production Research 1978, Vol.
+16, No. 4, pp 335 - 347.
+
+Lintsi Kaarma 1997; Lintsi M. & Saluste L. & Kaarma H. & Koskel S. &
+Aluoja A. & Liivamägi J. & Mehilane L. & Vasar V.; Characteristic
+Traits of Anthropometry in 17-18 Year old Schoolboys of Tartu. IN:
+Papers on Anthropology VII
+
+Lintsi Kaarma 2006; Lintsi M. & Kaarma H.; Growth of Estonian
+seventeen-year-old boys during the last Two Centuries. Economics and
+Human Biology 4-1, pp. 89–103
+
+Littlewood 1972; Littlewood, R. A.; Physical anthropology of the Eastern
+Highlands of New Guinea', Anthropological studies in the eastern
+highlands of New Guinea, vol. 2, Seattle, University of Washington
+Press.
+
+Lobsiger-Dellenbach 1951; Lobsiger-Dellenbach, Marquerite; Contribution
+a l'études anthropologique de l'Afrique occidentale francaise (colonie
+du Niger)' Archive Suisses d'Anthropologie  Génerale 16-1 (1951)
+
+Lopez-Alonso Condey 2003; Lopez-Alonso, Moramay & Condey, Raul P. 2003;
+The Ups and Downs of Mexican Economic Growth: the Biological Standard of
+Living and Inequality 1870-1950, Economics and Human biology 1-2, pp.
+169-186.
+
+Lorentz 1923; Lorentz, H.A.; Nova Guinea : résultats des expéditions
+scientifiques à la Nouvelle Guinée; Leiden : Brill.
+
+Lundman 1939; Lundman, Bertil; Über die fortgesetzte Zunahme der
+Körperhöhe in Schweden 1926 bis 1936', Zeitschrift für Rassenkunde,
+vol. 9.
+
+Manolis Neroutsos Zafeiratos 1995; Manolis, S. & Neroutsos, A. &
+Zafeiratos, C.; Secular changes in body formation of greek students',
+Human Evolution, vol. 10, no. 3pp. 199-204.
+
+Martínez-Carrion Perez-Castejon 1998; Martínez-Carrion, Jose M. &
+Perez-Castejon, Juan J.; Height and Standards of Living during the
+Industrialization of Spain: the Case of Elche. In: European Review of
+Economic History 2-2, pp. 201-230
+
+Matsumura 1925; Matsumura; On the cephalic index and stature of the
+Japanese and their  local differences' ; J Fak Sci Imp Univ Tokyo Sec 1,
+pp. 1-312;
+
+Maynard Turner 1914; Maynard, G.D.& Turner, G.A.; Anthropological notes
+on Bantu Natives from Portuguese East Africa', Publications of the South
+African Institute for Medical Research, Johannesburg.
+
+Mazumdar 1976; Mazumdar, S. K.; A Biometric Study on the Tribes of
+North-Western Himalayan Region', Anthropological Survey of India.
+
+Meineke 2008; Meineke, Lisa 2008; Italien. Diploma Thesis Tuebingen.
+
+Meisel Vega 2007; Meisel, Adolfo & Vega,  Margarita; The biological
+standard of living (and ist convergence) in Colombia, 1870–2003 - A
+tropical success story', Economics and Human Biology, vol. 5,
+pp.100–122
+
+Mesa Fuster Sanchez-Andres Marrodan 1993; Mesa, Maria Soleuad & Fuster,
+Vicente & Sánchez-Andrés, Angeles & Marrodán, Dolores; Secular
+Changes in Stature and Biacromial and Bicristal Diameters of Young Adult
+Spanish Males', American Journal of Human Biology,  vol. 5, pp. 705-709.
+
+Miklashevskaia 1973; Miklashevskaia, Natasa N.; Growth and development
+in high altitude regions of Southern Kirghiza, U.S.S.R.; Miami, Fla. :
+Field Research Projects
+
+Mironov 1999; Mironov, Boris; New Approaches to Old Problems: The
+Well-Being of the Population of Russia from 1821 to 1910 as Measured by
+Physical Stature, Slavic Review. Vol. 58. No. 1. Spring 1999, pp. 1-26.
+
+Mironov 2004b; Mironov, Boris; The Nutrition Standard of Life in the
+Soviet Russia under Stalin on the Anthropometric Data,' The Economic
+History. A Yearbook [in Russian]. 2004. Moscow: ROSSPEN, 2004, pp.
+565-588
+
+Mironov 2006; Mironov, Boris; Data Set on Russian Heights, provided by
+email. On the Details, see Mironov 2004, 2008 and his Anthropometric
+History of Russia
+
+Mokyr O Grada 1994; Mokyr, J. & O Grada; The Heights of the British and
+the Irish c. 1800 - 1815: Evidence from Recruits to the East India
+Company's Army', in Komlos, John (ed.) Stature, living standards and
+economic development : essays in anthropometric history, Chicago, Ill.
+Univer
+
+Mokyr O Grada 1996; Mokyr, J. & O Grada; Height and Health in the United
+Kingdom 1815-1860: Evidence from the East India Company Army. In:
+Explorations in Economic History 33-2 (1996), p. 141-168.
+
+Monasterio Signorini 2008; Monasterio, Leonardo M. & Signorini, Mateus;
+As condicoes de vida dos Gauchos entre 1889-1920: uma analise
+anthropometrica. Working Paper UFPel.
+
+Montero 2009; Montero, Hector Garcia; Antropometría y niveles de vida
+en el Madrid rural, 1837-1915. Historia Agraria 47, pp. 91-124
+
+Morgan 2003; Morgan, S. L.; Chinese Stature and Health Surveys of Adult
+Employees during the 20th Century. Conference Paper Economics and Human
+Biology 2003
+
+Morgan Liu 2007; Morgan, S. & Liu; Was Japanese Colonialism Good for the
+Welfare of Taiwanese? Stature and the Standard of Living', The China
+Quarterly, vol. 192, pp.990-1013.
+
+Murray 1997; Murray, John E.; Standards of the Present for People of the
+Past: Height, Weight, and Mortality among Men of Amherst College,
+1834-1949', The Journal of Economic History, vol. 57, no. 3, pp.
+585-606.
+
+Nicholas Steckel 1991; Nicholas, Stephen & Steckel, Richard; Heights and
+Living Standards of English Workers During the Early Years of
+Industrialisation, 1770-1815', Journal of Economic History, vol. 51, pp.
+937-57.
+
+Nummela 2000; Nummela, Ilkka; Pätkä Vai Ei? Suomalaisen Pituuskasvun
+Historiaa. Jyväskylä: Kansi.
+
+Nurse 1969; Nurse, G.T.; Height and History in Malawi, Government Press,
+Zomba, Malawi.
+
+Oezer 2008; Oezer, Basak Koca; Secular Trend in Body Height and Weight
+of Turkish Adults. Anthropological Science 116-3, pp. 191-199
+
+Olds 2003; Olds, Kelly B.; The biological standard of living in Taiwan
+under Japanese occupation. Economics and Human Biology, 1, 187-206.
+
+Olivier 1991; Olivier, G.; La stature des français en 1990', Bulletins
+et Mémoires de la Société d'anthropologie de Paris, vol. 3, no. 1, p.
+145 - 150.
+
+Olivier Devine 1985; Olivier, G.; Devine G.; Données nouvelles sur la
+stature et la corpulence en France', Cahiers d'anthropologie et
+biométrie humaine, vol. 3, no1-2, pp. 111-123.
+
+Orr Gilks 1931; Orr, J.B. & Gilks, J.L.; The Physique and Helath of Two
+African Tribes. London.
+
+Oschinsky 1954; Oschinsky, L.; The Racial Affinities of the Baganda and
+other Bantu Tribes of British East Africa. Cambridge.
+
+Oshanin 1964a; Oshanin, L. V.; Anthropological composition of the
+population of Central Asia : and the ethnogenesis of its peoples',
+Russian translation series of the Peabody Museum of Archaeology and
+Ethnology, vol. 2, Peabody Museum.
+
+Oshanin 1964b; Oshanin, L. V.; Anthropological composition of the
+population of Central Asia : and the ethnogenesis of its peoples',
+Russian translation series of the Peabody Museum of Archaeology and
+Ethnology, vol. 3, Peabody Museum.
+
+Oxley 2004; Oxley, Deborah; Living Standards of Women in Prefamine
+Ireland', Social Science History 28-2, pp. 271-296.
+
+Padez 2007; Padez, C.; Secular Trend in Portugal', Journal of  Human
+Ecology, vol. 22, no. 1, pp. 15-22.
+
+Padez Johnston 1999; Padez, C. & Johnston, F.; Secular trends in male
+adult height 1904-1996 in relation to place of residence and parent's
+educational level in Portugal', Annals of Human Biology, vol. 26, no. 3,
+pp. 287 – 298.
+
+Paissel 1901; Paissel, W. E.; Materialien zur Anthropologie der
+Tarantschen; Archiv fuer Anthropologie XXVI
+
+Pak 2004; Pak, Sunyoung; The biological standard of living in the two
+Koreas', Economics & Human Biology, vol. 2, pp. 510-521.
+
+Pak Schwekendiek Kim 2010; Pak, Sunyoung & Schwekendiek, Daniel & Kim,
+Hee Kyoung; Height and Living Standards in North Korea, 1930s-1980s',
+Economic History Review (forthcoming)
+
+Papadimitriou et al 2002; Papadimitriou, Anastasios et al.; Secular
+growth changes in the Hellenic population in the twentieth century;
+Hormones 2002, 1(4):245-250
+
+Pearl 1905; Pearl, Raymond; Biometrical Studies on Man: I. Variation and
+Correlation in Brain-Weight', Biometrika, vol. 4, no. 1/2, pp. 13-104.
+
+Pineau 1993; Pineau, J.C.; La stature en France depuis un siècle:
+évolution générale et régionale', Bulletins et Mémoires de la
+Société d'anthropologie de Paris, vol. 5, np. 1, pp. 257 - 268.
+
+Poech 1926; Pöch, H.; Beiträge zur Anthropologie der ukrainischn
+Wolhynier', Mitteilungen der anthropologischen Gesellschaft Wien, vol.
+56.
+
+Powys 1901; Powys, A.O.; Data for the Problem of Evolution in Man.
+Anthropometric Data from Australia', Biometrika, vol. 1, no. 1, pp.
+30-49.
+
+Prazuck Fisch Pichard Sidibe 1901; Prazuck, T. & Fisch  A. & Pichard, 
+E. & Sidibe, Y.; Lack of Secular Change in Male Adult Stature in Rural
+Mali', American Journal of physical Anthropology, vol. 75, pp. 471-475.
+
+Quiroga 1998; Quiroga, Gloria V.; Height Evolution in Spain, 1893-1954.
+An Analysis by Regions and Professions. in Komlos, John/Baten, Joerg,
+eds. (1998): The Biological Standard of Living in Comparative
+Perspective, Stuttgart 1998, pp. 359-383.
+
+Ramon Munoz 2009; Ramon-Munoz, Josep-Mari; Bienestar biológico y
+crecimiento agrario en la Cataluña rural,1840-1936
+
+Relethforth 1995; Relethford, John H.; Re-examination of Secular Change
+in Adult Irish Stature”, American Journal of Human Biology, 7, pp.
+249-253
+
+Risley 1906; Risley, Herbert H.; Anthropometric Data from Burma,
+Ethnographic Survey of India, Office of the superintendent, Government
+Printing, Calcutta, India.
+
+Risley 1969; Risley, Herbert; The People of India - 2. ed., ed. by W.
+Crooke. - Delhi : Oriental Books Repr. Co., 1969
+
+Roberts 1954; Roberts, D. F.; The Cretans. A geographical analysis of
+some aspects of their physical anthropology', The Journal of the Royal
+Anthropological Institute of Great Britain and Ireland, vol. 84, no.
+1/2, pp. 145-157.
+
+Rosenbaum 1988; Rosenbaum, S.; “100 Years of Heights and Weights,”
+Journal of the Royal Statistical Society, Series A, 151, pp. 276-309.
+
+Rubalcava Teruel 2006; Rubalcava, Luis & Teruel, Graciela; “User’s
+Guide for the Mexican Family Life Survey First Wave”
+
+Ruelle 1904; Ruelle, E.; Notes anthropologiques, ethnographiques et
+sociologiques sur quelques populations noires du 2e territoire
+militaire. L'Anthropologie 45 : 519-62, 657-703
+
+Russell 1976; Russell, Marcia; Parent-Child and Sibling-Sibling
+correlations of height and weight in a rural Guatemalan Population of
+preschool children', Human Biology, vol. 48, no. 3, p.501.
+
+Sabatini 1936; Sabatini, Arturo; Anthropologie der Tébu von Kufra',
+Zeitschrift fuer Rassenkunde, vol. 3.
+
+Salvatore 2004; Salvatore, Ricardo; Stature, Nutrition, and Regional
+Convergence: The Argentine Northwest in the Twentieth Century”, Social
+Science History 28-2, pp. 231-248
+
+Salvatore 2007; Salvatore, Ricardo; Heights, nutrition and well-being in
+Argentina, ca. 1850–1950. Preliminary results. Journal of Iberian and
+Latin American Economic History 25 (1), 53–86.
+
+Salvatore Baten 1998; Salvatore, Ricardo & Baten, Joerg; A Most
+Difficult Case of Estimation: Argentinian Heights, 1770-1840', in Komlos
+J. & Baten J. (eds.): The Biological Standard of Living in Comparative
+Perspective. Stuttgart, pp. 90-96.
+
+Sandberg Steckel 1987; Sandberg,Lars G.; Steckel,  Richard H.; Heights
+and economic history: the Swedish case', Annals of Human Biology, vol.
+14, no. 2, pp. 101 – 109.
+
+Sandberg Steckel 1997; Sandberg, Lars & Richard Steckel; Was
+Industrialization Hazardous to Your Health? Not in Sweden! In Richard
+Steckel and Roderick Floud (eds.) Health and Welfare during
+Industrialization. Chicago: University of Chicago Press, pp. 127-160.
+
+Sanna Floris Cosseddu 1993; Sanna, E.; Floris, G. and Cosseddu, G.G.;
+Secular trend in height in Sardinian conscripts drafted from 1879-1883
+to 1983-1986', Anthropologischer Anzeiger, vol. 51, no. 3, pp. 225-232.
+
+Santos David 1972; Santos David, J.H. 1972; Height growth of
+melanodermic natives in Northeastern Lunda (Angola.' South African
+Journal of Medical Science. 37-3: pp. 49-60.
+
+Sapounaki-Dracaki 1998; Sapounaki-Dracaki, Lydia; Heights and Nutritonal
+Status in Greece”, in Komlos, John/Baten, Joerg, eds. (1998)The
+Biological Standard of Living in Comparative Perspective,. Stuttgart
+1998, pp. 408-412.
+
+Sasse 1914; Sasse, J.; Zur Anthropometrie der Bewohner der
+holländisch-friesischen Insel Terschelling', Zeitschrift für
+Morphologie und Anthropologie, vol. 18.
+
+Scheiber 1881; Scheiber, S.H.; Untersuchungen über den mittleren Wuchs
+der Menschen in Ungarn. Arch. für Arthr. 8, pp. 233-267
+
+Schnaitmann 2009; Schnaitmann, Jörg A.; Wirtschaftsgeschichte
+Südostasiens und der Philippien. Unpublished Diploma Thesis Tuebingen.
+
+Seltzer 1936; Seltzer, Carl; The Racial Characteristics of Syrians and
+Armenians', Papers of the Peabody Museum of american Archaeology and
+Ethnology, vol. 13, no. 3, Harvard University.
+
+Seric 2007; Seric, Denis; Konvergenz und Divergenz des biologischen
+Lebensstandards in Afrika, vom späten 19. bis Mitte des 20.
+Jahrhunderts, Unpubl. Diploma Thesis Tuebingen (compiling data mainly
+from Hiernaux's African Compilation, but including some additional title
+
+Severino Lopez 1948; Severino López, Juan; La talla de enrolamiento en
+la Argentina. Investigación sobre la clase 1924', Anales del Instituto
+Étnico Nacional. Ministerio del Interior. Buenos Aires, Argentina.
+
+Shanklin 1938; Shanklin, William M.; Anthropometry of Syrian males',
+Journal of the Royal Anthropological Institute of Great Britain and
+Ireland, vol. 68, pp. 379-414.
+
+Shirokogoroff 1968; Shirokogoroff, S. M.; Anthropology of Northern
+China', Royal Asiatic Society, Extra vol. 2.
+
+Silvertoinen Lahelma Lundberg Rahkonen 2001; Silvertoinen, Karri &
+Lahelma, Eero & Lundberg, Olle & Rahkonen,  Ossi; Body height, birth
+cohort and social background in Finland and Sweden', The European
+Journal of Public Health, vol. 11, no. 2, pp. 124-129.
+
+Singh 1972; Singh, Raghbir; Somatometric study of the Punjabi Hindu
+Khatri (male) with special emphasis on growth (cross-sectional) and
+relationship between arm girth and body weigth measurements; Ed. by
+Henry Field. - Miami, Fla. : Field Research Projects, 1972
+
+Skaric-Juric Ginsburg Kobyliansky Malkin Smolej Narancic Rudan 2003;
+Skaric-Juric, Tatjana & Ginsburg, Emil & Kobyliansky,  Eugene & Malkin,
+Ida & Smolej Narancic Nina & Rudan, Pavao; Complex Segregation Analysis
+of Body Height, Weight and BMI in Pedigree Data from Middle Dalmatia,
+Croatia; Coll. Antropol., vol. 27, no. 1, pp. 135–149.
+
+Stayt 1931; Stayt, H.A.; The Bavenda. Oxford Univ. Press.
+
+Steckel Haurin 1994; Steckel, R.H. & Haurin, Donald R.; Health and
+Nutrition in the American Midwest: Evidence from Height of Ohio National
+Guardsmen, 1850-1910', in Komlos, J. (ed) Stature, living standards and
+economic development : essays in anthropometric history; University of
+Chicago Press.
+
+Stefancic Tomazo-Ravnik 1998; Stefancic, M.; Tomazo-Ravnik, T.;
+Fifty-two years of secular trend in Ljubljana school children; in
+Bodzsár, EB &  Susanne, C (eds.): Secular growth changes in Europe;
+Budapest : Eötvös Univ. Press.
+
+Stegl Baten 2008; Stegl, Mojgan & Baten, Jörg; Data Set on Middle East
+Heights, on the Background see Stegl and Baten 2009
+
+Stegl Baten 2009; Stegl, Mojgan & Baten, Jörg; Tall and Shrinking
+Muslims, Short and Growing Europeans: The Long-Run Welfare Development
+of the Middle East, 1840-1980:, Explorations in Economic History, vol.
+46.
+
+Stoev Yordanov 1998; Stoev, Racho & Yordanov, Yordan; Secular Trend in
+Bulgaria; in: Bodzár, B.E. and Susanne, C. (Eds.) Secular Growth
+Changes in Europe Eötvos Univ. Press, Budapest, pp. 65-73
+
+Stolz 2008; Stolz, Yvonne; The Biological Standard of Living in Angola
+and Guinea-Bissau, 1890-1940', University of Tuebingen Working Paper.
+
+Stolz Baten Reis 2009; Stolz, Yvonne & Baten, Jörg & Reis, Jaime; The
+Biological Standard of Living in Portugal, 1720-1980
+
+Strauss Thomas 1998; Strauss, John & Thomas, Duncan; Health, Nutrition
+and Development. Journal of Economic Literature 36-2, pp. 766-817
+
+Strouhal 1980; Strouhal, Eugen; Anthropometry of Egyptian Nubians', in
+Schwidetzky, I. & Chiarelli, B. & Necrasov, O. (eds.) Physical
+Anthropometry of European Populations.
+
+Sukkar 1976; Sukkar, M.Y.; Skinfold thickness and body fat in adult Fur
+men and women of Western Sudan. Human Biology 1976; 48: 315–321
+
+Sunder 2003; Sunder, Marco; The Making of Giants in a Welfare State: The
+Norwegian Experience in the 20th Century.” Economics and Human Biology
+1.
+
+Talbot Mulhall 1962; Talbot, P. Amaury/ Mulhall, H.; The Physical
+Anthropology of Southern Nigeria. A Biometric Study in Statistical
+Method. Cambridge University Press.
+
+Trevor 1947; Trevor, J. C.; The Physical Characters of the Sandawe', The
+Journal of the Royal Anthropological Institute of Great Britain and
+Ireland, vol. 77, no. 1, pp. 61-78.
+
+Twarog 1997; Twarog, Sophia; Heights and Living Standards in Germany,
+1850-1939: The Case of Württemberg. In Health and Welfare during
+Industrialization, edited by R Steckel and R. Floud. Chicago: The
+University of Chicago Press.
+
+Twiesselmann 1969; Twiesselmann, F.; Development biometrique de I.
+enfant a I'adulte: etude de 12 mesures corporelles et de 16 mesures
+céphaliques chez 14.299 écoliers bruxellois âgés de 3 à 25 ans;
+Presses Universitaires de Bruxelles, Bruxelles.
+
+Twrdek Baten 2010; Twrdek, Linda & Baten, Joerg; Selectivity of
+Argentina’s Immigrants'; University of Tübingen Working Paper.
+
+Twrdek Manzel 2010; Twrdek, Linda & Manzel, Kerstin; The Seed of
+Abundance and Misery. Peruvian Living Standards from the Early
+Republican Period to the End of the Guano Era', University of Tuebingen
+Working Paper.
+
+U.S. Department of Health 1976; U.S. Department of Health 1976; NHANES
+Survey 1976-80
+
+Udjus 1964; Udjus, Ludvig Gudmund; Anthropological Changes in Norwegian
+Men in the Twentieth Century, Univeritetsforlagets Trykningssentral.
+
+Valenzuela Avendano 1979; Valenzuela, C.Y & Avendaño, A; Antropometría
+y maduración sexual de escolares de un área de Santiago de Chile /
+Anthropometry and sexual maturation of students in an area of Santiago
+de Chile Boletín de la Oficina Sanitaria Panamericana.
+
+Van De Ginste 1946; Van De Ginste, Fernand; Anthropometric Study of the
+Bapende and Basuku of the Belgian Congo', American journal of Physical
+Anthropology, vol.  4, no. 2, pp. 125-152.
+
+Van Wieringen 1972; van Wieringen, J. C.; Secular changes of growth,
+Netherlands Institute for Preventive Medicine TNO, Leiden.
+
+Villarejos et al 1971; Villarejos, Victor M. et al.; Heights and Weights
+of Children in Urban and Rural Costa Rica; The Journal of Tropical
+Pediatrics and Environmental Child Health 17-1
+
+Waddell 1900; Waddell; The Tribes of the Brahmaputra Valley', Journal of
+the Asiatic Society of Bengal 69-3
+
+Waldhauer 1879; Waldhauer, Ferdinand; Zur Anthropologie der Liven.
+Dorpat, v. Schnakenburgs L. u. T--Anstalt
+
+Watanabe Kondo Matsunaga 1975; Watanabe, S. & Kondo,S. & Matsunaga, E.;
+Watanabe, S.; Kondo,S. & Matsunaga,E. (1975): Human Adaptability Volume
+2. Anthropological and Genetic Studies on the Japanese, University of
+Tokyo Press; 1975, Tokyo
+
+Webb Kuh Pajak Kubinova Malyutina Bobak 2008; Webb, Elisabeth A. &  Kuh,
+Diana & Pajak, Andrzej & Kubinova, Ruzena & Malyutina, Sofia & Bobak,
+Martin; Estimation of secular trends in adult height, and childhood
+socioeconomic circumstances in three Eastern European populations',
+Economics & Human Biology, vol. 6, no. 2, pp. 228-236.
+
+Weber Seidler Wilfing Hauser 1995; Weber, G. &  Seidler, H. &  Wilfing,
+H. &  Hauser, G.; Secular change in height in Austria: an effect of
+population stratification?', Annals of Human Biology, vol. 22, no. 4,
+pp. 277 – 288.
+
+Weinberg 1902; Weinberg, Richard; Vaterländisch-anthropologische
+Studien: Körpergröße estnischer Rekruten. Tartu.
+
+Weisbach 1903; Weisbach; Die Slovenen', Mitteilungen der
+Anthropologischen Gesellschaft in Wien, vol. 33.
+
+Weissenburg 1909; Weissenburg; Die autochthone Bevölkerung Palästinas
+in anthropologischer Beziehung', Zeitschrift für Demographie und
+Statistik der Juden, vol. 5, no. 9.
+
+Wells 1952; Wells; Physical Measurements of Northern Bushmen', Man, vol.
+52, pp. 53-56.
+
+Weninger Weninger 1959; Weninger & Weninger; Anthropologische
+Beobachtungen an Georgiern (Transkaukasien); Wien : Rohrer.
+
+WHO/UNESCO; WHO/UNESCO; WHO/UNESCO Internet Pages
+
+Woenno-Stat. Sbornik 1871; Woenno-Stat. Sbornik; Woenno-Stat. Sbornik
+
+Wu 1994; Wu; How severe was the Great Depression? Evidence from the
+Pittburgh Region', in Komlos, J. (ed) Stature, living standards and
+economic development: essays in anthropometric history, Chicago, Ill.
+University of Chicago Press.
+
+Excerpt of Hiernaux’s bibliography on African anthropology
+
+1  ADAM, A. 	1962. A survey of some genetical characters in Ethiopian
+tribes. I. Glutathione stability and glucose-6-phosphate dehydrogenase
+activity in red blood cells. Amer. J. phys. Anthropol. 20 : 172-73. VII.
+color-vision. Amer. J. phys. Anthropol. 20 : 194-95.
+
+2 ALBERTO, M.S. 	1962. Elementos de estudo para organizaçao da carta
+sero-antropologica de populaçao negra de Moçambique (com base no
+sistema ABO). Mem. Inst. Invest. cient. Moçambique 4 : 1-192.
+
+3. ALBERTO, M.S. e A.D. BARRETO. 	1952. Contribuiçao para o estudo
+sobre as variaçoes dos indices de robustez, vitalidade e corpulencia
+dos soldados negros de Moçambique. Bol. Soc. Est. Moçambique 74 :
+1-49.
+
+4 ALCIATI, G., I. BASCHIERI, G.A. BENEDETTI e G. SPEDINI. 	1964. Le
+transferrine sieriche nei Negri N'Zakara. Ric. Sci., Roma, 34, (II-B) :
+299-308.
+
+5 ALLISON, A.C. 	1954. The distribution of the sickle-cell trait in East
+Africa and elsewhere, and its apparent relationship to the incidence of
+subtertian malaria. Trans. r. Soc. trop. Hyg. 48 : 312-18.
+
+6. ALLISON, A.C. 	1956. The sickle-cell and haemoglobin C genes in some
+African populations. Ann. hum. Genet. 21 : 67-89.
+
+7. -, L.J. CHARLES and I.A. MCGREG0R. 	1961. Erythrocyte
+Glucose-6-Phosphate Dehydrogenase deficiency in West Africa. Nature,
+London 190: 1198-99.
+
+8. ALLISON, A.C., E.W. IKIN and A.E. MOURANT. 	1954. Further
+observations on blood groups in East African tribes. J. r. anthropol.
+Inst. 84 : 158-62.
+
+9. -, E.W. IKIN, A.E. MOURANT and A.B. RAPER. 	1952. Blood groups in
+some East African tribes. J. r. anthropol. Inst. 82 : 55-59.
+
+10. ALMEIDA, A. DE. 	1936. Subsidios para o estudo antropologico da
+populaçao dos Dembos (Angola). I. A estatura dos Mahungos e dos Luangos
+do sexo masculino. II. Sobre o indice cefalico dos Mahungos e dos
+Luangos adultos do sexo masculino. Broteria 22 : 126-45, 319-41.
+
+11. ALMEIDA, A. DE.. 	1936. Subsidios para o estudo antropologico da
+populaçao dos Dembos (Angola). Sobre o indice nasal dos Mahungos e dos
+Luangos adultos do sexo masculino. Africa Medica 10 : 101-29.
+
+12. ALMEIDA, A. DE. 1941. Indices de robustez dos Mahungos e Luangos
+(Dembos, Angola). Actos do I Congresso Nacional de Ciencias Naturais,
+II, Lisboa.
+
+13. ALMEIDA, A. DE. 1953-54. Contribuiçao para o estudo da antropologia
+serologica dos nativos de Angola (Nota preliminar). Estudios Coloniais 4
+: 220-22.
+
+14. ALMEIDA, A. DE. 1958. Contribuiçao para o estudo da Antropologia
+fisica dos Angolares (Ilka de Sao Tomé). Conf. internacion.
+Africanistas Occidentais, Lisboa, 68 sess., V : 11-20.
+
+15. -. ALMEIDA A. DE e M.E. DE CASTRo e ALMEIDA. 	1956. Contribuiçao
+para o estudo da sero-antropologia dos Bosquimanos de Angola
+(Mucuancalas), Garcia de Orta, Lisboa 4 : 327-33.
+
+16. ALMEIDA, A. DE. and. ALMEIDA, M.E. DE CASTRO e. 	1955.
+Contribuiçao para o estudo da sero-antropologia dos Bantos. Garcia de
+Orta, Lisboa 3 : 271-83.
+
+17. ALMEIDA, A. DE. 1956. De estatura, peso e sua correlaçao em gentes
+nativas de Angola. Garcia de Orta, Lisboa 4 : 349-58.
+
+18. -. 	1957. Subsidio para o estudo antropologico de Mucussos e
+Cuangares. I. Sobre a estatura e indice esquelico. Est. Ultramarinos,
+Lisboa 6 : 1-14.
+
+19. -. 	1958. Subsidio para o estudo antropologico de Mucussos e
+Cuangares. II. Sobre os indices cefalico e nasal. Garcia de Orta, Lisboa
+6 : 209-21.
+
+20. -. 	1958. Subsidio para o estudo antropologico de Mucussos o
+Cuangares. III. O indice de Pignet. Garcia de Orta, Lisboa 6 : 425-42.
+
+21. -. 	1959. Subsidio pari o estudo antropologico de Mucussos e
+Cuangares. IV..Comprimentos « total de braco » e « total da perna ».
+Est. antropol. phys. Ultramar Portugues, Mem. Junta.Invest. Ultramar,
+Lisboa 13 : 141-53.
+
+22. ALTE, J.A. MARTINS D'. 	1934. Indice-esquelico dos indigenas das
+Colonias. Trab. 10 Congr. nacion. Antrop. colon., Porto I : 293-99.
+
+23. ANDRE, L.J. et E. ANDRE-GADRAS. 	1957. Etude des rapports entre la
+siclémie et la lèpre. Méd. trop. 17 596-99.
+
+24. ARMATTOE, R.E.G., E.W. IKIN and A.E. MOURANT. 	1953. The ABO, Rh and
+MN blood groups of the Ewe and the Ashanti of the Gold Coast. West Afr.
+med. J. 2 : 89-93.
+
+25. ATHAYDE, A. 	1961. Estudo de alguns caracteres morfologicos dos
+Sossos e Mussorongos. Garcia de Orta, Lisboa 9 : 421-28.
+
+26. BARKER, E.M., E.W. IKIN and A.E. MOURANT. 	1953. The blood groups of
+the Shona of Southern Rhodesia. Heredity 7 : 131-33.
+
+27. BARNICOT, N.A., J.P. GARLICK, A. ADAM and M. BAT-MIRIAM. 	1962.'A
+survey of some genetical characters in Ethiopian tribes. III.
+Haptoglobins and transferrins. Amer. J. phys. Anthropol. 20 : 175-78.
+
+28. -, J.P. GARLICK, and D.F. ROBERTS. 	1960. Haptoglobin and
+transferrin inheritance in Northern Nigerians. Ann. hum. Genet. 24 :
+171-83.
+
+29. -, J.P. GARLICK, R. SINGER and J.S. WEINER. 	1959. Haptoglobin and
+transferrin variants in Bushmen and some other South African peoples.
+Nature, London 184: 2042-44.
+
+30. BARRETO, A.D. e M.S. ALBERTO. 	1953. Estudos antropologicos dos
+povos Bantos. Contribuiçao para o estudo dos grupos sanguineos dos
+indigenas moçambicanos. An. Inst. Med. trop. 10 : 3569-94.
+
+31. BAT-MIRIAM, M. 	1962. A survey of some genetical characters in
+Ethiopian tribes. IV. The blood groups of the Falasha, Galla and Guraghe
+tribes. Amer. J. phys. Anthropol. 20 : 179-82.
+
+32. -, and A. ADAM. 	1962. A survey of some genetical characters in
+Ethiopian tribes. X. Finger prints patterns. Amer. J. phys. Anthropol.
+20 : 200-204.
+
+33. BEET, E.A. 	1947. Sickle cell disease in Northern Rhodesia. East
+Afr. med. J. 24 : 212-22.
+
+34. BERGHE, L. VAN DEN et P. JANSSEN. 	1950. Maladie à sickle cells en
+Afrique Noire. Ann. Soc.  belge Méd. trop. 30 : 1553-66.
+
+35. BERNSTEIN, R.E. 	1963. Occurrence and clinical implications of
+red-cell glucose-6-phosphate dehydrogenase deficiency in South African
+racial groups. South A/r. med. J. 37 : 447-57.
+
+36. BLECHER, S.R. 	1964. Genetic factors in human adaptation. South Afr.
+J. Sci.  60 : 277-82.
+
+37. BLUMBERG, B.S., E.W. IKIN and A.E. MOURANT. 	1961. The blood groups
+of the pastoral Fulani and the Yoruba of Western Nigeria. Amer. J. phys.
+Anthropol. 19 : 195-201.
+
+38. BRAIN, P. 	1953. Sickle cell trait. Thesis Doct., Med., Univ. Cape
+Town.
+
+39. BURKE, J., G. DE BOCK et O. DE WULF. 	1958. La drépanocytémie
+simple et l'anémie drépanocytaire au Kwango (Congo Belge). Acad. r.
+Sci. Colon., Cl. Sci. nat. méd., Mém. in 8o, 7/3.
+
+40. BUXTON, L.H.D. 	1923. « Note on the measurements of the Ashanti
+made by Capt. Rattray », in Rattray, R.S. Ashanti. Oxford : Clarendon
+Press.
+
+41. CABANNES, R.J. 	1960. The distribution of abnormal haemoglobins in
+Algeria, the Hoggar, and High Volta: anthropological incidences. J. r.
+anthropol. Inst. 90 : 306-19.
+
+42. -. 	1962. Etude des types hémoglobiniques rencontrés dans les
+populations de la partie occidentale du continent africain. Thèse Doct.
+Sci., Toulouse.
+
+43. -, et J. RUFFIÉ. 	1961. Les types hémoglobiniques des populations
+du Tibesti. C.R. soc. Biol. 155: 2449-51.
+
+44. CASTRO, L DE. 	1915. Nella terra dei Negus. Milano : Trèves.
+
+45. CHABEUF, M. 	1959. Anthropologie physique du Moyen-Congo et du Gabon
+méridional. Bull. Mém. Soc. anthropol. Paris 10 : 97-185.
+
+46. CHANTRE, E. 	1904. Recherches anthropologiques en Egypte. Lyon: Rey.
+
+47. CHEVALIER, A. 	1906. Rapport sur une mission scientifique et
+économique -au Chari-Lac Tchad. Nouv. Arch. Miss. sci. litt. 13 : 7-52.
+
+48. COBLENTZ, A. 	1961. Goranes et Toubous des confins nord du Tchad.
+Thèse Doct. Méd., Paris.
+
+49. COLBOURNE, M.J. and G.M. EDINGTON. 	1956. Sickling and malaria in
+the Gold Coast. Brit. med. J. 1 :784-86.
+
+50. CORKILL, N.L. 	1949. Blood group patterns in Sudanese. Sudan Not.
+Rec. 30 : 267-70.
+
+51. COUTINHO COSTA F.M., B.C. DE SOUSA LECHNER, F. BARROS. 	1964.
+Fréquence des haptoglobines dans deux groupes ethniques de la Guinée
+Portugaise («  Balantas «  et «  Peuls « ). Sangre 9: 53-56.
+
+52. COUVY. 	1907. Notes anthropométriques sur quelques races du
+territoire militaire du Tchad (Saras, Kotokos, Boudoumas, Boulalas,
+Ouadaiens). Anthropol., Paris 18 : 549-82.
+
+53. CUMMINS, H. 	1955. Dermatoglyphics of Bushmen (South Africa). Amer.
+J. phys. Anthropol. 13 : 699-710.
+
+54. CZEKANOWSKI, J. 	1922. «Forschungen im Nil-Kongo-Zwischengebiet,
+anthropologische Beobachtungen. » in Wissenschaftliche Ergebnisse der
+Deutschen Zentral-Afrika-Expedition 1907-1908, pages 145-473, Band I.
+Leipzig: Klinkhardt und Biermann.
+
+55. DANBY, P.M. 	1953. A study of the physique of some native East
+Africans. J. r. anthropol. Inst. 83 : 194-214.
+
+56. DANKMEIJER, J. 	1947. Finger prints of African pygmies and negroes.
+Amer. J. phys. Anthropol. 5: 453-84.
+
+57. DAVID, J.H. Santos. 	1949. “Grupos sanguineos dos indigenas da
+Lunda e Songo.” in Diamang, Publicaçoes culturais no 3, Lisboa pages
+56-71.
+
+58. -. 	1955. Contribuiçao para o estudo da antropologia dos indigenas
+da Lunda e Songo. Lisboa: Diamang, Plubicacoes culturais no 25.
+
+59. DAVID, J.H. SANTOS. 	1958. Antropometria da tribo Caconga. Lisboa :
+Diamang, Public. cultur. no 36.
+
+60. -. 	1960. A drepanocitemia e a antropologia (uma  revisao e um
+estudo na Lunda e Songo). Lisboa : Diamang, Public. cultur. no 49.
+
+61. CALONNE-BEAUFAICT, A. DE. 	1909. Les Ababua. Mouv. sociol. internat.
+10e an. no 2.
+
+62. -. 	1912. Etudes Bakango. Liège : Thone.
+
+63. DELBROUCK, J. 	1958. Contribution à la génétique de la sicklémie
+: maintien de la fréquence é1evée de la sick1émie au Congo Belge.
+Ann. Soc. belge Méd. trop. 38 : 103-34.
+
+64. DELHAISE-ARNOULD, C. 	1912. Les Bapopoie. Bull. Soc. r. belge
+Géogr.. 36.: 86-113, 149-202.
+
+65. EDINGTON, G.M. and H. LEHMANN: 1956. The distribution of haemoglobin
+C in West Africa. Man 36.
+
+66. ELSDON-DEW, R. 	1939. Blood groups in Africa. Publ. South Air. Inst.
+med. Res. 9 : 29-94.
+
+67. FIELD, H. 	1952. Contribution to the anthropology o f the Faiyum,
+Sinai, Sudan, Kenya. Berkeley : Universityof California Press.
+
+68. FLEURIOT, A. 	1942. Los Babinga de Mekambo (Gabon). Etude
+anthropologique. Bull. Mém. Soc. anthropol. Paris 3 : 101-16.
+
+69. FOY, H., A. KONDI, A. REBELLO and F. MARTINS. 	1952. The
+distribution of sickle-cell trait and the incidence of sickle-cell
+anaemia in the Negro tribes of Portuguese East Africa. East Afr. med. J.
+29 247-51.
+
+70. FULLEBORN, F. 	1902. Beiträge zur physischen Anthropologie der Nord
+Nyassaländer. Berlin. Cité par Oschinsky, 1954.
+
+71. GAILLARD, R. et L. POUTRIN. 	1914. Etude anthropologique des
+populations des régions du Tchad et du Kanem. Paris : Larose.
+
+72. GALHANO, M.H. 	1961. Sobre alguns caracteres morfologicos dos
+Cacongos e Maiombes. Garcia de Orta Lisboa 9 : 441-47.
+
+73. GALLOWAY, A. 	1937. A contribution to the physical anthropology of
+the Ovambo. South Afr. J. Sci. 34: 351-64.
+
+74. GARLICK, J.P. and N.A. BARNICOT. 	1957. Blood groups and haemoglobin
+variants in Nigerian (Yoruba) schoolchildren. Ann. hum. Genet. London 21
+: 420-25.
+
+75. GELFAND, M. 	1960. Sickle cell anaemia in an african infant from
+Northern Rhodesia. Central afr. J. Med. 6 : 401-02.
+
+76. GERBEN, G. 	1949. Les Batutsi et les Bahutu. Inst. r. Sci. nat.
+Belgique, Mém. 2e sér., fasc. 31.
+
+77. GESSAIN, M. 	1957. Les dermatoglyphes digitaux des Noirs d'Afrique.
+Anthropol., Paris 61 : 239-67.
+
+78. GESSAIN, M. 	1961. Les dermatoglyphes digitaux de 3.897 habitants de
+Brazzaville (République centreafricaine). Bull. Mém. Soc. Anthropol.
+Paris 2 : 360-81.
+
+79. GESSAIN, R., J. RUFFIE, Y. et O. KANE, R. CABANNES et J. GOMILA. 
+1965. Note sur la séro-anthropologie de trois populations de Guinée et
+du Sénégal : Coniagui, Bassari et Bedik (groupes ABO, MN, Rh, P, Kell,
+Gm et hémoglobines). Bull. Mém. Soc. Anthropol. Paris 8 : 5-18.
+
+80. GIBLETT, E.R. 	1962. « The plasma transferrins », in Progress in
+Medical Genetics : Grune and Stratton, pages 34-63.
+
+81. GILLES, H..M., J. WATSON-WILLIAMS and B.G. TAYLOR. 	1960.
+Glucose-6-phosphate dehydrogenase deficiency trait in Nigeria. Nature,
+London 185: 257-58.
+
+82. GOLDSMITH, K.L.G. and J.M. LEWIS. 	1958. A preliminary investigation
+of the blood groups of the Sab Bondsmen of Northern Somaliland. Man 58.
+
+83. GOBDZIALKOWSKI, H. 	1931. Etude sur les tailles, poids et
+circonférences thoraciques des Nègres du Kwilu (Congo belge) en
+rapport à l`échelle de Pignet. XYe Congr. internat. Anthropol.
+Archéol. Préhist. Paris. Paris: Nourry 1933, pages 6-11.
+
+84. GROBBELAAR., C.S. 	1955. The distribution of the blood groups of the
+Korana. South afr. J. Sci. 51 : 323-26.
+
+85. GROBBELAAR., C.S. 	1954. The physical characteristics of the Korana.
+South afr. J. Sci. 53 : 97-160.
+
+86. GUSINDE, M. 	1948. Urwaldmenschen am Ituri. Wien : Springer.
+
+87. -. 	1949. Die Tun-Pygmäen in Ruanda. Wien-Mödling :
+Missionsdruckerei St Gabriel.
+
+88. HAMBLY, W.D. 	1938. Anthropometry of the Ovimbundu, Angola. Field
+Mus. nat. Hist. Anthropol. ser. 25 : 23-79.
+
+89. HARDY, J. 	1962. The ABO blood groups of Southern Nigerians and
+their relation to the history of the area. J. r. anthropol. Inst. 92 :
+223-31. '
+
+90. HENRIQUES, F.F. 	1953. Para um melhor conhecimento dos « Cacondas
+». An. Inst. Med. trop. 10 : 3487-94.
+
+91. HIERNAUX, J. 	1956. Analyse de la variation des caractères
+physiques humains en une région de l'Afrique centrale : Ruanda-Urundi
+et Kivu. Ann. Mus. r. Congo belge, Tervuren (Belgique), Anthropologie 3.
+
+92. -. 	1962. Données génétiques sur six populations de la
+République du Congo (groupes sanguins ABO et Rh, et taux de
+sicklémie). Ann. Soc. belge Méd. trop. 42 : 145-74.
+
+93. -. 	1964. Note sur 1'anthropométrie des Songye (Congo). Bol. Soc.
+Geogr. Lisboa: 337-41.
+
+94. HIERNAUX, J. 	1964. Les dermatoglyphes digitaux des Tutsi du Rwanda
+et des Shi du Congo. Bull. Mém. Soc. Anthropol. Paris 6 : 369-85.
+
+95. -. 	1964. Luba du Katanga et Luba du Kasai. Comparaison de deux
+popülations de même origine. Bull. Mém. Soc. Anthropol. Paris 6 :
+611-22.
+
+96. -. 	1966. Les Bushong et las Cwa du royaume Kuba (Congo Kinshasa) :
+Pygmées, pygmoides et pygméisation : anthropologie, linguistique et
+expansion bantoue. Bull. Mém. Soc. Anthropol. Paris 9 : 299-336.
+
+97 -. 	1967. Lee populations du Moyen-Chari (République du Tchad) :
+esquisse anthropologique. Notes et Documents Tchadiens 2 : 1-33.
+
+98. -, et H. VAN DER BORGJHT. 	1953. La fréquence du daltonisme chez
+las Batutsi et Bahutu du Ruanda-Urundi. Ann. Soc. belge Méd. trop. 33 :
+43-46.
+
+99. HOLAS, B. 	1952. Mission dans l'Est libérien (P.L. Dekeyser-B.
+Holas, 1948). Résultats démographiques, ethnologiques et
+anthropométriques. Mém. I.F.A.N. 14.
+
+100. HUBINONT, P.O., J. HIERNAUX et TH. MASSART-GUIOT. 	1952. Fréquence
+des gènes conditionnant l'apparition des groupes sanguins ABO, MN et
+CDE-cde (Rh) parmi las indigènes du Ruanda-Urundi. C.R. Soc. Biol.
+Bruxelles 146: 334.
+
+101. IKIN, E.W. and A.E. MOURANT. 	1962. A survey of some genetical
+characters in Ethiopian tribes. V. The blood groups of the Tigre,
+Billen, Amhara and other Ethiopian populations. Amer. J. phys.
+Anthropol. 20 : 183-89.
+
+102. JADIN, J. 	1935. Lee groupes sanguins des Pygmés. Mém. Inst. r.
+col. belge, Sci. nat. méd. 4.
+
+103. -. 	1940.Lee groupes sanguins des Pygmoides et des Nègres de la
+Province Equatoriale (Congo-Belge). Mém. Inst. r. col. belge, Sci. nat.
+méd. 10.
+
+104. -. 	1949. Le facteur Rh des Pygmées Bambuti de l'Ituri (Congo
+belge). C.R. soc. Biol., Bruxelles 143 582-83.
+
+105. JADIN, J. et G. BRUYNOGHE. 	1952. Groupes sanguins et facteur
+Rhésus des populations du Ruanda. Bull. Inst. r. col. Belge  23 :
+1116-24.
+
+106. JEFFREYS, M.D.W. 	1957. Heights and weights of Ibibios. South afr.
+J. Sci. 53 : 305-07.
+
+107. JELLIFFE, R.S. 	1954. The sickle-cell trait in three Northern
+Nigerian tribes. West afr. med. J. 3 : 26-28.
+
+108. JENKINS, T. 	1963. Sickle cell anaemia in Wankie, southern
+Rhodesia. Centr. Afr. J. Med. 9 : 307-19.
+
+109. JULIEN, P. 	1937. Die Blutgruppenverteilung bei einigen Völkern
+von Liberia und Sierra-Leone, Westafrika. Z. Rassenphysiol. 9 : 146-59.
+
+110. KANE, Y. et J. RUFFIÉ. 	1963. Etude hémotypologique de quelques
+groupes Peul, Toucouleur, Ouoloff et Sérère du Sénégal Occidental.
+Bull. Mém. Soc. Anthropol. Paris 4 : 545-53.
+
+111. KOERBER, R. et J. LINBARD. 	1951. Note sur la répartition des
+groupes sanguins AB, A, B et O dans divers groupes ethniques de l'A. O.
+F. Bull. Mém. Soc. Anthropol. Paris 2 : 158-60.
+
+112. KOSSOVITCH, N. 	1934. Recherches séro-anthropologiques chez
+quelques peuples du Sahara français. C.R. Soc. Biol. Paris 116: 759-61.
+
+113. LALOUEL, J. 	1950. Los Babinga du Bas-Oubangui. Contribution à
+l'étude anthropologique des Négrilles Baka et Bayaka. Bull. Mém. Soc.
+Anthropol. Paris 1 : 60-98.
+
+114. -. 	1955. La sicklémie au Gabon. Bull. Mém. Soc. Anthropol. Paris
+6 : 129-32.
+
+115. -. 	1957. Anthropométrie des Fang. Bull. Mém. Soc. Anthropol.
+Paris 8 : 371-82.
+
+116. LAMBOTTE-LEGRAND, J. et C. 	1950. Répartition des groupes sanguins
+des types A, B, O et Rh chez les indigènes du Bas-Congo. Ann. Soe.
+belge Méd. trop. 30 : 547-52.
+
+117. LANGUILLON, J. et A. DELAS. 	1957. Note sur la sicklémie et les
+groupes sanguins chez diverses populations du Cameroun. Méd. trop. 17 :
+830-35.
+
+118. LEBEDINSKI, M.J. 	1911. Anthropometrische Messungen vorgenommen an
+Gallas. Vorlaüfige Mitt. Russky Wratsch 46. in Lester, P. 	1928. Etude
+anthropologique des populations de l'Ethiopie. Anthropol. Paris 38 :
+61-90, 289-315.
+
+119. LEBZELTER, V. 	1931. Zur Anthropologie der Kung Buschleute. Anz.
+Akad. Wiss. Wien 68 : 24-26.
+
+120. LEFROU, G. 	1943. Le Noir d'Afrique. Paris: Payot. 
+
+121. LEHMANN, H. and C. NWOKOLO. 	1959. The river Niger as a barrier in
+the spread eastwards of haemoglobin C : a survey of haemoglobins in the
+Ibo. Nature 183: 1587-88.
+
+122. - and A.D. RAPER. 	1949. Distribution of the sickle-cell trait in
+Uganda and its ethnological significance. Nature 164: 494-96.
+
+123. -, A. SHARIH, T. GILAT and. R. LENZ. 	1962. A survey of some
+genetical characters in Ethiopian tribes. II. Hemoglobin examinations.
+Am. J. phys. Anthrop. 20 : 174.
+
+124. LEITE, A.S. et L. RÉ. 	1955. Contribution à l`étude ethnologique
+das populations africaines. Arch. Inst. Pasteur Algérie 33 : 344-49.
+
+125. -, J.V. BASTOS DE LUZ e J. PINTO NOGUEIRA. 	1953. Contribuiçao
+para o estudo da drepanocitemia nosagrupamentos tribais da Guiné
+Portuguesa. J. Soc. cienc. med. Lisboa 127: 6 p.
+
+126. LEJEUNE. 	1952. Premiers résultats d'une enquête sur la
+fréquence du « sickle cell trait » chez las nourrissons des
+consultations du cercle de Feshi. Rapp. F.O.R.E.A.M.I., p. 102-06.
+
+127. LESCHI, J. 	1948. Empreintes digitales chez quelques peuples
+d'Afrique Occidentale Française. Bull. Mém. Soc. Anthropol. Paris 9 :
+143-50.
+
+128. LESTRANGE, M. DE. 	1949. Contribution à l'anthropologie des Noirs
+d'A.O.F. I. Physiologie et pathologie des Coniagui; Bassari, Badyaranké
+et Peuls de la région de Youkounkoun (Guinée française). II.
+Anthropométrie de 1023 Coniagui, Bassari, Badyaranké et Fulakunda de
+Guinée française. Bull. Mém. Soc. Anthropol. Paris 10 : 156-65 et
+1950, 1 : 99-136.
+
+129. -1953. Les crêtes papillaires digitales de 1.491 Noirs d'Afrique
+occidentale. Bull. I.F.A.N. 15 : 1278-1315.
+
+130. LEYS, N.M. and T.A. JOYCE. 	1913. Note on a series of physical
+measurements from East Africa. J. r. anthropol. Inst. 43 : 195-267.
+
+131. LINHARD, J. 	1952. Note complémentaire sur la sicklémie dans la
+région de Dakar. Rev. Hématol. 7 : 561-66.
+
+132. LIVINGSTONE, F.B. 	1960. The wave of advance of an advantageous
+gene : the sickle cell gene in Liberia. Hum. Biol. 32 : 197-202.
+
+133. -, H. GERSHOWITZ, J.V. NEEL, W.W. ZUELZER and M.D. SOLOMON. 	1960.
+The distribution of several blood group genes in Liberia, the Ivory
+Coast and Upper Volta. Am. J. phys. Anthropol. 18 : 161-78.
+
+134. LOBSIGER-DELLENBACH, M. 	1951. Contribution à l'étude
+anthropologique de l'A.O.F. Haoussas, Bellahs, Djermas, Peuls, Touaregs,
+Maures. Arch. suis. Anthropol. gén. 16 : 1-86.
+
+135. MALCOLM, L.W.G. . 	1925. Notes an the physical anthropology of
+certain West African tribes. (2) The tribes of the Grassland area,
+Central Cameroon.. Mitt. anthropol. Geselsch. Wien 55 : 7-45.
+
+136. MATEUS, A.M. 	1949. Contribuiçao para o estudo da
+sero-antropologia da Guiné. An. Junt. Invest.colon. 5: 21-47.
+
+137. -. 	1953. A estatura de alguns grupos etnicos da Guiné. Trab. XIII
+Congr. Luso-Espanhol Progres. Cienc. (1950) 5 : 401-21.
+
+138. MATEUS, E. e M.H. GALHANO. 	1962. Sobre alguns caracteres metricos
+do corpo em Fulas da Guiné Portuguesa. Garcia de Orta Lisboa 10 :
+421-35.
+
+139. MATEUS, A. DE MAGALHAES. 	1952. Correlaçoes antropometricas em
+homens Bijagos. Conf. intern. Africanistas Ocidentais (Bissau 1947)
+Lisboa 4 : 73-81.
+
+140. MATEUS, E. DE OLIVEIRA. 	1963. Analise de variancia e teste t de
+caracteres metricos da cabeça de alguns grupos etnicos da Guiné
+Portuguesa. Garcia de Orta, Lisboa 11 : 11-2 5.
+
+141. MATEUS, A. et E. DE OLIVEIRA MATEUS. 	1962. « Estudo de Alguns
+caracteres metricos da cabeça nosFulas da Guiné Portuguesa » . In
+Estudos Cientificos oferecidos em homenagem do Prof. Dr. J. Carrington
+da Costa, pages 431-45, Lisboa.
+
+142. MATEUS, E. DE OLIVEIRA e M.H. GALHANO. 	1962. Canones
+antropometricos em Fulas da Guiné Portuguesa. Garcia de Orta, Lisboa 10
+: 45-58..
+
+143. MENDES CORREA, A.A. 	1916. Antropologia angolense. Quiocos,
+Luimbes, Luenas e Lutchazes. Arch. Anat. Antropol. 2 : 323-56.
+
+144. MIGEOD, F.W.H. 	1926. A view of Sierra Leone, London : Kegan.
+
+145. MILETTO. 	1951. Notes sur les ethnies de la région du Haut-Ogoué.
+Bull. Inst. Et. Centrafricaines 2 : 19-48.
+
+146. MONTENY, V.A. 	1963. Les groupes sanguins ABO des races du Nord-Est
+congolais. Ann. Soc. belge Méd. trop. 43 : 777-94.
+
+147. MOULLEC, J., J. LINHARD et E. SUTTON. 	1952. Quelques données sur
+les groupes sanguins des populations d'Afrique Occidentale Française.
+Rev. Hématol. 7 : 512-18.
+
+148. - et J. RUFFIÉ. MS. Observations sur la répartition des groupes
+sériques (haptoglobines, transferrines, groupes Gm) dans quelques
+populations. 2e Conf. intern. Gén. hum., Rome 1961.
+
+149. MOURA PIRES, F., M.A. SILVEIRA NUNES et F. BARROS. 	1964.
+Fréquence des haptoglobines dans quatre groupes ethniques du sud de
+l'Angola (« Bailundos », « Guanguelas », « Quipungos «  «
+Quiocos »). Sangre 9 : 53-56.
+
+150. NEEL, J.V., J. HIERNAUX, J. LINHARD, A. ROBINSON, W.W. ZUELZER and
+F.B. LIVINGSTONE. 	1956.Data an the occurence of Hemoglobin C and other
+abnormal hemoglobins in some African populations.Amer. J. hum. Gén. 8 :
+138-50.
+
+151. OLIVIER, G. 	1946. Documents anthropométriques pour servir à
+l'étude des principales populations du Sud-Cameroun. Bull. Soc. Et.
+Camerounaises 15-16 : 17-86.
+
+152. -. 	1947. Contribution à l'étude anthropologique du Sud-Cameroun.
+Bull. Mém. Soc.  anthropol. Paris 8 : 68-75. 
+
+153. -. 	1947. Etude des groupes sanguins chez les Noirs du Cameroun.
+Anthropol. Paris 51 : 445-60.
+
+154. -. 	1950. Anthropologie physique des Négrilles du Cameroun. Bull.
+Soc. Et. Camerounaises 29-30 : 113-18.
+
+155. -. MS.
+
+156. OSCHINKSKI, L. 	1954. The racial affinities of the Baganda and
+other bantu tribes of British East Africa. Cambridge: Heffer.
+
+157. PALES, L. 	1934. Contribution à l'étude anthropologique du Noir
+en Afrique Equatoriale Française. Anthropol. Paris 44 : 45-76.
+
+158. -, P. GALLAIS, J. BERT et R. FOURQUET. 	1954. La sicklémie
+(sickle-cell trait) chez certaines populations nigéro-tchadiennes de
+l'A.O.F. Anthropol. Paris 58 : 472-80.
+
+159. -, et J. LINHARD. 	1952. La sicklémie (sickle-cell trait) en
+Afrique Occidentale Française vue de Dakar. Anthropol. Paris 56 :
+53-86.
+
+160. PALES, L., A. SERRÉ, LAMBIN, PIIRIER et F. NEBIÉ. 	1953. La
+sicklémie (sickle-cell trait) en Afrique occidentale française
+(Haute-Volta). Anthropol. Paris 57 : 61-67.
+
+161. - et M. TASSIN DE SAINT-PÉREUSE. 	1952. Raciologie comparative des
+populations de l'A.O.F. III. Anatomie sommaire des Maures de l'A.O.F. et
+notamment des Maures du Trarza. IV. Parallèle anatomique succinct des
+Maures de 1'A.O.F. notamment des Maures du Trarza avee des Peuls et des
+Ouolofs. Bull. Mém. Soc. Anthropol. Paris 3 : 3-57.
+
+162. PALES. 	1953. Raciologie comparative des populations de l'Afrique
+occidentale. V. Stature - Indice cormique - Indice céphalique. Bull.
+Méd. Soc. Anthropol. Paris 4 : 183-497.
+
+163. -. 	1949. Raciologie comparative des populations de 1'A.O.F. II.
+Les Diamate d'Effoc et les Floup d'Oussouye (Casamance-Sénégal). Bull.
+Mém. Soc. Anthropol. Paris 10 : 210-220.
+
+164. PARENTI, R. 	1948. Gli Uaboni. Riv. Biol. colon. 9 : 65-91.
+
+165. PAULO, L.F. 	1957.Impressoes digitais nos indigenas da Guiné
+Portuguesa. Lisboa: Junta Investig. Ultramar 37.
+
+166. -. 	1959. Comparaçao de alguns caracteres antropologicos entre
+nativos de S. Tomé. Mém. Junta Investig. Ultramar 13 : 23-70.
+
+167. -. 	1961. Alguns caracteres antropologicos dos Cabindas e Angolas.
+Garcia de Orta, Lisboa 9 : 429-40.
+
+168. PONS, J. 	1951. Impressiones.dermopapilares en indigenas de la
+Guinea Ei apanola en relaçion con otras poblaciones. I. Muestras
+dactilares. Madrid : Instit. Estud. Afric.
+
+169. PORTER, I.H., S.H. BOYER, E.J. WATSON-WILLIAMS, A. ADAM, A.
+SZEINBERG and M. SINISCALCO. 	1964. Variation of glucose-6-phosphate
+dehydrogenase in different populations. Lancet april 25: 895-99.
+
+170. POUTRIN, L. 	1911-1912. Contribution à 1'étude des Pygmées
+d'Afrique. Les Négrilles du Centre Africain (type
+sous-dolichocéphale). Anthropol. Paris 22 : 421-549 et 23 : 349-415.
+
+171. PUCCIONI, N. 	1915-1916. Appunti sull'antropometria dei Baria e dei
+Cunama. Riv. Antropol. 20 : 1-17.
+
+172. -. 	1917. Studi sui materiali e sui dati antropologici ed
+etnografici raccolti della Missione Stefanini-Paoli nella Somalia
+Italiana meridionale. Arch. Antrop. Etnol. 47 : 13-161.
+
+173. RAVISSE. 	1952. Recherches sur la sicklémie chez les Pygmées de
+l'Afrique Equatoriale Française. Anthropol. Paris 56 : 491-93.
+
+174. REIS, C. SANTos. 	1956. Antropometria da tribe Maconde (primeiros
+subsidios). An. Inst. Med. Grop. 13: 811-82.
+
+175. REIS, C. SANTOS. 	1959. Os grupos sanguineos do sistema ABO e a
+posiçao antropologica dos Macondes. Garcia de Orta, Lisboa 7 : 641-99.
+
+176. RIFE, D.C. 	1953. An investigation of genetic variability among
+Sudanese. Amer. J. phys. Anthropol. 11 : 189-202.
+
+177. ROBERTS, D.F. 	1957. Contribusione alla etnologia dei “
+Pre-Niloti “ : i Mabaan a paragone dei Niloti. Riv. Antropol. 44 :
+317-24.
+
+178. -. 	1962. The incidence of red-green colour blindness in Hausa. Man
+16.
+
+179. -, E.W. IKIN and A.E. MOURANT. 	1955. Blood groups of the northern
+Nilotes. Ann. hum. Genet. 20 : 135-54.
+
+180. - and H. LEHMANN. 	1955. A search for abnormal haemoglobins in some
+southern Sudanese peoples. Brit. med. J. I : 519-26.
+
+181. -, H. LEHMANN and A.E. BOYO. 	1960. Abnormal Hemoglobins in Bornu.
+Amer. J. phys. Anthropol. 18 : 5-12.
+
+182. ROPARTZ, C., P.Y. ROUSSEAU et L. RIVAT. 	1963. Intérêt des
+groupes de Y-globuline G et Inv dans l'appréciation du métissage des
+populations : étude de ces groupes sériques dans l'Ouest africain et
+l'Extrême-Orient. Rev. fse Et. clin. biol. 8 : 465-72.
+
+183. RUELLE, E. 	1904. Notes anthropologiques, ethnographiques et
+sociologiques sur quelques populations noires du 2e territoire
+militaire. Anthropol. Paris 15 : 519-62, 657-703.
+
+184. RUFFIÉ, J., J. DUCOS, J. RANQUE et J. RIOUX. 	1962. « Etude
+séro-anthropologique des populations duTibesti (Sahara oriental) ».
+Proc. 8th Congr. int. Soc. Blood Transf. Tokyo 19.60, pages 195-202.
+
+185. SANTELLI. 1893. Les Danakils. Bull. Soc. Anthropol. Paris 4 :
+479-501.
+
+186. SANTOS JUNIOR, J.R. DOS. 	1944. Contribuiçao para o estudo da
+antropologia de Moçambique. Algumas tribos do distrito de Tete. Lisboa:
+Ministerio das Colonias, Memorias, seric antropol. etnol. II.
+
+187. -. 	1949. Im pressoes dermopapilares de indigenas de Moçambique.
+1. Sobre os desenhos das crisas das polpasdos dedos das maos. Porto :
+Imprensa Portuguesa.
+
+188. -. 	1950. Impressoes dermopapilares de indigenas de Moçambique, IL
+Novos elementos para o estudo dos desenhos das cristas digitais das
+maos. Lisboa.- Junta Invest. colon., An. vol. 5, t. 7.
+
+189. -, e A.F. ISIDORO. 	1957. Grupos sanguineos em pretos de
+Moçambique. Garcia de Orta. Lisboa 5 : 405-30.
+
+190. SARMENTO, A. 	1939. As figuras papilares digitais nos aborigenes de
+Angola (contribuiçao para o seu estudo). Trab. Soc. Portuguesa Antrop.
+Etnol., Porto 9 : 113-17.
+
+191. -. 	1943. Notas sobre a estatura de algumas populaçoes indigenas
+de Angola. Trab. Soc. Portuguesa Antrop. Etnogr. 5 : 49-55.
+
+192. -. 	1951. Contribuiçao para o estudo antropologico dos « Sambos
+». Bol. Soc. géogr. Lisboa 9-10 : 535-51.
+
+193. -. 	1951. Contribuiçao para o estudo da Antropologia dos «
+Huambos ». J. Med. 18 : 15 p.
+
+194. -. 	1953. Dinamometria nos indigenas de Angola. An. Inst. Med.
+trop. 10 : 3595-600.
+
+195. -. 	1953. Contribuiçao para o estudo da antropologia dos
+Bailundos. An. Inst. Med. trop. 10 : 3287-311.
+
+196. -. 	1956. Os Huambos (subsidio para o estudo da sua antropologia
+fisica, biologica e cultural). An. Inst. Med. trop. 13 : 113-68.
+
+197. -. 	1956. Unidade antropologica do Distrito do Huambo. An. Inst.
+Med. trop. 13 : 169-79.
+
+198. -. 	1958. Contribuiçao para o estudo da sero-antropologia dos «
+Sambos ». O Medico 343.
+
+199. -. Seroantropologia de Angola. O Medico 637: 1-8.
+
+200. SCHEBESTA, P. 	1938. Die Bambuti - Pygmäen vom Ituri. 1. Band.
+Geschichte, Geographie, Umwelt, Demographie und Anthropologie der Ituri
+- Bambuti (Belgisch Kongo). Mém. Inst. r. colon. belge, Sci. mor.
+polit. 1.
+
+201.  SCHREIDER, E.. 	1950. Les variations raciales et sexuelles du
+tronc humain. Anthropol. Paris 54 : 228-61.
+
+202. SCHULTZE, L. 	1928: Zur Kenntnis des Körpers der Hottentotten und
+Buschmänner. Jenaische Denkschriften 17 : 147-228.
+
+203. SCHULZ-WEIDNER, W. 	1952. Vorläufig Bericht über
+anthropologischer Ergebnisse der deutschen Frobeniusexpedition 1950/51
+nach S.W. Abessinien. Homo 3 : 162-67.
+
+204. SEINER, F. 	1912. Beobachtungen und Messungen a n Buschleuten. Z.
+Ethnol. 44 : 275-88.
+
+205. SELIGMAN, C.G. 	1910. The physical characters of the Nuba of
+Kordofan. J. r. anthropol. Inst. 40 : 505-24.
+
+206. -. 	1913. Some aspects of the hamitic problem in the Anglo-Egyptian
+Sudan. J. r. anthropol. Inst. 43 : 593-705.
+
+207. -. 	1935. Les races de l'Afrique. Paris. Payot.
+
+208. SIMON, K. 	1951. Colour vision of Buganda Africans. East afr. med.
+J. 28 : 75-80.
+
+209. SLOME, C., B. GAMPEL, J.H. ABRAMSON and N. SCOTCH. 	1960. Weight,
+Height and skinfold thickness of Zulu adults in Durban. South afr. med.
+J. 34 : 505-09.
+
+210. SPEDINI, G. 	1961. Le aptoglobine sieriche in 353 negri N'Zakara
+(R.C.A.). Riv. Antropol. 68 : 145-54.
+
+211. SPORCQ, J. 	1962. Los Bira de la plaine et les Bira de la forêt.
+Etucle comparative de leurs caractères physiques. 6e Congr. intern.
+Sci. antbropol. ethnol., Paris 1960, 1, pages 537-38.
+
+212. SQUIRES, B.T. 	1942. Colour vision and colour discrimination
+amongst the Bechuana. Trans. r. Soc. SouthA f r. 29 : 29-34.
+
+213. STAYT, H.A. 	1931. The Bavenda. Oxford Univ. Press.
+
+214. STEINBERG, A.G., R. STAUFFER, B..S. BLUMBERG and H. FUDENBERG. 
+1961. Gm phenotypes and genotypes in U.S. Whites and Negroes; in
+American Indians and Eskimos; in Africans and in Micronesians. Amer. J.
+hum. Genet. 13 : 205-13.
+
+215. STRUCK, B. 	1933. „ Anthropologische Ergebnisse aus Portugiesisch
+- Guinea“. In Bernatzik, H.A. Äthiopien des Westens. Band I, pages
+249-303. Wien. Weidel et Sohn.
+
+216. TALKOT, P.A. and H. MULHALL. 	1962. The physical anthropology of
+Southern Nigeria. Cambridge University Press.
+
+217. TAUXIER, L. 	1917. Le Noir du Yatenga. Paris: Larose.
+
+218. -. 	1932. Religion, moeurs et coutumes des Agnis de la Côte
+d'Ivoire. Paris: Geuthner.
+
+219. TOBIAS, P.V. 	1961 Fingerprints and palmar prints of Kalahari
+Bushmen. South afr. J. Sci. 57 : 333-45.
+
+220. -. 	1962. On the increasing stature of the Bushmen. Anthropos 57 :
+801-10.
+
+221. TOERIEN, M.J. and B.E. EISENBERG. 	1961. A biometrical analysis of
+some anthropological characters in Bush-Bantu hybrids. South afr. J.
+Sci. 57 : 218-22.
+
+222. TREMEARNE, A.J.N. 	1912. Notes an the Kagoro and other Nigerian
+head-hunters. J. r. anthropol. Inst. 42: 136-99.
+
+223. TREVOR, J.C. 	1950. The physical characters of the Sandawe. J. r.
+anthropol. Inst. 77 : 61-78.
+
+224. TRINCAO, C. 	1953. Grupos sanguineos dos indigenas da Guiné
+Portuguesa. Lisboa: Primeiro Coloquio de Hematologia Africana, 65-67.
+
+225. -. 	1961. Emoglobine anormali. Loro distribuzione neii territori
+portoghesi. Med. clin. sperim. 11 : 397-424.
+
+226. -, L.T. ALMEIDA FRANCO and A.R. NOGUEIRA. 	1960. A survey of
+abnormal haemoglobins in Portuguese Guinea. Nature, London 185: 326-27.
+
+227. TWIESSELMANN, F. 	1965, Expédition anthropologique du Dr. D.J.H.
+Nyéssen. II. Les Oromo-Gallas, les Anouaks, les Chillouks, les Nouers.
+Bull. Soc. bellge Anthrop. Préhist. 75 : 121-62.
+
+228. VALLOIS, H.V. 	1939. Recherches anthropométriques sur quelques
+groupes noirs du Cameroun. Bull. Mém. Soc. Anthropol. Paris 10 :
+161-74.
+
+229. -. 	1950. Les Badjoué du Sud-Cameroun. Etude anthropologique.
+Bull. Mém. Soc. Anthropol. Paris 1:18-.59.
+
+230. VAN DE GINSTE, F. 	1946. Anthropometric study on the Bapende and
+Bakusu of the Belgian Congo. Amer. J. phys. Anthropol. 4: 125-51.
+
+231. VANDEPITTE, J. 	1954. Aspects quantitatifs et génétiques de la
+sicklémie à Leopoldville. Ann. Soc. belge Méd. trop. 34 : 501-16.
+
+232. -, et J. STIJNS. 	1963. Les hémoglobinoses au Congo
+(Léopoldville) et au Rwanda-Burundi. Ann. Soc. belge Méd. trop. 43 :
+271-82.
+
+233. VAN ROS, G. et M. VAN SANDE. 	1963. «Sur la détermination des
+groupes sériques d'haptoglobine et de transferrine chez 1'homme », in
+Protides of the biological fduids, H. Peeters ed., Amsterdam : Elsevier.
+Vol. II, pages 416-19.
+
+234. VERNEAU, R. 	1909. « Anthropologie et ethnographie », in Jean
+Duchesne-Fournet, Mission en Ethiopie (1901-1903), pages 115-355. Paris:
+Masson.
+
+235. VIRCHOW, R. 1889. Kopfmasse von 40 Wei- und 19 Kru- Negern. Z.
+Ethnol. 21 : 85-93.
+
+236. WALTERS, T.H.. and H. LEHMANN. 	1956. Distribution of the S and C
+haemoglobin variants in two Nigerian communities. Trans. r. Soc. trop.
+Med. Hyg. 50 : 204-08.
+
+237. WEINER, J.S. and A. ZOUTENDYCK. 	1959. Blood-group investigation an
+Central Kalahari Bushmen. Nature, London 4664: 843-44.
+
+238. WELLS, L.H. 	1952. Physical measurements of Northern Bushmen. Man
+77.
+
+239.WENINGER, M. 	1965. Chimba und Vatwa, bantuide Viehzüchter und
+nicht -bantuide Wildbeuten. Mitt. anthropol. Gesell. Wien 95 : 180-90.
+
+240. ZOUTENDIEK, A., A.C. KOPEC and A.E. MOURANT. 	1953. The blood
+groups of the Bushmen. Amer. J. phys. Anthropol. 11 : 361-68.
+
+241. -. 	1955. The blood groups of the Hottentots. Amer: J. phys.
+Anthropol. 13 : 691-98.
+
+The titles cited above were used for the following countries and year:
+
+Country	From	To (or only birth decade)	Source (see above)
+
+Afghanistan
+
+1930	Debets 1970
+
+Afghanistan
+
+1880	Joyce 1926
+
+Albania	1880	1900	Coon 1974
+
+Algeria	1910	1930	Chamla 1972
+
+Angola	1810	1820	Eltis 1982; Eltis 2009
+
+Angola
+
+1940	Santos David 1972
+
+Angola	1890	1930	Stolz 2008
+
+Argentina	1870	1910	Baten Pelger Twrdek 2010
+
+Argentina	1850	1920	Severino Lopez 1948
+
+Armenia
+
+1900	Jarcho 1935
+
+Armenia
+
+1890	Seltzer 1936
+
+Armenia	1850	1860	Stegl Baten 2009; Stegl Baten 2008
+
+Australia
+
+1960	Austr. Bureau of Statistics 1998
+
+Australia	1850	1870	Powys 1901
+
+Australia	1880	1920	Whitwell de Souza Nicholas 1997; Nicholas 2009
+
+Austria	1820	1840	Komlos 1985
+
+Austria	1960	1970	Weber Seidler Wilfing Hauser 1995
+
+Bangladesh	1850	1880	Brennan MacDonald Shlomowitz 1997: Brennan
+MacDonald Shlomowitz 2006
+
+Bangladesh	1950	1980	Demographic and Health Survey
+
+Belgium
+
+1960	Eurobarometer 1996
+
+Belgium
+
+1940	Twiesselmann 1969
+
+Benin	1950	1980	Demographic and Health Survey
+
+Benin	1810	1820	Eltis 1982; Eltis 2009
+
+Benin
+
+1910	Trevor 1947
+
+Bolivia (Plurinational State of)	1930	1970	Godoy Leonard Reyes-García
+Goodman McDade Huanca Tanner Vadez 2006
+
+Bolivia (Plurinational State of)	1980	Hossain Lestrel Ohtsuki 2005
+
+Botswana
+
+1910	Wells 1952
+
+Brazil	1810	1880	Baten Pelger Twrdek 2010
+
+Brazil	1950	1960	Demographic and Health Survey
+
+Brazil
+
+1970	Kac Ventura Santos 1997
+
+Brazil	1890	1920	Monasterio Signorini 2008
+
+Bulgaria
+
+1880	Drontschilow 1914
+
+Burkina Faso	1940	1980	Demographic and Health Survey
+
+Burkina Faso	1930	Huizinga 1968a
+
+Burkina Faso	1920	Seric 2007
+
+Burundi
+
+1920	Seric 2007
+
+Cameroon	1950	1980	Demographic and Health Survey
+
+Cameroon
+
+1810	Eltis 1982; Eltis 2009
+
+Cameroon
+
+1930	Huizinga 1968b
+
+Cameroon
+
+1900	Malcolm 1925
+
+Cameroon	1890	1910	Seric 2007
+
+Canada	1930	1950	Bailey Carter Mirwald 1982
+
+Canada	1820	1840	Costa Fogel 1998; Fogel Engerman Trussell 1982
+
+Canada	1960	1970	Cranfield Inwood 2007
+
+Canada	1850	1860	Dick 1995
+
+Central African Republic	1940	1970	Demographic and Health Survey
+
+Chad	1950	1980	Demographic and Health Survey
+
+Chad
+
+1870	Gaillard Poutrin 1914
+
+Chad
+
+1940	Hiernaux 1972
+
+Chad
+
+1930	Seric 2007
+
+Chile
+
+1950	Valenzuela Avendaño 1979
+
+China	1890	1920	Morgan 2004
+
+China	1810	1880	Morgan 2006
+
+Colombia	1940	1980	Demographic and Health Survey
+
+Colombia	1870	1930	Meisel Vega 2007
+
+Comoros	1950	1970	Demographic and Health Survey
+
+Congo
+
+1950	Austin 1979
+
+Congo
+
+1810	Eltis 1982; Eltis 2009
+
+Congo
+
+1940	Hiernaux 1964
+
+Congo
+
+1920	Hiernaux 1965
+
+Congo
+
+1930	Seric 2007
+
+Congo
+
+1910	Van De Ginste 1946
+
+Cote d'Ivoire	1940	1970	Demographic and Health Survey
+
+Croatia
+
+1960	Jantz Kimmerle Baraybar 2008
+
+Croatia
+
+1930	Skaric-Juric Ginsburg Kobyliansky Malkin Smolej Narancic Rudan 2003
+
+Cuba
+
+1940	Laska-Mierzejewska 1970
+
+Cyprus	1860	1890	Buxton  1920
+
+Czech Republic	1900	1920	Fetter Hajnis 1962
+
+Czech Republic	1850	1880	Hodinova 2007
+
+Czech Republic	1810	1840	Komlos 1985
+
+Czech Republic	1930	1950	Webb Kuh Pajak Kubinova Malyutina Bobak 2008
+
+Czechoslovakia (until 1993)	1960	Jantz Kimmerle Baraybar 2008
+
+Czechoslovakia (until 1993)	1870	1890	Lebzelter 1923
+
+Democratic Republic of the Congo	1920	Hiernaux 1972
+
+Democratic Republic of the Congo	1930	Seric 2007
+
+Democratic Republic of the Congo	1910	Van De Ginste 1946
+
+Denmark
+
+1960	Eurobarometer 1996
+
+Denmark	1920	1940	Hasle Boldsen Jesper 1991
+
+Denmark
+
+1890	Mackeprang 1923
+
+Dominican Republic	1940	1970	Demographic and Health Survey
+
+Egypt	1930	1980	Demographic and Health Survey
+
+Egypt
+
+1880	Stegl Baten 2009; Stegl Baten 2008
+
+Egypt
+
+1900	Strouhal 1980
+
+Eritrea
+
+1880	Seric 2007
+
+Estonia
+
+1910	Aul 1964
+
+Estonia	1890	1960	Aul 1997
+
+Estonia
+
+1970	Lintsi Kaarma 1997
+
+Ethiopia (from 1993)	1940	1970	Demographic and Health Survey
+
+Ethiopia (from 1993)	1920	Schreider 1950
+
+Finland
+
+1930	Kajanoja 1971
+
+Finland
+
+1880	Kajava 1927
+
+Finland
+
+1900	Nickul 1927
+
+Finland	1940	1960	Silvertoinen Lahelma Lundberg Rahkonen 2001
+
+France	1930	1940	Chamla 1964
+
+France	1810	1920	Heyberger 2007
+
+France
+
+1970	Olivier 1991
+
+France
+
+1950	Olivier Devine 1985
+
+France
+
+1960	Pineau 1993
+
+Gabon
+
+1920	Chabeuf 1959
+
+Gabon	1950	1980	Demographic and Health Survey
+
+Georgia
+
+1900	Field 1953
+
+Georgia
+
+1890	Weninger 1951
+
+Germany	1810	1840	Baten 1999; Baten 2006
+
+Germany	1850	1880	Baten 2006
+
+Germany
+
+1890	Baten Fertig 2010
+
+Germany
+
+1910	Breitinger 1934
+
+Germany	1930	1970	Jäger Zellner Kromeyer-Hauschild Lüdde Eisele
+Hebebrand 2001
+
+Ghana	1830	1840	Austin Baten van Leeuwen 2007
+
+Ghana	1870	1920	Austin Moradi Baten 2007
+
+Ghana	1940	1980	Demographic and Health Survey
+
+Ghana
+
+1810	Eltis 1982; Eltis 2009
+
+Greece
+
+1880	Hasluck Morant 1929
+
+Greece
+
+1930	Hertzberg 1963
+
+Greece	1950	1960	Manolis Neroutsos Zafeiratos 1995
+
+Greece
+
+1870	Roberts 1954
+
+Guatemala	1940	1970	Demographic and Health Survey
+
+Guatemala	1890	1910	Faulhaber 1970
+
+Guinea
+
+1910	De Lestrange 1950
+
+Guinea	1950	1970	Demographic and Health Survey
+
+Guinea
+
+1890	Seric 2007
+
+Guinea-Bissau	1920	1950	Stolz 2008
+
+Guyana
+
+1900	Gillin 1967
+
+Haiti	1940	1980	Demographic and Health Survey
+
+Hungary	1950	1970	Gyenis Joubert 2004
+
+Hungary	1810	1840	Komlos 1985
+
+Hungary
+
+1860	Weisbach 1889
+
+India
+
+1950	Basu 1985
+
+India	1840	1890	Brennan MacDonald Shlomowitz 1997: Brennan MacDonald
+Shlomowitz 2006
+
+India
+
+1970	Demographic and Health Survey
+
+India	1910	1940	Guntupalli Baten 2006
+
+India
+
+1960	Sirajuddin 1993
+
+Indonesia (until 1999)	1840	1910	Baten Stegl Van Der Eng 2009
+
+Iran (Islamic Republic of)	1960	1980	Janghorbani Amini Willett Gouya
+Delavari Alikhani Mahdavi 2007
+
+Iran (Islamic Republic of)	1870	1910	Stegl Baten 2009; Stegl Baten 2008
+
+Iraq	1880	1900	Stegl Baten 2009; Stegl Baten 2008
+
+Ireland	1820	1840	Costa Fogel 1998; Fogel Engerman Trussell 1982
+
+Ireland
+
+1960	Eurobarometer 1996
+
+Ireland
+
+1810	Mokyr O Grada 1994
+
+Ireland	1900	1910	Relethforth Less 1981
+
+Ireland
+
+1870	Whitwell de Souza Nicholas 1997; Nicholas 2009
+
+Israel
+
+1930	Benoist 1971
+
+Italy	1810	1820	A'Hearn 2003; A'Hearn 2006
+
+Italy	1880	1890	Danubio Amicone Vargiu 2005
+
+Italy
+
+1930	Hertzberg 1963
+
+Italy
+
+1960	Sanna Floris Cosseddu 1993
+
+Italy	1940	1950	Susanne 1979
+
+Jamaica	1910	1930	Ashcroft Ling Lovell Miall 1966
+
+Jamaica
+
+1890	Davenport Steggerda 1929
+
+Japan
+
+1980	Hossain Lestrel Ohtsuki 2005
+
+Japan	1930	1960	Kimura 1984
+
+Japan	1880	1890	Matsumura 1925
+
+Japan
+
+1920	Watanabe Kondo Matsunaga 1975
+
+Japan
+
+1900	Yoshida 1926
+
+Kazakhstan
+
+1910	Debets 1970
+
+Kazakhstan	1940	1970	Demographic and Health Survey
+
+Kazakhstan
+
+1960	Facchhini 1998
+
+Kazakhstan
+
+1890	Field 1948
+
+Kazakhstan
+
+1930	Miklashevskaia 1973
+
+Kenya	1940	1980	Demographic and Health Survey
+
+Kenya
+
+1910	Field 1952
+
+Kenya	1880	1930	Seric 2007
+
+Kyrgyzstan	1940	1970	Demographic and Health Survey
+
+Kyrgyzstan
+
+1890	Jarcho 1935
+
+Kyrgyzstan
+
+1880	Joyce 1926
+
+Kyrgyzstan	1900	1930	Miklashevskaia 1973
+
+Latvia	1880	1900	Backmann 1924
+
+Lebanon
+
+1900	Seltzer 1936
+
+Lebanon
+
+1890	Shanklin 1938
+
+Madagascar
+
+1920	Chabeuf 1969
+
+Madagascar	1950	1970	Demographic and Health Survey
+
+Malawi	1950	1980	Demographic and Health Survey
+
+Malawi	1920	1940	Laing 1964
+
+Malawi
+
+1870	Maynard Turner 1914
+
+Malawi
+
+1930	Nurse 1969
+
+Malaysia
+
+1860	Martin 1905
+
+Mali	1970	1980	Demographic and Health Survey
+
+Mali
+
+1930	Huizinga Birnie-Teller 1966
+
+Mali	1940	1960	Prazuck Fisch Pichard Sidibe 1901
+
+Mexico	1840	1890	Carson 2007
+
+Mexico
+
+1980	Hossain Lestrel Ohtsuki 2005
+
+Mexico	1950	1970	Rubalcava Teruel 2006
+
+Morocco
+
+1880	Coon 1931
+
+Morocco	1950	1980	Demographic and Health Survey
+
+Mozambique	1950	1980	Demographic and Health Survey
+
+Mozambique	1810	Eltis 1982; Eltis 2009
+
+Mozambique	1870	Maynard Turner 1914
+
+Mozambique	1910	Seric 2007
+
+Myanmar
+
+1880	Risley 1906
+
+Myanmar	1850	1870	Risley 1906; Waddell 1900
+
+Namibia	1940	1970	Demographic and Health Survey
+
+Namibia
+
+1930	Seric 2007
+
+Namibia
+
+1880	Wells 1952
+
+Nepal
+
+1930	Bhasin 1974
+
+Netherlands	1960	Eurobarometer 1996
+
+Netherlands	1940	Van Wieringen 1972
+
+Nicaragua	1940	1980	Demographic and Health Survey
+
+Niger	1940	1970	Demographic and Health Survey
+
+Niger
+
+1910	Lobsiger-Dellenbach 1951
+
+Nigeria	1810	1820	Eltis 1982; Eltis 2009
+
+Nigeria
+
+1890	Talbot Mulhall 1962
+
+Norway
+
+1900	Bryn Schreiner 1929; Waaler Schiotz 1932
+
+Norway	1820	1840	Costa Fogel 1998; Fogel Engerman Trussell 1982
+
+Norway	1870	1940	Udjus 1964
+
+Pakistan	1850	1890	Brennan MacDonald Shlomowitz 2006
+
+Pakistan
+
+1900	Mazumdar 1976
+
+Pakistan	1930	1940	Singh 1972
+
+Pakistan
+
+1870	Waddell 1900; Brennan McDonald Shlomowitz 2006
+
+Papua New Guinea	1860	Chalmers 1898; Hagen 1898; Schellong 1891
+
+Papua New Guinea	1930	Littlewood 1972
+
+Papua New Guinea	1880	Lorentz 1923
+
+People's Republic of Korea	1950	1980	Pak 2004
+
+People's Republic of Korea	1880	Shirokogoroff 1968
+
+Peru	1940	1980	Demographic and Health Survey
+
+Peru
+
+1920	Frisancho 1976
+
+Peru	1820	1880	Manzel Twrdek 2010
+
+Philippines
+
+1860	Bean Planta 1911; Schebesta 1952; Bean 1909a; Bean 1909b; Bean
+1909c
+
+Philippines	1870	1890	Bean Planta 1911; Schebesta 1952; Bean 1909a; Bean
+1909b; Bean 1909c; Wastl 1957
+
+Philippines	1900	1910	Schebesta 1952; Wastl 1957
+
+Poland
+
+1980	Hossain Lestrel Ohtsuki 2005
+
+Poland	1840	1970	Kopczynski 2009
+
+Poland
+
+1930	Webb Kuh Pajak Kubinova Malyutina Bobak 2008
+
+Portugal
+
+1980	Hossain Lestrel Ohtsuki 2005
+
+Portugal
+
+1960	Padez 2007
+
+Portugal
+
+1970	Padez Johnston 1999
+
+Portugal	1810	1910	Stolz 2008
+
+Puerto Rico	1940	1970
+
+	Puerto Rico	1890	1910	Godoy Goodman Levins Caram Seyfried 2007
+
+Puerto Rico
+
+1980	Hossain Lestrel Ohtsuki 2005
+
+Puerto Rico	1920	1930	Thieme 1959
+
+Republic of Korea	1950	1980	Korean Research Institute of Standard and
+Science 2004
+
+Republic of Korea	1940	Sang-Do 1978
+
+Russian Federation	1890	1900	Jarcho 1935
+
+Russian Federation	1920	1950	Mironov 2006
+
+Russian Federation	1910	Oshanin 1964
+
+Rwanda
+
+1870	Czekanowski 1910
+
+Rwanda	1950	1980	Demographic and Health Survey
+
+Rwanda
+
+1910	Oschinsky 1954
+
+Rwanda
+
+1920	Seric 2007
+
+Senegal	1940	1970	Demographic and Health Survey
+
+Senegal	1810	1820	Eltis 1982; Eltis 2009
+
+Senegal	1910	1920	Seric 2007
+
+Slovakia	1920	1940	Fetter Hajnis 1962
+
+Slovenia	1920	1970	Stefancic Tomazo-Ravnik 1998
+
+Slovenia
+
+1860	Weisbach 1903
+
+Somalia
+
+1880	Puccioni 1931; Radlauer 1915
+
+Somalia
+
+1890	Puccioni 1931; Radlauer 1915; Bertram 1932
+
+Somalia	1910	1920	Seric 2007
+
+South Africa	1890	1910	Crayen 2006
+
+South Africa	1920	1940	Laing 1964
+
+Spain	1840	1880	Martínez-Carrion 1994
+
+Spain
+
+1960	Mesa Fuster Sanchez-Andres Marrodan 1993
+
+Sudan (until 2011)	1910	Field 1952
+
+Sudan (until 2011)	1920	Roberts 1954
+
+Sudan (until 2011)	1930	Sukkar 1976
+
+Sweden	1840	1900	Hultkrantz 1927
+
+Sweden
+
+1910	Lundman 1939
+
+Sweden
+
+1930	Oezer 2008
+
+Sweden
+
+1870	Pearl 1905
+
+Sweden	1810	1850	Sandberg Steckel 1987
+
+Sweden	1940	1960	Silvertoinen Lahelma Lundberg Rahkonen 2001
+
+Switzerland	1870	1910	Brennecke 1935
+
+Switzerland	1820	1830	Costa Fogel 1998; Fogel Engerman Trussell 1982
+
+Syrian Arab Republic	1890	Sabatini 1936
+
+Syrian Arab Republic	1900	Seltzer 1936
+
+Syrian Arab Republic	1880	Shanklin 1938
+
+Taiwan
+
+1940	Morgan Liu 2007
+
+Tajikistan	1880	1910	Abdushelishvili 1968
+
+Tajikistan
+
+1870	Oshanin 1964
+
+Thailand
+
+1900	Andrews 1943
+
+The former Yugoslav Republic of Macedonia	1910	1930	Miszkiewicz 1961
+
+Togo	1950	1970	Demographic and Health Survey
+
+Turkey	1950	1970	Demographic and Health Survey
+
+Turkey
+
+1880	Hausschildt Wagenseil 1931
+
+Turkey
+
+1930	Hertzberg 1963
+
+Turkey
+
+1980	Oezer 2008
+
+Turkey	1860	1870	Stegl Baten 2009; Stegl Baten 2008
+
+Turkmenistan	1910	Oshanin 1964
+
+Turkmenistan	1890	Oshanin 1964b
+
+Uganda	1950	1980	Demographic and Health Survey
+
+Uganda
+
+1910	Oschinsky 1954
+
+Ukraine	1820	1840	Komlos 1985
+
+Ukraine	1870	1880	Pöch 1926
+
+United Kingdom of Great Britain and Northern Ireland	1900	1910	Clements
+Pickett 1957
+
+United Kingdom of Great Britain and Northern Ireland	1820	1840	Costa
+Fogel 1998; Fogel Engerman Trussell 1982
+
+United Kingdom of Great Britain and Northern Ireland	1960	Eurobarometer
+1996
+
+United Kingdom of Great Britain and Northern Ireland	1830	Floud Wachter
+Gregory 1990; Floud Wachter Gregory 1991
+
+United Kingdom of Great Britain and Northern Ireland	1890	1920	Kemsley
+1951
+
+United Kingdom of Great Britain and Northern Ireland	1810	Mokyr O Grada
+1994
+
+United Kingdom of Great Britain and Northern Ireland	1850	1950	Rosenbaum
+1988
+
+United Republic of Tanzania	1940	1970	Demographic and Health Survey
+
+United Republic of Tanzania	1930	Jürgens 1967
+
+United Republic of Tanzania	1910	Oschinsky 1954
+
+United Republic of Tanzania	1920	Seric 2007
+
+United Republic of Tanzania	1900	Trevor 1947
+
+United States of America	1940	1960	BRFSS Annual Survey Data 1995
+
+United States of America	1810	1840	Costa Fogel 1998; Fogel Engerman
+Trussell 1982
+
+United States of America	1850	1860	Komlos 2006
+
+United States of America	1870	Murray 1997
+
+United States of America	1880	Steckel Haurin 1994
+
+United States of America	1920	1930	U.S. Department of Health 1976
+
+United States of America	1890	1910	Wu 1994
+
+Uzbekistan	1940	1970	Demographic and Health Survey
+
+Uzbekistan
+
+1900	Jarcho 1935
+
+Uzbekistan
+
+1890	Oshanin 1964
+
+Uzbekistan
+
+1910	Oshanin 1964a
+
+Viet Nam
+
+1920	Chabeuf 1967
+
+Yemen
+
+1900	Demographic and Health Survey
+
+Zambia	1940	1980	Demographic and Health Survey
+
+Zimbabwe	1900	1970	Demographic and Health Survey
+
+
+
+This is an excerpt of the paper by Baten and Blum (2012), which was
+published in a modified way in the following way (please cite this):
+
+Jörg Baten and Matthias Blum 
+
+“Anthropometric within-country Inequality and the Estimation of Skill
+Premia with Anthropometric Indicators”, Review of Economics --
+Jahrbuch fuer Wirtschaftswissenschaften 62-2 (2011), pp.107-138.
+
+Recently, a method to measure inequality has been proposed that is based
+on anthropometric indicators. Baten (1999, 2000) argued that the
+coefficient of variation of human stature is correlated with overall
+inequality in a society, and that it can be used as indicator,
+especially where income inequality measures are lacking. This
+correlation has been confirmed in further analyses, for example by
+Pradhan et al. (2003), Moradi and Baten (2005), Sunder (2003),
+Guntupalli and Baten (2006), Baten (2000a), Blum (2009), Baten et al.
+(2009). The idea behind is that heights reflect nutritional conditions
+during early childhood and youth. As wealthier people have better access
+to food and shelter and less illnesses, they tend to be taller than the
+poorer part of the population. Hence, the variation of height of a
+certain cohort may be indicative of income distribution during the
+decade of their birth.
+
+The aim of this research note is to summarize this strand of literature,
+and to compare it with other indicators of inequality, such as skill
+premia. We provide estimates of skill premia for a set of countries and
+decades for which “height CVs”, as they will be called in the
+following, are available. Moreover, we will provide a second set of
+estimates based on reasonable interpolations. Skill premia are defined
+here as the ratio between a skilled worker in the building trades, and
+an unskilled one. This measure is available for a number of countries
+since the 19th and early, whereas the amount of other inequality
+indicators (such as the gini coefficient of income) is quite limited and
+sometimes of low accuracy before the 1970s and 1980s. Clearly, the skill
+premium as a measure of inequality does not cover the whole economy, and
+the assumption that inequalities between skilled and unskilled building
+workers reflects skill premia in other sectors of the economy might not
+always hold. Especially subsistence farming, household production and
+black market economies might be clearly different. those latter parts of
+the economy can be covered quite well with anthropometric measures. This
+means that if we find a significant correlation between skill premia,
+which is the most abundant income-based inequality indicator, and height
+CVs, both measures together will allow to trace inequalities within
+countries quite well for the past two centuries.
+
+What are the advantages and disadvantages of anthropometric inequality
+measures? Heights offer a good complement to conventional inequality
+indicators and constitute perhaps an even better indicator in some
+respect. If the distribution of food and medical goods in an economy
+becomes more unequal, heights should also become more unequal. Yet while
+a correlation with income does exist, this correlation is only partial.
+As mentioned above, some important inputs are not traded on markets but
+are provided as public goods, such as public health measures or food
+supplements for schoolchildren. Public goods lead to modest deviations
+between purchasing power-based and height-based inequality measures.
+Moreover, income totally neglects transfers within households. This is a
+major argument in favor of height-based inequality measures: heights are
+an outcome indicator, whereas real income represents an input to human
+utility. Deaton (2001) and Pradhan et al. (2003) have argued
+convincingly that measures of health inequality are important in their
+own right, not only in relation to income. Heights do capture important
+biological aspects of the standard of living (Komlos, 1985; Steckel,
+1995), irrespective of the fact that some problems regarding the stature
+variable may exist. 
+
+Anthropometric methods are even more advantageous for studying
+developing countries of the 20th and the generally poorer countries of
+the 19th century. To date, the development of inequality within LDCs
+could not be sufficiently explored because reliable data were lacking.
+The well-known Deininger and Squire data set (1996), for example,
+provides only eight Gini coefficients of income for Subsahran Africa for
+the period before 1980, labeled as “acceptable”. Atkinson and
+Brandolini (2001) convincingly pointed to serious flaws in the income
+inequality data collected by Deininger and Squire, arising from
+insufficient consistency across countries and over time. For those
+countries, height inequality measures can provide important additional
+insights. We do not claim that height is the only accurate measure of
+inequality, but argue that it generates new insights on inequality while
+serving as a useful countercheck for other indicators, thereby leading
+to more meaningful results overall.
+
+Methodological background of height CVs
+
+The effects of inequality on heights are best understood by comparing
+the likely outcomes of a hypothetical situation, in which a population
+is exposed to two alternative allocations of resources A and B after
+birth:
+
+All individuals receive the same quantity and quality of resources
+(nutritional and health inputs). This case refers to a situation of
+perfect equality.
+
+Available resources are allocated unequally (but independently of the
+genetic height potential of the individuals). 
+
+In the case of A, the height distribution should only reflect genetic
+factors. Despite perfect equality, we observe a biological variance of
+(normally distributed) heights in this case. Yet how does the height
+distribution respond to an increase in inequality (B)? The unequal
+allocation of nutritional, medical and shelter resources allows some
+individuals to gain and grow taller, while others lose and suffer from
+decreasing nutritional status. In comparison with the situation of
+perfect equality, the individual heights of the rich strata shift
+therefore to the right, the poor strata shift to the left. Thus rising
+inequality should lead to higher height inequality, although this effect
+is weakened by the fact that the genetic height variation accounts for
+the largest share of height variation. Even a bimodal height
+distribution could result if the resource endowment differed extremely
+between groups. In practice, since the biological variance continues to
+contribute a large share to the total variance, most height
+distributions are normally distributed or very close to normal, but with
+a much higher standard deviation than A (but see A’Hearn (2004),
+Jacobs, Katzur and Tassenaar (2008) on late teenagers).
+
+The standard deviation is not a satisfactory measure of inequality,
+since anthropologists argue that the biological variance increases with
+average height (Schmitt and Harrison 1988). The coefficient of variation
+(CV) takes this effect into account and is a consistent and robust
+estimate of inequality. For a country i and a five-year-age birth decade
+t, the CV is defined as:
+
+Thus, the standard deviation ( is expressed as a percentage of the mean
+(. Baten (1999, 2000a) compared height differences between social groups
+using the CV for early 19th century Bavaria, since an ideal data set was
+available for this region and time period, with nearly the entire male
+population measured at a homogeneous age and the economic status of all
+parents recorded. The measures turned out to be highly correlated.
+Therefore, high CVs sufficiently reflect social and occupational
+differences without relying on classifications. The CV of a totally
+equal society is yet unknown and can only be empirically approximated.
+For decomposing world health inequality, Pradhan et al. (2003) tried to
+standardise height inequality by assuming that the height distributions
+in OECD countries reflect the genetic growth potential of individuals
+only. However, this would mean that no nutritional and health inequality
+exists in OECD countries, which seems highly implausible. In Germany
+during the 1990s, for example, height differences between social groups
+were as large as two centimeters (Baten and Boehm 2009; Komlos and Kriwy
+2003). Even in egalitarian Scandinavia, some height inequality remains
+between regions (Sunder 2003).
+
+Moradi and Baten (2005) have estimated the relationship between income
+inequality and height CV for 14 African countries and 29 five-year
+periods. They controlled for the differences in income definition and
+population coverage by including dummy variables. In addition, country
+fixed-effects were included (  REF _Ref89485783 \h  \* MERGEFORMAT 
+Table  2, model 1 and 3) which implies that their analysis focused
+mainly on intertemporal effects.
+
+They found that height CV was significant and positively correlated with
+the gini coefficients of income (Table 1). An increase in the CV by one
+unit corresponded with a rise in the gini coefficient by 13.2 points in
+the fixed-effects specification. It is noteworthy that the relationship
+between the CV and the gini coefficient is not sensitive to country
+fixed-effects in general. In another regression without country fixed
+effects (2), they obtained a coefficient between nutritional and income
+inequality of 20.9. Both coefficients were very close to Baten and
+Fraunholz's (2004) estimate for Latin America, which reported a
+significant coefficient of 15.5 based on gini coefficients whose
+underlying data are of the highest possible quality. Additional
+robustness tests including weighting for sample quality confirmed the
+relationship. Moradi and Baten (2005) recommended the following formula
+for translating height CVS into income ginis:
+
+(2) 				Giniit=-33.5+20.5*CVit
+
+Moradi and Baten argued that an excellent case for comparing the
+development of both income and height-based inequality measures is
+Kenya, for which the estimates by Bigsten (1985) offer a consistent
+source with a sufficient number of data points. The development of both
+inequality measures is nearly identical, except for the sudden fall of
+the gini coefficient in 1955 with which the CV does not correspond. It
+is actually not clear which of the two inequality measures describes the
+development better, but at least it seems that the CV’s movement is
+somewhat smoother and less volatile (the CV might moreover be less
+volatile due to some consumption smoothing, as people reduce their
+savings in harder times to smooth their consumption). However, both the
+strong rise of inequality in Kenya during the early 1950s and the more
+gradual rise of the late 1960s are clearly visible in both series.
+Similarly, the decline in inequality thereafter is confirmed by both
+measures. Summing up, the development of CVs over time serves as a
+promising measure of inequality, even more so because in periods and
+countries in which other data on inequality are either non-existent or
+unreliable.
+
+Actually, most estimates between height CV and income gini have been
+performed for the period after 1950s when real incomes started to
+increase and a smaller part of that budget was allocated to food and
+shelter. This might bias the correlation between height CV and gini
+coefficient of income downwards because in many regions a lower portion
+of income was spend on food and shelter in the later period. Our main
+interest is the period prior to 1950, and especially the poorer
+countries. In that period budgets were relatively small, and the
+proportion spent on food and shelter high, so height CV and income ginis
+should be closer correlated than in the post-1950 period. 
+
+In sum, the relationship between gini coefficient of income and height
+CV seems quite well-established. Hence we collected all available data
+from hundreds of previously published articles (see appendix for a list
+of references), and benefited from scholars who provided us with their
+original height data sets. We excluded cases with very small numbers of
+height measurements, or if only one special group within a country was
+included. We took care that late teenage year / early twenties samples,
+military truncation, gender, prison selectivity and other factors did
+not distort our samples. In order to express height CVs in a more
+familiar measure for economists studying inequality issues, we converted
+the height CV for each country and birth decade with formula (2) into
+income gini equivalents.
+
+Skill Premia and height inequalities
+
+We collected the available evidence of unskilled and skilled building
+workers that was compiled by Robert Allen for the 19th century, and the
+League of Nations and International Labor Organization Statistics for
+the early 20th century. This evidence yielded a panel of 166
+observations between the 1800s and 1950s. Most of the time, it has
+around 10 observations per decade (mostly from the Allen compilation).
+But in 1950, there are 33 observations, because the International Labor
+Organization extended the coverage to a number of poor countries. This
+is also the reason why the variation of inequality is slightly higher in
+this decade.
+
+When we compare this dataset with overlapping evidence on height ginis,
+there is a general correspondence (Figure 1). For example, Spain in the
+1850s-1890s, Mexico in the 1950s and the U.S. had quite high
+inequalities, whereas inequality was rather low in Denmark and
+Switzerland in the 1920s.
+
+Testing this more systematically, we examine in three different
+regression specifications whether the relationship between
+anthropometric inequality measures and skill premia is significant
+(Table 3). The overlap between our database on height ginis and skill
+premia yields 50 observations, and each observation reflects on country
+and birth decade. given the panel nature, we estimated both fixed and
+random effects models in order to study the robustness of the
+relatinship (and also simple OLS in column 3). The relationship is
+statistically significant and positive. The explanatory power of those
+models is reasonably high, although a lot of random fluctuation cannot
+be explained.
+
+In order to assess the robustness, we repeated the test with a slightly
+larger sample of height ginis, for which we used some conservative
+interpolation for Europe, America and Asia (for which the amount of data
+allows some interpolation). This brought the number of observations to
+125 for the whole period and 101 for the “long” 19th century (until
+the 1910s). Adding those values reduces the size of the coefficient
+somewhat (which can partly be explained by the fact that the constant is
+now estimated to be around 1, whereas it was below 1 in Table 3 and the
+Col. 4 of Table 4). But in general, the relationship between
+anthropometric inequality and skill premia remains robust. It is also
+not affected by the inclusion of decadal or country dummy variables
+neither.
+
+Finally, we have also studied the experience of the period until 1910
+separately, which might be different from the 1920s to 1950s period, in
+which a number of parameters changed in the world economy. However,
+again, the estimation results are relatively robust.
+
+Conclusion
+
+In this study, we have reviewed the literature on anthropometric
+inequality and developed a model to estimate skill premia based on those
+height-based measures. The literature focused so far mainly on the
+comparison between income and height ginis of the second half of the
+20th century. The correlation with income gini coefficient for African
+and Latin countries already demonstrated that this approach is able to
+yield plausible results. 
+
+In this study, we are building on the fact that direct comparisons with
+skill premia have not been done in the previous literate. We found the
+relationship between the two inequality indicators to be relatively
+strong and robust in different estimation procedures.
+
+References 
+
+A’Hearn, B. (2004). A Restricted Maximum Likelihood Estimator for
+Truncated Height Samples. Economics and Human Biology 2, pp. 5-19
+
+Allen, Robert C. (2001).‘The Great Divergence in European Wages and
+Prices from the Middle Ages to the First World War,’ Explorations in
+Economic History, Vol. 38, pp 411-447.
+
+Allen, Robert & Jean-Pascal Bassino & Debin Ma & Christine Moll-Murata &
+Jan Luiten van Zanden, 2010. ‘Wages, Prices, and Living Standards in
+China,1738-1925: in comparison with Europe, Japan, and India,’
+Economic History Review, forthcoming
+
+Alvaredo, F. and Saez, E. (2006). ‘Income and wealth concentration in
+Spain in a 
+
+Atkinson, A. B. (2007b). ‘Top incomes in the United Kingdom over the
+twentieth century.’ In Top Incomes over the Twentieth Century: A
+Contrast Between Continental European and English Speaking Countries
+(ed. A. Atkinson and T. Piketty), pp.82-140. Oxford: Oxford University
+Press. 
+
+Atkinson, A. B. and Leigh, A. (2005). ‘The distribution of top incomes
+in New Zealand.’ 
+
+Atkinson, A. B. and Leigh, A. (2007a). ‘The distribution of top
+incomes in Australia.’ 
+
+Atkinson, A.B., & Brandolini, A. (2001). Promise and Pitfalls in the Use
+of ‘Secondary’ Data Sets: Income Inequality in OECD Countries as a
+Case Study. Journal of Economic Literature, 39(3), 771-799.
+
+Australian National University CEPR Discussion Paper 503.
+
+Banerjee, A. and T. Piketty (2005), “Top Indian Incomes, 1922-2000”,
+The World Bank Economic Review, 19, 1-20.
+
+Barro, R. J. (2000), ‘Inequality and Growth in a Panel of
+Countries’, Journal of Economic Growth, vol. 5, no. 1, March 2000, pp.
+5-32.
+
+Bassino, J.P. (2006). Inequality in Japan (1892-1941): Physical Stature,
+Income, and Health. Economic and Human Biology 4, pp. 62-88.
+
+Baten, J. (1999). Ernährung und wirtschaftliche Entwicklung in Bayern,
+1730-1880. Stuttgart: Steiner.
+
+Baten, J. (2000). "Economic Development and the Distribution of
+Nutritional Resources in Bavaria, 1797-1839," in Journal of Income
+Distribution 9, pp. 89-106
+
+Baten, J., P. Földvari, B. van Leeuwen and Jan Luiten van Zanden
+(2009). Globalization and Global Income Inequality 1820-2000. Exploring
+a new dataset. Conference Paper WEHC Utrecht.
+
+Baten, J. and U. Fraunholz (2004). Did Partial Globalization Increase
+Inequality? The Case of the Latin American Periphery, 1950-2000" with
+Uwe Fraunholz, CESifo Economic Studies 50-1 (2004), pp. 45-84.
+
+Baten, J., and Böhm, A. (2009). “Trends of Children’s Height and
+Parental Unemployment: A Large-Scale Anthropometric Study on Eastern
+Germany, 1994-2006.”, German Economic Review (forthcoming).
+
+Benabou, R. (1996), ‘Inequality and Growth’, in: B. S. Bernanke and
+J. J. Rotemberg (eds), NBER Macroeconomics Annual 1996, Cambridge, MA:
+MIT Press, pp. 11–74.
+
+Bertola, Luis, Cecilia Castelnovo, Javier Rodriguez, Henry Willebald
+(2009). ‘Income distribution in the Latin American Southern Cone
+during the first globalization boom and beyond’ International Journal
+of Comparative Sociology (forthcoming)
+
+Bigsten, A. (1985). Income Distribution and Growth in a Dual Economy.
+PhD thesis, Gothenburg University, Department of Economics.
+
+Blum (2009), #
+
+Bourguignon, F., Morrisson, C.,(2002). Inequality among world citizens:
+1890-1992, American Economic Review 92 (4), 727-744, September.
+
+Broadberry, S. (2003) “Relative per capita Income Levels in the United
+Kingdom and the United States since 1870: Reconciling Time Series
+Projections and Direct Benchmark Estimates”, Journal of Economic
+History, 63 (2003): 852-863.
+
+Chapman, Agatha, L. Wages and Salaries in the United Kingdom
+1920–1938. Cambridge: Cambridge University Press, 1953
+
+Deaton, A. (2001). Relative Deprivation, Inequality and Mortality. NBER
+Working Paper 8099.
+
+Deininger, K. and Squire, L. (1996), ‘A new dataset measuring income
+inequality’, The World Bank Economic Review, 10, 565-591.
+
+Deininger, K. and Squire, L. (1998), ‘New Ways of Looking at Old
+Issues: Inequality and Growth’, Journal of Development Economics,
+December 1998, 57(2), pp. 259 – 87
+
+Dell, F. (2007). ‘Top incomes in Germany throughout the twentieth
+century: 1891–1998.’ In Top Incomes over the Twentieth Century: A
+Contrast Between Continental European and English Speaking Countries
+(ed. A. Atkinson and T. Piketty), pp.365-425. Oxford: Oxford University
+Press. 
+
+Dell, F., Piketty T. and Saez, E.  (2007). ‘Income and wealth
+concentration in Switzerland over the 20th century.’ In Top Incomes
+over the Twentieth Century: A Contrast Between Continental European and
+English Speaking Countries (ed. A. Atkinson and T. Piketty), pp.472-500.
+Oxford: Oxford University Press.  
+
+DeLong, J. Bradford and Andrei Shleifer. 1993. “Princes and Merchants:
+City Growth before the Industrial Revolution.” Journal of Law and
+Economics 36(2): 671-702.
+
+Eeckhout, Jan (2004)’Gibrat’s Law for (all) Cities’, American
+Economic Review, 94 (5) 1429-1451.
+
+Feinstein, Charles H. and Mark Thomas, ‘A Plea for Errors,’
+Discussion Papers in Economic and Social History, Number 41, University
+of Oxford 2001.
+
+Forbes, K. J. (2000), ‘A Reassessment of the Relationship between
+Inequality and Growth’, American Economic Review, vol. 90-4, pp.
+869-87.
+
+François, J.F., and H. Rojas-Romagosa (2005), “The Construction and
+Interpretation of Combined Cross Section and Time-Series Inequality
+Datasets,” Worl d Bank Policy Research Working Paper 3748.  
+
+Fujiwara, Yoshi (2005) Pareto-Zipf, Gibrat’s Laws, Detailed Balance
+and their breakdown’ in A. Chatterjee et.al. (eds.) Econophysics and
+Wealth Distributions. Springer, Milan, 24-33.
+
+Gibrat, R. (1931), Les Inégalites Économiques, Sirey, Paris.
+
+Glaeser, E.L., R. La Porta, F. Lopez-de-Silanes, A. Shleifer (2004).
+‘Do Institutions Cause Growth?’ Journal of Economic Growth 9-,
+271-303.
+
+Global History of Prices and Wages, Utrecht - 19-21 August 2004
+
+Guntupalli, A.M. and Baten, J. (2006). “The Development and Inequality
+of Heights in North, West and East India, 1915-44”, Explorations in
+Economic History 43, iss. 4, pp. 578-608.
+
+Jacobs, J., Katzur, T., Tassenaar, V. (2008). On Estimators for
+Truncated Height Samples. Economics and Human Biology 6-1, pp. 43-56.
+
+Jones, C.I., (1997). On the evolution of the world income distribution,
+Journal of Economic Perspectives 11 (3), 19-36, Summer.
+
+Komlos, J. & Kriwy, P. (2003). The Biological Standard of Living in the
+Two Germanies. German Economic Review, 4(4), 459-73.
+
+Komlos, J. (1985). Stature and Nutrition in the Habsburg Monarchy: The
+Standard of Living and Economic Development. American Historical Review,
+90, 1149-1161.
+
+Latham and H. Kawakatsu (eds.), Asia Pacific Dynamism 1500-2000 (London:
+Routledge): 13-45.
+
+Leigh, A., and P. van der Eng (2007), “Top Incomes in Indonesia,
+1920-2004,” Australian National University, Centre for Economic Policy
+Research, Discussion Paper no. 549.
+
+Lindert, P., Milanovic, B., and J. Williamson (2007), “Measuring
+Ancient Inequality,” NBER Working Paper No. 13550.
+
+López, J.H., Servén, L., 2006. A normal relationship? Poverty, growth,
+and inequality.
+
+Macmillan Reference; New York : Stockton Press, 1998. 
+
+Maddison, A. (2001). The world economy: a millennial perspective. OECD,
+Paris.
+
+Maddison, A. (2003). The world economy: historical statistics. OECD,
+Paris
+
+Milanovic, B., (2002). True world income distribution, 1988 and 1993:
+First calculation based on household surveys alone, Economic Journal 112
+(476), 51-92, January.
+
+Milanovic, Branko (2007) World Apart. Measuring International and Global
+Inequality. Princeton.
+
+Milanovic, Branko, Peter Lindert and Jeffrey Williamson (2007) Measuring
+Ancient Inequality. MPRA working paper No. 5388,
+http://mpra.ub.uni-muenchen.de/5388/1/MPRA_paper_5388.pdf 
+
+Mironov, B. (2004). Prices and Wages in St. Petersburg for Three
+Centuries (1703-2003). Towards a 
+
+Mitchell, B. R. (2003a). International Historical Statistics: Africa,
+Asia and Oceania, 1750-2000 (Basingstoke and New York: Palgrave
+Macmillan, 4th edn. 2003.
+
+Mitchell, B.R. (1998). International historical statistics: the
+Americas, 1750-1993, London: Macmillan 
+
+Mitchell, B.R. (1998b). International historical statistics: Africa,
+Asia & Oceania, 1750-1993, London: Macmillan Reference; New York :
+Stockton Press, 1998. 
+
+Mitchell, B.R. (1998c). International historical statistics: Europe,
+1750-1993, London : 
+
+Moradi, A. and Baten, J. (2005) “Inequality in Sub-Saharan Africa
+1950-80: New Estimates and New Results, ” World Development Volume
+33-8  (2005), pp. 1233-1265.
+
+Moriguchi, C. and Saez, E. (2006). ‘The evolution of income
+concentration in Japan, 1885-2002: evidence from income tax
+statistics,’ National Bureau of Economic Research Working Paper 12558,
+NBER, Cambridge, MA. 
+
+Nolan, B. (2007). ‘Long-term trends in top income shares in
+Ireland.’ In Top Incomes over the Twentieth Century: A Contrast
+Between Continental European and English Speaking Countries (ed. A.
+Atkinson and T. Piketty), pp.501-530. Oxford: Oxford University Press.
+
+Persson, T. and Tabellini, G. (1994), ‘Is Inequality Harmful for
+Growth?’, American Economic Review, 84-3, pp. 600–21.
+
+Piketty, T. (2007). ‘Income, wage and wealth inequality in France,
+1901-1998.’ In Top Incomes over the Twentieth Century: A Contrast
+Between Continental European and English Speaking Countries (ed. A.
+Atkinson and T. Piketty), pp.43-81.  Oxford: Oxford University Press.
+
+Piketty, T. and Saez, E. (2006b). ‘Income inequality in the United
+States.’ Tables and Figures updated to 2004 in Excel format,  
+HYPERLINK "http://emlab.berkeley.edu/users/saez/" 
+http://emlab.berkeley.edu/users/saez/  (downloaded 6 December 2006).
+
+Pomeranz, K. (2000). The Great Divergence. China, Europe and the Making
+of the Modern World Economy. Princeton U.P
+
+Pradhan, M., Sahn, D.E., & Younger, S.D. (2003). Decomposing World
+Health Inequality. Journal of Health Economics, 22(2), 271-293.
+
+Prados de la Escosura, L. (2008), ‘Inequality, Poverty and the Kuznets
+Curve in Spain, 1850-2000. European Review of Economic History 12, pp.
+287-324
+
+Prados de la Escosura, Leandro, (2000). "  HYPERLINK
+"http://ideas.repec.org/a/eee/exehis/v37y2000i1p1-41.html" 
+International Comparisons of Real Product, 1820-1990: An Alternative
+Data Set ,"   HYPERLINK "http://ideas.repec.org/s/eee/exehis.html" 
+Explorations in Economic History , vol. 37(1), pages 1-41, January.
+
+Reference; New York : Stockton Press. 
+
+Roine, J. and Waldenström, D. (2006). ‘Top incomes in Sweden over the
+twentieth century.’ Research Institute of Industrial Economics Working
+Paper 667, Stockholm, Sweden. 
+
+Rose, Andrew K. (2006) ’Cities and Countries’ Journal of Money,
+Credit and Banking, Vol. 38 (8) 2225-2245.
+
+Rossi, N., G. Toniolo, G. Vecchi, “Is the Kuznets curve still alive ?
+Evidence from Italian household budgets, 1881-1961”, The journal of
+economic history, 4, 2001.
+
+Saez, E. and Veall, M. (2005). ‘The evolution of high incomes in
+Northern America: lessons from Canadian evidence.’ American Economic
+Review, vol. 95(3), (June), pp. 831-849. 
+
+Salverda, W. and Atkinson, A. B. (2007). ‘Top incomes in the
+Netherlands over the twentieth century.’ In Top Incomes over the
+Twentieth Century: A Contrast Between Continental European and English
+Speaking Countries (ed. A. Atkinson  and T. Piketty), pp.426-472.
+Oxford: Oxford University Press.  
+
+Schmitt, L.H. & Harrison, G.A. (1988). Patterns in the Within-Population
+Variability of Stature and Weight. Annals of Human Biology, 15(5),
+353-364.
+
+Soltow, L. (1998), “The Measures of Inequality”, in: L. Soltow and
+J.L. van Zanden (eds.), Income & Wealth Inequality in the Netherlands
+16th-20th Century, Het Spinhuis: Amsterdam, 7-22.
+
+Soltow, Lee and Jan Luiten van Zanden (1998) Income and Wealth
+Inequality in the Netherlands 1500-1990. Het Spinhuis Amsterdam
+
+Steckel, R. (1995). Stature and the Standard of Living. Journal of
+Economic Literature, 33(4), 1903–1940.
+
+Sunder, M. (2003). The Making of Giants in a Welfare State: The
+Norwegian Experience in the 20th Century. Economics & Human Biology,
+1(2), 267-276.
+
+Van Leeuwen, Bas and Péter Földvári, 'The Development of inequality
+and poverty in 
+
+Ward, M. H., Devereux, J. (2005). Relative British and American Income
+Levels during the First Industrial Revolution, Research in Economic
+History, 23, (2005), 255-292. 
+
+Wit, Gerrit de (2005) Firm size distributions. An overview of
+steady-state distributions resulting from firm dynamics models.
+International Journal of Industrial Organization, 23 (2005) 423– 450.
+
+Williamson Jeffrey G. (1998). “Globalization and the Labor Market:
+Using History to Inform Policy ” pp. 103-193 in P. Aghion and J. G.
+Williamson, eds.Growth, Inequality and Globalization. Cambridge UP.
+
+Williamson, J. (1999c). Real Wages, Inequality, and Globalization in
+Latin America Before 1940. Revista de Historia Economica, 17 (special
+number), 101-142.
+
+Williamson, J. (2000a). Globalization, Factor Prices and Living
+Standards in Asia Before 1940, in A.J.H. 
+
+Williamson, J. (2000b). Real Wages and Factor Prices Around the
+Mediterranean 1500-1940,in S. Pamuk and J.G. Williamson (eds.) The
+Mediterranean Response to Globalization Before 1950 (London: Routledge)
+: 45-75. 
+
+Williamson, J. G. and P. H. Lindert (1980), American Inequality: A
+Macroeconomic History. (New York: Academic Press).
+
+Williamson, Jeffrey G. (2000) "Real Wages and Factor Prices Around the
+Mediterranean 1500-1940," Chp. 3 in S. Pamuk and J.G. Williamson (eds.)
+The Mediterranean Response to Globalization Before 1950 (London:
+Routledge 2000) : 45-75
+
+World Bank Policy Research Working Paper 3814. 
+
+World Income Inequality Database V2.0c May 2008
+(http://www.wider.unu.edu/research/Database/en_GB/database/)
+
+Zanden, J.L. van (2002) 'Rich and Poor before the Industrial Revolution:
+a comparison between Java and the Netherlands at the beginning of the
+19th century', Explorations in Economic History 40, 1-23.

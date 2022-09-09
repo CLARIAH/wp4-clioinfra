@@ -1,0 +1,1463 @@
+1. Title
+
+	Numeracy estimates (ABCC) by birth decade and country, both before and
+after 1800
+
+2. Author(s)
+
+	Baten, Joerg, University of Tuebingen.; with the help of several
+coauthors, without implying any responsibility to them for potential
+mistakes (Valeria Prayon, Dorothee Crayen, Dácil Juif, Ralph Hippe,
+Christina Mumme and many others) 
+
+3. Production date
+
+	2013-12-26.
+
+4. Version
+
+	1
+
+5. Variable group(s)
+
+	Education
+
+6. Variable(s)
+
+	Numeracy estimates (ABCC) of both genders in percent.
+
+7. Unit of analysis
+
+	Country
+
+8. Keywords (5)
+
+	Numeracy, education.
+
+9. Abstract (200 words)
+
+	Age data frequently display excess frequencies at attractive numbers,
+such as multiples of five. We use this “age heaping” to measure
+cognitive ability in quantitative reasoning, or “numeracy”. We
+construct a database of age heaping-based estimates of basic numeracy
+with exceptional geographic and temporal coverage
+
+10. Time period
+
+	1500 -1970. All data refer to the birth decadal average (1810 means
+1810-19 etc)
+
+11. Geographical coverage
+
+	Worldwide
+
+12. Methodologies used for data collection and processing
+
+	Reconstruction of basic numeracy by birth decade using a variety of
+different sources. See also the text below. The ABCC is a linear
+transformation of the Whipple index of age heaping.
+
+13. Data quality
+
+	As good as possible, but counter-checking and improvement welcome.
+Interpretations on individual country level should be done with careful
+checking. In the ClioInfra quality coding, none of the ABCC obtains a 1
+(“official governmental statistic”) or a 4 (“Conjecture,
+guesstimate). All the ABCCs which are based on UN Demographic Yearbooks
+or which contain the word “Census” in the title referenced in the
+bibliography/list of references should obtain a 2, because those ABCC
+values are calculated with official statistical data, but by the
+authors, not by the government. All other estimates should obtain a 3.
+
+14. Date of collection
+
+	See references
+
+15. Data collectors
+
+	Joerg Baten, Valeria Prayon, Dorothee Crayen, Dácil Juif, Ralph Hippe,
+Christina Mumme, and many colleagues from around the world.
+
+16. Sources
+
+None of the Whipple estimates of the modestly sized literature entered
+the data set unchanged, three general references which should be cited
+(because they reflect most of the literature) are
+
+A’Hearn Baten Crayen 2009: Brian A’Hearn, Joerg Baten and Dorothee
+Crayen: “Quantifying Quantitative Literacy: Age Heaping and the
+History of Human Capital”. Journal of Economic History 69-3 (Sept
+2009), pp.783-808.
+
+Crayen Baten 2010: Crayen, D., and Baten, J. (2010). Global Trends in
+Numeracy 1820-1949 and its Implications for Long-Run Growth.
+Explorations in Economic History, 47(1): 82-99.
+
+Prayon and Baten (2013): Valeria Prayon and Joerg Baten: “Human
+Capital, Institutions, Settler Mortality, and Economic Growth in Africa,
+Asia and the Americas”. Working Paper Univ. Tuebingen 2013.
+
+But as the underlying age data comes from a variety of sources, here is
+the complete list:
+
+(we first reported authors and year; then author with first name;
+finally title)
+
+References
+
+A’Hearn Baten Crayen 2009: Brian A’Hearn, Joerg Baten and Dorothee
+Crayen: “Quantifying Quantitative Literacy: Age Heaping and the
+History of Human Capital”. Journal of Economic History 69-3 (Sept
+2009), pp.783-808.
+
+Argentina 1869: Argentina, National census data of 1869, published in
+Somoza, J., Lattes, A., 1967. Muestras de los dos primeros censos
+nacionales de población, 1869 y 1895. Documento de Trabajo No 46,
+Instituto T. Di Tella, CIS, Buenos Aires
+
+Argentina 1895: National census data of 1869 and 1895, published in
+Somoza, J., Lattes, A., 1967. Muestras de los dos primeros censos
+nacionales de población, 1869 y 1895. Documento de Trabajo No 46,
+Instituto T. Di Tella, CIS, Buenos Aires
+
+Baten Sohn 2013: Baten, J and Kitae Sohn: “Back to the ‘Normal’
+Level of Human-Capital Driven Growth? A Note on Early Numeracy in Korea,
+China and Japan, 1550–1800”, University of Tübingen Working Papers
+in economics and finance, No. 52
+
+Baten Fourie 2013: Baten, J, and Johan Fourie “Numeracy in the 18th
+Century Indian Ocean Region”): ERSA Working Paper No. 270 (2013)
+
+Baten Ma Morgan Wang 2010: Baten, J., Debin Ma, Stephen Morgan and Qing
+Wang (2010) “Evolution of Living Standards and Human Capital in China
+in the 18-20th Centuries: Evidences from Real Wages, Age-heaping, and
+Anthropometrics”, Explorations in Economic History 47-3: 347-359
+
+Brazil 1970: VIII Recenseamento Geral do Brasil. Censo Demográfico de
+1970.
+
+Cairo 1848: see Ghanem 2012
+
+Canada 1852 and 1881: Historical Censuses of Canada (Canada East, Canada
+West, New Brunswick and Nova Scotia). Université de Montréal,
+Montréal; 
+
+Costa Rica 1927: Censo 1927: “Censo de Población de 1927” (online)
+Centro Centroamreicano de Población (CCP),   HYPERLINK
+"http://ccp.ucr.ac.cr/bvp/censos/1927/index.html" 
+http://ccp.ucr.ac.cr/bvp/censos/1927/index.html  (assessed on
+2012-05-29) 
+
+Crayen Baten 2010: Crayen, D., and Baten, J. (2010). Global Trends in
+Numeracy 1820-1949 and its Implications for Long-Run Growth.
+Explorations in Economic History, 47(1): 82-99.
+
+DHS: Demographic and Health Surveys, various countries (abbreviated with
+2-char ISO code) and years.   HYPERLINK "http://www.measuredhs.com" 
+www.measuredhs.com  last accessed 131226
+
+Eberhardt 2010: Eberhart, Helmut et al. (2010), Preliminary dataset
+“Albanische Volkszaehlung von 1918”, entstanden an der
+Karl-Franzens-Universita¨t Graz unter Mitarbeit von Helmut Eberhart,
+Karl Kaser, Siegfried Gruber, Gentiana Kera, Enriketa Papa-Pandelejmoni
+und finanziert durch Mittel des Oesterreichischen Fonds zur Foerderung
+der wissenschaftlichen Forschung; (FWF). 
+
+Egypt 1848: Census of Cairo, 
+
+Egypt 1907: Census of Egypt: The Statistical Department of the Ministry
+of Finance Egypt, 1907. Statistical yearbook of Egypt. 3rd census of
+Egypt 1905. Cairo, The Government Press; 
+
+  HYPERLINK "http://www.familysearch.org"  www.familysearch.org :
+Mortality registers of Sweden, last accessed 131226
+
+Grether 2012: Grether, Kathrin (2012), Langfristige
+Humankapitalentwicklung auf den Philippinen im international Vergleich.
+Unpubl. BA Thesis Univ. Tuebingen
+
+Gruber undated: Siegfried Gruber, Friendly communication, who collected
+visitation data on a number of Serbian villages. Siegfried Gruber,
+Karl-Franzens-Universität Graz, Centre for Southeast European History,
+Project ‘‘Kinship and Social; Security”
+
+Guettler 2011: Guettler, Sabine (2011), Verbreitung der
+Bildungsinnovationen in Peru und Ecuador im 18. und 19. Jahrhundert,
+Unpubl. Diploma Thesis Univ. Tuebingen
+
+Habsburg 1880: Austro-Hungarian census of 1880, published as
+Österreichische Statistik, Band 1, Heft 1–3, Band 2, Heft 1–2 and
+Band 5, Heft 3, 1882–1884. The evidence covers Austria, Bosnia and
+Herzegovina, Croatia, Czech Republic, Hungary, Slovakia and Slovenia. We
+merged Austrian, Russian, and German regional statistics to obtain
+weighed averages for the modern territories of Ukraine and Poland.
+
+Hippe Baten 2012: Hippe, R. and Baten, J. (2012) “The Early Regional
+Development of Human Capital in Europe, 1790 – 1880, Scandinavian
+Economic History Review, 60, Number 3, 1 November 2012 , pp. 254-289
+
+India 1881-1921: 1891-1921 (Census of India, 1891 (Bombay, Madras,
+North-Western Provinces) Indian Empire Census of 1891, 1901, 1911 and
+1921. The Superintendent of Government Printing India, Calcutta; 
+
+IPUMS: Ruggles Alexander Genadek Goeken Schroeder Sobek 2010: Ruggles,
+S., Alexander, J.T., Genadek, K., Goeken, R., Schroeder, M.B., and
+Sobek, M. (2010). Integrated Public Use Microdata Series: Version 5.0
+[Machine-readable database]. Minneapolis: University of Minnesota.
+
+Japan 1882: Ministry of Internal Affairs and Communications, 1882. First
+Statistical Yearbook of the Japan Empire. Population statistics of the
+Province of Kai 1879 (today’s Yamamashu Prefecture). Government
+Publications, Tokyo; 
+
+Juif Baten 2013: Juif, D.-T., Baten, J. (2013). “On the Human Capital
+of ‘Inca’ Indios before and after the Spanish Conquest. Was there a
+“Pre-Colonial Legacy”?”,Explorations in Economic History 50-2
+(2013), pp. 227-41. Older version: Tuebingen Working Papers in Economics
+and Finance 27.
+
+Manzel 2009: Kerstin Manzel 2009. Essays on Human Capital Development in
+Latin America and Spain, Dissertation, Univ. Tuebingen
+
+Manzel Baten and Stolz 2012: Manzel, K., Baten, J. and Stolz, Y. (2012)
+“Convergence and Divergence of Numeracy: The Development of Age
+Heaping in Latin America, 17th to 20th Century”, Economic History
+Review 65, 3 (2012), pp. 932–960. Detailed sources are listed in their
+online appendix p.4/5
+
+Manzel Baten 2009: Manzel, K. and Baten, J. (2009). Gender Equality and
+Inequality in Numeracy: The Case of Latin America and the Caribbean,
+1880-1949. Journal of Iberian and Latin American Economic History,
+27(1): 37-74.
+
+Matic 2010: Matic, E. (2010). Die Humankapitalentwicklung in Bulgarien
+und Bosnien im 19./20. Jahrhundert. Unveröff. Bachelor-Arbeit
+Universität Tübingen.
+
+Meinzer 2013: Meinzer, Nicholas (2013) “The selectivity of migrants to
+Australia: a new methodological approach”. Unpubl. Master thesis Univ.
+Tuebingen.
+
+Pertschy 2012: Pertschy, Robert (2012), Regionale Unterschiede der
+langfristigen Humankapitalentwicklung in Chile im 19. Jahrhundert.
+Unpubl. BA Thesis Univ. Tuebingen; 
+
+Rothenbacher 2002: Rothenbacher, F. (2002). The European Population
+1850-1945. Basingstoke: Palgrave Macmillan.
+
+Russia 1959 and 1970: Demoskop Weekly (2001). ėlektronnaja versija
+bjulletenja Naselenie i obščestvo. Institut Demografii
+Gosudarstvennogo Universiteta, Vysšej Školy Ėkonomiki, Moskva.
+
+Russian 1897: Russian Empire: First General Russian Empire Census of
+1897.
+
+Schneider 2011: Schneider, Christian (2011), Das Humankapital in den
+Regionen Ecuadors, Unpubl. Diploma Thesis Univ. Tuebingen
+
+Starbatty 2011: Starbatty, Peter (2011). Humankapitalentwicklung im
+Osmanischen Reich 1760-1810. Regionale und ethnische Unterschiede.
+Unpubl. BA Thesis Univ. Tuebingen.
+
+Stolz Baten Botelho 2013: Stolz, Yvonne, Baten, J. and Botelho, T.
+"Growth effects of 19th century mass migrations: “Fome Zero” for
+Brazil?" European Review of Economic History 17-1 (2013), pp. 95-121.
+Older version: Tuebingen Working Papers in Economics and Finance 20
+
+Stolz Baten Reis 2013: Stolz, Yvonne, Baten, J. and Jaime Reis,
+“Portuguese Living Standards 1720-1980 in European Comparison –
+Heights, Income and Human Capital”, Economic History Review 66-2
+(2013), pp. 545-578
+
+United Kingdom 1851: Anderson, M. et al., 1979. National sample from the
+1851 census of Great Britain [computer file]. Supplied by History Data
+Service, UK Data Archive (SN: 1316). Colchester, Essex; Schuerer, K.,
+Woollard, M., 2002. 
+
+United Kingdom 1881: National sample from the 1881 census of Great
+Britain [computer file]. Supplied by History Data Service, UK Data
+Archive (SN: 4375). Colchester, Essex; 
+
+UNDYB various years: United Nations, Department of International
+Economic and Social Affairs, Statistical Office (various issues).
+Demographic Yearbook. New York: United Nations.
+
+United States 1850, 1860, 1870, 1880, 1900: Ruggles, S., Alexander,
+J.T., Genadek, K., Goeken, R., Schroeder, M.B., and Sobek, M. (2010).
+Integrated Public Use Microdata Series: Version 5.0 [Machine-readable
+database]. Minneapolis: University of Minnesota
+
+The titles cited above were used for the following countries and year:
+
+Country	From (or only birth decade)	To	Source (see above)
+
+Austria	1620
+
+A'Hearn Baten Crayen 2009, refers to early 17th C
+
+Austria	1710	1790	Stolz Baten Reis 2013
+
+Austria	1770
+
+A'Hearn Baten Crayen 2009, refers to late 18th C
+
+Austria	1800
+
+Habsburg 1880
+
+Austria	1810	1880	Rothenbacher 2002
+
+Belgium	1720
+
+A'Hearn Baten Crayen 2009, refers to early 18th C
+
+Belgium	1760	1890	Rothenbacher 2002
+
+France	1670
+
+A'Hearn Baten Crayen 2009
+
+France	1720	1790	Stolz Baten Reis 2013
+
+France	1910	1960	1990 UNDYB
+
+France	1800	1900	Rothenbacher 2002
+
+Germany	1830	1900	Rothenbacher 2002
+
+Germany	1910
+
+UNDYB
+
+Germany	1710	1790	Stolz Baten Reis 2013
+
+Germany	1800
+
+A'Hearn Baten Crayen 2009, refers to early 19th C
+
+Germany	1620
+
+A'Hearn Baten Crayen 2009, protestant part of Germany, refers to early
+17th C
+
+Germany	1670
+
+A'Hearn Baten Crayen 2009, protestant part of Germany, refers to late
+17th C
+
+Germany	1500
+
+A'Hearn Baten Crayen 2009, refers to late 15th C Wuerttemberg
+
+Luxembourg	1810	1870	Rothenbacher 2002
+
+Netherlands	1770	1880	Rothenbacher 2002
+
+Netherlands	1500
+
+A'Hearn Baten Crayen 2009, refers to late 15th C
+
+Switzerland	1720
+
+A'Hearn Baten Crayen 2009, refers to early 18th C
+
+Switzerland	1910	1960	1990 UNDYB
+
+Switzerland	1780	1890	Rothenbacher 2002
+
+Switzerland	1620
+
+A'Hearn Baten Crayen 2009, refers to early 17th C
+
+Denmark	1710	1770	Stolz Baten Reis 2013
+
+Denmark	1790	1890	Rothenbacher 2002
+
+Estonia	1820	1860	Russia 1897
+
+Estonia	1880	1940	Russia 1959 1970
+
+Finland	1800	1890	Rothenbacher 2002
+
+Finland	1960
+
+1990 UNDYB
+
+Finland	1900	1950	1985 UNDYB
+
+Iceland	1820	1900	Rothenbacher 2002
+
+Ireland	1800
+
+A'Hearn Baten Crayen 2009
+
+Ireland	1780	1790	Stolz Baten Reis 2013
+
+Ireland	1840	1890	Rothenbacher 2002
+
+Ireland	1900	1950	1979 UNDYB
+
+Ireland	1960
+
+1991 UNDYB
+
+Latvia	1820	1860	Russia 1897
+
+Latvia	1880	1940	Russia 1959 1970
+
+Lithuania	1950	1960	1989 UNDYB
+
+Lithuania	1880	1940	Russia 1959 1970
+
+Lithuania	1820	1860	Russia 1897
+
+Norway	1800
+
+Rothenbacher 2002
+
+Norway	1810	1870	Norway 1861-1900
+
+Norway	1900	1950	1980 UNDYB
+
+Norway	1770
+
+A'Hearn Baten Crayen 2009, refers to late 18th C
+
+Norway	1960
+
+1990 UNDYB
+
+Sweden	1650
+
+Calculated based on feath registers from familysearch.org (probably
+downward bias)
+
+Sweden	1910	1960	1991 UNDYB
+
+Sweden	1800	1900	Rothenbacher 2002
+
+United Kingdom of Great Britain and Northern Ireland	1930	1960	1991
+UNDYB
+
+United Kingdom of Great Britain and Northern Ireland	1810	1820	United
+Kingdom 1851
+
+United Kingdom of Great Britain and Northern Ireland	1780	1790	Stolz
+Baten Reis 2013
+
+United Kingdom of Great Britain and Northern Ireland	1620
+
+A'Hearn Baten Crayen 2009, refers to early 17th C
+
+United Kingdom of Great Britain and Northern Ireland	1800	1900
+Rothenbacher 2002
+
+United Kingdom of Great Britain and Northern Ireland	1770
+
+A'Hearn Baten Crayen 2009, refers to late 18th C
+
+United Kingdom of Great Britain and Northern Ireland	1910	1920	1951
+UNDYB
+
+United Kingdom of Great Britain and Northern Ireland	1720
+
+A'Hearn Baten Crayen 2009, refers to early 18th C
+
+United Kingdom of Great Britain and Northern Ireland	1840	1850	United
+Kingdom 1881
+
+Bosnia and Herzegovina	1910	1960	1991 UNDYB
+
+Croatia	1800	1850	Habsburg 1880
+
+Greece	1870	1920	UNDYB
+
+Italy	1720	1770	Stolz Baten Reis 2013
+
+Italy	1790	1900	Rothenbacher 2002
+
+Italy	1520
+
+A'Hearn Baten Crayen 2009
+
+Malta	1870	1920	UNDYB
+
+Portugal	1620
+
+Juif Baten 2013, refers to early 17th C
+
+Portugal	1720	1790	Stolz Baten Reis 2013
+
+Portugal	1520
+
+Juif Baten 2013, refers to early 16th C
+
+Portugal	1670
+
+Juif Baten 2013, refers to late 17th C
+
+Portugal	1570
+
+Juif Baten 2013, refers to late 16th C
+
+Portugal	1860	1910	Rothenbacher 2002
+
+Slovenia	1810	1850	Habsburg 1880
+
+Slovenia	1910	1960	1989 UNDYB
+
+Spain	1710	1720	Stolz Baten Reis 2013
+
+Spain	1620
+
+Juif Baten 2013, refers to early 17th C
+
+Spain	1570
+
+Juif Baten 2013, refers to late 16th C
+
+Spain	1670
+
+Juif Baten 2013, refers to late 17th C
+
+Spain	1830	1940	Crayen and Baten 2010
+
+Spain	1520
+
+Juif Baten 2013, refers to early 16th C
+
+The former Yugoslav Republic of Macedonia	1910	1960	1994 UNDYB
+
+Belarus	1880	1940	Russia 1959 1970
+
+Belarus	1820	1860	Russia 1897
+
+Bulgaria	1890	1940	1970 UNDYB
+
+Czech Republic	1800
+
+A'Hearn Baten Crayen 2009, refers to early 19th C
+
+Czech Republic	1840	1900	Rothenbacher 2002
+
+Czech Republic	1720
+
+A'Hearn Baten Crayen 2009, refers to early 18th C
+
+Czech Republic	1810	1830	Habsburg 1880
+
+Czech Republic	1770
+
+A'Hearn Baten Crayen 2009, refers to late 18th C
+
+Czech Republic	1620
+
+A'Hearn Baten Crayen 2009, refers to early 17th C
+
+Czechoslovakia (until 1993)	1810	1830	Habsburg 1880
+
+Czechoslovakia (until 1993)	1790	1800	Crayen and Baten 2010; Gruber
+undated
+
+Hungary	1800	1840	Habsburg 1880
+
+Hungary	1930	1960	1990 UNDYB
+
+Hungary	1720	1760	Stolz Baten Reis 2013
+
+Hungary	1670	1770	A'Hearn Baten Crayen 2009
+
+Hungary	1870	1920	Rothenbacher 2002
+
+Poland	1900	1950	1978 UNDYB
+
+Poland	1800
+
+A'Hearn Baten Crayen 2009, refers to early 19th C
+
+Poland	1870	1890	Rothenbacher 2002
+
+Poland	1770
+
+A'Hearn Baten Crayen 2009, refers to late 18th C
+
+Poland	1820	1860	Russia 1897, Hippe and Baten 2012
+
+Republic of Moldova	1950	1960	1989 UNDYB
+
+Republic of Moldova	1820	1860	Russia 1897
+
+Republic of Moldova	1880	1940	Russia 1959 1970
+
+Romania	1880	1930	1966 UNDYB
+
+Romania	1950	1960	1992 UNDYB
+
+Romania	1940
+
+1970 UNDYB
+
+Romania	1800	1840	Habsburg 1880
+
+Russian Federation	1880	1940	Russia 1959 1970
+
+Russian Federation	1800
+
+A'Hearn Baten Crayen 2009, refers to early 19th C
+
+Russian Federation	1950	1960	1989 UNDYB
+
+Russian Federation	1820	1860	Russia 1897
+
+Russian Federation	1720	1760	Stolz Baten Reis 2013
+
+Russian Federation	1670
+
+A'Hearn Baten Crayen 2009, refers to late 17th C
+
+Slovakia	1800	1840	Habsburg 1880
+
+Ukraine	1880	1940	Russia 1959 1970
+
+Ukraine	1800	1810	Habsburg 1880
+
+Ukraine	1820	1860	Russia 1897
+
+Bermuda	1950	1960	1991 UNDYB
+
+Bermuda	1930	1940	1970 UNDYB
+
+Bermuda	1870	1920	1950 UNDYB
+
+Canada	1960
+
+1991 UNDYB
+
+Canada	1900	1950	1971 UNDYB
+
+Canada	1810	1850	Canada 1852 and 1881
+
+Canada	1890
+
+1976 UNDYB
+
+Canada	1780	1800	Historical Census of Canada 1852
+
+Greenland	1930
+
+1965 UNDYB
+
+Greenland	1870	1920	1951 UNDYB
+
+United States of America	1890	1920	1950 UNDYB
+
+United States of America	1930	1950	1980 UNDYB
+
+United States of America	1770	1800	Ruggles et al. 2010
+
+United States of America	1810	1880	IPUMS
+
+United States of America	1960
+
+1990 UNDYB
+
+Aruba	1910	1960	1991 UNDYB
+
+Bahamas	1910	1960	1990 UNDYB
+
+Barbados	1860	1910	UNDYB
+
+British Virgin Islands	1910	1960	1991 UNDYB
+
+Cayman Islands	1920	1970	1998 UNDYB
+
+Cuba	1900	1950	1981 UNDYB
+
+Dominican Republic	1930	1940	Manzel Baten 2009
+
+Dominican Republic	1870	1920	1950 UNDYB
+
+Grenada	1860	1910	UNDYB
+
+Guadeloupe	1880	1930	1967 UNDYB
+
+Haiti	1870	1920	1950 UNDYB
+
+Haiti	1930	1940	UNDYB
+
+Jamaica	1910	1960	1991 UNDYB
+
+Martinique	1880	1930	1967 UNDYB
+
+Martinique	1940	1960	1990 UNDYB
+
+Netherlands Antilles (until 2010)	1910	1960	1992 UNDYB
+
+Puerto Rico	1870	1920	1950 UNDYB
+
+Puerto Rico	1930	1960	1990 UNDYB
+
+Saint Lucia	1910	1960	1991 UNDYB
+
+Trinidad and Tobago	1860	1910	1946 UNDYB
+
+Belize	1860	1910	1950 UNDYB
+
+Costa Rica	1940
+
+UNDYB
+
+Costa Rica	1840	1890	CostaRica 1927
+
+Costa Rica	1900	1930	1963 UNDYB
+
+El Salvador	1870	1920	1950 UNDYB
+
+El Salvador	1930	1940	Manzel Baten 2009
+
+Guatemala	1870	1920	1950 UNDYB
+
+Honduras	1890	1940	1974 UNDYB
+
+Mexico	1870	1900	Manzel, Baten and Stolz 2012
+
+Mexico	1680	1800	Manzel Baten Stolz 2012
+
+Mexico	1910	1960	1990 UNDYB
+
+Nicaragua	1870	1920	1950 UNDYB
+
+Nicaragua	1930
+
+1963 UNDYB
+
+Nicaragua	1940
+
+UNDYB
+
+Panama	1950
+
+1980 UNDYB
+
+Panama	1960
+
+1990 UNDYB
+
+Panama	1870	1920	1950 UNDYB
+
+Panama	1930
+
+1960 UNDYB
+
+Argentina	1680	1790	Manzel Baten Stolz 2012
+
+Argentina	1810	1860	Manzel, Baten and Stolz 2012
+
+Argentina	1900	1950	1980 UNDYB
+
+Argentina	1870	1880	Argentina 1914
+
+Bolivia (Plurinational State of)	1950	1960	1992 UNDYB
+
+Bolivia (Plurinational State of)	1870	1880	UNDYB
+
+Bolivia (Plurinational State of)	1890	1940	1976 UNDYB
+
+Brazil	1830	1890	Stolz, Baten and Botelho 2013
+
+Brazil	1810	1820	Manzel, Baten and Stolz 2012
+
+Brazil	1900	1920	UNDYB
+
+Brazil	1770	1800	Stolz/Baten/Bothelho
+
+Chile	1890	1940	UNDYB
+
+Colombia	1810	1840	Manzel, Baten and Stolz 2012
+
+Colombia	1940	1950	1985 UNDYB
+
+Colombia	1880	1930	1964 UNDYB
+
+Ecuador	1810	1840	Manzel Baten Stolz 2012
+
+Ecuador	1870	1880	UNDYB
+
+Ecuador	1890	1940	1974 UNDYB
+
+Ecuador	1790	1800	Manzel Baten Stolz 2012; Schneider 2011
+
+Ecuador	1950	1960	1990 UNDYB
+
+French Guiana	1880	1930	1967 UNDYB
+
+Guyana	1860	1910	UNDYB
+
+Paraguay	1880	1930	UNDYB
+
+Peru	1860	1910	Manzel, Baten and Stolz 2012
+
+Suriname	1880	1930	1964 UNDYB
+
+Uruguay	1780	1800	Manzel Baten Stolz 2012
+
+Uruguay	1940
+
+1975 UNDYB
+
+Uruguay	1880	1930	1963 UNDYB
+
+Uruguay	1810	1840	Manzel, Baten and Stolz 2012
+
+Uruguay	1950
+
+1985 UNDYB
+
+Venezuela (Bolivarian Republic of)	1770	1790	Manzel Baten Stolz 2012
+
+Venezuela (Bolivarian Republic of)	1870	1920	1950 UNDYB
+
+Venezuela (Bolivarian Republic of)	1930	1940	Manzel Baten 2009
+
+Australia	1920	1960	1991 UNDYB
+
+Australia	1860	1910	1947 UNDYB
+
+New Zealand	1860	1910	1945 UNDYB
+
+New Zealand	1960
+
+1991 UNDYB
+
+New Zealand	1920	1930	1961 UNDYB
+
+New Zealand	1940	1950	1986 UNDYB
+
+Fiji	1920	1930	1966 UNDYB
+
+Fiji	1860	1910	1946 UNDYB
+
+Fiji	1940	1950	1986 UNDYB
+
+Vanuatu	1910	1960	1989 UNDYB
+
+Guam	1920	1970	2000 UNDYB
+
+Marshall Islands	1910	1960	1988 UNDYB
+
+Micronesia (Federated States of)	1950	1970	1999 UNDYB
+
+Cook Islands	1910	1960	1996 UNDYB
+
+French Polynesia	1900	1950	1986 UNDYB
+
+Tonga	1900	1950	1986 UNDYB
+
+Afghanistan	1900	1950	1979 UNDYB
+
+Bangladesh	1900	1940	1974 UNDYB
+
+India	1900	1940	UNDYB
+
+India	1830	1890	India 1881-1921
+
+Iran (Islamic Republic of)	1880	1930	UNDYB
+
+Maldives	1940	1950	1985 UNDYB
+
+Maldives	1880	1930	1967 UNDYB
+
+Nepal	1900	1950	UNDYB
+
+Pakistan	1900	1940	Pakistan 1973
+
+Sri Lanka	1860	1950	UNDYB
+
+China	1900
+
+UNDYB
+
+China	1670	1770	Baten Sohn 2013
+
+China	1910	1960	1990 UNDYB
+
+China	1820	1890	Baten et al. 2010
+
+China, Hong Kong Special Administrative Region	1940	1950	1986 UNDYB
+
+China, Hong Kong Special Administrative Region	1960
+
+1991 UNDYB
+
+China, Hong Kong Special Administrative Region	1880	1930	1961 UNDYB
+
+China, Macao Special Administrative Region	1910	1960	1991 UNDYB
+
+Japan	1890
+
+UNDYB
+
+Japan	1900	1950	1985 UNDYB
+
+Japan	1800
+
+Japanese Ministry of Internal Affairs and Communications 1882
+
+Japan	1590
+
+Baten Sohn 2013
+
+Japan	1960
+
+1990 UNDYB
+
+Japan	1810	1880	Japan 1882
+
+Mongolia	1910	1960	1990 UNDYB
+
+Republic of Korea	1930
+
+1960 UNDYB
+
+Republic of Korea	1870	1920	1955 UNDYB
+
+Republic of Korea	1940	1950	1980 UNDYB
+
+Republic of Korea	1960
+
+1990 UNDYB
+
+Cyprus	1920	1960	1992 UNDYB
+
+Brunei Darussalam	1950
+
+1981 UNDYB
+
+Brunei Darussalam	1890	1940	1971 UNDYB
+
+Cyprus	1860	1910	1946 UNDYB
+
+Cambodia	1880	1930	1962 UNDYB
+
+Indonesia (until 1999)	1860	1890	Crayen and Baten 2010
+
+Indonesia (until 1999)	1900	1950	UNDYB
+
+Malaysia	1870	1930	Crayen and Baten 2010
+
+Myanmar	1840	1870	India 1881-1921
+
+Philippines	1870	1920	1948 UNDYB
+
+Philippines	1930
+
+1960 UNDYB
+
+Singapore	1920	1970	2000 UNDYB
+
+Thailand	1860	1910	1947 UNDYB
+
+Thailand	1920	1930	UNDYB
+
+Viet Nam	1910	1960	1989 UNDYB
+
+Armenia	1880	1940	Russia 1959 1970
+
+Armenia	1820	1860	Russia 1897
+
+Azerbaijan	1880	1940	Russia 1959 1970
+
+Azerbaijan	1820	1860	Russia 1897
+
+Bahrain	1890	1940	1971 UNDYB
+
+Bahrain	1960
+
+1991 UNDYB
+
+Bahrain	1970
+
+2001 UNDYB
+
+Bahrain	1950
+
+1981 UNDYB
+
+Georgia	1880	1940	Russia 1959 1970
+
+Georgia	1820	1860	Russia 1897
+
+Iraq	1880	1930	UNDYB
+
+Israel	1870	1920	UNDYB
+
+Kuwait	1880	1930	1970 UNDYB
+
+Occupied Palestinian Territory	1910	1960	1991 UNDYB
+
+Qatar	1900
+
+1986 UNDYB
+
+Syrian Arab Republic	1890	1940	UNDYB
+
+Turkey	1870	1920	1950 UNDYB
+
+Turkey	1950	1960	1990 UNDYB
+
+Turkey	1930
+
+1965 UNDYB
+
+Turkey	1820	1860	Russia 1897
+
+Yemen	1940	1960	1991ye DHS
+
+Kazakhstan	1950	1960	1989 UNDYB
+
+Kazakhstan	1820	1860	Russia 1897
+
+Kazakhstan	1880	1940	Russia 1959 1970
+
+Kyrgyzstan	1820	1860	Russia 1897
+
+Kyrgyzstan	1950	1960	1989 UNDYB
+
+Kyrgyzstan	1880	1940	Russia 1959 1970
+
+Tajikistan	1880	1940	Russia 1959 1970
+
+Tajikistan	1820	1860	Russia 1897
+
+Turkmenistan	1880	1940	Russia 1959 1970
+
+Turkmenistan	1820	1860	Russia 1897
+
+Uzbekistan	1820	1860	Russia 1897
+
+Uzbekistan	1880	1940	Russia 1959 1970
+
+Algeria	1890	1930	1966 UNDYB
+
+Egypt	1810	1820	Egypt 1848
+
+Egypt	1830	1860	Egypt 1907
+
+Egypt	1870	1910	1947 UNDYB
+
+Egypt	1770	1800	Census of Cairo 1848; Ghanem 2012
+
+Libya	1890	1940	UNDYB
+
+Morocco	1880	1930	1960 UNDYB
+
+Tunisia	1880	1930	1966 UNDYB
+
+Benin	1900	1950	1979 UNDYB
+
+Burkina Faso	1900	1950	1985 UNDYB
+
+Cape Verde	1910	1960	1990 UNDYB
+
+Cote d'Ivoire	1910	1960	1988 UNDYB
+
+Gambia	1890	1940	UNDYB
+
+Ghana	1880	1940	UNDYB
+
+Guinea-Bissau	1870	1920	UNDYB
+
+Liberia	1890	1930	1962 UNDYB
+
+Liberia	1940
+
+1974 UNDYB
+
+Mali	1890	1940	1976 UNDYB
+
+Niger	1940	1960	1991ne DHS
+
+Nigeria	1880	1930	1963 UNDYB
+
+Saint Helena	1900	1950	1987 UNDYB
+
+Togo	1880	1940	UNDYB
+
+Cameroon	1890	1940	1976 UNDYB
+
+Central African Republic	1900	1940	1975 UNDYB
+
+Chad	1940	1960	1997td DHS
+
+Democratic Republic of the Congo	1900	1950	1985 UNDYB
+
+Gabon	1950	1970	2000ga DHS
+
+Botswana	1940	1960	1991 UNDYB
+
+Botswana	1880	1930	1964 UNDYB
+
+South Africa	1860	1910	1950 UNDYB
+
+South Africa	1920	1950	1980 UNDYB
+
+Swaziland	1940	1950	1986 UNDYB
+
+Swaziland	1880	1930	1966 UNDYB
+
+Burundi	1910	1960	1990 UNDYB
+
+Ethiopia (from 1993)	1940	1960	1992et DHS
+
+Kenya	1940	1950	1979 UNDYB
+
+Kenya	1960
+
+1989 UNDYB
+
+Kenya	1880	1930	1962 UNDYB
+
+Madagascar	1890	1940	UNDYB
+
+Mauritius	1890	1940	1970 UNDYB
+
+Réunion	1910	1960	1988 UNDYB
+
+Uganda	1950	1960	1991 UNDYB
+
+Uganda	1890	1940	1969 UNDYB
+
+United Republic of Tanzania	1880	1930	1967 UNDYB
+
+Zambia	1890	1940	UNDYB
+
+Zimbabwe	1940	1960	1994zw DHS
+
+
+
+This following is an excerpt of the papers by A’Hearn et al. (2009),
+on the pre-1800 estimates (especially those referring to half centuries)
+and Prayon/Baten (2013), on the post-1800 estimates. For the citation of
+A’Hearn et al. see above.
+
+On the pre-1800 part
+
+As signature ability can proxy for literacy, so accuracy of age
+reporting can proxy for numeracy, and for human capital more generally.
+A society in which individuals know their age only approximately is a
+society in which life is not governed by the calendar and the clock but
+by the seasonal cycle; in which birth dates are not recorded by families
+or authorities; in which few individuals must document their age in
+connection with privileges (voting, office-holding, marriage, holy
+orders) or obligations (military service, taxation); in which
+individuals who do know their birth year struggle to accurately
+calculate their age from the current year. Approximation in age
+awareness manifests itself in the phenomenon of “heaping” in
+self-reported age data. Individuals lacking certain knowledge of their
+age rarely state this openly, but choose instead a figure they deem
+plausible. They do not choose randomly, but have a systematic tendency
+to prefer “attractive” numbers, such as those ending in 5 or 0, even
+numbers, or - in some societies - numbers with other specific terminal
+digits. Such “age heaping” can be assessed in a wide range of
+sources: census returns, tombstones, necrologies, muster lists, legal
+records, or tax data, for example. While care must be exercised in
+ascertaining possible biases, such data are much more widely available
+than signature rates and other proxies for human capital.
+
+Age heaping is a well-known phenomenon among demographers, development
+economists, and anthropologists. Already a half-century ago influential
+studies by Roberto Bachi and Robert Myers investigated age heaping and
+its inverse correlation with education levels within and across
+countries. Myers later demonstrated a similar inverse correlation
+between age awareness and income at the individual level as well. For
+others, including epidemiologists, age heaping is a problem to be
+solved, a source of distortion in age-specific vital rates. Zelnik, for
+example, assessed age misreporting in the United States between the 1880
+and 1950 censuses. 
+
+Meanwhile, historians have studied age heaping as a topic of interest in
+its own right. In their landmark study of Florentine tax records from
+the fourteenth and fifteenth centuries David Herlihy and Christiane
+Klapisch-Zuber document marked heaping on even numbers for children and
+on multiples of five for adults, to a degree similar to that reported
+for Egyptian census data in 1947. Age heaping diminished substantially
+over successive tax enumerations from 1371 to 1470, and was more
+prevalent among women, in rural areas and small towns, and among the
+poor. Daniel Kaiser and Peyton Engel report similar age heaping levels
+for early modern Russia. A well-known study is Richard Duncan-Jones’
+analysis of grave monument inscriptions in twelve provinces of the Roman
+Empire. He finds age heaping on multiples of five at rates not
+dissimilar to those for medieval Tuscany or developing countries of the
+1950s and ’60s and higher for women than men. 
+
+	There has been little use of age heaping as an indicator of human
+capital in the economic history literature. Joel Mokyr tests for
+positive selection or “brain drain” in pre-famine Irish emigration
+by comparing age heaping among migrants to the population at large.
+Developing original measures of age heaping along the way, he finds no
+support for the conventional wisdom that the best and brightest
+emigrated. In other studies of Ireland, John Budd and Timothy Guinnane
+report considerable heaping on multiples of five in the 1901 and 1911
+censuses among the illiterate, the poor, and the aged; Cormac O’Grada,
+among Dublin’s immigrant Jewish population. O’Grada interprets age
+heaping as confirming that low Jewish literacy rates did not refer only
+to the English language and, consequently, that their lower mortality
+rate was the result of religious practices rather than education. For
+Britain, Jason Long has assessed age heaping in linked samples from the
+censuses of 1851 and 1881. A quarter of his 1851 school-aged children
+reported ages in 1881 that were from two to five years different from
+the expected 30 year increment. Countywide age heaping had a limited
+impact on individual labor market outcomes, once other county
+characteristics were controlled for, but individual age discrepancies
+had a significant impact on socio-economic status, wages (10% higher for
+0-discrepancy individuals), and the probability of rural-urban
+migration. 
+
+To deploy age-heaping as a useful indicator of human capital, we require
+a measure that allows us to track its variation over time and across
+groups. We propose a variant of the well-known Whipple Index, which is
+simple, robust, and easy to interpret. The Whipple Index is the ratio of
+the observed frequency of ages ending in 0 or 5 to the frequency
+predicted by assuming a uniform distribution of terminal digits (in
+other words one fifth). 
+
+ .
+
+An index value of 500 would indicate perfect heaping on multiples of
+five; a value of 100 no heaping at all; and a value of 0 perfect
+“anti-heaping”. The notation in Equation 1 is meant to emphasize
+that W must be defined over an interval in which each terminal digit
+occurs an equal number of times, for example 30-39 or 23-72. The
+prediction of equal terminal digit frequencies is what makes the Whipple
+Index easy to calculate, but is also a source of inaccuracy. In a
+typical population, frequencies decrease with age; in the interval 50-54
+one would expect fewer 54 year olds than 50 year olds, even in the
+absence of heaping. Restricting attention to intervals of (multiples of)
+ten years helps mitigate this problem. A more obvious limitation of the
+Whipple Index is that it can capture only heaping on multiples of five.
+In practice, this is the overwhelmingly dominant form of heaping
+observed for adults across a wide range of times and places in our data.
+(Among children and adolescents even-heaping is common.) 
+
+In a separate study, we compare the statistical properties of the
+Whipple Index with alternatives including measures proposed by Bachi,
+Myers, and Mokyr.  In simulation studies, the Whipple Index demonstrates
+several advantages. First its mean is not scale dependent, meaning that
+W can be compared across samples of widely varying size. Second, E(W)
+increases linearly with heaping, again facilitating comparisons.
+Finally, the coefficient of variation of W across random samples is
+systematically lower than for the alternatives, at all sample sizes and
+for all degrees of heaping. This leads to greater reliability in
+correctly ranking samples according to the true extent of heaping in the
+underlying populations. In this paper we employ a simple transformation
+of the Whipple Index that can be interpreted as the share of individuals
+that correctly report their age:
+
+ .
+
+Note: this index was named in later publications ‘ABCC-Index’
+
+ (...)
+
+
+
+On the post-1800 part
+
+Based on the assumption that basic numerical skills are acquired during
+the first decade of life, we calculate the ABCC index for birth cohorts.
+Since mortality increases with higher ages, the frequencies of reported
+ages ending in multiples of five would augment and lead to an
+underestimation of the ABCC index. To overcome this problem, we spread
+the final digits of 0 and 5 more evenly across the age ranges and define
+the age-groups 23-32, 33-42, …, 73 to 82. In a second step, the
+age-groups are assigned to the corresponding birth decades. In the case
+that data overlap for one or several birth decades within a country
+because more than one census was available for this country, we
+calculated the arithmetic average of the indices. In the entire data
+set, the birth decades range from the 1680s to the 1970s for some
+countries, whereas for the majority of countries data are only available
+for the birth decades from the 1870s to the 1940s for most individual
+countries.
+
+A major advantage of the age-heaping method is its consistent
+calculation. This way, age-heaping results might be more easily
+comparable across countries, whereas comparisons of literacy or
+enrolment rates might be misleading due to significant measurement
+differences or different school systems. Further, owing to usually high
+drop-out rates in developing countries and heterogeneous teacher
+quality, it can be argued that enrolment rates are less conclusive for
+our goal as enrolment ratios are an input measure of human capital: Even
+though a country might have high enrolment ratios, they do not permit
+conclusions about the quality of education. Age-heaping on the other
+hand is - like literacy - an output measure of human capital.
+
+Recently, several studies confirmed a positive correlation between
+age-heaping and other human capital indicators. In their global study on
+age-heaping for the period 1880 to 1940, Crayen and Baten (2010a)
+identified primary school enrolment as a main determinant of
+age-heaping: an increase of enrolment rates led to a significant
+decrease of the age-heaping level. A’Hearn, Baten, and Crayen (2009)
+used a large U.S. census sample to perform a very detailed analysis of
+the correlation between regional numeracy and literacy. Based on a
+sample of 650,000 individuals from the 1850, 1870, and 1900 IPUMS U.S.
+censuses, they found for the overall sample as well as for subsamples a
+positive and statistically significant relationship between these two
+human capital indicators. They also went back further in time and
+studied the relationship of signature ability as a proxy for literacy
+and age-heaping as a proxy for numeracy in early modern Europe. Here as
+well they found a positive correlation between the two measures. In a
+study on China, Baten et al. (2010) found a strong relationship between
+the age-heaping and literacy among Chinese immigrants in the US born in
+the 19th century. Additionally, Hippe (2011) examined systematically the
+relationship of numeracy and literacy on the regional level in seven
+European countries in the 19th century and in ten developing countries
+in the 20th century. He found for each country separately a high
+correlation between the two indicators. 
+
+Possible objections to the age-heaping method should be addressed here.
+One concerns the uncertainty of what is actually being measured; is it
+the age-awareness of the respondent during the interview or the
+diligence of the reporting personnel? The other possible objection
+relates to other forms of age-heaping, i.e., other patterns than the
+heaping on multiples of five. Concerning the first objection, Crayen and
+Baten (2010b) admit that the possibility of a potential bias always
+exists if more than one person is involved in the creation of a
+historical source. For example, if literacy is measured by analysing the
+share of signatures in marriage contracts, there might have been priests
+who were more or less interested in obtaining real signatures, as
+opposed to just crosses or other symbols (Crayen and Baten (2010b:460)).
+They argue, however, that the empirical findings in previous age-heaping
+studies, namely that there is generally less numeracy among the lower
+social strata and similar regional differences of age-heaping and
+illiteracy, support their assumption that the age-awareness of the
+respondent is captured and the bias of meticulous or inaccurate
+reporting is negligible. A study by Scott and Sabagh (1970) supports the
+assumption that it does not make a difference whether the individual or
+the reporting personnel reports a rounded age if the true age is
+unknown. They investigated the behaviour of canvassers during the
+Moroccan Multi-Purpose Sample Survey of 1961-1963 and found that the
+canvassers were indeed not free of reporting rounded ages of people that
+did not know their age themselves. The interesting feature in this
+context is that between 70 and 90 per cent (dependent on the underlying
+age group) of the interviewed people did not know their age and
+thereupon the historical calendar method was applied. Expressed in ABCC
+values this would imply an overall numeracy level somewhere between 10
+and 30 ABCC points. And indeed, this fits well the calculated
+age-heaping level observed in Morocco for the census of 1960, namely an
+ABCC level between 20 and 40.
+
+To overrule the second objection, which is different heaping patterns,
+we exclude in our study all individuals younger than 23 and older than
+82 to minimise possible biases due to age effects. The very old are
+dropped as mortality effects might distort the age-heaping indices.
+Among teenagers and young adults, we often find a heaping pattern on
+multiples of two instead of multiples of five, indicating a more precise
+age-awareness than older age groups that heap on multiples of five. The
+reason is probably that many important events in life, marriage,
+military recruitment, and reaching legal age happen during the late
+teens and early twenties; such occasions might increase age awareness.
+Further, special cultural number preferences – like the dragon year or
+the number eight in Chinese culture – do not seem to influence the
+index much, as Baten et al. (2010) found in a study on China.
+
+Crayen and Baten (2010a) also examined whether the degree of bureaucracy
+in a country could account for lower age-heaping values, i.e., if the
+government interacts with its citizens more regularly, the age-awareness
+of the population might be higher than in countries without well
+developed institutions, independently of one’s individual educational
+attainment. To test this possible bureaucratic factor, they included two
+explanatory variables, one measuring the ‘state antiquity’ and one
+that accounts for the numbers of censuses performed in each country up
+to the period under study. For all specifications, those variables
+showed no significant influence on the age-heaping level of the
+countries, leading to the conclusion that this ‘bureaucratic factor’
+does not play an important role. The fact that countries with an early
+introduction of birth registers and a high number of censuses show
+higher age-awareness can be explained with the fact that these countries
+introduced also schooling relatively early. Again, schooling outweighs
+the independent bureaucratic effect. Somehow related to this is the
+question of cultural differences in age-awareness. However, analysis
+showed that only the East Asian region had systematically less
+age-heaping than the other regions under study. This finding might be
+due to the importance of the Chinese astrological calendar in daily
+life, which relies on greater numerical ability in the population. In
+conclusion, the correlation between age-heaping and other human capital
+indicators is quite well established, and the ‘bureaucratic’ factor
+does not invalidate this relationship (Crayen and Baten 2010b:458). 
+
+Additionally, could it be a problem that we construct our trends based
+on different census years? Crayen and Baten (2010a) examined the
+possible correlation of age and age-heaping and found only a systematic
+influence of age on the heaping behaviour among the youngest age group:
+23 to 32. People at this age tend to heap their age less than the older
+age groups. Based on this observation, Crayen and Baten suggested an
+adjustment of the numeracy index for the youngest birth cohort that we
+applied in this study as well.  
+
+ Bachi, Tendency; Myers, Instance and Accuracy.
+
+ Zelnik, Age Heaping. 
+
+ For discussion of age heaping as a problem see Vallin, et al., New
+estimate; Crockett and Crockett, Consequences discuss the issues for
+historical research. See also U.N. Statistics Division, Nonsampling
+Errors.
+
+ Herlihy and Klapisch-Zuber, Toscans.
+
+ Kaiser and Engel, Time.
+
+ Duncan-Jones, Structure. For a study of contemporary China, see Jowett
+and Li, Age Heaping.
+
+ Mokyr, J., Why Ireland Starved.
+
+ Budd and Guinnane, Intentional; O’Grada, Dublin. 
+
+ A’Hearn et al., Quantifying.
+
+ Manzel and Baten (2009) found the same strong relationship between
+literacy and numeracy in a study on the regions of Argentina.
+
+.
+
+4
+
+?
+
+Q
+
+‚
+
+ƒ
+
+œ
+
+ƒ
+
+“
+
+å
+
+ÿ
+
+Q R  ® ÿ  
+
+摧熊=᐀h k ®  
+
+$-B-ù-o
+
+$-/-B-M-ø-ù-ú-#$89ENno}ë
+
+$
+
+æ%Ì&í'm(”)r*
+
+*Ý*
+
+«
+
+ᘀ摨ᘨ　ⱊ唀Ĉᘆ摨ᘨ㘀 The proposed adjustment for the
+youngest age group (23-32) is: (W-100)*0.25+W. For more details, see the
+Appendix in Baten and Crayen (2010a).
+

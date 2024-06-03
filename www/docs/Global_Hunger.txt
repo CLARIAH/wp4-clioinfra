@@ -1,0 +1,56 @@
+Metadata
+
+1. Title
+Global Hunger
+
+2. Author(s)
+Michail Moatsos
+
+3. Production date
+27 May 2024
+
+4. Version
+1
+
+5. Variable group(s)
+Demography
+
+6. Variable(s)
+Hunger rate
+
+7. Unit of analysis
+Country
+
+8. Keywords (5)
+Global hunger, hunger rate, FAO hunger
+
+9. Abstract (200 words)
+The hunger rate represents the share of the people in a country below a fraction of a cost of basic needs poverty line. The fraction used by FAO is 52%, and I use that value for 2018. For years before and up to 1820 I linearly interpolate using a 80% value for 1820. The dynamic caloric requirement that is used to estimate the food component follows the FAO guidelines, and it is estimated based on height data from Clio Infra, and age-gender population distributions from UN and Mitchell. The protein content is 0.83 gr per kg of body weight. The estimates cover the period 1820-2018 (yearly). It is expressed as a share, from 0 to 1.
+
+10. Time period
+1820-2018
+
+11. Geographical coverage
+Global
+
+12. Methodologies used for data collection and processing
+Annual estimates. See the parent paper (on poverty) for details at https://www.oecd-ilibrary.org/sites/3d96efc5-en/1/3/9/index.html?itemId=/content/publication/3d96efc5-en&_csp_=2c2e680562193998e9d20ed6a45a9242&itemIGO=oecd&itemContentType=book
+
+13. Data quality
+See table 9.1 at https://www.oecd-ilibrary.org/sites/3d96efc5-en/1/3/9/index.html?itemId=/content/publication/3d96efc5-en&_csp_=2c2e680562193998e9d20ed6a45a9242&itemIGO=oecd&itemContentType=book and the section on data quality of the paper for the details on data quality.]
+
+14. Period of collection
+2017-2020
+
+15. Data collectors
+Michail Moatsos
+
+16. Sources
+See the parent paper (on global poverty) for details at https://www.oecd-ilibrary.org/sites/3d96efc5-en/1/3/9/index.html?itemId=/content/publication/3d96efc5-en&_csp_=2c2e680562193998e9d20ed6a45a9242&itemIGO=oecd&itemContentType=book
+
+17. Text
+Full text of the parent paper (on global poverty) is available at https://www.oecd-ilibrary.org/sites/3d96efc5-en/1/3/9/index.html?itemId=/content/publication/3d96efc5-en&_csp_=2c2e680562193998e9d20ed6a45a9242&itemIGO=oecd&itemContentType=book
+
+18. Citation (that should be used for this dataset)
+Moatsos, M. (2024). Global Hunger Rates. Clio Infra long run data repository.
+
